@@ -16,7 +16,7 @@ $(document).ready(function() {
 	function contact() {
 		if ($("#cform").is(":hidden"))
 		{
-			$("#ribbon").css({"background":"url(images/logo1.jpg) no-repeat"});
+			$("#ribbon").css({"background":"url(images/ribbon.jpg) top right no-repeat"});
 			$("#home").slideUp("fast");
 			$("#cform").slideDown("slow");
 		}
