@@ -133,29 +133,96 @@ overflow:hidden;
 }
 
 
-.divInPage1
+.div1InPage1
 {
+	background-color:orange;
 	font-size : 30px;
-	margin-top:55%;
+	margin-top:20%;
+	margin-right:2%;
 	text-align:right;
-	color:maroon;
+	color:yellow;
 	font-family:"Comic Sans MS", cursive, sans-serif;
+	
 	
 }
 
-.divInPage2
+.div1InPage2
 {
+	background-color:orange;
 	font-size : 30px;
-	margin-top:55%;
+	margin-top:20.5%;
 	text-align:left;
-	color:maroon;
+	color:yellow;
 	font-family:"Comic Sans MS", cursive, sans-serif;
 	
 }
 
 
+.div2InPage1
+{
+	background-color:orange;
+	font-size : 30px;
+	margin-top:56.5%;
+	margin-right:2%;
+	text-align:right;
+	color:yellow;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+	
+	
+}
+
+.div2InPage2
+{
+	background-color:orange;
+	margin-top:1%;
+	font-size : 30px;
+	text-align:left;
+	color:yellow;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+	
+}
 
 
+.page1
+{
+	border-right:1px solid;
+	border-top:1px solid;
+	border-bottom:1px solid;
+	border-color:red;
+	height:510px;
+	width:410px;
+	margin-top:5%;
+	margin-left:4%;
+	margin-bottom:5%;
+	background-color:orange;
+	
+}
+
+
+.page2
+{
+	border-right:1px solid;
+	border-top:1px solid;
+	border-bottom:1px solid;
+	border-color:red;
+	height:510px;
+	width:400px;
+	margin-top:5%;
+	margin-right:3%;
+	margin-bottom:5%;
+	background-color:orange;
+	
+}
+.lastPage
+{
+	border:1px solid;
+	border-color:red;
+	height:510px;
+	width:380px;
+	margin:5%;
+	background-color:orange;
+	
+}
 
 
 
