@@ -4,20 +4,17 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About Us</title>
+  <title>Kithabwala</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
- 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   
-  <script type="text/javascript" src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"> </script>
-   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
- 
+  
   <style>
 .custom
 {
-	padding:5%;
+	padding-top:4%;
 }
 
 .header-color
@@ -29,7 +26,12 @@ session_start();
 {
 	color:black;
 }
+body {
+    background-image: url("images/bg.jpg");
+    background-color: #cccccc;
+}
 </style>
+
 
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,7 +42,7 @@ session_start();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-		<img style="align:left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" >
+		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" ></a>
 		<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
 	  
     
@@ -77,14 +79,16 @@ session_start();
   </div>
 </nav>
 
+
 </head>
-<body>
+<body background-image: url("bg.jpg")>
 
 <div class="container-fluid">
   
   <div class="row" style="margin-top:5%">
-    <div class="collapse navbar-collapse" >
-	<div class="col-sm-2" style="position:fixed">
+    
+	<div class="collapse navbar-collapse" >
+	<div class="col-sm-1.5" style="position:fixed">
 		<ul class="nav nav-pills nav-stacked">
 			<li><a class="page-scroll sidebar-color" href="#about">About Us</a></li>
 			<li><a class="page-scroll sidebar-color" href="#mission">Mission/Vision</a></li>
@@ -94,11 +98,14 @@ session_start();
 		</ul>
 	</div>
 	</div>
-	<div class="col-sm-10" style="margin-left:14%">
+	<div class="col-sm-10.5 " style="margin-left:14%">
 	
-		<section class="row custom" id="about">
+		<section  class=" row custom" id="about">
 			<h3><b>About Us</b></h3>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			<br>
+			Kithabwala, from the house of Samast Enterprises India Pvt Ltd, offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.<br><br>
+            Kithabwala gives a transformational makeover to the rustic notebook, making it MORE than just a place to write! <br><br>
+            Everybody wants MORE! MORE out of everything! Kithabwala doesn't sell books, we sell something more. 
 		</section>
 		
 		
@@ -107,7 +114,16 @@ session_start();
 		
 		<section class="row custom" id="mission">
 		<h3><b>Mission/Vision</b></h3>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		<br>
+			VISION
+			<br>
+            At Kithabwala, our vision is to create a better experience around a notebook while ensuring accessibiility to all. 
+			<br>
+			<br>
+            MISSION
+			<br>
+            A notebook must not just be a scribbling pad. It is an essential part of a student's life. Kithabwala shall work closely to bring a notebook close to the user.
+
 		</section>
 		
 		
@@ -116,14 +132,51 @@ session_start();
 		
 		<section class="row custom" id="team">
 		<h3><b>Team KithabWala</b></h3>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		<p>Abhilash Gali - Founder</p>
+		<img src="images/abhilash.png" alt="Cinque Terre" height=300px width=300px style="padding-top:1%">
+		<br>
+		<br>
+		<p>Found his stepping stone at CBIT by launching customized college merchandise, envisioned a market demand for quality products to found a corporate gifting, custom merchandise company, Merakii. In one such project, customized notebooks created a buzz and sold out before the clock hands touched other. This inspired him to launch a notebook brand with a revolutionized book.  After multiple projects, achieved entrepreneurial wisdom and earned.</p>
+		<br>
+		<br>
+		<p>Sahil Kaul</p>
+		<img src="images/sahilkaul.png" alt="Cinque Terre" height=300px width=300px style="padding-top:1%">
+		<br>
+		<br>
+		<p>Sahil is from a Deloitte analytics background, dabbled in start-ups, passionate writer, avid trekker and is someone who loves to improve efficiency in every process.
+        Loves to ideate and improve an idea. Good conversationalist who would one day want Shawarma to be the currency of this world.</p>
+		<br>
+		<br>
+		<p>Himanshu</p>
+		<img src="images/himanshu.png" alt="Cinque Terre" height=300px width=300px style="padding-top:1%">
+		<br>
+		<br>
+		<p>Himanshu is an incisive professional with a passion towards working in a fast growing environment. An engineer by education and a consultant by heart, Himanshu is currently working towards developing the business and formulating the strategies at Kithabwala. Himanshu carries an experience of working for some of the top Fortune 100 Companies and is working at a Big 4 Professional Services Firm in parallel.</p>
+		<br>
+		<br>
+		<p>Thanmay Krishna </p>
+		<img src="images/thanmay.png" alt="Cinque Terre" height=300px width=300px style="padding-top:1%">
+		<br>
+		<br>
+		<p>Critically negative in his approach, Thanmay Krishna works backwards and always thinks as to why an idea won't work. A mechanical engineering graduate, he handles the administration of the company and takes care of the back end support. A foodie by passion, he is a one stop shop for food and beverages.</p>
+		<br>
+		<br>
+		<p>Ravi Teja</p>
+		<img src="images/raviteja.png" alt="Cinque Terre" height=300px width=300px style="padding-top:1%">
+		<br>
+		<br>
+		<p>A passionate hard worker, Ravi loves to follow a process and stick to the plan. Spent his childhood studying in different parts of the country, he brings a different perspective to the table. A people's person who likes to handle multiple responsibilities, Ravi can be a party pooper owing to his teetotalism habits.</p>
+	
+
+
+			
 		</section>
 		
 		
 		
 		
 		
-		<section class="row custom" id="storeLoc">
+		<section class="row" id="storeLoc">
 		<h3><b>Store Location</b></h3>
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 		</section>
@@ -132,9 +185,14 @@ session_start();
 	
 		
 		
-		<section class="row custom" id="careers">
+		<section class="row" id="careers">
 		<h3><b>Careers at KithabWala</b></h3>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			At Kithabwala you will have the opportunity to work with a group of highly talented individuals and learn the specifics in a product based start-up. We offer Competitive Compensation and a Performance linked Bonus. The icing on the cake is however a chance to be a part of the core team for long term benefits. If you want to be a part of our journey, reach out to us!
+			<br>
+			<br>
+            email: contact@kithabwala.com
+			<br>
+
 		</section>
 		
 		
@@ -142,32 +200,30 @@ session_start();
 	
   </div>
   
- <div class="row" style="background:black;color:white;text-align:center;padding:5%">
+ <div class="row" style="background:black;color:white;text-align:center;padding:3%">
   <div class="col-sm-4">
 		<h4><b>Company</b></h4>
-		<p>About Us</p>
-		<p>Team</p>
-		<p>Carrer at KithabWala</p>
+		<p><a href="aboutUs.html">About Us</a></p> 
+	    <p><a href="#">Team</a></p>
+		<p><a href="#">Carrer at KithabWala</a></p>
   </div>
   
   <div class="col-sm-4">
-  
-	<h4><b>Advertise</b></h4>
-		<p>Advertise with us</p>
-		<p>Store Locations</p>
-		
-		
+	    <h4><b>Advertise</b></h4>
+		<p><a href="#">Advertise with us</a></p>
+		<p><a href="#">Store Locations</a></p>		
   </div>
   
   <div class="col-sm-4">
-  
-  <h4><b>Reach out</b></h4>
-		<p>Contact Us</p>
-		
-		
+       <h4><b>Reach out</b></h4>
+	   <p><a href="contactUs.html">Contact Us</a></p>
   </div>
 </div>
+
 </div>
+
+
+
 
 
 
@@ -400,10 +456,10 @@ session_start();
       </div>
       <div class="modal-body">
         
-		<div class="col-sm-12">
+		
 			
-			
-			
+			<div class="row">
+			<div class="col-sm-12">
 			<div class="form-horizontal" role="form">
 			
 				<div class="form-group" >
@@ -450,7 +506,7 @@ session_start();
    
   
 			</div>
-			
+			</div>
 		</div>
       </div>
       
@@ -549,8 +605,12 @@ session_start();
 	<script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	
-	
-	
-</body>
+	 <script>
+	//$('#verificationModal').modal('toggle');
+ </script>
+ 
+ 
+ 
+</body
  
 </html>
