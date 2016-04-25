@@ -32,25 +32,29 @@ session_start();
 </style>
 
 
-
-  <nav class="navbar  navbar-fixed-top" style="background:black">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-
     <div class="navbar-header">
-		<img src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" style="padding-top:1%">
-      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+		<img style="align:left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" >
+		<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
+	  
+    
     </div>
-    <ul class="nav navbar-nav">
-	<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
-      <li><a class="header-color" href="aboutus.php">About Us</a></li> 
-	  <li><a class="header-color" href="products.php">Products</a></li>
-      <li><a class="header-color" href="advertise.php">Advertise</a></li>
-      <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
-	  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
-    </ul>
-	
-	<ul class="nav navbar-nav navbar-right">
-		<?php 
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+         <li><a class="header-color" href="aboutus.php">About Us</a></li> 
+		  <li><a class="header-color" href="products.php">Products</a></li>
+		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
+		  <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
+		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <?php 
 			if(!isset($_SESSION['emailid']))
 			{
 						echo '<li><a class="header-color"  href="#" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>'
@@ -68,11 +72,10 @@ session_start();
 					.'	</div></li>';
 				
 			?>
-      
-    </ul>
+      </ul>
+    </div>
   </div>
 </nav>
-
 
 </head>
 <body>
@@ -80,7 +83,7 @@ session_start();
 <div class="container-fluid">
   
   <div class="row" style="margin-top:5%">
-    
+    <div class="collapse navbar-collapse" >
 	<div class="col-sm-2" style="position:fixed">
 		<ul class="nav nav-pills nav-stacked">
 			<li><a class="page-scroll sidebar-color" href="#about">About Us</a></li>
@@ -90,9 +93,10 @@ session_start();
 			<li><a class="page-scroll sidebar-color" href="#careers">Careers</a></li>
 		</ul>
 	</div>
+	</div>
 	<div class="col-sm-10" style="margin-left:14%">
 	
-		<section class=" row custom" id="about">
+		<section class="row custom" id="about">
 			<h3><b>About Us</b></h3>
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 		</section>
@@ -165,6 +169,8 @@ session_start();
 </div>
 </div>
 
+
+
 <!-- Login Modal -->
 <div id="loginModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -175,8 +181,8 @@ session_start();
         <center><font color="orange" size="5px">Login</font></center>
       </div>
       <div class="modal-body">
-        
-		<div class="row">
+          <div class="col-md-12" >
+		
 			
 			<div class="form-horizontal" role="form">
 			
@@ -188,7 +194,11 @@ session_start();
   				</div>
 				
 				<div class="form-group" id="loginEmailDivision">
-    				<label class="control-label col-sm-3" for="loginemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
+					<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="loginemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
+						</div>
+					</div>
     				<div class="col-sm-7">
       					<input type="text" class="form-control" id="loginemailid" placeholder="Email address" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="" autofocus>
       					<span class="" id="loginEmailErrorSpan"></span>
@@ -197,7 +207,11 @@ session_start();
   				
   				
   				<div class="form-group" id="loginPasswordDivision">
-    				<label class="control-label col-sm-3" for="loginpassword"><span class = "glyphicon glyphicon-lock"></span></label>
+					<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="loginpassword"><span class = "glyphicon glyphicon-lock"></span></label>
+						</div>
+					</div>
     				<div class="col-sm-7"> 
       					<input type="password" class="form-control" id="loginpassword" placeholder="Password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="loginPasswordErrorSpan"></span>
@@ -246,19 +260,19 @@ session_start();
 
 
 
-
 <!-- registration Modal -->
 <div id="registrationModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
+	
       <div class="modal-header">
         <center><font color="orange" size="5px">Registration</font></center>
       </div>
       <div class="modal-body">
-        
-		<div class="row">
+        <div class="col-md-12" >
+		
 			
 			
 			
@@ -273,42 +287,66 @@ session_start();
   				</div>
 				
 				<div class="form-group" id="registrationFirstNameDivision">
-    				<label class="control-label col-sm-3" for="registrationfirstname"><span class = "glyphicon glyphicon-user"></span></label>
-    				<div class="col-sm-7">
-      					<input type="text" class="form-control" id="registrationfirstname" placeholder="Firstname" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
+					
+					<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label  col-sm-offset-12 " for="registrationfirstname"><span class = "glyphicon glyphicon-user"></span></label>
+						</div>
+					</div>
+					<div class="col-sm-7">
+      					<input type="text" class="form-control" id="registrationfirstname" placeholder="Enter Your Firstname" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="registrationFirstNameErrorSpan"></span>
     				</div>
   				</div>
 				
 				<div class="form-group" id="registrationLastNameDivision">
-    				<label class="control-label col-sm-3" for="registrationlastname"><span class = "glyphicon glyphicon-user"></span></label>
+					<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="registrationlastname"><span class = "glyphicon glyphicon-user"></span></label>
+						</div>
+					</div>
     				<div class="col-sm-7">
-      					<input type="text" class="form-control" id="registrationlastname" placeholder="Enter Lastname" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
+      					<input type="text" class="form-control" id="registrationlastname" placeholder="Enter Your Lastname" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="registrationLastNameErrorSpan"></span>
     				</div>
   				</div>
   				  				
   				
   				<div class="form-group" id="registrationEmailDivision">
-    				<label class="control-label col-sm-3" for="registrationemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
+				<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="registrationemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
+						</div>
+					</div>
+    				
     				<div class="col-sm-7">
-      					<input type="text" class="form-control" id="registrationemailid" placeholder="Email address" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
+      					<input type="text" class="form-control" id="registrationemailid" placeholder="Enter Your Email Address" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="registrationEmailErrorSpan"></span>
     				</div>
   				</div>
   				
   				
   				<div class="form-group" id="registrationPasswordDivision">
-    				<label class="control-label col-sm-3" for="registrationpassword"><span class = "glyphicon glyphicon-lock"></span></label>
+				<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="registrationpassword"><span class = "glyphicon glyphicon-lock"></span></label>
+						</div>
+					</div>
+    				
     				<div class="col-sm-7"> 
-      					<input type="password" class="form-control" id="registrationpassword" placeholder="Password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
+      					<input type="password" class="form-control" id="registrationpassword" placeholder="Enter Your Password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="registrationPasswordErrorSpan"></span>
     				</div>
     			</div>
     			
     			
     			<div class="form-group" id="registrationConfirmPasswordDivision">
-    				<label class="control-label col-sm-3" for="registrationconfirmpassword"><span class = "glyphicon glyphicon-lock"></span></label>
+				<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="registrationconfirmpassword"><span class = "glyphicon glyphicon-lock"></span></label>
+						</div>
+					</div>
+    				
     				<div class="col-sm-7"> 
       					<input type="password" class="form-control" id="registrationconfirmpassword" placeholder="Confirm password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="registrationConfirmPasswordErrorSpan"></span>
@@ -327,8 +365,8 @@ session_start();
   				
    
    
-  
 			</div>
+			
 			
 		</div>
       </div>
@@ -339,6 +377,7 @@ session_start();
 
   </div>
 </div>
+
 
 
 
@@ -361,7 +400,7 @@ session_start();
       </div>
       <div class="modal-body">
         
-		<div class="row">
+		<div class="col-sm-12">
 			
 			
 			
@@ -376,7 +415,12 @@ session_start();
 				
 			
 				<div class="form-group" id="verificationCodeDivision">
-    				<label class="control-label col-sm-3" for="verificationcode"><span class = "glyphicon glyphicon-lock"></span></label>
+					
+					<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="verificationcode"><span class = "glyphicon glyphicon-lock"></span></label>
+						</div>
+					</div>
     				<div class="col-sm-7">
       					<input type="text" class="form-control" id="verificationcode" placeholder="Enter Verification Code" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="registrationFirstNameErrorSpan"></span>
@@ -433,10 +477,10 @@ session_start();
       </div>
       <div class="modal-body">
         
-		<div class="row">
+		
 			
-			
-			
+			<div class="row">
+			<div class="col-md-12">
 			<div class="form-horizontal" role="form">
 			
 				<div class="form-group" >
@@ -448,7 +492,11 @@ session_start();
 				
 			
 				<div class="form-group" id="resetEmailDivision">
-    				<label class="control-label col-sm-3" for="resetemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
+					<div class="col-sm-3">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="resetemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
+						</div>
+					</div>
     				<div class="col-sm-7">
       					<input type="text" class="form-control" id="resetemailid" placeholder="Enter Email Address " data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="resetEmailErrorSpan"></span>
@@ -473,9 +521,10 @@ session_start();
    
   
 			</div>
-			
+			</div>
+			</div>
 		</div>
-      </div>
+      
       
     </div>
 
