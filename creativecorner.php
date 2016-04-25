@@ -64,7 +64,7 @@ session_start();
 					.'		<span class="caret"></span></a>'
 					.'		<ul class="dropdown-menu">'
 					.'		  <li><a href="dashboard.php">Dashboard</a></li>'
-					.'		  <li><a href="#">Account Settings</a></li>'
+					.'		  <li><a href="accountsettings.php">Account Settings</a></li>'
 					.'		  <li><a href="phpFiles/logout.php">LogOut</a></li>'
 					.'		</ul>'
 					.'	  </div>'

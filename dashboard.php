@@ -16,7 +16,11 @@ require_once 'phpFiles/isSessionSet.php';
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"> </script>
   <script type="text/javascript" src="customjs/dashboard.js"> </script>
- 
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
 	
   
   <style>
@@ -33,30 +37,36 @@ require_once 'phpFiles/isSessionSet.php';
 
 
 
-  <nav class="navbar  navbar-fixed-top" style="background:black">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-
     <div class="navbar-header">
-		<img src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" style="padding-top:1%">
-      
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" ></a>
+		<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
+	  
+    
     </div>
-    <ul class="nav navbar-nav">
-	<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
-      <li><a class="header-color" href="aboutus.php">About Us</a></li> 
-	  <li><a class="header-color" href="products.php">Products</a></li>
-      <li><a class="header-color" href="advertise.php">Advertise</a></li>
-      <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
-	  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
-    </ul>
-	<ul class="nav navbar-nav navbar-right">
-		<?php 
-			if($_SESSION['emailid']=="")
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+         <li><a class="header-color" href="aboutus.php">About Us</a></li> 
+		  <li><a class="header-color" href="products.php">Products</a></li>
+		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
+		  <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
+		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <?php 
+			if(!isset($_SESSION['emailid']))
 			{
-						echo '<li><a class="header-color"  href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>'
+						echo '<li><a class="header-color"  href="#" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>'
 								.'<li><a class="header-color" href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>';
 			}
 			else
-				echo '<li><a  style="cursor:pointer" data-toggle="dropdown">Welcome '.$_SESSION['firstname'].' '.$_SESSION['lastname']
+				echo '<li ><a  style="cursor:pointer" data-toggle="dropdown">Welcome '.$_SESSION['firstname'].' '.$_SESSION['lastname']
 					.'		<span class="caret"></span></a>'
 					.'		<ul class="dropdown-menu">'
 					.'		  <li><a href="dashboard.php">Dashboard</a></li>'
@@ -65,13 +75,12 @@ require_once 'phpFiles/isSessionSet.php';
 					.'		</ul>'
 					.'	  </div>'
 					.'	</div></li>';
-				//echo '<font color="white">Welcome '.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</font>';
+				
 			?>
-      
-    </ul>
+      </ul>
+    </div>
   </div>
 </nav>
-
 
 </head>
 <body>
@@ -84,12 +93,12 @@ require_once 'phpFiles/isSessionSet.php';
   js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=493329037393007";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="container-fluid">
+<div class="container-fluid" style="margin:1%">
   
   <div class="row" style="margin-top:5%;margin-bottom:5%">
     
-	<div class="col-sm-2" style="text-align:center">
-		<img src="profilePics/<?php echo $_SESSION['profileimage'] ?>" class="img-rounded" alt="Cinque Terre" width="150" height="200" >
+		<div class="col-sm-2" style="text-align:center">
+			 <img src="profilePics/<?php echo $_SESSION['profileimage'] ?>" class="img-rounded" alt="Cinque Terre" width="150" height="200" >
 		<p><b><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'] ?></b></p>
 		<button type="button" class="btn btn-success btn-block" onclick="getApprovedPosts(0)">Home</button>
 		<?php
@@ -106,6 +115,9 @@ require_once 'phpFiles/isSessionSet.php';
 					echo '<button type="button" class="btn btn-success btn-block" onclick="getPendingPosts(0)">Pending Ideas</button>';
 			}
 		?>
+
+
+		
 		
 	</div>
 	<div class="col-sm-10" >
@@ -127,33 +139,27 @@ require_once 'phpFiles/isSessionSet.php';
 	</div>
 	
   </div>
-  
- <div class="row " style="background:black;color:white;text-align:center;padding:5%">
+  </div>
+ <div class="row" style="background:black;color:white;text-align:center;padding:3%">
   <div class="col-sm-4">
 		<h4><b>Company</b></h4>
-		<p>About Us</p>
-		<p>Team</p>
-		<p>Carrer at KithabWala</p>
+		<p><a href="aboutUs.html">About Us</a></p> 
+	    <p><a href="#">Team</a></p>
+		<p><a href="#">Carrer at KithabWala</a></p>
   </div>
   
   <div class="col-sm-4">
-  
-	<h4><b>Advertise</b></h4>
-		<p>Advertise with us</p>
-		<p>Store Locations</p>
-		
-		
+	    <h4><b>Advertise</b></h4>
+		<p><a href="#">Advertise with us</a></p>
+		<p><a href="#">Store Locations</a></p>		
   </div>
   
   <div class="col-sm-4">
-  
-  <h4><b>Reach out</b></h4>
-		<p>Contact Us</p>
-		
-		
+       <h4><b>Reach out</b></h4>
+	   <p><a href="contactUs.html">Contact Us</a></p>
   </div>
 </div>
-</div>
+
 
 
 

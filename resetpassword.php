@@ -18,8 +18,35 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   
+   <style>
   
-  <style>
+  section{
+	  text-align: justify;
+    text-justify: inter-word;
+	margin-right:5%;
+	font-style: italic;
+	font-size:17px;
+  }
+.custom
+{
+	padding-top:4%;
+}
+
+.header-color
+{
+	color:white;
+}
+
+.sidebar-color
+{
+	color:black;
+}
+
+
+text-font { font-style: italic;
+   
+}
+
  
   .margin-all
   {
@@ -45,34 +72,43 @@
     background: #000000;
 	}
   </style>
-  <script>
+  
+  
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" ></a>
+		<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
+	  
+    
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+         <li><a class="header-color" href="aboutus.php">About Us</a></li> 
+		  <li><a class="header-color" href="products.php">Products</a></li>
+		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
+		  <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
+		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
 
-</script>
+
 </head>
 <body>
 		
 		
 		
-		<div class="container-fluid">
+		<div class="container-fluid" style="margin-top:10%">
 	
 	
-		<div class="row well bg-success">
-			<div class="col-sm-4">
-				
-			</div>
-			<div class="col-sm-4 text-center">
-				<font color="white" size="4px"><b><em>GOODCREED</em> </b></font><br>
-				<font color="white" size="4px">GATE Online Test Series <br>
-					(Computer Science And Engineering)</font>
-			</div>
-			<div class="col-sm-3 margin-all">
-						<div class = "btn-group" data-toggle = "buttons">
-   							<button class = "btn btn-primary" onclick="window.open('home.html','_self')"><span class="glyphicon glyphicon-home"> Home</span></button>
-      						<button class="btn btn-primary" onclick="window.open('aboutus1.html','_self')"><span class="glyphicon glyphicon-list-alt"> AboutUs</span></button>	
-						</div>
-			
-			</div>
-		</div>
 		
 		
 		
@@ -112,7 +148,11 @@
   				
   				
 				<div class="form-group" id="resetPasswordDivision">
-    				<label class="control-label col-sm-4" for="resetPassword"><span class = "glyphicon glyphicon-lock"></span></label>
+					<div class="col-sm-4">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="resetPassword"><span class = "glyphicon glyphicon-lock"></span></label>
+						</div>
+					</div>
     				<div class="col-sm-7"> 
       					<input type="password" class="form-control" id="resetPassword" placeholder="Password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="resetPasswordErrorSpan"></span>
@@ -121,8 +161,13 @@
     			
     			<input type="hidden" value="<?php echo $password?>" id="p">
     			
+				
     			<div class="form-group" id="resetConfirmPasswordDivision">
-    				<label class="control-label col-sm-4" for="resetConfirmPassword"><span class = "glyphicon glyphicon-lock"></span></label>
+					<div class="col-sm-4">
+						<div class="collapse navbar-collapse" >
+							<label class="control-label col-sm-offset-12" for="resetConfirmPassword"><span class = "glyphicon glyphicon-lock"></span></label>
+						</div>
+					</div>
     				<div class="col-sm-7"> 
       					<input type="password" class="form-control" id="resetConfirmPassword" placeholder="Confirm password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
       					<span class="" id="resetConfirmPasswordErrorSpan"></span>
@@ -132,8 +177,8 @@
     
     
   				<div class="form-group"> 
-    				<div class="control-label col-sm-offset-1 col-sm-7">
-      					<button type="submit" class="btn btn-success" onclick="return checkPasswordParameters()">Submit</button>
+    				<div class="control-label col-sm-offset-4 col-sm-7">
+      					<button type="submit" class="btn btn-success btn-block" onclick="return checkPasswordParameters()">Submit</button>
     				</div>
   				</div>
   				
