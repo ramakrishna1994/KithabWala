@@ -16,7 +16,7 @@
 <div class="flipbook-viewport">
 	<div class="container">
 		<div class="flipbook">
-			<div class="hard p1" style="background-image:url(images/logo.png);background-size:cover">
+			<div class="hard p1" style="background-image:url(images/coverphoto.png);background-size:cover">
 				<center><button onclick="turnPages()" class="button">Click Me to know More !!</button></center>
 			</div>
 			
