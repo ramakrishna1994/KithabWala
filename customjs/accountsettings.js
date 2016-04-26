@@ -1,4 +1,4 @@
-
+$(":file").filestyle();
 
 $(document).ready(function(){
   
