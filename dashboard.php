@@ -129,25 +129,26 @@ background-image: url("images/bg.jpg");
 	  
 <div class="container" >
   
-  <div class="row" style="margin-top:5%;margin-bottom:5%">
+  <div class="row" style="margin-top:2%;margin-bottom:5%">
     
-		<div class="collapse navbar-collapse col-sm-2" >
+		<div class="collapse navbar-collapse col-sm-2" style="margin-top:5%">
 		<div  style="text-align:center">
-			 <img src="profilePics/<?php echo $_SESSION['profileimage'] ?>" class="img-rounded" alt="Cinque Terre" width="150" height="200" >
-		<p><b><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'] ?></b></p>
-		<button type="button" class="btn btn-success btn-block" onclick="getApprovedPosts(0)">Home</button>
+			 <img src="profilePics/<?php echo $_SESSION['profileimage'] ?>" class="img-rounded" alt="Cinque Terre" width="100" height="100" >
+		<p style="color:purple;margin-top:10%"><b><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'] ?></b></p>
+		<button type="button" class="btn btn-primary btn-block" onclick="getApprovedPosts(0)">Home</button>
 		<?php
 			if($_SESSION['isadmin'] == 0)
 			{
-					echo '<button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Submit an Idea</button>';
+					echo '<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Submit an Idea</button>'
+						.'<button type="button" class="btn btn-primary btn-block" onclick="getUserPosts(0)">Your Ideas</button>';
 			}
 		?>
 		
-		<button type="button" class="btn btn-success btn-block" onclick="getUserPosts(0)">Your Ideas</button>
+		
 		<?php
 			if($_SESSION['isadmin'] == 1)
 			{
-					echo '<button type="button" class="btn btn-success btn-block" onclick="getPendingPosts(0)">Pending Ideas</button>';
+					echo '<button type="button" class="btn btn-primary btn-block" onclick="getPendingPosts(0)">Pending Ideas</button>';
 			}
 		?>
 
@@ -155,13 +156,13 @@ background-image: url("images/bg.jpg");
 	</div>	
 		
 	</div>
-	<div class="col-sm-10" >
+	<div class="col-sm-10" style="padding:5%">
 		
 		<div class="row" id="posts">
 			<!----------------------will be filled dynamically---------->
 		</div>
 		<div class="row">
-			<div class="panel panel-default" onclick="getPendingPosts(0)" id="loadmore" style="cursor:pointer">
+			<div class="panel panel-primary" onclick="getPendingPosts(0)" id="loadmore" style="cursor:pointer">
 				<div class="panel-heading" style="text-align:center" id="loadmorecontent">
 					Load More
 				</div>
@@ -175,7 +176,9 @@ background-image: url("images/bg.jpg");
 	
   </div>
   </div>
- <div class="row" style="background:black;color:white;text-align:center;padding:3%">
+  
+ <footer class="footer" style="background:black;color:white;text-align:center;padding:3%">
+ <div class="container">
   <div class="col-sm-4">
 		<h4><b>Company</b></h4>
 		<p><a href="aboutUs.html">About Us</a></p> 
@@ -193,7 +196,8 @@ background-image: url("images/bg.jpg");
        <h4><b>Reach out</b></h4>
 	   <p><a href="contactUs.html">Contact Us</a></p>
   </div>
-</div>
+  </div>
+</footer>
 
 
 

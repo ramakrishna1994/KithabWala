@@ -149,8 +149,8 @@ session_start();
   						</div>
   						
   						<div class="form-group"> 
-    						<div class="control-label col-sm-offset-1 col-sm-8">
-      						<button type="submit" class="btn btn-success" onclick="changePassword()">Submit</button>
+    						<div class="control-label col-sm-offset-5 col-sm-7">
+      						<button type="submit" class="btn btn-success btn-block" onclick="changePassword()">Submit</button>
     					</div>
   					</div>
   						
@@ -182,23 +182,23 @@ session_start();
   						
   						<div class="form-group" >
     						
-    						<div class="col-sm-7 col-sm-offset-4 text-center" id="profilePicture">
+    						<div class="col-sm-7 col-sm-offset-5 text-center" id="profilePicture">
     							<!-- ---------image Division -->
 							</div>
   						</div>
   						
   						<div class="form-group" >
-    						<label class="control-label col-sm-5"></label>
-    						<div class="col-sm-1 text-center">
-    							<input type="file" id="image">
+    						
+    						<div class="col-sm-7 col-sm-offset-5 text-center">
+    							<input type="file" class="filestyle" id="image">
 							</div>
   						</div>
   						
   						
   						<div class="form-group" >
-    						<label class="control-label col-sm-6"></label>
-    						<div class="col-sm-4 text-center" >
-    							<button type="submit" class="btn btn-danger" onclick="updateProfilePic()">Submit</button>
+    						
+    						<div class="col-sm-5 col-sm-offset-6 text-center" >
+    							<button type="submit" class="btn btn-danger btn-block" onclick="updateProfilePic()">Submit</button>
 							</div>
   						</div>
   				</div>

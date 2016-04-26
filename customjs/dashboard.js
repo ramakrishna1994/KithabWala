@@ -135,12 +135,17 @@ function getApprovedPosts(resultscount)
 				
 						}
 							
+						if(response[response.length-1].nomoreresults == 1 && resultscount == 0)
+						{
+								$("#loadmore").show();
+								document.getElementById("loadmore").setAttribute("onclick","");
+								$('#loadmorecontent').html('No Posts to Display');
+						}
 						
-						
-						if(response[response.length-1].nomoreresults == 0)
+						else if(response[response.length-1].nomoreresults == 0)
 						{
 							$("#loadmore").show();
-							document.getElementById("loadmore").setAttribute("onclick","getApprovedPosts("+response[response.length-1].resultscount+")")
+							document.getElementById("loadmore").setAttribute("onclick","getApprovedPosts("+response[response.length-1].resultscount+")");
 							$('#loadmorecontent').html('Load More');
 						}
 						else{

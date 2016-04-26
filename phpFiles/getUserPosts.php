@@ -8,7 +8,7 @@ require_once 'connection.php';
 
 $resultscount = $_POST['resultscount'] ; 
 //$selectquery="select * from approvedposts order by postid desc limit 10 offset ".$resultscount." ;";
-$selectquery='select * from (SELECT * FROM approvedposts UNION SELECT * from pendingposts) as name ORDER by name.postid desc limit 10 offset '.$resultscount.';';
+$selectquery='select * from (SELECT * FROM approvedposts UNION SELECT * from pendingposts) as name where userid = '.$_SESSION['userid'].' ORDER by name.postid desc limit 10 offset '.$resultscount.';';
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 
 
@@ -42,7 +42,7 @@ while($row = mysqli_fetch_array($result)){
 
 
 $resultscount = $resultscount + 10 ; 
-$selectquery='select * from (SELECT * FROM approvedposts UNION SELECT * from pendingposts) as name ORDER by name.postid desc limit 10 offset '.$resultscount.';';
+$selectquery='select * from (SELECT * FROM approvedposts UNION SELECT * from pendingposts) as name userid = '.$_SESSION['userid'].' ORDER by name.postid desc limit 10 offset '.$resultscount.';';
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 if(mysqli_num_rows($result)<=0)
 	$json.='{"nomoreresults":1}]';
