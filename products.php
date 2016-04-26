@@ -119,7 +119,7 @@ session_start();
 		</ul>
 	</div>
 	</div>
-	<div class="col-sm-10.5" style="margin-left:14%">
+	<div class="col-sm-10.5" style="margin-left:12%;margin-right:10%">
 
 
 		 <div id="myCarousel" class="carousel slide" data-ride="carousel">
