@@ -30,13 +30,13 @@ session_start();
 	  text-align: justify;
     text-justify: inter-word;
 	
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: sans-serif;
 	font-size:17px;
 	
   }
 .custom
 {
-	padding-top:4%;
+	padding-top:6%;
 }
 
 .header-color
@@ -58,28 +58,28 @@ body {
 
 
 
-	<nav class="navbar  navbar-default navbar-fixed-top" style="background-image:url('images/white.png')">
+	<nav class="navbar navbar-inverse navbar-fixed-top"  id="rk">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <div class="navbar-header" style="height:70px;">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top:6%">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" ></a>
-		<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
+		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="70" height="70" ></a>
+		<a class="navbar-brand" href="#" style="margin-top:5%"> <font size="5px" color="orange">&nbsp; Kithabwala</font></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
-      <ul class="nav navbar-nav">
-		  <li><a class="header-color" href="aboutus.php">About Us</a></li> 
-		  <li><a class="header-color" href="products.php">Products</a></li>
-		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
-		  <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
-		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top:1%" >
+      <ul class="nav navbar-nav" >
+		  <li><a class="header-color"  href="aboutus.php">About Us</a></li> 
+		  <li><a class="header-color"  href="products.php">Products</a></li>
+		  <li><a class="header-color"  href="advertise.php">Advertise</a></li>
+		  <li><a class="header-color"  href="creativecorner.php">Creative Corner</a></li> 
+		  <li><a class="header-color"  href="contactus.php">Contact Us</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right" >
@@ -121,7 +121,7 @@ body {
   <div class="row" >
     
 	<div class="collapse navbar-collapse" >
-	<div class="col-sm-1.5" style="position:fixed;margin-top:5%">
+	<div class="col-sm-1.5" style="position:fixed;margin-top:7%">
 		<ul class="nav nav-pills nav-stacked">
 			<li><a class="page-scroll sidebar-color" href="#about">About Us</a></li>
 			<li><a class="page-scroll sidebar-color" href="#mission">Mission/Vision</a></li>
@@ -144,7 +144,7 @@ body {
 		
 	<!----------------------------- For Web Version--------------------------->
 		
-		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
+		<div class="row" style="background color:black;border:0.5px solid black;margin-top:3%"></div>
 		
 		<section class="row custom " id="mission">
 		
@@ -171,7 +171,7 @@ body {
 		<div class="col-sm-4">
 			<img src="images/abhilash.png" alt="Abhilash Gali" height=250px width=250px style="padding-top:1%">
 		</div>
-		<div class="col-sm-6">  
+		<div class="col-sm-8">  
 			<h3><i>Abhilash Gali - Founder </i></h3>
 			<p>Found his stepping stone at CBIT by launching customized college merchandise, envisioned a market demand for quality products to found a corporate gifting, custom merchandise company, Merakii. In one such project, customized notebooks created a buzz and sold out before the clock hands touched other. This inspired him to launch a notebook brand with a revolutionized book.  After multiple projects, achieved entrepreneurial wisdom and earned.</p>
 		</div>
@@ -179,12 +179,12 @@ body {
 		<br>
 		<br>
 		<div class="row " style="border:none">
-		<div class="col-sm-6">  
+		<div class="col-sm-8">  
 			<h3><i>Sahil Kaul</i></h3>
 			<p>Sahil is from a Deloitte analytics background, dabbled in start-ups, passionate writer, avid trekker and is someone who loves to improve efficiency in every process.
             Loves to ideate and improve an idea. Good conversationalist who would one day want Shawarma to be the currency of this world.</p>
 		</div>
-		<div class="col-sm-4" >
+		<div class="col-sm-4" style="padding-left:10%">
 			<img src="images/sahilkaul.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
 	    </div>
@@ -194,7 +194,7 @@ body {
 		<div class="col-sm-4">
 			<img src="images/himanshu.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
-		<div class="col-sm-6">  
+		<div class="col-sm-8">  
 			<h3><i>Himanshu Joshi</i> </h3>
 			<p>Himanshu is an incisive professional with a passion towards working in a fast growing environment. An engineer by education and a consultant by heart, Himanshu is currently working towards developing the business and formulating the strategies at Kithabwala. Himanshu carries an experience of working for some of the top Fortune 100 Companies and is working at a Big 4 Professional Services Firm in parallel.</p>
 		</div>
@@ -202,12 +202,12 @@ body {
 		<br>
 		<br>
 		<div class="row" style="border:none">
-		<div class="col-sm-6">  
+		<div class="col-sm-8">  
 			<h3><i>Thanmay Krishna</i> </h3>
 			<p>Critically negative in his approach, Thanmay Krishna works backwards and always thinks as to why an idea won't work. A mechanical engineering graduate, he handles the administration of the company and takes care of the back end support. A foodie by passion, he is a one stop shop for food and beverages.</p>
 		</div>
-		<div class="col-sm-4">
-			<img src="images/thanmay.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
+		<div class="col-sm-4" style="padding-left:10%">
+			<img  src="images/thanmay.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
 	    </div>
 		<br>
@@ -216,7 +216,7 @@ body {
 		<div class="col-sm-4">
 			<img src="images/raviteja.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
-		<div class="col-sm-6">  
+		<div class="col-sm-8">  
 			<h3><i>Ravi Teja</i></h3>
 			<p>A passionate hard worker, Ravi loves to follow a process and stick to the plan. Spent his childhood studying in different parts of the country, he brings a different perspective to the table. A people's person who likes to handle multiple responsibilities, Ravi can be a party pooper owing to his teetotalism habits.</p>
 		</div>
@@ -261,12 +261,38 @@ body {
 		
 		
 		
-		<section class="row custom" id="storeLoc">
+		<section class="row custom" id="storeLoc" >
 		<h3><b><font color="black">Store Location</font></b></h3>
-			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
+			</script>
+			<div class="col-sm-10 col-sm-offset-1" style="margin-top:3%">
+				<div id='gmap_canvas' style='height:250px;width:100%;'>
+				</div>
+				<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+			</div>
+			<script type='text/javascript'>
+				function init_map()
+					{
+						var myOptions = 
+							{
+								zoom:10,
+								center:new google.maps.LatLng(17.436693740943927,78.44132646871091),
+								mapTypeId: google.maps.MapTypeId.ROADMAP
+							};
+						map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+						marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(17.436693740943927,78.44132646871091)});
+						infowindow = new google.maps.InfoWindow
+							({
+								content:'<strong>Kithabwala Store Location</strong><br>India<br>'
+							});
+						google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+						infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+			</script>
 		</section>
+		
 		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
-		<section class="row custom" id="careers">
+		
+		<section class="row custom" id="careers" style=";margin-bottom:2%">
 		<h3><b><font color="black">Careers at KithabWala</font></b></h3>
 			At Kithabwala you will have the opportunity to work with a group of highly talented individuals and learn the specifics in a product based start-up. We offer Competitive Compensation and a Performance linked Bonus. The icing on the cake is however a chance to be a part of the core team for long term benefits. If you want to be a part of our journey, reach out to us!
 			<br>
@@ -280,26 +306,59 @@ body {
 	
   </div>
   
- <div class="row" style="background:black;color:white;text-align:center;padding:3%">
+ <div class="row" style="background:white;color:orange;text-align:center;padding:3%">
+ <div class="row">
   <div class="col-sm-4">
 		<h4><b>Company</b></h4>
+		<div class="row" style="border-top:1px solid black;margin:3%"></div>
 		<p><a href="aboutUs.html">About Us</a></p> 
-	    <p><a href="#">Team</a></p>
+		<p><a href="#">Team</a></p>
 		<p><a href="#">Carrer at KithabWala</a></p>
+		
   </div>
   
   <div class="col-sm-4">
 	    <h4><b>Advertise</b></h4>
+		<div class="row" style="border-top:1px solid black;margin:3%"></div>
 		<p><a href="#">Advertise with us</a></p>
 		<p><a href="#">Store Locations</a></p>		
   </div>
   
   <div class="col-sm-4">
        <h4><b>Reach out</b></h4>
+	   	<div class="row" style="border-top:1px solid black;margin:3%"></div>
 	   <p><a href="contactUs.html">Contact Us</a></p>
   </div>
+  
+</div>
+<div class="row " style="margin-top:2%">
+<div class="col-sm-4 col-sm-offset-4">
+	<div class="col-sm-2">
+		
+	</div>
+	<div class="col-sm-2">
+		<a href="https://facebook.com"><img src="images/facebook.png"></a>
+	</div>
+	<div class="col-sm-2">
+		<a href="https://twitter.com"><img src="images/twitter_alt.png"></a>
+	</div>
+	<div class="col-sm-2">
+		<a title="number"><img src="images/whatsapp.png"></a>
+	</div>
+	<div class="col-sm-2">
+		<a href=""><img src="images/linkedin.png"></a>
+	</div>
+	
+</div>
 </div>
 
+
+<div class="row " style="margin-top:3%">
+<div class="col-sm-4 col-sm-offset-4" style="text-align:center">
+	&copy; 2016 All Rights reserved to Kithabwala.com
+</div>
+</div>
+</div>
 </div>
 
 
@@ -686,8 +745,12 @@ body {
 	<script src="customjs/forgotPassword.js"></script>
 	
 	 <script>
-	//$('#verificationModal').modal('toggle');
- </script>
+		
+		if(screen.width < 767)
+			document.getElementById('rk').className = 'navbar navbar-inverse navbar-static-top';
+		else
+			document.getElementById('rk').className = 'navbar navbar-inverse navbar-fixed-top';
+	</script>
  
  
  
