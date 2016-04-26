@@ -30,7 +30,7 @@ session_start();
 	  text-align: justify;
     text-justify: inter-word;
 	
-	font-style: italic;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size:17px;
 	
   }
@@ -41,7 +41,7 @@ session_start();
 
 .header-color
 {
-	color:white;
+	color:yellow;
 }
 
 .sidebar-color
@@ -53,14 +53,12 @@ body {
     background-color: #cccccc;
 }
 
-text-font { font-style: italic;
-   
-}
+
 </style>
 
 
 
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar  navbar-default navbar-fixed-top" style="background-image:url('images/white.png')">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -75,7 +73,7 @@ text-font { font-style: italic;
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color:black;">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
       <ul class="nav navbar-nav">
 		  <li><a class="header-color" href="aboutus.php">About Us</a></li> 
 		  <li><a class="header-color" href="products.php">Products</a></li>
@@ -84,7 +82,7 @@ text-font { font-style: italic;
 		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
       </ul>
       
-      <ul class="nav navbar-nav navbar-right" style="background-color:black">
+      <ul class="nav navbar-nav navbar-right" >
         <?php 
 			if(!isset($_SESSION['emailid']))
 			{
@@ -136,9 +134,9 @@ text-font { font-style: italic;
 	<div class="col-sm-10 " style="margin-left:12%;margin-right:3%">
 	
 		<section  class=" row custom text-font" id="about">
-			<h3><b><font color="purple">About Us</font></b></h3>
+			<h3><b><font >About Us</font></b></h3>
 			<br>
-			Kithabwala, from the house of Samast Enterprises India Pvt Ltd, offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.<br><br>
+			<i>Kithabwala</i>, from the house of <i>Samast Enterprises India Pvt Ltd</i>, offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.<br><br>
             Kithabwala gives a transformational makeover to the rustic notebook, making it MORE than just a place to write! <br><br>
             Everybody wants MORE! MORE out of everything! Kithabwala doesn't sell books, we sell something more. 
 		</section>
@@ -146,23 +144,27 @@ text-font { font-style: italic;
 		
 	<!----------------------------- For Web Version--------------------------->
 		
+		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
 		
-		<section class="row custom section-mobile" id="mission">
+		<section class="row custom " id="mission">
 		
-		<h3><b><font color="purple">Mission/Vision</font></b></h3>
+		<h3><b><font color="black">Mission/Vision</font></b></h3>
 		<br>
 			<b>VISION</b>
 			<br>
-            At Kithabwala, our vision is to create a better experience around a notebook while ensuring accessibiility to all. 
+            <i>At Kithabwala, our vision is to create a better experience around a notebook while ensuring accessibiility to all. </i>
 			<br>
 			<br>
             <b>MISSION</b>
 			<br>
-            A notebook must not just be a scribbling pad. It is an essential part of a student's life. Kithabwala shall work closely to bring a notebook close to the user.
+            <i>A notebook must not just be a scribbling pad. It is an essential part of a student's life. Kithabwala shall work closely to bring a notebook close to the user.</i>
 			<br>
 		</section>
 
-		<section class="row" id="team">
+		
+		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
+			
+		<section class="row custom" id="team">
 		<h3><b>Team KithabWala</b></h3>
 		<br>
 		<div class="row" style="border:1px">
@@ -170,15 +172,15 @@ text-font { font-style: italic;
 			<img src="images/abhilash.png" alt="Abhilash Gali" height=250px width=250px style="padding-top:1%">
 		</div>
 		<div class="col-sm-6">  
-			<h3>Abhilash Gali - Founder </h3>
+			<h3><i>Abhilash Gali - Founder </i></h3>
 			<p>Found his stepping stone at CBIT by launching customized college merchandise, envisioned a market demand for quality products to found a corporate gifting, custom merchandise company, Merakii. In one such project, customized notebooks created a buzz and sold out before the clock hands touched other. This inspired him to launch a notebook brand with a revolutionized book.  After multiple projects, achieved entrepreneurial wisdom and earned.</p>
 		</div>
 	    </div>
 		<br>
 		<br>
-		<div class="row" style="border:none">
+		<div class="row " style="border:none">
 		<div class="col-sm-6">  
-			<h3>Sahil Kaul</h3>
+			<h3><i>Sahil Kaul</i></h3>
 			<p>Sahil is from a Deloitte analytics background, dabbled in start-ups, passionate writer, avid trekker and is someone who loves to improve efficiency in every process.
             Loves to ideate and improve an idea. Good conversationalist who would one day want Shawarma to be the currency of this world.</p>
 		</div>
@@ -188,12 +190,12 @@ text-font { font-style: italic;
 	    </div>
 		<br>
 		<br>
-		<div class="row" style="border:1px">
+		<div class="row " style="border:1px">
 		<div class="col-sm-4">
 			<img src="images/himanshu.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
 		<div class="col-sm-6">  
-			<h3>Himanshu Joshi </h3>
+			<h3><i>Himanshu Joshi</i> </h3>
 			<p>Himanshu is an incisive professional with a passion towards working in a fast growing environment. An engineer by education and a consultant by heart, Himanshu is currently working towards developing the business and formulating the strategies at Kithabwala. Himanshu carries an experience of working for some of the top Fortune 100 Companies and is working at a Big 4 Professional Services Firm in parallel.</p>
 		</div>
 	    </div>
@@ -201,7 +203,7 @@ text-font { font-style: italic;
 		<br>
 		<div class="row" style="border:none">
 		<div class="col-sm-6">  
-			<h3>Thanmay Krishna </h3>
+			<h3><i>Thanmay Krishna</i> </h3>
 			<p>Critically negative in his approach, Thanmay Krishna works backwards and always thinks as to why an idea won't work. A mechanical engineering graduate, he handles the administration of the company and takes care of the back end support. A foodie by passion, he is a one stop shop for food and beverages.</p>
 		</div>
 		<div class="col-sm-4">
@@ -210,12 +212,12 @@ text-font { font-style: italic;
 	    </div>
 		<br>
 		<br>
-		<div class="row" style="border:1px">
+		<div class="row " style="border:1px">
 		<div class="col-sm-4">
 			<img src="images/raviteja.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
 		<div class="col-sm-6">  
-			<h3>Ravi Teja</h3>
+			<h3><i>Ravi Teja</i></h3>
 			<p>A passionate hard worker, Ravi loves to follow a process and stick to the plan. Spent his childhood studying in different parts of the country, he brings a different perspective to the table. A people's person who likes to handle multiple responsibilities, Ravi can be a party pooper owing to his teetotalism habits.</p>
 		</div>
 	    </div>
@@ -243,6 +245,7 @@ text-font { font-style: italic;
 		
 		
 		
+		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
 		
 		
 		
@@ -258,14 +261,13 @@ text-font { font-style: italic;
 		
 		
 		
-		
-		<section class="row" id="storeLoc">
-		<h3><b><font color="purple">Store Location</font></b></h3>
+		<section class="row custom" id="storeLoc">
+		<h3><b><font color="black">Store Location</font></b></h3>
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 		</section>
-		
-		<section class="row" id="careers">
-		<h3><b><font color="purple">Careers at KithabWala</font></b></h3>
+		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
+		<section class="row custom" id="careers">
+		<h3><b><font color="black">Careers at KithabWala</font></b></h3>
 			At Kithabwala you will have the opportunity to work with a group of highly talented individuals and learn the specifics in a product based start-up. We offer Competitive Compensation and a Performance linked Bonus. The icing on the cake is however a chance to be a part of the core team for long term benefits. If you want to be a part of our journey, reach out to us!
 			<br>
 			<br>

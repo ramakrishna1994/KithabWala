@@ -196,9 +196,14 @@ function getUserPosts(resultscount)
 				
 						}
 							
+						if(response[response.length-1].nomoreresults == 1 && resultscount == 0)
+						{
+								$("#loadmore").show();
+								document.getElementById("loadmore").setAttribute("onclick","");
+								$('#loadmorecontent').html('No Posts to Display');
+						}
 						
-						
-						if(response[response.length-1].nomoreresults == 0)
+						else if(response[response.length-1].nomoreresults == 0)
 						{
 							$("#loadmore").show();
 							document.getElementById("loadmore").setAttribute("onclick","getUserPosts("+response[response.length-1].resultscount+")")
@@ -255,7 +260,14 @@ function getPendingPosts(resultscount)
 				
 						}
 						
-						if(response[response.length-1].nomoreresults == 0)
+						if(response[response.length-1].nomoreresults == 1 && resultscount == 0)
+						{
+								$("#loadmore").show();
+								document.getElementById("loadmore").setAttribute("onclick","");
+								$('#loadmorecontent').html('No Posts to Display');
+						}
+						
+						else if(response[response.length-1].nomoreresults == 0)
 						{
 							$("#loadmore").show();
 							document.getElementById("loadmore").setAttribute("onclick","getPendingPosts("+response[response.length-1].resultscount+")")
