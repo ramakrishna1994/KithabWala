@@ -72,7 +72,8 @@ if(isset($_FILES['file']))
 else
 
 {
-	
+	$insertQuery = "insert into pendingposts(userid,description,filename) values (".$_SESSION['userid'].",'".$description."','dummy')";		
+	mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 	echo '{"error":"'.$error.'"}';	
 }
 	

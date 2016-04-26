@@ -22,7 +22,7 @@ if($_SESSION['code'] == $verificationcode	)
 			$resetpasswordhash.=$random;
 		}
 		//echo $resetpasswordhash;
-		$hashed_password = crypt($password); // let the salt be automatically generated
+		$hashed_password = crypt($password,'!@#$%^'); // let the salt be automatically generated
 		//echo $hashed_password;
 		$insertQuery='insert into users(firstname,lastname,emailid,password,profileimage,isadmin,resetpasswordhash) values ('
 					.'"'.$firstname.'",'

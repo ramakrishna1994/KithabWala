@@ -10,9 +10,22 @@ session_start();
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   
-  
+	
   <style>
-  
+  @media (max-width: 767px) /* @grid-float-breakpoint -1 */
+{
+    .navbar-fixed-top
+    {
+    position: relative;
+    top: auto;
+    }
+	
+	.section-mobile{
+		display:none;
+	}
+}
+
+
   section{
 	  text-align: justify;
     text-justify: inter-word;
@@ -47,28 +60,31 @@ text-font { font-style: italic;
 
 
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
+        <span class="icon-bar"></span>
       </button>
-		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Kithabwala Logo" width="50" height="50" ></a>
+		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" ></a>
 		<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
-	  
-    
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color:black;">
       <ul class="nav navbar-nav">
-         <li><a class="header-color" href="aboutus.php">About Us</a></li> 
+		  <li><a class="header-color" href="aboutus.php">About Us</a></li> 
 		  <li><a class="header-color" href="products.php">Products</a></li>
 		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
 		  <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
 		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      
+      <ul class="nav navbar-nav navbar-right" style="background-color:black">
         <?php 
 			if(!isset($_SESSION['emailid']))
 			{
@@ -76,20 +92,26 @@ text-font { font-style: italic;
 								.'<li><a class="header-color" href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>';
 			}
 			else
-				echo '<li ><a  style="cursor:pointer" data-toggle="dropdown">Welcome '.$_SESSION['firstname'].' '.$_SESSION['lastname']
-					.'		<span class="caret"></span></a>'
-					.'		<ul class="dropdown-menu">'
-					.'		  <li><a href="dashboard.php">Dashboard</a></li>'
-					.'		  <li><a href="accountsettings.php">Account Settings</a></li>'
-					.'		  <li><a href="phpFiles/logout.php">LogOut</a></li>'
-					.'		</ul>'
-					.'	  </div>'
-					.'	</div></li>';
-				
+			{
+				$content =  '<li><a  style="cursor:pointer" data-toggle="dropdown"><font color="orange"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
+						.'	<span class="caret"></span></a>'
+						.'	<ul class="dropdown-menu" style="background-color:white;padding:2%">'
+						.'	<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>'
+						.'	<li><a class="header-color" href="accountsettings.php"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></li>';
+					
+					
+					
+					$content .= '<li><a class="header-color" href="phpFiles/logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+							. '</ul>'
+							.'	  </div>'
+							.'	</div></li>';
+							echo $content;
+			}
+							
 			?>
       </ul>
-    </div>
-  </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
 
@@ -98,7 +120,7 @@ text-font { font-style: italic;
 
 <div class="container-fluid">
   
-  <div class="row" style="margin-top:6%">
+  <div class="row" >
     
 	<div class="collapse navbar-collapse" >
 	<div class="col-sm-1.5" style="position:fixed;margin-top:5%">
@@ -122,10 +144,11 @@ text-font { font-style: italic;
 		</section>
 		
 		
-	
+	<!----------------------------- For Web Version--------------------------->
 		
 		
-		<section class="row custom" id="mission">
+		<section class="row custom section-mobile" id="mission">
+		
 		<h3><b><font color="purple">Mission/Vision</font></b></h3>
 		<br>
 			<b>VISION</b>
@@ -136,54 +159,101 @@ text-font { font-style: italic;
             <b>MISSION</b>
 			<br>
             A notebook must not just be a scribbling pad. It is an essential part of a student's life. Kithabwala shall work closely to bring a notebook close to the user.
+			<br>
+		</section>
 
+		<section class="row" id="team">
+		<h3><b>Team KithabWala</b></h3>
+		<br>
+		<div class="row" style="border:1px">
+		<div class="col-sm-4">
+			<img src="images/abhilash.png" alt="Abhilash Gali" height=250px width=250px style="padding-top:1%">
+		</div>
+		<div class="col-sm-6">  
+			<h3>Abhilash Gali - Founder </h3>
+			<p>Found his stepping stone at CBIT by launching customized college merchandise, envisioned a market demand for quality products to found a corporate gifting, custom merchandise company, Merakii. In one such project, customized notebooks created a buzz and sold out before the clock hands touched other. This inspired him to launch a notebook brand with a revolutionized book.  After multiple projects, achieved entrepreneurial wisdom and earned.</p>
+		</div>
+	    </div>
+		<br>
+		<br>
+		<div class="row" style="border:none">
+		<div class="col-sm-6">  
+			<h3>Sahil Kaul</h3>
+			<p>Sahil is from a Deloitte analytics background, dabbled in start-ups, passionate writer, avid trekker and is someone who loves to improve efficiency in every process.
+            Loves to ideate and improve an idea. Good conversationalist who would one day want Shawarma to be the currency of this world.</p>
+		</div>
+		<div class="col-sm-4" >
+			<img src="images/sahilkaul.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
+		</div>
+	    </div>
+		<br>
+		<br>
+		<div class="row" style="border:1px">
+		<div class="col-sm-4">
+			<img src="images/himanshu.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
+		</div>
+		<div class="col-sm-6">  
+			<h3>Himanshu Joshi </h3>
+			<p>Himanshu is an incisive professional with a passion towards working in a fast growing environment. An engineer by education and a consultant by heart, Himanshu is currently working towards developing the business and formulating the strategies at Kithabwala. Himanshu carries an experience of working for some of the top Fortune 100 Companies and is working at a Big 4 Professional Services Firm in parallel.</p>
+		</div>
+	    </div>
+		<br>
+		<br>
+		<div class="row" style="border:none">
+		<div class="col-sm-6">  
+			<h3>Thanmay Krishna </h3>
+			<p>Critically negative in his approach, Thanmay Krishna works backwards and always thinks as to why an idea won't work. A mechanical engineering graduate, he handles the administration of the company and takes care of the back end support. A foodie by passion, he is a one stop shop for food and beverages.</p>
+		</div>
+		<div class="col-sm-4">
+			<img src="images/thanmay.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
+		</div>
+	    </div>
+		<br>
+		<br>
+		<div class="row" style="border:1px">
+		<div class="col-sm-4">
+			<img src="images/raviteja.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
+		</div>
+		<div class="col-sm-6">  
+			<h3>Ravi Teja</h3>
+			<p>A passionate hard worker, Ravi loves to follow a process and stick to the plan. Spent his childhood studying in different parts of the country, he brings a different perspective to the table. A people's person who likes to handle multiple responsibilities, Ravi can be a party pooper owing to his teetotalism habits.</p>
+		</div>
+	    </div>
+		<br>
+		
 		</section>
 		
 		
 		
 		
 		
-		<section class="row custom" id="team">
-		<h3><b><font color="purple">Team KithabWala</font></b></h3>
-		<p><b>Abhilash Gali - Founder</b></p>
-		<img src="images/abhilash.png" alt="Cinque Terre" height="300" width="300" style="padding-top:1%">
-		<br>
-		<br>
-		<p>Found his stepping stone at CBIT by launching customized college merchandise, envisioned a market demand for quality products to found a corporate gifting, custom merchandise company, Merakii. In one such project, customized notebooks created a buzz and sold out before the clock hands touched other. This inspired him to launch a notebook brand with a revolutionized book.  After multiple projects, achieved entrepreneurial wisdom and earned.</p>
-		<br>
-		<br>
-		<p><b>Sahil Kaul</b></p>
-		<img src="images/sahilkaul.png" alt="Cinque Terre" height="300" width="300" style="padding-top:1%">
-		<br>
-		<br>
-		<p>Sahil is from a Deloitte analytics background, dabbled in start-ups, passionate writer, avid trekker and is someone who loves to improve efficiency in every process.
-        Loves to ideate and improve an idea. Good conversationalist who would one day want Shawarma to be the currency of this world.</p>
-		<br>
-		<br>
-		<p><b>Himanshu</b></p>
-		<img src="images/himanshu.png" alt="Cinque Terre" height="300" width="300" style="padding-top:1%">
-		<br>
-		<br>
-		<p>Himanshu is an incisive professional with a passion towards working in a fast growing environment. An engineer by education and a consultant by heart, Himanshu is currently working towards developing the business and formulating the strategies at Kithabwala. Himanshu carries an experience of working for some of the top Fortune 100 Companies and is working at a Big 4 Professional Services Firm in parallel.</p>
-		<br>
-		<br>
-		<p><b>Thanmay Krishna</b></p>
-		<img src="images/thanmay.png" alt="Cinque Terre" height="300" width="300" style="padding-top:1%">
-		<br>
-		<br>
-		<p>Critically negative in his approach, Thanmay Krishna works backwards and always thinks as to why an idea won't work. A mechanical engineering graduate, he handles the administration of the company and takes care of the back end support. A foodie by passion, he is a one stop shop for food and beverages.</p>
-		<br>
-		<br>
-		<p><b>Ravi Teja</b></p>
-		<img src="images/raviteja.png" alt="Cinque Terre" height="300" width="300" style="padding-top:1%">
-		<br>
-		<br>
-		<p>A passionate hard worker, Ravi loves to follow a process and stick to the plan. Spent his childhood studying in different parts of the country, he brings a different perspective to the table. A people's person who likes to handle multiple responsibilities, Ravi can be a party pooper owing to his teetotalism habits.</p>
-	
-
-
-			
-		</section>
+		<!---------------------------------------------------------------------------->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -194,10 +264,6 @@ text-font { font-style: italic;
 			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 		</section>
 		
-		
-	
-		
-		
 		<section class="row" id="careers">
 		<h3><b><font color="purple">Careers at KithabWala</font></b></h3>
 			At Kithabwala you will have the opportunity to work with a group of highly talented individuals and learn the specifics in a product based start-up. We offer Competitive Compensation and a Performance linked Bonus. The icing on the cake is however a chance to be a part of the core team for long term benefits. If you want to be a part of our journey, reach out to us!
@@ -205,7 +271,6 @@ text-font { font-style: italic;
 			<br>
             <b>Email Id: contact@kithabwala.com</b>
 			<br>
-
 		</section>
 		
 		
