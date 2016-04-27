@@ -45,7 +45,7 @@ $resultscount = $resultscount + 10 ;
 $selectquery="select * from approvedposts limit 10 offset ".$resultscount." ;";
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 if(mysqli_num_rows($result)<=0)
-	$json.='{"nomoreresults":1}]';
+	$json.='{"nomoreresults":1,"resultscount":'.$resultscount .'}]';
 else
 	$json.='{"nomoreresults":0,"resultscount":'.$resultscount .'}]';
 

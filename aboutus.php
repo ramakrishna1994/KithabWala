@@ -30,7 +30,7 @@ session_start();
 	  text-align: justify;
     text-justify: inter-word;
 	
-	font-family: sans-serif;
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
 	font-size:17px;
 	
   }
@@ -41,24 +41,55 @@ session_start();
 
 .header-color
 {
-	color:yellow;
+	color:white;
 }
 
 .sidebar-color
 {
-	color:black;
+	color:grey;
 }
-body {
-    background-image: url("images/bg.jpg");
-    background-color: #cccccc;
-}
+    .strike {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+    
+    
+    }
+
+    .strike > span {
+        position: relative;
+        display: inline-block;
+		font-size: 20px;
+    }
+	
+    .strike > span:before,
+    .strike > span:after {
+        content: "";
+        position: absolute;
+        top: 58%;
+        width: 9999px;
+        /* Here is the modification */
+        border-top: 1px solid black;
+		
+    }
+
+    .strike > span:before {
+        right: 100%;
+        margin-right: 15px;
+    }
+
+    .strike > span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
 
 
 </style>
 
 
 
-	<nav class="navbar navbar-inverse navbar-fixed-top"  id="rk">
+	<nav class="navbar navbar-default navbar-fixed-top"  id="rk" style="background-color:grey">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="height:70px;">
@@ -69,25 +100,25 @@ body {
         <span class="icon-bar"></span>
       </button>
 		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="70" height="70" ></a>
-		<a class="navbar-brand" href="#" style="margin-top:5%"> <font size="5px" color="orange">&nbsp; Kithabwala</font></a>
+		<a href="#" style="align:left"> <img  style="margin-top:10%;" src="images/KithabwalaHeader.png" width="100" height="30"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top:1%" >
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"  style="margin-top:1%">
       <ul class="nav navbar-nav" >
-		  <li><a class="header-color"  href="aboutus.php">About Us</a></li> 
-		  <li><a class="header-color"  href="products.php">Products</a></li>
-		  <li><a class="header-color"  href="advertise.php">Advertise</a></li>
-		  <li><a class="header-color"  href="creativecorner.php">Creative Corner</a></li> 
-		  <li><a class="header-color"  href="contactus.php">Contact Us</a></li>
+		  <li><a class="header-color"  href="#"><font size="3px" color="#ffcc04">About Us</font></a></li> 
+		  <li><a class="header-color"  href="#"><font size="3px" color="#ffcc04">Products</font></a></li>
+		  <li><a class="header-color"  href="#"><font size="3px" color="#ffcc04">Advertise</font></a></li>
+		  <li><a class="header-color"  href="#"><font size="3px" color="#ffcc04">Creative Corner</font></a></li> 
+		  <li><a class="header-color"  href="#"><font size="3px" color="#ffcc04">Contact Us</font></a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right" >
         <?php 
 			if(!isset($_SESSION['emailid']))
 			{
-						echo '<li><a class="header-color"  href="#" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>'
-								.'<li><a class="header-color" href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>';
+						echo '<li><a class="header-color"  href="#" data-toggle="modal" data-target="#registrationModal"><font size="2px" color="#ffcc04"><span class="glyphicon glyphicon-user" ></span>&nbsp;&nbsp;Sign Up</font></a></li>'
+								.'<li><a class="header-color" href="#" data-toggle="modal" data-target="#loginModal"><font size="2px" color="#ffcc04"><span class="glyphicon glyphicon-log-in" ></span>&nbsp;&nbsp;Login</font></a></li>';
 			}
 			else
 			{
@@ -114,75 +145,85 @@ body {
 
 
 </head>
-<body background-image: url("bg.jpg")>
+<body >
 
 <div class="container-fluid">
   
   <div class="row" >
     
 	<div class="collapse navbar-collapse" >
-	<div class="col-sm-1.5" style="position:fixed;margin-top:7%">
+	<div class="col-sm-1.5" style="position:fixed;margin-top:7%;" id="sidebar">
 		<ul class="nav nav-pills nav-stacked">
 			<li><a class="page-scroll sidebar-color" href="#about">About Us</a></li>
 			<li><a class="page-scroll sidebar-color" href="#mission">Mission/Vision</a></li>
 			<li><a class="page-scroll sidebar-color" href="#team">Team</a></li>
-			<li><a class="page-scroll sidebar-color" href="#storeLoc">Store Location</a></li>
+			<li><a class="page-scroll sidebar-color" href="#storeLoc">Corporate Office Location</a></li>
 			<li><a class="page-scroll sidebar-color" href="#careers">Careers</a></li>
 		</ul>
 	</div>
 	</div>
-	<div class="col-sm-10 " style="margin-left:12%;margin-right:3%">
+	<div class="col-sm-10" style="margin-left:16%;padding-right:5%">
 	
 		<section  class=" row custom text-font" id="about">
-			<h3><b><font >About Us</font></b></h3>
-			<br>
-			<i>Kithabwala</i>, from the house of <i>Samast Enterprises India Pvt Ltd</i>, offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.<br><br>
-            Kithabwala gives a transformational makeover to the rustic notebook, making it MORE than just a place to write! <br><br>
-            Everybody wants MORE! MORE out of everything! Kithabwala doesn't sell books, we sell something more. 
+			<div class="strike row">
+				<span><h3><b><font color="grey">ABOUT US urf HAMARI PEHCHAN...</font></b></h3></span>
+			</div>
+			<div class="row">
+			<i>Kithabwala</i>, from the house of <i>Samast Enterprises India Pvt. Ltd.</i>, offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.<br><br>
+            We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!
+			</div>
+            <!---Kithabwala gives a transformational makeover to the rustic notebook, making it MORE than just a place to write! <br><br>--->
+            <!---Everybody wants MORE! MORE out of everything! Kithabwala doesn't sell books, we sell something more.---> 
 		</section>
 		
 		
 	<!----------------------------- For Web Version--------------------------->
 		
-		<div class="row" style="background color:black;border:0.5px solid black;margin-top:3%"></div>
+		<div class="row" style="background color:black"></div>
 		
 		<section class="row custom " id="mission">
-		
-		<h3><b><font color="black">Mission/Vision</font></b></h3>
-		<br>
+		<div class="strike">
+				<span><h3><b><font color="grey">SOME DEEP THOUGHTS!</font></b></h3></span>
+			<br>
+                        <img src="images/vision.png" width="50" height="50">
+                        <br>
 			<b>VISION</b>
 			<br>
-            <i>At Kithabwala, our vision is to create a better experience around a notebook while ensuring accessibiility to all. </i>
+			<i>At Kithabwala, our vision is to create a better experience around a notebook while ensuring accessibility to all. </i>
 			<br>
+			<img src="images/mission.png" width="50" height="50">
 			<br>
             <b>MISSION</b>
 			<br>
             <i>A notebook must not just be a scribbling pad. It is an essential part of a student's life. Kithabwala shall work closely to bring a notebook close to the user.</i>
 			<br>
+		</div>
+		
 		</section>
 
 		
-		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
+		<div class="row" style="background color:black"></div>
 			
 		<section class="row custom" id="team">
-		<h3><b>Team KithabWala</b></h3>
+		<div class="strike">
+				<span><h3><b><font color="grey">'KITHABWALE' ya TEAM KITHABWALA</font></b></h3></span>
+			</div>
 		<br>
-		<div class="row" style="border:1px">
+		<div class="row">
 		<div class="col-sm-4">
 			<img src="images/abhilash.png" alt="Abhilash Gali" height=250px width=250px style="padding-top:1%">
 		</div>
 		<div class="col-sm-8">  
-			<h3><i>Abhilash Gali - Founder </i></h3>
-			<p>Found his stepping stone at CBIT by launching customized college merchandise, envisioned a market demand for quality products to found a corporate gifting, custom merchandise company, Merakii. In one such project, customized notebooks created a buzz and sold out before the clock hands touched other. This inspired him to launch a notebook brand with a revolutionized book.  After multiple projects, achieved entrepreneurial wisdom and earned.</p>
+			<h3><i><b>Abhilash Gali - Founder</b> </i></h3>
+			<p>Abhilash started his career by envisioning a market demand for customized merchandise and founded Merakii Enterprises to meet this demand. While handling a project which dealt in customized notebooks, the buzz around it and the pace with which the products sold out transitioned Abhilash into an assessing mode where he evaluated the market potential for the same. The project eventually inspired Abhilash to launch a brand and re-think the way a Notebook should be! After multiple prototypes and numerous brainstorming sessions Abhilash was able to transfer his imagination of the notebook into reality!</p>
 		</div>
 	    </div>
 		<br>
 		<br>
 		<div class="row " style="border:none">
 		<div class="col-sm-8">  
-			<h3><i>Sahil Kaul</i></h3>
-			<p>Sahil is from a Deloitte analytics background, dabbled in start-ups, passionate writer, avid trekker and is someone who loves to improve efficiency in every process.
-            Loves to ideate and improve an idea. Good conversationalist who would one day want Shawarma to be the currency of this world.</p>
+			<h3><i><b>Sahil Kaul</b></i></h3>
+			<p>Sahil is an ex Deloitte consultant, dabbled in start-ups, passionate writer, avid trekker and is someone who loves to improve efficiency in every process. Sahil loves to ideate and improve an idea. He is a good conversationalist who would one day want Shawarma to be the currency of this world.</p>
 		</div>
 		<div class="col-sm-4" style="padding-left:10%">
 			<img src="images/sahilkaul.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
@@ -195,15 +236,15 @@ body {
 			<img src="images/himanshu.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
 		<div class="col-sm-8">  
-			<h3><i>Himanshu Joshi</i> </h3>
-			<p>Himanshu is an incisive professional with a passion towards working in a fast growing environment. An engineer by education and a consultant by heart, Himanshu is currently working towards developing the business and formulating the strategies at Kithabwala. Himanshu carries an experience of working for some of the top Fortune 100 Companies and is working at a Big 4 Professional Services Firm in parallel.</p>
+			<h3><i><b>Himanshu Joshi</b></i> </h3>
+			<p>Himanshu is an incisive professional with a passion for working in a fast growing environment. An engineer by education and a consultant by heart, Himanshu is currently working towards developing the business and formulating the strategies at Kithabwala. Himanshu carries an experience of working for some of the top Fortune 100 Companies and is working at a Big 4 Professional Services Firm in parallel.</p>
 		</div>
 	    </div>
 		<br>
 		<br>
 		<div class="row" style="border:none">
 		<div class="col-sm-8">  
-			<h3><i>Thanmay Krishna</i> </h3>
+			<h3><i><b>Thanmay Krishna</b></i> </h3>
 			<p>Critically negative in his approach, Thanmay Krishna works backwards and always thinks as to why an idea won't work. A mechanical engineering graduate, he handles the administration of the company and takes care of the back end support. A foodie by passion, he is a one stop shop for food and beverages.</p>
 		</div>
 		<div class="col-sm-4" style="padding-left:10%">
@@ -217,7 +258,7 @@ body {
 			<img src="images/raviteja.png" alt="Cinque Terre" height=250px width=250px style="padding-top:1%">
 		</div>
 		<div class="col-sm-8">  
-			<h3><i>Ravi Teja</i></h3>
+			<h3><i><b>Ravi Teja</b></i></h3>
 			<p>A passionate hard worker, Ravi loves to follow a process and stick to the plan. Spent his childhood studying in different parts of the country, he brings a different perspective to the table. A people's person who likes to handle multiple responsibilities, Ravi can be a party pooper owing to his teetotalism habits.</p>
 		</div>
 	    </div>
@@ -245,7 +286,7 @@ body {
 		
 		
 		
-		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
+		<div class="row" style="background color:black"></div>
 		
 		
 		
@@ -259,10 +300,12 @@ body {
 		
 		
 		
-		
+	
 		
 		<section class="row custom" id="storeLoc" >
-		<h3><b><font color="black">Store Location</font></b></h3>
+		<div class="strike">
+				<span><h3><b><font color="grey">CORPORATE OFFICE LOCATION</font></b></h3></span>
+			</div>
 			<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'>
 			</script>
 			<div class="col-sm-10 col-sm-offset-1" style="margin-top:3%">
@@ -283,18 +326,20 @@ body {
 						marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(17.436693740943927,78.44132646871091)});
 						infowindow = new google.maps.InfoWindow
 							({
-								content:'<strong>Kithabwala Store Location</strong><br>India<br>'
+								content:'<strong>KITHABWALA CORPORAT OFFICE LOCATION</strong><br>India<br>'
 							});
 						google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
 						infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
 			</script>
 		</section>
 		
-		<div class="row" style="background color:black;border:1px solid black;margin-top:3%"></div>
+		<div class="row" style="background color:black"></div>
 		
 		<section class="row custom" id="careers" style=";margin-bottom:2%">
-		<h3><b><font color="black">Careers at KithabWala</font></b></h3>
-			At Kithabwala you will have the opportunity to work with a group of highly talented individuals and learn the specifics in a product based start-up. We offer Competitive Compensation and a Performance linked Bonus. The icing on the cake is however a chance to be a part of the core team for long term benefits. If you want to be a part of our journey, reach out to us!
+			<div class="strike">
+				<span><h3><b><font color="grey">WORK WITH US</font></b></h3></span>
+			</div>
+			At Kithabwala you will have the opportunity to work with a group of highly talented individuals and learn the specifics in a product based start-up. We offer Competitive Compensation and a Performance linked Bonus. The icing on the cake however is a chance to be a part of the core team for long term benefits. If you want to be a part of our journey, reach out to us!
 			<br>
 			<br>
             <b>Email Id: contact@kithabwala.com</b>
@@ -306,47 +351,42 @@ body {
 	
   </div>
   
- <div class="row" style="background:white;color:orange;text-align:center;padding:3%">
+ <div class="row" style="background-color:grey;color:orange;text-align:center;padding:3%;z-index:10">
  <div class="row">
   <div class="col-sm-4">
-		<h4><b>Company</b></h4>
+		<h4><b><font color="#ffcc04">Company</font></b></h4>
 		<div class="row" style="border-top:1px solid black;margin:3%"></div>
-		<p><a href="aboutUs.html">About Us</a></p> 
-		<p><a href="#">Team</a></p>
-		<p><a href="#">Carrer at KithabWala</a></p>
+		<p><a href="#"><font color="black">About Us</font></a></p> 
+		<p><a href="#"><font color="black">Team</font></a></p>
+		<p><a href="#"><font color="black">Carrer at KithabWala</font></a></p>
 		
   </div>
   
   <div class="col-sm-4">
-	    <h4><b>Advertise</b></h4>
+	    <h4><b><font color="#ffcc04">Advertise</font></b></h4>
 		<div class="row" style="border-top:1px solid black;margin:3%"></div>
-		<p><a href="#">Advertise with us</a></p>
-		<p><a href="#">Store Locations</a></p>		
+		<p><a href="#"><font color="black">Advertise with us</font></a></p>
+		<p><a href="#"><font color="black">Store Locations</font></a></p>		
   </div>
   
   <div class="col-sm-4">
-       <h4><b>Reach out</b></h4>
+       <h4><b><font color="#ffcc04">Reach out</font></b></h4>
 	   	<div class="row" style="border-top:1px solid black;margin:3%"></div>
-	   <p><a href="contactUs.html">Contact Us</a></p>
+	   <p><a href="#"><font color="black">Contact Us</font></a></p>
   </div>
   
 </div>
 <div class="row " style="margin-top:2%">
 <div class="col-sm-4 col-sm-offset-4">
-	<div class="col-sm-2">
-		
-	</div>
-	<div class="col-sm-2">
-		<a href="https://facebook.com"><img src="images/facebook.png"></a>
+	
+	<div class="col-sm-2 col-sm-offset-3">
+		<a href="https://www.facebook.com/Kithabwala-156605224697747/?fref=ts"><img src="images/facebook.png"></a>
 	</div>
 	<div class="col-sm-2">
 		<a href="https://twitter.com"><img src="images/twitter_alt.png"></a>
 	</div>
-	<div class="col-sm-2">
-		<a title="number"><img src="images/whatsapp.png"></a>
-	</div>
-	<div class="col-sm-2">
-		<a href=""><img src="images/linkedin.png"></a>
+		<div class="col-sm-2">
+		<a href="https://www.linkedin.com/company/kithabwala?trk=ppro_cprof"><img src="images/linkedin.png"></a>
 	</div>
 	
 </div>
@@ -355,7 +395,7 @@ body {
 
 <div class="row " style="margin-top:3%">
 <div class="col-sm-4 col-sm-offset-4" style="text-align:center">
-	&copy; 2016 All Rights reserved to Kithabwala.com
+	<font color="#ffcc04">&copy; 2016 All Rights reserved to Kithabwala.com</font>
 </div>
 </div>
 </div>
@@ -750,6 +790,28 @@ body {
 			document.getElementById('rk').className = 'navbar navbar-inverse navbar-static-top';
 		else
 			document.getElementById('rk').className = 'navbar navbar-inverse navbar-fixed-top';
+		
+		
+		$.fn.followTo = function ( pos ) {
+    var $this = this,
+        $window = $(window);
+    
+    $window.scroll(function(e){
+        if ($window.scrollTop() > pos) {
+            $this.css({
+                position: 'absolute',
+                top: pos
+            });
+        } else {
+            $this.css({
+                position: 'fixed',
+                top: 0
+            });
+        }
+    });
+};
+
+$('#sidebar').followTo(2400);
 	</script>
  
  

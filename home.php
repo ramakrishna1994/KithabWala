@@ -31,6 +31,40 @@
 					</div>
 				</div>
 			</div>
+			<div class="hard p3" style="background-color:purple;">
+				<div class="page2">
+					<div class="div1InPage2">
+						ntly Printing !!
+					</div>
+					<img src="images/pr2.gif" width="40%" height="40%" style="margin-top:5%">
+					<div class="div2InPage2">
+						en in Notebooks !!
+					</div>
+				</div>
+			</div>
+			
+			<div class="page" style="background-color:purple;">
+				<div class="page2">
+					<div class="div1InPage2">
+						ntly Printing as !!
+					</div>
+					<img src="images/pr2.gif" width="40%" height="40%" style="margin-top:5%">
+					<div class="div2InPage2">
+						en in Notebooks asd!!
+					</div>
+				</div>
+			</div>
+			<div class="page" style="background-color:purple;">
+				<div class="page2">
+					<div class="div1InPage2">
+						ntly Printing abc!!
+					</div>
+					<img src="images/pr2.gif" width="40%" height="40%" style="margin-top:5%">
+					<div class="div2InPage2">
+						en in Notebooks oye!!
+					</div>
+				</div>
+			</div>
 			
 			<div class="hard p3" style="background-color:purple;">
 				<div class="page2">

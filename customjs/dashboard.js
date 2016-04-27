@@ -135,7 +135,7 @@ function getApprovedPosts(resultscount)
 				
 						}
 							
-						if(response[response.length-1].nomoreresults == 1 && resultscount == 0)
+						if(response[response.length-1].nomoreresults == 1 && response[response.length-1].resultscount == 0)
 						{
 								$("#loadmore").show();
 								document.getElementById("loadmore").setAttribute("onclick","");
@@ -196,7 +196,7 @@ function getUserPosts(resultscount)
 				
 						}
 							
-						if(response[response.length-1].nomoreresults == 1 && resultscount == 0)
+						if(response[response.length-1].nomoreresults == 1 && response[response.length-1].resultscount == 0)
 						{
 								$("#loadmore").show();
 								document.getElementById("loadmore").setAttribute("onclick","");
@@ -260,7 +260,7 @@ function getPendingPosts(resultscount)
 				
 						}
 						
-						if(response[response.length-1].nomoreresults == 1 && resultscount == 0)
+						if(response[response.length-1].nomoreresults == 1 && response[response.length-1].resultscount == 0)
 						{
 								$("#loadmore").show();
 								document.getElementById("loadmore").setAttribute("onclick","");
