@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,24 +76,7 @@ session_start();
 		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <?php 
-			if(!isset($_SESSION['emailid']))
-			{
-						echo '<li><a class="header-color"  href="#" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>'
-								.'<li><a class="header-color" href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>';
-			}
-			else
-				echo '<li ><a  style="cursor:pointer" data-toggle="dropdown">Welcome '.$_SESSION['firstname'].' '.$_SESSION['lastname']
-					.'		<span class="caret"></span></a>'
-					.'		<ul class="dropdown-menu">'
-					.'		  <li><a href="dashboard.php">Dashboard</a></li>'
-					.'		  <li><a href="accountsettings.php">Account Settings</a></li>'
-					.'		  <li><a href="phpFiles/logout.php">LogOut</a></li>'
-					.'		</ul>'
-					.'	  </div>'
-					.'	</div></li>';
-				
-			?>
+        
       </ul>
     </div>
   </div>

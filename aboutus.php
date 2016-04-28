@@ -99,8 +99,10 @@ session_start();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+	  <div class="col-sm-12">
 		<a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="70" height="70" ></a>
-		<a href="#" style="align:left"> <img  style="margin-top:10%;" src="images/KithabwalaHeader.png" width="100" height="30"></a>
+		<a href="#" style="align:left" > <img style="margin-top:12%" align="left" src="images/KithabwalaHeader.png" width="100" height="30"></a>
+		</div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -147,7 +149,7 @@ session_start();
 </head>
 <body >
 
-<div class="container-fluid">
+<div class="container">
   
   <div class="row" >
     
@@ -162,7 +164,7 @@ session_start();
 		</ul>
 	</div>
 	</div>
-	<div class="col-sm-10" style="margin-left:16%;padding-right:5%">
+	<div class="col-sm-10" style="margin-left:16%">
 	
 		<section  class=" row custom text-font" id="about">
 			<div class="strike row">
