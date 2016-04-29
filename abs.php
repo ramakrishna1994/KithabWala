@@ -805,7 +805,10 @@ $('#sidebar').followTo(2400);
 $('#sidebar').hide();
 function slidesidebar(val)
 {
+	$("div").animate({ 
 	
+	top:'500px'});    
+        });
 }
 
 
