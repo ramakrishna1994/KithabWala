@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `approvedposts` (
-  `postid` int(11) NOT NULL AUTO_INCREMENT,
+  `postid` int(11) NOT NULL,
   `userid` int(11) NOT NULL,
   `description` varchar(1024) NOT NULL,
   `filename` varchar(100) NOT NULL,
