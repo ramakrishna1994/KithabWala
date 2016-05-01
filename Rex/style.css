@@ -754,21 +754,31 @@ img{
 
 .team-img-1 { 
 	background-image: url(images/abhilash.png);
+	background-size: 100% 110%;
+    background-repeat: no-repeat;
 }
 
 .team-img-2 { 
 	background-image: url(images/sahilkaul.png);
+	background-size: 100% 110%;
+    background-repeat: no-repeat;
 }
 
 .team-img-3 { 
 	background-image: url(images/himanshu.png);
+	background-size: 100% 110%;
+    background-repeat: no-repeat;
 }
 .team-img-4 { 
 	background-image: url(images/thanmay.png);
+	background-size: 100% 90%;
+    background-repeat: no-repeat;
 }
 
 .team-img-5{ 
 	background-image: url(images/raviteja.png);
+	background-size: 100% 110%;
+    background-repeat: no-repeat;
 }
 .team-info {
 	position: absolute;
