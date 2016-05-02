@@ -358,7 +358,7 @@ session_start();
   <div class="col-sm-4">
 		<h4><b><font color="#ffcc04">Company</font></b></h4>
 		<div class="row" style="border-top:1px solid black;margin:3%"></div>
-		<p><a href="#"><font color="black">About Us</font></a></p> 
+		<p><a href="#"><font color="black" size="2px">About Us</font></a></p> 
 		<p><a href="#"><font color="black">Team</font></a></p>
 		<p><a href="#"><font color="black">Carrer at KithabWala</font></a></p>
 		
@@ -367,8 +367,8 @@ session_start();
   <div class="col-sm-4">
 	    <h4><b><font color="#ffcc04">Advertise</font></b></h4>
 		<div class="row" style="border-top:1px solid black;margin:3%"></div>
-		<p><a href="#"><font color="black">Advertise with us</font></a></p>
-		<p><a href="#"><font color="black">Store Locations</font></a></p>		
+		<p><a href="#">Advertise with us</a></p>
+		<p><a href="#">Store Locations</a></p>		
   </div>
   
   <div class="col-sm-4">
