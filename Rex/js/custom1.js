@@ -48,7 +48,7 @@ jQuery(function($){
 
 
 	jQuery(window).bind('scroll', function () {
-    if ($(window).scrollTop() > 700) {
+    if ($(window).scrollTop() > 10) {
         $('.main-navbar').addClass('navbar-fixed-top');
         $('.logo').addClass('logo-compressed');
         $('.main-nav li a').addClass('less-padding');
@@ -162,7 +162,7 @@ jQuery(function($){
 		// Cache selectors
 		var lastId,
 		topMenu = $(".main-nav"),
-		topMenuHeight = topMenu.outerHeight()-20,
+		topMenuHeight = topMenu.outerHeight()+13,
 		// All list items
 		menuItems = topMenu.find("a"),
 		// Anchors corresponding to menu items

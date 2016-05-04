@@ -162,7 +162,7 @@ jQuery(function($){
 		// Cache selectors
 		var lastId,
 		topMenu = $(".main-nav"),
-		topMenuHeight = topMenu.outerHeight()-20,
+		topMenuHeight = topMenu.outerHeight()+13,
 		// All list items
 		menuItems = topMenu.find("a"),
 		// Anchors corresponding to menu items
