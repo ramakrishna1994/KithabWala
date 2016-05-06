@@ -40,8 +40,18 @@
     <![endif]-->
 
 	
+	 <!-- initialize jQuery Library --> 
+ 
 	<style>
 	
+	.hidden{
+visibility: hidden;
+}
+
+.show{
+	display:block;
+}
+
 		.contact-form .form-group input {
 	background: transparent;
 	color: #e1e1e1;
@@ -54,6 +64,7 @@
 	align:right;
 	
 }
+
 
 
 
@@ -111,6 +122,19 @@
         .jssora22r:hover { background-position: -190px -31px; }
         .jssora22l.jssora22ldn { background-position: -250px -31px; }
         .jssora22r.jssora22rdn { background-position: -310px -31px; }
+		
+		
+		
+		
+
+
+#ccimage {
+    display: none;
+}
+
+#cc:hover #ccimage {
+    display: block;
+}
 	</style>
 
 	
@@ -136,15 +160,27 @@
   <header id="header">
     <div class="header-inner">
       <!-- Header image -->
-      <img src="images/header-bg.jpg" alt="img">
+      <img src="images/header.jpg" alt="img">
       <div class="header-overlay" >
         <div class="header-content" > 
         <!-- Start header content slider -->
-        <h2 class="header-slide">WE GENERATE
-          <span>MOST CREATIVE</span>
-          <span>MOST Design</span>
-          <span>MOST Valuable</span>
-          IDEA</h2>
+			<div class="row">
+				<div class="col-md-4" style="border:1px solid black;">
+					<div class="show" id="ccimage" style="background:url('images/mscc.jpg') no-repeat;height:400px;width:300px">
+						
+					</div>
+				</div>
+				<div class="col-md-4"   id="p">
+					<div id="pimage" class="show"  >
+						<img src="images/msp.jpg"  width="250" height="400">
+					</div>
+				</div>
+				<div class="col-md-4"   id="ad">
+					<div id="adimage" class="show" >
+						<img src="images/msad.jpg" width="250" height="400">
+					</div>
+				</div>
+			</div>
         <!-- End header content slider -->  
         <!-- Header btn area -->
 		 <div class="header-btn-area main-nav menu-scroll">
@@ -483,6 +519,19 @@
 	<img src="images/skyline.svg" width="100%" style="margin-top:10%">
   </div>
 
+  
+  
+  
+  
+  
+  
+ 
+
+	
+	
+	
+	
+	
   <!-- Start Footer -->    
   <footer id="footer">
     <div class="footer-top">
@@ -602,6 +651,13 @@
             $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
         });
+		
+	$("#cc").hover(function(){
+    $('#ccimage').slideToggle();
+});
+
+		 
+		
     </script>
 
   
