@@ -298,6 +298,29 @@ img{
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 }
+
+.kirkir
+{
+	border: 2px solid #fff;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	padding: 25px 28px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.kirkir:hover .kirkir:focus{
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+}
 .knowmore-btn:hover,
 .knowmore-btn:focus,
 .download-btn:hover,
@@ -2229,7 +2252,7 @@ img{
 	}
 	.download-btn {  
 	  font-size: 18px;  
-	  padding: 20px 25px;	  
+	    
 	}
 	.header-btn-area {
 	  margin-top: 65px;  
