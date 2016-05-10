@@ -272,7 +272,7 @@ img{
 	border-radius: 50%;
 	
 	color: #fff;	
-	font-size: 35px;	
+	font-size: 15px;	
 	font-weight: bold;
 	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
@@ -2472,7 +2472,7 @@ img{
 	  line-height: 55px;
 	}
 	.knowmore-btn {
-	  font-size: 15px;
+	  font-size: 1px;
 	  padding: 15px 18px;
 	}
 	.download-btn {
@@ -2632,7 +2632,7 @@ img{
 	  line-height: 43px;
 	}
 	.knowmore-btn {
-	  font-size: 14px;
+	  font-size: 1px;
 	  padding: 10px 15px;
 	}
 	.download-btn {
@@ -2785,12 +2785,12 @@ img{
 	  line-height: 35px;
 	}
 	.header-btn-area {
-	  margin-top: 00px;
+	  margin-top: 0px;
 	}
 
 	.header-btn-area a {
 	  display: block;
-	  margin: 10px 15px;
+	  margin: 0px 0px;
 	}
 	.knowmore-btn {
 	  font-size: 14px;

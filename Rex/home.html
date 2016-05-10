@@ -7,8 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kithabwala</title>
     <!-- Favicon -->
-
-
+	
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -21,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css"/>  
      <!-- Theme color -->
     <link id="switcher" href="css/theme-color/default.css" rel="stylesheet">
+	 <link  href="css/contactus.css" rel="stylesheet">
 	
     <!-- Main Style -->
     <link href="style.css" rel="stylesheet">
@@ -44,6 +44,65 @@
  
 	<style>
 	
+	
+	
+	.fixed_queries_content .nav-tabs>li.active>a, .fixed_queries_content .nav-tabs>li.active>a:focus, .fixed_queries_content .nav-tabs>li.active>a:hover {
+    background-image: none;
+}
+.backtotopbtn {
+    right: 45px;
+    bottom: 75px;
+}
+.fixed_queries_section_overlay {
+    display: none;
+}
+.catalog-product-view .fixed_queries_section, .catalog-product-view .fixed_queries_content {
+    display: none;
+}
+.fixed_queries_content .validation-advice {
+    position: absolute;
+    margin-top: -19px;
+}
+
+
+	#mine
+	{
+		font-size:17px;
+		color:orange;
+		transition:1s;
+	}
+	
+	#mine:hover
+	{
+		color:grey;
+		font-size:22px;
+	}
+	.button {
+    background-color: #ffcc04; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+	.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ffcc04;
+}
+
+.button1:hover {
+    background-color: #ffcc04;
+    color: white;
+}
+
 	.hidden{
 visibility: hidden;
 }
@@ -125,16 +184,7 @@ visibility: hidden;
 		
 		
 		
-		
 
-
-#ccimage {
-    display: none;
-}
-
-#cc:hover #ccimage {
-    display: block;
-}
 	</style>
 
 	
@@ -142,6 +192,30 @@ visibility: hidden;
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
     <!-- use jssor.slider.debug.js instead for debug -->
    
+<!-- Required for login -->
+<script type="text/javascript">
+window.youama_ajaxlogin_index_index = "http://www.happilyunmarried.com/ajaxlogin/ajax/index/";
+window.current_url = "http://www.happilyunmarried.com/";
+window.autoShowUp = "no";
+window.forgotPassword = "http://www.happilyunmarried.com/ajaxlogin/ajax/forgotpassword/";
+window.checkLoggedIn = "http://www.happilyunmarried.com/explore/cover/checklogin/";
+window.recentlyViewedProductsUrl = "http://www.happilyunmarried.com/explore/cover/recentlyviewed/";
+window.cartUrl = "http://www.happilyunmarried.com/checkout/cart/";
+window.checkoutUrl = "http://www.happilyunmarried.com/onepagecheckout/";
+window.ordersUrl = "http://www.happilyunmarried.com/sales/order/history/";
+window.cartUpdateUrl = "http://www.happilyunmarried.com/checkout/cart/ajaxUpdate/";
+window.removeGiftWrapAmountUrl = "http://www.happilyunmarried.com/checkout/cart/removegiftwrap/";
+window.addCustomerAddressUrl = "http://www.happilyunmarried.com/checkout/cart/addcustomeraddress/";
+window.formKeyVal = "c5dR8rB3Bc1wWNIu";
+window.enableCartButtonUrl = "http://www.happilyunmarried.com/onepagecheckout/";
+window.isProduction = parseInt("1") ;
+</script>	
+
+<script type="text/javascript">
+	var baseUrl = "http://www.happilyunmarried.com/";
+	var currentUrl = "http://www.happilyunmarried.com/";
+	var faqHtmlUrl = "http://www.happilyunmarried.com/explore/cart/getFaqToolbarHtml/";
+</script>
 
   </head>
   <body>
@@ -155,7 +229,9 @@ visibility: hidden;
   <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#menu-area"><i class="fa fa-chevron-up"></i></a>
   <!-- END SCROLL TOP BUTTON -->
-
+  
+ 
+ 
   <!-- Start header section -->  
   <header id="header">
     <div class="header-inner">
@@ -164,41 +240,46 @@ visibility: hidden;
       <div class="header-overlay" >
         <div class="header-content" > 
         <!-- Start header content slider -->
-			<div class="row" style="text-align:center">
-				<div class="col-md-4" >
-					
-					<div class="show" id="ccimage" style="border:1px solid black;height:400px;width:80%;background-color:white">
-						<img src="images/mscc.png"  class="img-rounded" width="230" height="310"><br>
-						<div class="col-md-10 col-md-offset-1">
-							<button type="button" class="btn btn-warning btn-lg btn-block"><font size="2px">EXPLORE YOUR CREATVITIY</font></button>
-						</div>
-						
+			<div class="row" style="text-align:center" id="abc" >
+				<div class="col-md-4" style="cursor:pointer">
+					<p style="position:fixed;color:#ffcc04;text-align:center;margin-top:16%;margin-left:7%">CREATIVE CORNER</p>
+					<div id="cchoverdiv" style="height:400px;">
+					<div class="col-md-10 col-md-offset-1" style="border:1px solid black;height:400px;width:80%;background-color:white" id="ccdiv">
+							<img src="images/msp.png"  class="img-circle" width="200" height="210"><br>
+							<p id="mine">CREATIVE CORNER</p>
+							<button type="button" class="button button1" style="margin-top:20%;margin-left:10%"><font size="2px">EXPLORE YOUR CREATIVITY</font></button>
+					</div>
 					</div>
 				</div>
-				<div class="col-md-4"   >
-					<div id="pimage" class="show"  style="border:1px solid black;height:400px;width:80%;background-color:white">
-						<img src="images/msp.png"  class="img-rounded" width="230" height="310"><br>
-						<div class="col-md-10 col-md-offset-1">
-							<button type="button" class="btn btn-warning btn-lg btn-block"><font size="2px">VIEW OUR PRODUCTS</font></button>
-						</div>
-						
+				<div class="col-md-4"   style="cursor:pointer">
+					<p style="position:fixed;color:#ffcc04;text-align:center;margin-top:16%;margin-left:9%">PRODUCTS</p>
+					<div id="phoverdiv" style="height:400px;">
+					<div class="col-md-10 col-md-offset-1" style="border:1px solid black;height:400px;width:80%;background-color:white" id="pdiv">
+							<img src="images/msp.png"  class="img-circle" width="200" height="210"><br>
+							<p id="mine">PRODUCTS</p>
+							<button type="button" class="button button1" style="margin-top:20%;margin-left:17%"><font size="2px">VIEW OUR PRODUCTS</font></button>
 					</div>
+					</div>	
 				</div>
-				<div class="col-md-4"   id="ad" >
-					<div id="adimage" class="show" style="border:1px solid black;height:400px;width:80%;background-color:white">
-						<img src="images/msad.png" class="img-rounded" width="230" height="310"><br>
-						<div class="col-md-10 col-md-offset-1">
-							<button type="button" class="btn btn-warning btn-lg btn-block"><font size="2px">Brand With Us</font></button>
-						</div>
+				<div class="col-md-4"   id="ad" style="cursor:pointer">
+					<p style="position:fixed;color:#ffcc04;text-align:center;margin-top:16%;margin-left:9%">ADVERTISE</p>
+					<div id="adhoverdiv" style="height:400px;">
+					<div class="col-md-10 col-md-offset-1" style="border:1px solid black;height:400px;width:80%;background-color:white" id="addiv">
+							<img src="images/msad.png" class="img-circle" width="200" height="210"><br>
+							<p id="mine">ADVERTISE</p>
+							<button type="button" class="button button1" style="margin-top:20%;margin-left:25%"><font size="2px">BRAND WITH US</font></button>
+					</div>
 					</div>
 				</div>
 			</div>
         <!-- End header content slider -->  
         <!-- Header btn area -->
-		 <div class="header-btn-area main-nav menu-scroll">
-          <a class="knowmore-btn menu-scroll" href="#jalsa"><i class="fa fa-chevron-down"></i></a>
-		
-        </div>
+		 <div class="row" style="text-align:center">
+			<div class="col-sm-2 col-sm-offset-5">
+				<button class="button button1" onclick="hideheader()"><i class="fa fa-chevron-down"></i></button>
+			</div>
+		</div>
+       
 		
       </div>
       </div>      
@@ -318,7 +399,7 @@ visibility: hidden;
   <!-- End carousel section -->
 
   <!-- Start from three tabs section -->
-  <section id="from-blog">
+  <section id="three-tabs">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -412,7 +493,7 @@ visibility: hidden;
   
   
   <!-- Start from blog section -->
-  <section id="from-blog">
+  <section id="blog">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -483,7 +564,7 @@ visibility: hidden;
   <!-- End from blog section -->
   
     <!-- Start subscription section -->
-  <section id="contact">
+  <section id="subscription">
     <div class="container">
       <div class="row">
 	
@@ -519,16 +600,80 @@ visibility: hidden;
   
   
   
-  <div class="row" style="padding-top:10%">
+  <div class="row" style="padding-top:10%" id="skyline">
 	<img src="images/skyline.svg" width="100%" style="margin-top:10%">
   </div>
 
   
   
   
-  
-  
-  
+   <div id="contactus">
+<!-- TRADE ENQUIRIES SECTION -->
+    <a class="fixed_queries_section phone_icon"><i class="fa fa-phone" ></i></a>
+
+    <div class="fixed_queries_section_overlay" style="display: none;"></div>
+
+    <div class="fixed_queries_content inner">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" >
+            <li role="presentation" class="first"><a aria-controls="home" role="tab" data-toggle="tab">Order Queries</a></li>
+            <li role="presentation" class="last"><a aria-controls="profile" role="tab" data-toggle="tab">Trade Queries</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="col-xs-12 extra_pad query_form_main_section">
+                    <div class="message_query_section">Message us your Query</div>
+                    <form id="enquiry_form_on_trade">
+                        <input type="text" name="query_name" id="query_name" class="form-control required-entry" placeholder="Enter Order ID">
+                        <input type="email" name="query_email" id="query_email" class="form-control required-entry" placeholder="Your Email Addresss">
+                        <textarea name="query_comment" id="query_comment" class="form-control required-entry" placeholder="Enter Your Query"></textarea>
+                        <button class="btn btn-default" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="col-xs-12 extra_pad success_message_on_query_submission">
+                    <div class="success_bubble">
+                        <img src="./Buy funny &amp; unique gifts from India&#39;s coolest company - Happily Unmarried_files/ic-QuerySent.svg">
+                    </div>
+                    <div class="thanks_message">Thanks for your query</div>
+                    <div class="getting_back_info">We will get back to you within 24 - 48 hours. Do check your Email.</div>
+                </div>
+                <div class="col-xs-12 tab_footer">
+                    <div class="row">
+                        <div class="col-xs-3 phone_icon_on_footer"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="col-xs-9 footer_info">
+                            <div class="callus_text">or call us at</div>
+                            <div class="tollnumber"><a href="tel:180030007347">1800 3000 7347</a></div>
+                            <div class="tollnumber"><a href="tel:180030005887">1800 3000 5887</a></div>
+                            <div class="week">[Mon-Fri - 10AM - 6PM]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="col-xs-12 trade_enquiry_tab">
+                    <div class="message_query_section">For Trade related queries call us at:</div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-3 phone_icon_on_footer">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-9 pad_left_10">
+                            <div class="tollnumber"><a href="tel:+918800402266">+91-8800402266</a></div>
+                            <div class="tollnumber"><a href="tel:+917042388244">+91-7042388244</a></div>
+                            <div class="col-xs-12 footer_note week">
+                                <sup>*</sup>Mon - Fri - 10 AM - 6 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a  class="fixed_queries_section close_icon"><i class="fa fa-close" ></i></a>
+    </div>
+  </div>
+  <!-- END OF ENQUIRIES SECTION -->
  
 
 	
@@ -626,6 +771,25 @@ visibility: hidden;
   <script type="text/javascript" src="js/wow.js"></script> 
  <script type="text/javascript" src="js/custom.js"></script>
   <script>
+  hideBodyAndShowMain();
+	function hideBodyAndShowMain()
+	{
+		$("#header").show();
+		$("#contactus").hide();
+		$("#menu-area").hide();
+		$("#about").hide();
+		$("#jssor_1").hide();
+		$("#three-tabs").hide();
+		$("#testimonial").hide();
+		$("#blog").hide();
+		$("#subscription").hide();
+		$("#skyline").hide();
+		$("#footer").hide();
+		
+	}
+	
+	
+		
         jQuery(document).ready(function ($) {
             
             var jssor_1_SlideoTransitions = [
@@ -677,12 +841,146 @@ visibility: hidden;
             //responsive code end
         });
 		
-	$("#cc").hover(function(){
-    $('#ccimage').slideToggle();
+		
+		$('#ccdiv').hide();
+		$('#pdiv').hide();
+		$('#addiv').hide();
+	 
+	 
+	$("#cchoverdiv").hover(function(){
+    $('#ccdiv').slideDown(500);
+	 $('#pdiv').slideUp(500);
+	 $('#addiv').slideUp(500);
 });
 
-		 
+$("#phoverdiv").hover(function(){
+     $('#ccdiv').slideUp(500);
+	 $('#pdiv').slideDown(500);
+	 $('#addiv').slideUp(500);
+});
+
+$("#adhoverdiv").hover(function(){
+    $('#ccdiv').slideUp(500);
+	 $('#pdiv').slideUp(500);
+	 $('#addiv').slideDown(500);
+});
+
+$("#abc").hover(function(){
+    $('#ccdiv').slideUp(500);
+	 $('#pdiv').slideUp(500);
+	 $('#addiv').slideUp(500);
+});
+
+		 function hideheader()
+		 {
+			$("#contactus").show();
+			$("#menu-area").show();
+			$("#about").show();
+			$("#jssor_1").show();
+			$("#three-tabs").show();
+			$("#testimonial").show();
+			$("#blog").show();
+			$("#subscription").show();
+			$("#skyline").show();
+			$("#footer").show();
+			$("#header").slideUp(1000);
+		 }
 		
+		function showheader()
+		{
+			$("#header").slideDown(1000);
+		}
+		
+		
+		jQuery(document).ready(function($) {
+    $(document.body).on('click', '.edit_sms_number', function() {
+        console.log('jnnn');
+        if ($('#'+this.id).is(':checked')) {
+            $('#'+this.id).val('1');
+        } else {
+            $('#'+this.id).val('0');
+        }
+    });
+
+    //////////
+    // Trade Enquiry related js
+    /////
+    window.originalHeightOfBlock = $(".fixed_queries_content").outerHeight();
+    window.originalWidthOfBlock = $(".fixed_queries_content").outerWidth();
+
+    window.longAnimationDuration = 500;
+    window.shortAnimationDuration = 300;
+
+    $(".fixed_queries_section_overlay").hide();
+
+    window.expandFixedTabs = function() {
+        $(".fixed_queries_content").animate({
+            width: '400px'
+        }, longAnimationDuration, function() {
+            $('body').css('overflow-y', 'hidden');
+            $(".fixed_queries_section.phone_icon").fadeOut();
+            $(".fixed_queries_section_overlay").fadeIn();
+            $(".fixed_queries_content").css('overflow', 'initial');
+
+            var curHeight = $('.fixed_queries_content').height();
+            $('.fixed_queries_content').css('height', 'auto');
+            var autoHeight = $('.fixed_queries_content').height();
+
+            $(".fixed_queries_content").height(curHeight).animate({
+                height: autoHeight
+            }, longAnimationDuration, function() {
+                $( ".fixed_queries_content .first" ).addClass( "active" );
+                $(".fixed_queries_content .tab-content").show().animate({
+                    opacity: 1,
+                    top: 0
+                }, shortAnimationDuration, function() {
+                    $(".fixed_queries_section.close_icon").fadeIn();
+                });
+            });
+        });
+    };
+
+    $(".fixed_queries_section.phone_icon").click(function() {
+        expandFixedTabs();
+    });
+
+    window.collapseFixedTabs = function() {
+        $('body').css('overflow-y', 'auto');
+        $(".fixed_queries_section.close_icon").hide();
+        $(".fixed_queries_section_overlay").fadeOut();
+        $( ".fixed_queries_content .first" ).removeClass( "active" );
+        $(".fixed_queries_content").animate({
+            height: originalHeightOfBlock
+        }, longAnimationDuration, function() {
+                $(".fixed_queries_section.phone_icon").fadeIn();
+                $(".fixed_queries_content").css('overflow', 'hidden');
+            $(".fixed_queries_content").animate({
+                width: originalWidthOfBlock
+            }, longAnimationDuration, function() {
+                $(".fixed_queries_content .tab-content").css({
+                    opacity: 0,
+                    top: 30
+                });
+                $( ".fixed_queries_content .nav-tabs .first a" ).trigger( "click" );
+                $(".query_form_main_section").show();
+                $(".success_message_on_query_submission").hide();
+                $(".query_form_main_section input").val('');
+                $(".query_form_main_section textarea").val('');
+                $( ".fixed_queries_content .first" ).removeClass( "active" );
+
+            });
+        });
+    };
+
+    $(".fixed_queries_section.close_icon").click(function() {
+        collapseFixedTabs();
+    });
+
+    $(".fixed_queries_section_overlay").click(function() {
+        collapseFixedTabs();
+    });
+});
+
     </script>
 
   
