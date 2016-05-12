@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +22,7 @@ position:relative
 }
 	</style>
 	
-	
+	<link  href="css/contactus.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -66,8 +70,7 @@ position:relative
 
  
  
-  
- <!-- Start menu section -->
+  <!-- Start menu section -->
   <section id="menu-area">
 	
     <nav class="navbar navbar-default main-navbar" role="navigation">  
@@ -86,26 +89,41 @@ position:relative
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li class="active"><a href="home.html">HOME</a></li>
-            <li><a href="aboutus.html">ABOUT US</a></li> 
-            <li><a href="products.html">PRODUCTS</a></li>                    
+			<li class="active"><a href="home.php">HOME</a></li>
+            <li><a href="aboutus.php">ABOUT US</a></li> 
+            <li><a href="products.php">PRODUCTS</a></li>                    
             <li><a href="#a">ADVERTISE </a></li> 
-            <li><a href="#c">CREATIVE</a></li> 
+            <li><a href="#creative.php">CREATIVE</a></li> 
 			
 			
-			<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
-			<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
 			
 			
-			<li id="userdetails" class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" >Welcome Saradhi Ramakrishna
-				<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-				  <li><a href=""><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>
-				  <li><a href=""><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></a></li>
-				  <li><a href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></a></li> 
-				</ul>
-			</li>
+			<?php 
+			if(!isset($_SESSION['emailid']))
+			{	
+						
+						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
+							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+							';
+			}
+			else
+			{
+				$content =  '<li><a  style="cursor:pointer" data-toggle="dropdown"><font color="orange"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
+						.'	<span class="caret"></span></a>'
+						.'	<ul class="dropdown-menu" style="background-color:white;padding:2%">'
+						.'	<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>'
+						.'	<li><a class="header-color" href="accountsettings.php"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></li>';
+					
+					
+					
+					$content .= '<li><a class="header-color" href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+							. '</ul>'
+							
+							.'	</li>';
+							echo $content;
+			}
+							
+			?>
           </ul>      
 			
         </div><!--/.nav-collapse -->
@@ -224,7 +242,13 @@ We are inspired from experiences and aim to give a transformational makeover to 
   
   
    
-
+  <div class="container">	
+	<div class="row">
+		<div class="col-md-12 ">
+			<iframe src="carricages/carricages.html" width="100%" height="1000px" frameBorder="0"></iframe>
+		</div>
+	</div>
+  </div>
   
   
  
@@ -283,38 +307,101 @@ We are inspired from experiences and aim to give a transformational makeover to 
   </section> 
  
  
-  <!-- Start careers section -->
-  <section id="careers">
-    <div class="container-fluid" style="background:url('img/purple.jpg');height:280px;">
-      <div class="row">
-        <div class="col-md-12">
-          <!-- Start welcome area -->
-          <div class="welcome-area">
-            <div class="title-area">
-              <h2 class="tittle"><span></span></h2>
-               <div class="header-btn-area">
-					<a class="download-btn" href="#"> Join us in our journey</a>
+   <!-- Start call to action -->
+  <section id="call-to-action">
+    <img src="images/careers.png" alt="img">
+    <div class="call-to-overlay">
+      <div class="container">
+        <div class="call-to-content wow fadeInUp">
          
-        </div>
-            </div>
-            
-          </div>
-          <!-- End welcome area -->
+          <a href="#" class="button button-default" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
         </div>
       </div>
-      
-    </div>
-  </section> 
-  <!-- End about section -->
+    </div> 
+  </section>
+  <!-- End call to action -->
   
   
   
  
   
-<div class="row">
-	<img src="images/skyline.svg" width="100%" style="margin-top:4%">
-  </div>
+  <div id="contactus">
+<!-- TRADE ENQUIRIES SECTION -->
+    <a class="fixed_queries_section phone_icon"><i class="fa fa-phone" ></i></a>
 
+    <div class="fixed_queries_section_overlay" style="display: none;"></div>
+
+    <div class="fixed_queries_content inner">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" >
+            <li role="presentation" class="first"><a aria-controls="home" role="tab" data-toggle="tab">Order Queries</a></li>
+            <li role="presentation" class="last"><a aria-controls="profile" role="tab" data-toggle="tab">Trade Queries</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <div class="col-xs-12 extra_pad query_form_main_section">
+                    <div class="message_query_section">Message us your Query</div>
+                    <form id="enquiry_form_on_trade">
+                        <input type="text" name="query_name" id="query_name" class="form-control required-entry" placeholder="Enter Order ID">
+                        <input type="email" name="query_email" id="query_email" class="form-control required-entry" placeholder="Your Email Addresss">
+                        <textarea name="query_comment" id="query_comment" class="form-control required-entry" placeholder="Enter Your Query"></textarea>
+                        <button class="btn btn-default" type="submit">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="col-xs-12 extra_pad success_message_on_query_submission">
+                    <div class="success_bubble">
+                        <img src="./Buy funny &amp; unique gifts from India&#39;s coolest company - Happily Unmarried_files/ic-QuerySent.svg">
+                    </div>
+                    <div class="thanks_message">Thanks for your query</div>
+                    <div class="getting_back_info">We will get back to you within 24 - 48 hours. Do check your Email.</div>
+                </div>
+                <div class="col-xs-12 tab_footer">
+                    <div class="row">
+                        <div class="col-xs-3 phone_icon_on_footer"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div class="col-xs-9 footer_info">
+                            <div class="callus_text">or call us at</div>
+                            <div class="tollnumber"><a href="tel:180030007347">1800 3000 7347</a></div>
+                            <div class="tollnumber"><a href="tel:180030005887">1800 3000 5887</a></div>
+                            <div class="week">[Mon-Fri - 10AM - 6PM]</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <div class="col-xs-12 trade_enquiry_tab">
+                    <div class="message_query_section">For Trade related queries call us at:</div>
+                    <div class="col-xs-12">
+                        <div class="col-xs-3 phone_icon_on_footer">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-9 pad_left_10">
+                            <div class="tollnumber"><a href="tel:+918800402266">+91-8800402266</a></div>
+                            <div class="tollnumber"><a href="tel:+917042388244">+91-7042388244</a></div>
+                            <div class="col-xs-12 footer_note week">
+                                <sup>*</sup>Mon - Fri - 10 AM - 6 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a  class="fixed_queries_section close_icon"><i class="fa fa-close" ></i></a>
+    </div>
+  </div>
+  <!-- END OF ENQUIRIES SECTION -->
+  
+  
+  
+  
+    <div class="row" style="padding-top:10%" id="skyline">
+	<img src="images/skyline.svg" width="100%" style="margin-top:10%">
+  </div>
+  
+  
+  
   	
   <!-- Start Footer -->    
   <footer id="footer">
@@ -353,32 +440,35 @@ We are inspired from experiences and aim to give a transformational makeover to 
     </div>
 	<div class="footer-bottom">
 			 <div class="row" style="text-align:center">
-				   <div class="col-md-3" >
+				   <div class="col-md-2" >
 						<h4><b><font color="#ffcc04">Company</font></b></h4>
-						<div class="row" style="border-top:1px solid #ffcc04;width:50%;margin-top:7%;margin-bottom:5%;margin-left:25%"></div>
+						
 						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
 						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
 						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
 						
 				  </div>
 			  
-				  <div class="col-md-3">
+				  <div class="col-md-2">
 						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
-						<div class="row" style="border-top:1px solid #ffcc04;width:50%;margin-top:7%;margin-bottom:5%;margin-left:25%"></div>
+						
 						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
 						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
 				  </div>
   
-				  <div class="col-md-3">
+				  <div class="col-md-2">
 					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
-						<div class="row" style="border-top:1px solid #ffcc04;width:50%;margin-top:7%;margin-bottom:5%;margin-left:25%"></div>
+						
 					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
 				  </div>
 				  
-				  <div class="col-md-3">
+				  <div class="col-md-3 col-md-offset-3">
+						<div class="row">
+							fb page
+						</div>
 					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
-						<div class="row" style="border-top:1px solid #ffcc04;width:50%;margin-top:7%;margin-bottom:5%;margin-left:25%"></div>
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Saradhi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+						
+					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
 				  </div>
         </div>
     </div>
@@ -824,7 +914,100 @@ We are inspired from experiences and aim to give a transformational makeover to 
 
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
+<script>
+	
+		 //////////
+    // Trade Enquiry related js
+    /////
+		
+		jQuery(document).ready(function($) {
+    $(document.body).on('click', '.edit_sms_number', function() {
+        console.log('jnnn');
+        if ($('#'+this.id).is(':checked')) {
+            $('#'+this.id).val('1');
+        } else {
+            $('#'+this.id).val('0');
+        }
+    });
 
+   
+    window.originalHeightOfBlock = $(".fixed_queries_content").outerHeight();
+    window.originalWidthOfBlock = $(".fixed_queries_content").outerWidth();
+
+    window.longAnimationDuration = 500;
+    window.shortAnimationDuration = 300;
+
+    $(".fixed_queries_section_overlay").hide();
+
+    window.expandFixedTabs = function() {
+        $(".fixed_queries_content").animate({
+            width: '400px'
+        }, longAnimationDuration, function() {
+            $('body').css('overflow-y', 'hidden');
+            $(".fixed_queries_section.phone_icon").fadeOut();
+            $(".fixed_queries_section_overlay").fadeIn();
+            $(".fixed_queries_content").css('overflow', 'initial');
+
+            var curHeight = $('.fixed_queries_content').height();
+            $('.fixed_queries_content').css('height', 'auto');
+            var autoHeight = $('.fixed_queries_content').height();
+
+            $(".fixed_queries_content").height(curHeight).animate({
+                height: autoHeight
+            }, longAnimationDuration, function() {
+                $( ".fixed_queries_content .first" ).addClass( "active" );
+                $(".fixed_queries_content .tab-content").show().animate({
+                    opacity: 1,
+                    top: 0
+                }, shortAnimationDuration, function() {
+                    $(".fixed_queries_section.close_icon").fadeIn();
+                });
+            });
+        });
+    };
+
+    $(".fixed_queries_section.phone_icon").click(function() {
+        expandFixedTabs();
+    });
+
+    window.collapseFixedTabs = function() {
+        $('body').css('overflow-y', 'auto');
+        $(".fixed_queries_section.close_icon").hide();
+        $(".fixed_queries_section_overlay").fadeOut();
+        $( ".fixed_queries_content .first" ).removeClass( "active" );
+        $(".fixed_queries_content").animate({
+            height: originalHeightOfBlock
+        }, longAnimationDuration, function() {
+                $(".fixed_queries_section.phone_icon").fadeIn();
+                $(".fixed_queries_content").css('overflow', 'hidden');
+            $(".fixed_queries_content").animate({
+                width: originalWidthOfBlock
+            }, longAnimationDuration, function() {
+                $(".fixed_queries_content .tab-content").css({
+                    opacity: 0,
+                    top: 30
+                });
+                $( ".fixed_queries_content .nav-tabs .first a" ).trigger( "click" );
+                $(".query_form_main_section").show();
+                $(".success_message_on_query_submission").hide();
+                $(".query_form_main_section input").val('');
+                $(".query_form_main_section textarea").val('');
+                $( ".fixed_queries_content .first" ).removeClass( "active" );
+
+            });
+        });
+    };
+
+    $(".fixed_queries_section.close_icon").click(function() {
+        collapseFixedTabs();
+    });
+
+    $(".fixed_queries_section_overlay").click(function() {
+        collapseFixedTabs();
+    });
+});
+		
+</script>
 	
 
   </body>

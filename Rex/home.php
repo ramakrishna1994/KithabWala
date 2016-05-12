@@ -452,9 +452,9 @@ session_start();
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
 			<li class="active"><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
-            <li><a href="products.php">PRODUCTS</a></li>                    
+            <li><a href="products\products.php">PRODUCTS</a></li>                    
             <li><a href="#a">ADVERTISE </a></li> 
-            <li><a href="#creative.php">CREATIVE</a></li> 
+            <li><a href="creative.php">CREATIVE</a></li> 
 			
 			
 			
@@ -478,8 +478,8 @@ session_start();
 					
 					$content .= '<li><a class="header-color" href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
 							. '</ul>'
-							.'	  </div>'
-							.'	</div></li>';
+							
+							.'	</li>';
 							echo $content;
 			}
 							
