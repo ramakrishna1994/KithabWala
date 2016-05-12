@@ -147,16 +147,16 @@ img{
 .scrollToTop {
 	background: #f9f9f9 none repeat scroll 0 0;
 	border-radius: 50%;
-	bottom: 60px;	
+	bottom: 80px;	
 	display: none;
-	font-size: 25px;
-	height: 55px;
-	line-height: 50px;
+	font-size: 20px;
+	height: 45px;
+	line-height: 43px;
 	position: fixed;
-	right: 50px;
+	right: 47px;
 	text-align: center;
 	text-decoration: none;
-	width: 55px;
+	width: 45px;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s; 
@@ -381,7 +381,7 @@ img{
 	cursor: text;
 }
 .search-area input[type="submit"] {
-	background-image: url("assets/images/search-icon.png");
+	background-image: url("images/search-icon.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	border: medium none;
@@ -722,18 +722,18 @@ img{
 }
 
 .team-img-1 { 
-	background-image: url(assets/images/team-member1.png);
+	background-image: url(images/team-member1.png);
 }
 
 .team-img-2 { 
-	background-image: url(assets/images/team-member2.png);
+	background-image: url(images/team-member2.png);
 }
 
 .team-img-3 { 
-	background-image: url(assets/images/team-member3.png);
+	background-image: url(images/team-member3.png);
 }
 .team-img-4 { 
-	background-image: url(assets/images/team-member4.png);
+	background-image: url(images/team-member4.png);
 }
 .team-info {
 	position: absolute;
@@ -1486,7 +1486,7 @@ img{
 /*--------------------*/
 
 #contact {
-	background-image: url("assets/images/contact-bg.jpg");
+	background-image: url("images/contact-bg.jpg");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -1596,7 +1596,7 @@ img{
 /*--------------------*/
 
 #footer{
-	background-color: #242424;
+	background-color: black;
 	display: inline;
 	float: left;
 	margin-top: -6px;
@@ -2428,8 +2428,8 @@ img{
 	}
 	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus{
-		background-color: #00d999;
-		border-color: #00d999;
+		background-color: #ffcc04;
+		border-color: #ffcc04;
 		color: #fff;
 	}
 	.navbar-default .navbar-toggle:hover .icon-bar,

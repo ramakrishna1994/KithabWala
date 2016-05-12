@@ -89,7 +89,7 @@ session_start();
 
 
 
-	<nav class="navbar navbar-default navbar-fixed-top"  id="rk" style="background-color:grey">
+	<nav class="navbar navbar-default"  id="rk" style="background-color:grey">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="height:70px;">
