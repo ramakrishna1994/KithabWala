@@ -25,7 +25,9 @@ $(document).ready(function(){
 				{
 					$("#signup").hide();
 					$("#login").hide();
-					$("#userdetails").show();  
+					$("#userdetails").show(); 
+					
+					$("#loginusername").html = response.firstname + "&nbsp;" + response.lastname;
 				}
 
 
