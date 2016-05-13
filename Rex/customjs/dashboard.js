@@ -32,16 +32,37 @@ function ApprovePost(postid)
 function submitPost()
 {
 	$('#status').html('&nbsp;&nbsp;<img class="img-rounded" alt="Cinque Terre" width="20" height="20" src="images/loader.gif">');
+	var title = document.getElementById("title").value;
 	var description = document.getElementById('description').value;
+	var theme = document.getElementById('theme').value;
+	
+	if(document.getElementById("theme").value === "Select Theme")
+	{
+		$('#status').html('<font color="red">Please select one theme</font>');
+		return false;
+	}
+	if(document.getElementById("title").value == "")
+	{
+		$('#status').html('<font color="red">Please enter title</font>');
+		return false;
+	}
 	if(description == "")
 	{
 		$('#status').html('<font color="red">Please Enter Description</font>');
 		return false;
 	}
+	if(document.getElementById("termscheckbox").checked == false)
+	{
+		$('#status').html('<font color="red">Please accept Terms and Conditions</font>');
+		return false;
+	}
+	
 			
 			var formData = new FormData();
 			formData.append( 'file', $( '#file' )[0].files[0] );
 			formData.append( 'description', description );
+			formData.append( 'title', title );
+			formData.append( 'theme', theme );
 	 
 	 $(document).ready(function(){
 		 

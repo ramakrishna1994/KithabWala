@@ -20,7 +20,7 @@ while($row = mysqli_fetch_array($result)){
 	
 			
 			
-		$insertquery = 'insert into approvedposts(postid,userid,description,filename) values('.$row['postid'].','.$row['userid'].',"'.$row['description'].'","'.$row['filename'].'");'; 
+		$insertquery = 'insert into approvedposts(postid,userid,title,theme,description,filename) values('.$row['postid'].','.$row['userid'].',"'.$row['theme'].'","'.$row['title'].'","'.$row['description'].'","'.$row['filename'].'");'; 
 		mysqli_query($con,$insertquery) or die(mysqli_error($con));
 		
 		$deletequery = 'delete from pendingposts where postid = '.$postid;

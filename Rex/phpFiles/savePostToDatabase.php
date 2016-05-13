@@ -3,6 +3,8 @@ require_once 'isSessionSet.php';
 require_once 'connection.php';
 
 $description = $_POST['description'];
+$theme = $_POST['theme'];
+$title = $_POST['title'];
 $username = $_SESSION['firstname'].'_'.$_SESSION['lastname'];
 $error = -1;
 if(isset($_FILES['file']))
@@ -57,7 +59,7 @@ if(isset($_FILES['file']))
 			{
 				
 				$error = 0;
-				$insertQuery = "insert into pendingposts(userid,description,filename) values (".$_SESSION['userid'].",'".$description."','".$newfilename."')";		
+				$insertQuery = "insert into pendingposts(userid,theme,title,description,filename) values (".$_SESSION['userid'].",'".$theme."','".$title."','".$description."','".$newfilename."')";		
 				mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 			}
 			else
@@ -72,7 +74,7 @@ if(isset($_FILES['file']))
 else
 
 {
-	$insertQuery = "insert into pendingposts(userid,description,filename) values (".$_SESSION['userid'].",'".$description."','dummy')";		
+	$insertQuery = "insert into pendingposts(userid,theme,title,description,filename) values (".$_SESSION['userid'].",'".$theme."','".$title."','".$description."','dummy')";		
 	mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 	echo '{"error":"'.$error.'"}';	
 }

@@ -21,8 +21,15 @@ require_once 'phpFiles/isSessionSet.php';
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"> </script>
   <script type="text/javascript" src="customjs/dashboard.js"> </script>
-
-	
+ <link rel="stylesheet" href="style.css">
+	   <link id="switcher" href="css/theme-color/default.css" rel="stylesheet">
+    <!-- Fonts -->
+    <!-- Open Sans for body font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Raleway for Title -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <!-- Pacifico for 404 page   -->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   
   <style>
  @media (max-width: 767px) /* @grid-float-breakpoint -1 */
@@ -53,7 +60,8 @@ background-image: url("images/bg.jpg");
 </head>
 <body>
   
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+  
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:white">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" >
@@ -64,21 +72,23 @@ background-image: url("images/bg.jpg");
         <span class="icon-bar"></span>
       </button>
       <a style="align:left"><img align="left" src="images/logo.png" class="img-circle" alt="Cinque Terre" width="50" height="50" ></a>
-		<a class="navbar-brand" href="#"> <font color="orange">&nbsp; KithabWala</font></a>
+		
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color:black;">
-      <ul class="nav navbar-nav" style="background-color:black;">
-        <li><a class="header-color" href="aboutus.php">About Us</a></li> 
-		  <li><a class="header-color" href="products.php">Products</a></li>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" >
+	  <li><a class="header-color" href="aboutus.php">&nbsp;</a></li> 
+	  <li><a class="header-color" href="aboutus.php">&nbsp;</a></li> 
+        <li><a class="header-color" href="aboutus.php">Home</a></li> 
+		  <li><a class="header-color" href="products.php">About Us</a></li>
 		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
-		  <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
-		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
+		  <li><a class="header-color" href="creative.php">Creative Corner</a></li> 
+		  
         
        </ul>
       
-      <ul class="nav navbar-nav navbar-right" style="background-color:black;">
+      <ul class="nav navbar-nav navbar-right">
       
 							
 							
@@ -129,7 +139,7 @@ background-image: url("images/bg.jpg");
 	  
 <div class="container" >
   
-  <div class="row" style="margin-top:2%;margin-bottom:5%">
+  <div class="row" style="margin-top:2%;margin-bottom:1%">
     
 		<div class="collapse navbar-collapse col-sm-2" style="margin-top:5%">
 		<div  style="text-align:center">
@@ -176,29 +186,88 @@ background-image: url("images/bg.jpg");
 	
   </div>
   </div>
-  
- <footer class="footer" style="background:black;color:white;text-align:center;padding:3%">
- <div class="container">
-  <div class="col-sm-4">
-		<h4><b>Company</b></h4>
-		<p><a href="aboutUs.html">About Us</a></p> 
-	    <p><a href="#">Team</a></p>
-		<p><a href="#">Carrer at KithabWala</a></p>
+ 
+    <div class="row" id="skyline">
+	<img src="images/skyline.svg" width="100%" style="margin-top:1%">
   </div>
   
-  <div class="col-sm-4">
-	    <h4><b>Advertise</b></h4>
-		<p><a href="#">Advertise with us</a></p>
-		<p><a href="#">Store Locations</a></p>		
-  </div>
   
-  <div class="col-sm-4">
-       <h4><b>Reach out</b></h4>
-	   <p><a href="contactUs.html">Contact Us</a></p>
-  </div>
-  </div>
-</footer>
-
+  
+  	
+  <!-- Start Footer -->    
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-top-area">             
+                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+              <div class="footer-social">
+					<div class="row">
+						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+								
+								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
+						</div>
+						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+								
+								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
+						</div>
+						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+								
+								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
+						</div>
+						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+								
+								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
+						</div>
+					</div>
+				   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="footer-bottom">
+			 <div class="row" style="text-align:center">
+				   <div class="col-md-2" >
+						<h4><b><font color="#ffcc04">Company</font></b></h4>
+						
+						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
+						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
+						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
+						
+				  </div>
+			  
+				  <div class="col-md-2">
+						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+						
+						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
+						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
+				  </div>
+  
+				  <div class="col-md-2">
+					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+						
+					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
+				  </div>
+				  
+				  <div class="col-md-3 col-md-offset-3">
+						<div class="row">
+							fb page
+						</div>
+					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+						
+					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+				  </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 
 
 
@@ -211,7 +280,7 @@ background-image: url("images/bg.jpg");
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Submit an Idea</h4>
+        <h4 class="modal-title"><center><font color="orange" size="5px">Submit an IDEA</font></center></h4>
       </div>
       <div class="modal-body">
         
@@ -222,15 +291,36 @@ background-image: url("images/bg.jpg");
     				</div>
   				</div>
 				
+				<div class="form-group" >
+    				
+    				
+					  <select class="form-control" id="theme">
+						<option>Select Theme</option>
+						<option>Books</option>
+						<option>Careers</option>
+						<option>Showcase</option>
+						<option>Innovative</option>
+					  </select>
+  				</div>
+				
+				<div class="form-group">
+					
+					<input type="text" class="form-control" id="title" placeholder="Enter the Title for the Design">
+				</div>
+				
 			<div class="form-group">
-				<label for="comment">Enter the Description:</label>
-				<textarea class="form-control" rows="5" id="description"></textarea>
+				
+				<textarea class="form-control" rows="5" id="description" placeholder="Enter the Description"></textarea>
 				
 			</div>
 			
 			<div class="form-group">
 				<input type="file" class="filestyle" id="file">
 			</div>
+			
+				<div class="form-group">
+					<label class="checkbox-inline"><input type="checkbox" value="" id="termscheckbox">I accept Terms and Conditions</label>
+				</div>
 			
 			<div class="form-group">
 				<button type="button" class="btn btn-success btn-block" onclick="submitPost()">Submit</button>
