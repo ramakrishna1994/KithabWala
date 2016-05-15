@@ -452,7 +452,7 @@ session_start();
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
 			<li class="active"><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
-            <li><a href="products\products.php">PRODUCTS</a></li>                    
+            <li><a href="products.php">PRODUCTS</a></li>                    
             <li><a href="advertise.php">ADVERTISE </a></li> 
             <li><a href="creative.php">CREATIVE</a></li> 
 			
@@ -460,7 +460,7 @@ session_start();
 			
 			
 			<?php 
-			if(!isset($_SESSION['emailid']))
+			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
 							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
@@ -476,7 +476,7 @@ session_start();
 					
 					
 					
-					$content .= '<li><a class="header-color" href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+					$content .= '<li><a class="header-color" href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
 							. '</ul>'
 							
 							.'	</li>';
@@ -601,7 +601,7 @@ session_start();
                 <div class="col-md-4">
                   <article class="single-from-blog">
                     <figure>
-                      <a href="blog-single.html"><img src="images/advertise.png" alt="img"></a>
+                      <a href="blog-single.html"><img src="images/cc.png" alt="img"></a>
                     </figure>
                     <div class="blog-title">
                       <h2><a href="blog-single.html">Advertise With US</a></h2>
@@ -928,10 +928,14 @@ session_start();
 					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
 				  </div>
 				  
-				  <div class="col-md-3 col-md-offset-3">
-						<div class="row">
-							fb page
+				   <div class="col-md-2">
+					   <div class="row" >
+							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
 						</div>
+				  </div>
+				  
+				  <div class="col-md-4">
+						
 					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
 						
 					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
@@ -943,6 +947,8 @@ session_start();
     </div>
   </footer>
   <!-- End Footer -->
+  
+  
 </div>
   <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -1169,9 +1175,9 @@ $(window).scroll(function() {
 });
 
 
+setTimeout(function(){ showheader();}, 5000);
 
 
-showheader();
 	
 	function hideheader()
 	{

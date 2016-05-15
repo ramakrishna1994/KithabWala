@@ -63,7 +63,7 @@ $password='Kithabwala123';
 					
 						$_SESSION['firstname'] = $row['firstname'];
 						$_SESSION['lastname'] = $row['lastname'];
-						$_SESSION['emailid'] = $row['emailid'];
+						$_SESSION['kithabwalaemailid'] = $row['emailid'];
 						$_SESSION['profileimage'] = $row['profileimage'];
 						$_SESSION['isadmin'] = $row['isadmin'];
 						$_SESSION['userid'] = $row['userid'];
@@ -74,7 +74,7 @@ $password='Kithabwala123';
 			}
 						
 			
-		
+		echo '{"error":0}';
 		
 	
 

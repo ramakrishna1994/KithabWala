@@ -43,11 +43,7 @@ session_start();
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script>
-	setTimeout(function(){
-	showheader();
-}, 3000);
-</script>
+	
 	<style>
 	
 	
@@ -246,17 +242,17 @@ session_start();
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li class="active"><a href="home.php">HOME</a></li>
+			<li ><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
-            <li><a href="products.php">PRODUCTS</a></li>                    
-            <li><a href="#a">ADVERTISE </a></li> 
+            <li class="active"><a href="products.php">PRODUCTS</a></li>                    
+            <li ><a href="advertise.php">ADVERTISE </a></li> 
             <li><a href="creative.php">CREATIVE</a></li> 
 			
 			
 			
 			
 			<?php 
-			if(!isset($_SESSION['emailid']))
+			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
 							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
@@ -272,7 +268,7 @@ session_start();
 					
 					
 					
-					$content .= '<li><a class="header-color" href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+					$content .= '<li><a class="header-color" href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
 							. '</ul>'
 							
 							.'	</li>';
@@ -453,10 +449,14 @@ session_start();
 					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
 				  </div>
 				  
-				  <div class="col-md-3 col-md-offset-3">
-						<div class="row">
-							fb page
+				   <div class="col-md-2">
+					   <div class="row" >
+							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
 						</div>
+				  </div>
+				  
+				  <div class="col-md-4">
+						
 					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
 						
 					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
@@ -468,7 +468,9 @@ session_start();
     </div>
   </footer>
   <!-- End Footer -->
-
+  
+  
+  
   <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -602,23 +604,7 @@ session_start();
 	
 	
 	
-	var fixmeTop = $('.fixedp').offset().top;
-$(window).scroll(function() {
-    var currentScroll = $(window).scrollTop();
-    if (currentScroll <= 100) {
-        $('.fixedp').css({
-            position: 'fixed',
-			display:'block'
-            
-        });
-    } else {
-        $('.fixedp').css({
-            position: 'static',
-			display:'none'
-        });
-    }
-});
-
+	
 
 
 
@@ -1031,7 +1017,6 @@ $(window).scroll(function() {
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
 
-	
 
 
 

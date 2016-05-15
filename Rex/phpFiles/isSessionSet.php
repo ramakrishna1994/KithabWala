@@ -1,5 +1,5 @@
 <?php 
 session_start();
-if(!isset($_SESSION['emailid']))
-	header('location:../home.php');
+if(!isset($_SESSION['kithabwalaemailid']))
+	 echo '{"error":0}';
 ?>

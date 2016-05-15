@@ -50,7 +50,7 @@ function fb_login(){
 		        contentType: false,
 		        success: function (response) {
 		            
-				alert(1);	 
+					 
 						 
 					    
 			        	
@@ -125,7 +125,7 @@ function fb_login(){
 						 
 					    
 			        	
-		            location.reload();
+		           window.location.reload();
 			        	
 				   
 				 

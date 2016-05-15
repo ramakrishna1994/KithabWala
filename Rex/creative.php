@@ -7,10 +7,10 @@ session_start();
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-signin-client_id" content="982351477211-enciajdnumr2rru6nhvpfb0ni1e20bgg.apps.googleusercontent.com  ">
+	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Creative Corner</title>
+    <title>Home</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/logo.ico"/>
 		<link  href="css/contactus.css" rel="stylesheet">
@@ -43,9 +43,176 @@ session_start();
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<script>
+	setTimeout(function(){
+	showheader();
+}, 3000);
+</script>
+	<style>
+	
+	
 
+
+#contact {
+	background-image: url("images/contact-bg.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: inline;
+	float: left;
+	padding: 70px 0;
+	width: 100%;
+}
+.contact-left {
+	background-color: rgba(104, 102, 96, 0.5);
+	display: inline;
+	float: left;
+	padding: 30px 40px 10px;
+	width: 100%;
+}
+.contact-left h2 {
+	color: #fafafa;
+	font-size: 35px;
+	margin-bottom: 35px;
+}
+.single-address {
+	display: inline;
+	float: left;
+	margin-bottom: 15px;
+	padding-right: 50px;
+	width: 100%;
+}
+.single-address h4 {
+	color: #fafafa;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 17px;
+}
+.single-address p {
+	color: #fafafa;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.contact-right{
+	background-color: rgba(104, 102, 96, 0.5);
+	display: inline;
+	float: left;
+	padding: 30px 40px;
+	width: 100%;
+}
+.contact-right h2 {
+	color: #fafafa;
+	font-size: 35px;
+	margin-bottom: 48px;
+}
+.contact-form .form-group input {
+	background: transparent;
+	color: #e1e1e1;
+	font-size: 20px;
+	border: 1px solid #fff;
+	border-radius: 0;
+	height: 45px;
+	margin-bottom: 24px;
+}
+.contact-form .form-group textarea{
+	color: #e1e1e1;
+	background: transparent;
+	border: 1px solid #fff;
+	border-radius: 0;
+	height: 190px;
+}
+.contact-form .form-control:focus {
+    outline: 0;
+    box-shadow: none;    
+} 
+.contact-form .form-control::-webkit-input-placeholder {
+	color: #e2e2e2;
+	font-size: 20px;
+}
+
+.contact-form .form-control:-moz-placeholder { /* Firefox 18- */
+	color: #e2e2e2;
+	font-size: 20px; 
+}
+
+.contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
+	color: #e2e2e2;
+	font-size: 20px;
+}
+
+.contact-form .form-control:-ms-input-placeholder {  
+	color: #e2e2e2;
+	font-size: 20px;
+}
+.contact-form button {
+	float: right;
+	margin-right: 0;
+	border-radius: 0px;
+}
+.contact-form.button-default::after,
+.contact-form .button-default > span {
+	padding: 12px 40px;  
+}
+#google-map{
+	display: inline;
+	float: left;	
+	width: 100%;
+}
+
+
+	
+		.button123 {
+    background-color: #ffcc04; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+	.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ffcc04;
+}
+	
+		
+		
+		.fixedp{
+			font-size:30px;
+		}
+		
+		
+		
+	.mine
+	{
+		font-size:30px;
+		color:grey;
+		transition:1s;
+	}
+	
+	.mine:hover
+	{
+		color:green;
+		font-size:35px;
+		
+	}
+	
+	
+
+	
+	
+
+		
+	</style>
   </head>
-  <body style="background-color:838282">
+  <body>
 
   <!-- BEGAIN PRELOADER -->
   <div id="preloader">
@@ -58,8 +225,10 @@ session_start();
   <!-- END SCROLL TOP BUTTON -->
 
   
-<div id="bodyid">
- <section id="menu-area">
+  <!-- End header section -->
+
+  <!-- Start menu section -->
+  <section id="menu-area">
 	
     <nav class="navbar navbar-default main-navbar" role="navigation">  
 		
@@ -78,16 +247,16 @@ session_start();
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
 			<li ><a href="home.php">HOME</a></li>
-            <li class="active"><a href="aboutus.php">ABOUT US</a></li> 
+            <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
-            <li><a href="advertise.php">ADVERTISE </a></li> 
+            <li class="active"><a href="advertise.php">ADVERTISE </a></li> 
             <li><a href="creative.php">CREATIVE</a></li> 
 			
 			
 			
 			
 			<?php 
-			if(!isset($_SESSION['emailid']))
+			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
 							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
@@ -103,7 +272,7 @@ session_start();
 					
 					
 					
-					$content .= '<li><a class="header-color" href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+					$content .= '<li><a class="header-color" href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
 							. '</ul>'
 							
 							.'	</li>';
@@ -118,24 +287,8 @@ session_start();
       </div>          
     </nav> 
   </section>
+  <!-- End menu section -->
 
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
-  
   
  
    <!-- Start subscription section -->
@@ -147,6 +300,19 @@ session_start();
 	</div>
   </div>
   <!-- End subscription section -->
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
   
   
   
@@ -222,12 +388,9 @@ session_start();
   
   
   
-    <div class="row" style="padding-top:3%" id="skyline">
-		
-			<img src="images/skyline.svg" width="100%" style="margin-top:10%">
-		
+    <div class="row" id="skyline">
+	<img src="images/skyline.svg" width="100%" style="margin-top:5%">
   </div>
-  
   
   
   	
@@ -290,10 +453,14 @@ session_start();
 					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
 				  </div>
 				  
-				  <div class="col-md-3 col-md-offset-3">
-						<div class="row">
-							fb page
+				   <div class="col-md-2">
+					   <div class="row" >
+							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
 						</div>
+				  </div>
+				  
+				  <div class="col-md-4">
+						
 					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
 						
 					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
@@ -305,7 +472,7 @@ session_start();
     </div>
   </footer>
   <!-- End Footer -->
-</div>
+
   <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -326,10 +493,9 @@ session_start();
   <!-- Custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
   <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-  <script type="text/javascript" src="customjs/initialpageload.js"></script>
+
     <script>
-		
-		
+
 		
 		
 		
@@ -428,14 +594,39 @@ session_start();
 		
 		
 		
+		function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
 		
 		
-	
-	
+			
+	 
 	
 
 	
+	
+	
+	var fixmeTop = $('.fixedp').offset().top;
+$(window).scroll(function() {
+    var currentScroll = $(window).scrollTop();
+    if (currentScroll <= 100) {
+        $('.fixedp').css({
+            position: 'fixed',
+			display:'block'
+            
+        });
+    } else {
+        $('.fixedp').css({
+            position: 'static',
+			display:'none'
+        });
+    }
+});
 
+
+
+
+		
 		
 	</script>
 	
@@ -465,14 +656,15 @@ session_start();
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="270" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
 						</div>
   				</div>
 				
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="270" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><a href="#" onclick="fb_login();"><img src="images/fb_login_awesome.jpg" border="0" alt=""></a>
+</center>
 						</div>
   				</div>
 				
@@ -553,6 +745,9 @@ session_start();
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
+
+	
+</div>
 
   </div>
 </div>
@@ -838,8 +1033,10 @@ session_start();
 
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
+	<script src="customjs/social.js"></script>
 
 	
+
 
 
   </body>
