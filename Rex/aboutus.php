@@ -12,15 +12,7 @@ session_start();
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kithabwala</title>
     <!-- Favicon -->
-	<style>
-		body{
-			color:#838282;
-		}
-		
-		.shakeimage{
-position:relative
-}
-	</style>
+	
 	
 	<link  href="css/contactus.css" rel="stylesheet">
     <!-- Font Awesome -->
