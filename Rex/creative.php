@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,8 +59,7 @@
 
   
 <div id="bodyid">
-  <!-- Start menu section -->
-  <section id="menu-area">
+ <section id="menu-area">
 	
     <nav class="navbar navbar-default main-navbar" role="navigation">  
 		
@@ -74,26 +77,40 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li class="active"><a href="home.html">HOME</a></li>
-            <li><a href="aboutus.html">ABOUT US</a></li> 
-            <li><a href="products.html">PRODUCTS</a></li>                    
-            <li><a href="#a">ADVERTISE </a></li> 
-            <li><a href="#c">CREATIVE</a></li> 
+			<li ><a href="home.php">HOME</a></li>
+            <li class="active"><a href="aboutus.php">ABOUT US</a></li> 
+            <li><a href="products.php">PRODUCTS</a></li>                    
+            <li><a href="advertise.php">ADVERTISE </a></li> 
+            <li><a href="creative.php">CREATIVE</a></li> 
 			
 			
-			<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
-			<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
 			
 			
-			<li id="userdetails" class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" >Welcome Saradhi Ramakrishna
-				<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-				  <li><a href=""><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>
-				  <li><a href=""><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></a></li>
-				  <li><a href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></a></li> 
-				</ul>
-			</li>
+			<?php 
+			if(!isset($_SESSION['emailid']))
+			{
+						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
+							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+							';
+			}
+			else
+			{
+				$content =  '<li><a  style="cursor:pointer" data-toggle="dropdown"><font color="orange"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
+						.'	<span class="caret"></span></a>'
+						.'	<ul class="dropdown-menu" style="background-color:white;padding:2%">'
+						.'	<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>'
+						.'	<li><a class="header-color" href="accountsettings.php"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></li>';
+					
+					
+					
+					$content .= '<li><a class="header-color" href="phpFiles\logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+							. '</ul>'
+							
+							.'	</li>';
+							echo $content;
+			}
+							
+			?>
           </ul>      
 			
         </div><!--/.nav-collapse -->
@@ -101,7 +118,6 @@
       </div>          
     </nav> 
   </section>
-  <!-- End menu section -->
 
   
 
@@ -417,60 +433,6 @@
 	
 	
 	
-	var fixmeTop = $('.fixedp').offset().top;
-$(window).scroll(function() {
-    var currentScroll = $(window).scrollTop();
-    if (currentScroll <= 100) {
-        $('.fixedp').css({
-            position: 'fixed',
-			display:'block'
-            
-        });
-    } else {
-        $('.fixedp').css({
-            position: 'static',
-			display:'none'
-        });
-    }
-});
-
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
-  $(document).ready(function(){
-  $.ajax({
-				url: "phpFiles/isSessionSet.php",// give your url
-				type: "GET",
-				dataType: 'json',
-				processData: false,
-				contentType: false,
-				success: function (response) {
-				console.log(response.error);
-				if(response.error == 1)
-				{
-					$("#signup").show();
-					$("#login").show();
-					$("#userdetails").hide();  
-				}
-					
-				else
-				{
-					$("#signup").hide();
-					$("#login").hide();
-					$("#userdetails").show();  
-				}
-
-
-				}
-				});
-				});
-}
-
-
-
 
 	
 

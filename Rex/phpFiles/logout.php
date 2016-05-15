@@ -2,6 +2,6 @@
 require_once 'isSessionSet.php';
 
 session_destroy();
-header('location:../aboutus.php')
+header('location:..//home.php')
 
 ?>

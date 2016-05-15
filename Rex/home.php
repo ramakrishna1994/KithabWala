@@ -7,7 +7,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-signin-client_id" content="982351477211-enciajdnumr2rru6nhvpfb0ni1e20bgg.apps.googleusercontent.com  ">
+	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Home</title>
@@ -453,7 +453,7 @@ session_start();
 			<li class="active"><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products\products.php">PRODUCTS</a></li>                    
-            <li><a href="#a">ADVERTISE </a></li> 
+            <li><a href="advertise.php">ADVERTISE </a></li> 
             <li><a href="creative.php">CREATIVE</a></li> 
 			
 			
@@ -1168,40 +1168,6 @@ $(window).scroll(function() {
     }
 });
 
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
-  $(document).ready(function(){
-  $.ajax({
-				url: "phpFiles/isSessionSet.php",// give your url
-				type: "GET",
-				dataType: 'json',
-				processData: false,
-				contentType: false,
-				success: function (response) {
-				console.log(response.error);
-				if(response.error == 1)
-				{
-					$("#signup").show();
-					$("#login").show();
-					$("#userdetails").hide();  
-				}
-					
-				else
-				{
-					$("#signup").hide();
-					$("#login").hide();
-					$("#userdetails").show();  
-				}
-
-
-				}
-				});
-				});
-}
 
 
 
@@ -1251,14 +1217,15 @@ showheader();
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="270" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
 						</div>
   				</div>
 				
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="270" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><a href="#" onclick="fb_login();"><img src="images/fb_login_awesome.jpg" border="0" alt=""></a>
+</center>
 						</div>
   				</div>
 				
@@ -1339,6 +1306,9 @@ showheader();
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
+
+	
+</div>
 
   </div>
 </div>
@@ -1624,6 +1594,7 @@ showheader();
 
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
+	<script src="customjs/social.js"></script>
 
 	
 

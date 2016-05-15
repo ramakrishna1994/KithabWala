@@ -161,7 +161,9 @@ background-image: url("images/bg.jpg");
 					echo '<button type="button" class="btn btn-primary btn-block" onclick="getPendingPosts(0)">Pending Ideas</button>';
 			}
 		?>
-
+		<button type="button" class="btn btn-primary btn-block" >LeaderBoard</button>
+		<button type="button" class="btn btn-primary btn-block" >Notifications</button>
+		<button type="button" class="btn btn-primary btn-block" >FAQ's</button>
 
 	</div>	
 		

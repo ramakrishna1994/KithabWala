@@ -70,7 +70,6 @@ position:relative
 
  
  
-  <!-- Start menu section -->
   <section id="menu-area">
 	
     <nav class="navbar navbar-default main-navbar" role="navigation">  
@@ -89,19 +88,18 @@ position:relative
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li class="active"><a href="home.php">HOME</a></li>
-            <li><a href="aboutus.php">ABOUT US</a></li> 
+			<li ><a href="home.php">HOME</a></li>
+            <li class="active"><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
-            <li><a href="#a">ADVERTISE </a></li> 
-            <li><a href="#creative.php">CREATIVE</a></li> 
+            <li><a href="advertise.php">ADVERTISE </a></li> 
+            <li><a href="creative.php">CREATIVE</a></li> 
 			
 			
 			
 			
 			<?php 
 			if(!isset($_SESSION['emailid']))
-			{	
-						
+			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
 							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
 							';
@@ -131,7 +129,6 @@ position:relative
       </div>          
     </nav> 
   </section>
-  <!-- End menu section -->
 
   <!-- Start about section -->
   <section id="about" >
@@ -191,12 +188,12 @@ We are inspired from experiences and aim to give a transformational makeover to 
   </section> --------->
 
   
-  
+
   
   <!-- Start Testimonial section -->
   <section id="testimonial">
-    <img src="images/testimonial-bg.jpg" alt="img" height="400px" width="100%">
-    <div class="counter-overlay" style="height:400px">
+    <img src="images/aboutus.jpg" alt="img" height="300px" width="100%">
+    <div class="counter-overlay" style="height:300px">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -207,7 +204,7 @@ We are inspired from experiences and aim to give a transformational makeover to 
                 <!-- Start testimonial slider -->
                 <div class="testimonial-slider">
                   <!-- single slide -->
-                  <div style="color:white;margin-top:11%;text-align:center">
+                  <div style="color:white;text-align:center">
                     <font size="6px">You can make anything by writing – C.S Lewis. </font><br><br>
 					<font size="4px">Our mission is to inspire you to write! </font>
                     
@@ -242,10 +239,10 @@ We are inspired from experiences and aim to give a transformational makeover to 
   
   
    
-  <div class="container">	
+  <div class="container-fluid">	
 	<div class="row">
 		<div class="col-md-12 ">
-			<iframe src="carricages/carricages.html" width="100%" height="1000px" frameBorder="0"></iframe>
+			<iframe src="carricages.html" width="100%" height="1000px" frameborder="0"  onload="resizeIframe(this)"></iframe>
 		</div>
 	</div>
   </div>
@@ -309,12 +306,12 @@ We are inspired from experiences and aim to give a transformational makeover to 
  
    <!-- Start call to action -->
   <section id="call-to-action">
-    <img src="images/careers.png" alt="img">
+    <img src="images/joinus.jpg" alt="img">
     <div class="call-to-overlay">
       <div class="container">
         <div class="call-to-content wow fadeInUp">
          
-          <a href="#" class="button button-default" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
+          <a href="careers.php" class="button button-default" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
         </div>
       </div>
     </div> 
@@ -1006,6 +1003,10 @@ We are inspired from experiences and aim to give a transformational makeover to 
         collapseFixedTabs();
     });
 });
+
+function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
 		
 </script>
 	
