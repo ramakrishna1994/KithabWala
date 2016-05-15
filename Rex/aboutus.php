@@ -237,7 +237,7 @@ We are inspired from experiences and aim to give a transformational makeover to 
 		</div>
 	  </div>
 	  </div>
-  
+   
   
    
   <div class="container-fluid">	
