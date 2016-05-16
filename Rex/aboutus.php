@@ -12,7 +12,15 @@ session_start();
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Kithabwala</title>
     <!-- Favicon -->
-	
+	<style>
+		body{
+			color:#838282;
+		}
+		
+		.shakeimage{
+position:relative
+}
+	</style>
 	
 	<link  href="css/contactus.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -123,30 +131,7 @@ session_start();
     </nav> 
   </section>
   <!-- End menu section -->
-  <!-- Start about section -->
-  <section id="about" >
-    <div class="container-fluid">
-      <div class="row">
-      
-          <!-- Start welcome area -->
-          <div class="welcome-area">
-            <div class="title-area">
-              <h2 class="tittle"><span>About Us</span></h2>
-              <span class="tittle-line"></span>
-              <p style="text-align:justify"><font color="#838282">Kithabwala, from the house of Samast Enterprises India Pvt. Ltd., offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.
-
-We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</font></p>
-            </div>
-            
-          </div>
-          <!-- End welcome area -->
-      
-      </div>
-      
-    </div>
-  </section> 
-  <!-- End about section -->
-
+  
   
   
  
@@ -185,8 +170,8 @@ We are inspired from experiences and aim to give a transformational makeover to 
   
   <!-- Start Testimonial section -->
   <section id="testimonial">
-    <img src="images/aboutus.jpg" alt="img" height="300px" width="100%">
-    <div class="counter-overlay" style="height:300px">
+    <img src="images/aboutus.jpg" alt="img" height="400px" width="100%">
+    <div class="counter-overlay" style="height:400px">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -197,7 +182,7 @@ We are inspired from experiences and aim to give a transformational makeover to 
                 <!-- Start testimonial slider -->
                 <div class="testimonial-slider">
                   <!-- single slide -->
-                  <div style="color:white;text-align:center">
+                  <div style="color:white;text-align:center;margin-top:5%">
                     <font size="6px">You can make anything by writing – C.S Lewis. </font><br><br>
 					<font size="4px">Our mission is to inspire you to write! </font>
                     
@@ -216,22 +201,22 @@ We are inspired from experiences and aim to give a transformational makeover to 
   <div class="container" >
     <div class="row" >
 		<div class="col-md-10 col-md-offset-1" style="text-align:center;margin-top:3%;color:#838282">
-		<p>We do this by <br>
-		<h5><font color="#838282" size="3px">Giving you captivating & energetic designs.</font></h5><br>
-		<p style="text-align:justify">Considerable amount of our resources are spent in ideating, envisioning and designing books with the elements you love to see in it. A specific focus is laid by us to incorporate the design elements & content given to us by our <a href="creativecorner.html">EnThU customers</a> . </p> <br>
-		<h5><font color="#838282" size="3px">Giving more for less!</font></h5>
+		<p><font size="5px" color="black"><b>We do this by</b></font> <br>
+		<h5><font color="black" size="3px"><b>Giving you captivating & energetic designs.</b></font></h5><br>
+		<p style="text-align:justify">Considerable amount of our resources are spent in ideating, envisioning and designing books with the elements you love to see in it. A specific focus is laid by us to incorporate the design elements & content given to us by our <a href="creativecorner.html" style="color:red">EnThU customers</a> . </p> <br>
+		<h5><font color="black" size="3px"><b>Giving more for less!</b></font></h5>
 		<b></b>
 		<br>
 		<p style="text-align:justify">We offer best in class quality at rationally reasonable rates along with value added fun elements such as the Magic Slate (Yes you read it right! Our books take you down the memory lane), sweet deals & discounts to make you feel rewarded anddd…….Hey! Why don’t you go down the lane to the nearest store and checkout our product, we have some more surprises in it for you.</p>
 		<br>
-		<b><h5><font color="#838282" size="3px">Ensuring that we do all the lively experimenting while maintaining the aesthetics of a classic notebook and creating an enriching experience for you to write</b></font></h5>
+		<b><h5><font color="black" size="3px"><b>Ensuring that we do all the lively experimenting while maintaining the aesthetics of a classic notebook and creating an enriching experience for you to write</b></font></h5>
 			</p>
 		</div>
 	  </div>
 	  </div>
-   
   
-   
+  
+   <!------------------------------------------------
   <div class="container-fluid">	
 	<div class="row">
 		<div class="col-md-12 ">
@@ -239,8 +224,102 @@ We are inspired from experiences and aim to give a transformational makeover to 
 		</div>
 	</div>
   </div>
+  -------------------------------------->
   
   
+  
+  
+  <!-- Start Team action -->
+  <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="team-area">
+            <div class="title-area">
+              <h2 class="tittle"><font color="#ffd00d">Kithabwale उर्फ़ Team Kithabwala</font> </h2>
+              <span class="tittle-line"></span>
+              <p><font color="black" size="3px">We are a bunch of misfits with a love for the retro age and the synergistic partnership among us completes the Jigsaw puzzle which we proudly refer to as Kithabwala! We strongly believe that ‘Team Work’ leads to ‘Dream Work’.</font></p>
+			  <p><font color="black">If anyone of you wants to get in touch with anyone of us, we would be more than happy to do so, after all we trust in the power of networking </font></p>
+            </div>
+            <!-- Start team content -->
+            <div class="team-content">
+              <ul class="team-grid">
+                <li>
+                  <div class="team-item team-img-1 wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <div class="team-info">
+                      <p> I must explain to you how all this mistaken idea of denouncing pleasure n</p>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-facebook"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-twitter"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-pinterest"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-rss"></span></a>
+                    </div>
+                  </div>
+                  <div class="team-address">
+                    <p>John Richerd</p>
+                    <span>CEO &amp; Founder</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="team-item team-img-2 wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <div class="team-info">
+                      <p> I must explain to you how all this mistaken idea of denouncing pleasure n</p>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-facebook"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-twitter"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-pinterest"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-rss"></span></a>
+                    </div>
+                  </div>
+                  <div class="team-address">
+                    <p>MIKE BATTON</p>
+                    <span>Co-founder</span>                  
+                  </div>
+                </li>
+                <li>
+                  <div class="team-item team-img-3 wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <div class="team-info">
+                      <p> I must explain to you how all this mistaken idea of denouncing pleasure n</p>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-facebook"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-twitter"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-pinterest"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-rss"></span></a>
+                    </div>
+                  </div>
+                  <div class="team-address">
+                    <p>JOHN VICK</p>
+                    <span>Developer</span>
+                  </div>
+                </li>
+                  <li>
+                  <div class="team-item team-img-4 wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <div class="team-info">
+                      <p> I must explain to you how all this mistaken idea of denouncing pleasure n</p>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-facebook"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-twitter"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-pinterest"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-rss"></span></a>
+                    </div>
+                  </div>
+                  <div class="team-address">
+                    <p>ROB HANSOM</p>
+                    <span>Senior designer</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- End team content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Start Team action -->
+
+  <!-- Start call to action -->
+  <section id="call-to-action">
+    <img src="images/map.png" alt="img" width="1300" height="400">
+    
+  </section>
+  <!-- End call to action -->
  
   <!--  -->
   <section id="team">
@@ -302,7 +381,7 @@ We are inspired from experiences and aim to give a transformational makeover to 
     <img src="images/joinus.jpg" alt="img">
     <div class="call-to-overlay">
       <div class="container">
-        <div class="call-to-content wow fadeInUp">
+        <div class="call-to-content wow fadeInUp" style="margin-top:15%" >
          
           <a href="careers.php" class="button button-default" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
         </div>
@@ -400,23 +479,23 @@ We are inspired from experiences and aim to give a transformational makeover to 
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
+                <p style="color:#ffd00d;font-size:30px;margin-top:5%">KITHABWALA</p>    
 				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
 						</div>
@@ -431,7 +510,7 @@ We are inspired from experiences and aim to give a transformational makeover to 
 	<div class="footer-bottom">
 			 <div class="row" style="text-align:center">
 				   <div class="col-md-2" >
-						<h4><b><font color="#ffcc04">Company</font></b></h4>
+						<h4><b><font color="#ffd00d">Company</font></b></h4>
 						
 						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
 						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
@@ -440,14 +519,14 @@ We are inspired from experiences and aim to give a transformational makeover to 
 				  </div>
 			  
 				  <div class="col-md-2">
-						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+						<h4><b><font color="#ffd00d">Advertise</font></b></h4>
 						
 						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
 						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
 				  </div>
   
 				  <div class="col-md-2">
-					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+					   <h4><b><font color="#ffd00d">Reach out</font></b></h4>
 						
 					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
 				  </div>
@@ -460,7 +539,7 @@ We are inspired from experiences and aim to give a transformational makeover to 
 				  
 				  <div class="col-md-4">
 						
-					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+					   <h4><b><font color="#ffd00d">Head Quarters</font></b></h4>
 						
 					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
 				  </div>
