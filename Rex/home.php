@@ -289,15 +289,15 @@ session_start();
 	transition: all 0.5s;
 }
 .logo {
-	height: 80px;  
-	width: 70px;
+	height: 50px;  
+	width: 100px;
 	margin-right: 45px;
-	margin-top: -25%;
+	margin-top: 1%;
 	padding: 0;
 }
 .logo-compressed {
-	height: 80px;  
-	width: 70px;
+	height: 50px;  
+	width: 100px;
 }
 .logo img {
 	height: 100%;
@@ -414,13 +414,14 @@ session_start();
 			</div>
 			</div>
 			
-			
+		<div class="row" style="margin-top:7%">	
         <!-- End header content slider -->  
         <!-- Header btn area -->
-        <div class="header-btn-area">
+        <div class="col-md-4 col-md-offset-4">
           <a class="knowmore-btn menu-scroll" onclick="hideheader()" ><i class="fa fa-chevron-down"></i></a>
         </div>
       </div>
+	  </div>
       </div>      
     </div>
 
@@ -446,7 +447,7 @@ session_start();
             <span class="icon-bar"></span>
           </button>
           <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="logo"></a>                      
+           <a class="navbar-brand logo" href="index.html"><img src="images/kithabwala.png" alt="logo"></a>                      
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
@@ -456,19 +457,18 @@ session_start();
             <li><a href="advertise.php">ADVERTISE </a></li> 
             <li><a href="creative.php">CREATIVE</a></li> 
 			
-			 </ul> 
-			 <ul id="top-menu" class="nav navbar-nav navbar-right menu-scroll">
+			 
 			
 			<?php 
 			if(!isset($_SESSION['kithabwalaemailid']))
 			{
-						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
-							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+						echo '<li style="margin-left:10%" id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><font size="2px"><span class="glyphicon glyphicon-user"></span> Sign Up</font></a></li> 
+							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><font size="2px"><span class="glyphicon glyphicon-log-in"></span> Login</font></a></li> 
 							';
 			}
 			else
 			{
-				$content =  '<li><a  style="cursor:pointer" data-toggle="dropdown"><font color="orange"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
+				$content =  '<li style="margin-left:10%"><a  style="cursor:pointer" data-toggle="dropdown"><font color="orange"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
 						.'	<span class="caret"></span></a>'
 						.'	<ul class="dropdown-menu" style="background-color:white;padding:2%">'
 						.'	<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>'
@@ -503,7 +503,7 @@ session_start();
             <div class="title-area">
               <h2 class="tittle">Welcome to <span>Kithabwala</span></h2>
               <span class="tittle-line"></span>
-              <p>Kithabwala, from the house of Samast Enterprises India Pvt. Ltd., offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.</p>
+			<p>We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>
             </div>
            
           </div>
@@ -529,33 +529,18 @@ session_start();
 
 <!----------start carousel section------------->
  
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 400px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 400px; overflow: hidden;">
+           <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="img/purple.jpg" />
+            </div>
             <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/red.jpg" />
-                <div style="position: absolute; top: 30px; left: 30px; width: 480px; height: 120px; font-size: 50px; color: #ffffff; line-height: 60px;">TOUCH SWIPE SLIDER</div>
-                <div style="position: absolute; top: 300px; left: 30px; width: 480px; height: 120px; font-size: 30px; color: #ffffff; line-height: 38px;">Build your slider with anything, includes image, content, text, html, photo, picture</div>
-                <div data-u="caption" data-t="0" style="position: absolute; top: 100px; left: 600px; width: 445px; height: 300px;">
-                    <img src="img/c-phone.png" style="position: absolute; top: 0px; left: 0px; width: 445px; height: 300px;" />
-                    <img src="img/c-jssor-slider.png" data-u="caption" data-t="1" style="position: absolute; top: 70px; left: 130px; width: 102px; height: 78px;" />
-                    <img src="img/c-text.png" data-u="caption" data-t="2" style="position: absolute; top: 153px; left: 163px; width: 80px; height: 53px;" />
-                    <img src="img/c-fruit.png" data-u="caption" data-t="3" style="position: absolute; top: 60px; left: 220px; width: 140px; height: 90px;" />
-                    <img src="img/c-navigator.png" data-u="caption" data-t="4" style="position: absolute; top: -123px; left: 121px; width: 200px; height: 155px;" />
-                </div>
-                <div data-u="caption" data-t="5" style="position: absolute; top: 120px; left: 650px; width: 470px; height: 220px;">
-                    <img src="img/c-phone-horizontal.png" style="position: absolute; top: 0px; left: 0px; width: 470px; height: 220px;" />
-                    <div style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px; overflow: hidden;">
-                        <img src="img/c-slide-1.jpg" data-u="caption" data-t="6" style="position: absolute; top: 0px; left: 0px; width: 379px; height: 213px;" />
-                        <img src="img/c-slide-3.jpg" data-u="caption" data-t="7" style="position: absolute; top: 0px; left: 379px; width: 379px; height: 213px;" />
-                    </div>
-                    <img src="img/c-navigator-horizontal.png" style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px;" />
-                    <img src="img/c-finger-pointing.png" data-u="caption" data-t="8" style="position: absolute; top: 740px; left: 1600px; width: 257px; height: 300px;" />
-                </div>
+                <img data-u="image" src="img/blue.jpg" />
             </div>
             <div data-p="225.00" style="display: none;">
                 <img data-u="image" src="img/purple.jpg" />
@@ -563,7 +548,7 @@ session_start();
             <div data-p="225.00" style="display: none;">
                 <img data-u="image" src="img/blue.jpg" />
             </div>
-            <a data-u="ad" href="http://www.jssor.com" style="display:none">jQuery Slider</a>
+          
         
         </div>
         <!-- Bullet Navigator -->
@@ -593,7 +578,7 @@ session_start();
             <div class="title-area">
       
               
-              <p><font color="" size="5px">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</font></p>
+              <p><font color="" size="3px">Kithabwala, from the house of Samast Enterprises India Pvt. Ltd., offers an innovative series of notebooks that are specifically designed to strike a chord with customer while giving them an unmatched combination of humour, rewards, entertainment and premium quality at budget-friendly prices.</font></p>
             </div>
             <!-- From Blog content -->
             <div class="from-blog-content">

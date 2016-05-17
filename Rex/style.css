@@ -221,17 +221,18 @@ img{
 	text-align: center;
 }
 .header-btn-area a{
-	margin: 0px 15px;
+	margin: 0px 10px;
 }
 .knowmore-btn{
+	position:fixed;
 	border: 2px solid #fff;
 	border-radius: 50%;
 	color: #fff;	
-	font-size: 15px;	
+	font-size: 10px;	
 	font-weight: bold;
 	font-family: 'Raleway', sans-serif;
 	text-transform: uppercase;
-	padding: 16px 18px;
+	padding: 13px 15px;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-ms-transition: all 0.5s;
@@ -355,7 +356,7 @@ img{
 
 #about{
 	background-color: #fff;
-	padding: 70px 0;
+	padding: 20px 0;
 	float: left;
 	display: inline;
 	width: 100%;	
