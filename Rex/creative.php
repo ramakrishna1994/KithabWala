@@ -249,8 +249,8 @@ session_start();
 			<li ><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
-            <li class="active"><a href="advertise.php">ADVERTISE </a></li> 
-            <li><a href="creative.php">CREATIVE</a></li> 
+            <li ><a href="advertise.php">ADVERTISE </a></li> 
+            <li class="active"><a href="creative.php">CREATIVE</a></li> 
 			
 			
 			

@@ -380,8 +380,8 @@ session_start();
 					<div id="cchoverdiv" style="height:350px;">
 					<div class="col-md-10 col-md-offset-1" style="border:1px solid orange;height:370px;width:80%;background:url('images/buttonbg.jpg') no-repeat" id="ccdiv">
 							<img src="images/msp.png"  class="img-circle" width="200" height="175"><br>
-							<p class="mine">CREATIVE<br>CORNER</p><br><br>
-							<a href="#" class="action-button shadow animate red">EXPLORE YOUR CREATIVITY</a>
+							<p class="mine" onclick="window.open('creative.php','_self')">CREATIVE<br>CORNER</p><br><br>
+							<a href="creative.php" class="action-button shadow animate red">EXPLORE YOUR CREATIVITY</a>
 							
 							
 					</div>
@@ -392,8 +392,8 @@ session_start();
 					<div id="phoverdiv" style="height:350px;">
 					<div class="col-md-10 col-md-offset-1" style="border:1px solid orange;height:370px;width:80%;background:url('images/buttonbg.jpg') no-repeat" id="pdiv">
 							<img src="images/msp.png"  class="img-circle" width="200" height="175"><br>
-							<p class="mine">PRODUCTS<br>&nbsp;</p><br><br>
-							<a href="#" class="action-button shadow animate blue">VIEW OUR PRODUCTS</a>
+							<p class="mine" onclick="window.open('products.php','_self')">PRODUCTS<br>&nbsp;</p><br><br>
+							<a href="products.php" class="action-button shadow animate blue">VIEW OUR PRODUCTS</a>
 							
 							
 					</div>
@@ -404,8 +404,8 @@ session_start();
 					<div id="adhoverdiv" style="height:350px;">
 					<div class="col-md-10 col-md-offset-1" style="border:1px solid orange;height:370px;width:80%;background:url('images/buttonbg.jpg') no-repeat" id="addiv">
 							<img src="images/msad.png" class="img-circle" width="200" height="175"><br>
-							<p class="mine">ADVERTISE<br>&nbsp;</p><br><br>
-							<a href="#" class="action-button shadow animate green">BRAND WITH US</a>
+							<p class="mine" onclick="window.open('advertise.php','_self')">ADVERTISE<br>&nbsp;</p><br><br>
+							<a href="advertise.php" class="action-button shadow animate green">BRAND WITH US</a>
 						
 							
 					</div>
@@ -456,8 +456,8 @@ session_start();
             <li><a href="advertise.php">ADVERTISE </a></li> 
             <li><a href="creative.php">CREATIVE</a></li> 
 			
-			
-			
+			 </ul> 
+			 <ul id="top-menu" class="nav navbar-nav navbar-right menu-scroll">
 			
 			<?php 
 			if(!isset($_SESSION['kithabwalaemailid']))
@@ -593,7 +593,7 @@ session_start();
             <div class="title-area">
       
               
-              <p>We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>
+              <p><font color="" size="5px">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</font></p>
             </div>
             <!-- From Blog content -->
             <div class="from-blog-content">
@@ -772,18 +772,17 @@ session_start();
     <div class="container">
       <div class="row">
      
-        <div class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12">
-          <div class="contact-right wow fadeInRight">
-            <h2>Subscribe with us</h2>
-            <form action="" class="contact-form">
-              <div class="form-group">                
-                <input type="text" class="form-control" placeholder="Email Id">
-              </div>
-              <button type="submit" data-text="SUBMIT" class="button button-default"><span>SUBMIT</span></button>
-            </form>
-          </div>
-        </div>
-      </div>
+        <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
+         
+			
+			<input type="email" class="form-control" id="email" placeholder="Subscribe to our Newsletter">
+		 </div>
+		 <div class="col-md-2">
+		 
+		 
+		  
+		   <button type="submit" class="btn btn-primary btn-block">JOIN</button>
+		</div>
     </div>
   </section>
   <!-- End subscription section -->
@@ -863,7 +862,7 @@ session_start();
   
   
     <div class="row" style="padding-top:10%" id="skyline">
-	<img src="images/skyline.svg" width="100%" style="margin-top:10%">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
   </div>
   
   

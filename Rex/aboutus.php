@@ -85,12 +85,12 @@ position:relative
             <span class="icon-bar"></span>
           </button>
           <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="logo"></a>                      
+           <a class="navbar-brand logo" href="index.html"><img src="images/kithabwala.png" alt="logo"></a>                      
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li class="active"><a href="home.php">HOME</a></li>
-            <li><a href="aboutus.php">ABOUT US</a></li> 
+			<li ><a href="home.php">HOME</a></li>
+            <li class="active"><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
             <li><a href="advertise.php">ADVERTISE </a></li> 
             <li><a href="creative.php">CREATIVE</a></li> 
@@ -226,19 +226,44 @@ position:relative
   </div>
   -------------------------------------->
   
+   <!-- Start call to action -->
+  <section id="call-to-action">
+    <img src="images/map.png" alt="img" width="1300" height="500">
+    
+  </section>
   
   
+  
+   <!-- Start subscription section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+     
+        <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
+         
+			
+			<input type="email" class="form-control" id="email" placeholder="Subscribe to our Newsletter">
+		 </div>
+		 <div class="col-md-2">
+		 
+		 
+		  
+		   <button type="submit" class="btn btn-primary btn-block">JOIN</button>
+		</div>
+    </div>
+  </section>
+  <!-- End subscription section -->
   
   <!-- Start Team action -->
   <section id="team">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
           <div class="team-area">
             <div class="title-area">
               <h2 class="tittle"><font color="#ffd00d">Kithabwale उर्फ़ Team Kithabwala</font> </h2>
               <span class="tittle-line"></span>
-              <p><font color="black" size="3px">We are a bunch of misfits with a love for the retro age and the synergistic partnership among us completes the Jigsaw puzzle which we proudly refer to as Kithabwala! We strongly believe that ‘Team Work’ leads to ‘Dream Work’.</font></p>
+              <p style="text-align:justify"><font color="black" size="3px">We are a bunch of misfits with a love for the retro age and the synergistic partnership among us completes the Jigsaw puzzle which we proudly refer to as Kithabwala! We strongly believe that ‘Team Work’ leads to ‘Dream Work’.</font></p>
 			  <p><font color="black">If anyone of you wants to get in touch with anyone of us, we would be more than happy to do so, after all we trust in the power of networking </font></p>
             </div>
             <!-- Start team content -->
@@ -255,7 +280,7 @@ position:relative
                     </div>
                   </div>
                   <div class="team-address">
-                    <p>John Richerd</p>
+                    <p>Abhilash Gali</p>
                     <span>CEO &amp; Founder</span>
                   </div>
                 </li>
@@ -270,7 +295,7 @@ position:relative
                     </div>
                   </div>
                   <div class="team-address">
-                    <p>MIKE BATTON</p>
+                    <p>Sahil Kaul</p>
                     <span>Co-founder</span>                  
                   </div>
                 </li>
@@ -285,10 +310,13 @@ position:relative
                     </div>
                   </div>
                   <div class="team-address">
-                    <p>JOHN VICK</p>
+                    <p>Himanshu Joshi</p>
                     <span>Developer</span>
                   </div>
                 </li>
+				</ul>
+				<br><br><br>
+				<ul class="team-grid">
                   <li>
                   <div class="team-item team-img-4 wow fadeInUp" style="visibility: hidden; animation-name: none;">
                     <div class="team-info">
@@ -300,7 +328,23 @@ position:relative
                     </div>
                   </div>
                   <div class="team-address">
-                    <p>ROB HANSOM</p>
+                    <p>Thanmay Krishna</p>
+                    <span>Senior designer</span>
+                  </div>
+                </li>
+				
+				<li>
+                  <div class="team-item team-img-4 wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <div class="team-info">
+                      <p> I must explain to you how all this mistaken idea of denouncing pleasure n</p>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-facebook"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-twitter"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-pinterest"></span></a>
+                      <a href="http://markups.io/items/rex/#"><span class="fa fa-rss"></span></a>
+                    </div>
+                  </div>
+                  <div class="team-address">
+                    <p>Ravi Teja Gamini</p>
                     <span>Senior designer</span>
                   </div>
                 </li>
@@ -314,27 +358,9 @@ position:relative
   </section>
   <!-- Start Team action -->
 
-  <!-- Start call to action -->
-  <section id="call-to-action">
-    <img src="images/map.png" alt="img" width="1300" height="400">
-    
-  </section>
-  <!-- End call to action -->
+
  
-  <!--  -->
-  <section id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-			<div class="welcome-area row">
-             
-               
-            </div>
-		 </div>
-      </div>
-      
-    </div>
-  </section> 
+
 
 
  
@@ -348,7 +374,8 @@ position:relative
               <span class="tittle-line"></span>
 			  <div class="row">
 				<div class>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1903.2356352918341!2d78.44114891681208!3d17.4371436767228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1462074634019" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<a href="https://www.google.co.in/maps/place/Sarathi+Studios+Bus+Stop/@17.4370234,78.4407573,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb90c55f8fef47:0x8925c47abc4116d6!8m2!3d17.4370183!4d78.442946" target="_blank"><img src="images/pmap.jpg" class="img-circle" width="300" height="300"></a>
+             
             </div>
             
         
@@ -360,30 +387,29 @@ position:relative
   
 </div>
  
- <!--  -->
-  <section id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-			<div class="welcome-area row">
-             
-               
-            </div>
-		 </div>
-      </div>
+
+ 
+ 
+  <div class="welcome-area" style="margin-top:5%">
+            <div class="title-area">
+              <h2 class="tittle"><span>Be a part of our story</span></h2>
+              <span class="tittle-line"></span>
+			  <p><font color="black" size="3px">We're always looking for great folks to join us on our mission. If you want to be a part of our story, we'd love to chat. Explore our careers section to see if there's a role that excites you. If there isn't one and we like each other, we'll create one for you.</font></p>
+			  <p>
+		</div>
       
     </div>
-  </section> 
- 
  
    <!-- Start call to action -->
-  <section id="call-to-action">
+  <section id="call-to-action" style="margin-top:3%">
+	
+	
     <img src="images/joinus.jpg" alt="img">
     <div class="call-to-overlay">
       <div class="container">
         <div class="call-to-content wow fadeInUp" style="margin-top:15%" >
          
-          <a href="careers.php" class="button button-default" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
+          <a href="careers.php" class="button button-default button-lg" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
         </div>
       </div>
     </div> 

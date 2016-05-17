@@ -293,15 +293,15 @@ img{
 	transition: all 0.5s;
 }
 .logo {
-	height: 80px;  
-	width: 70px;
+	height: 50px;  
+	width: 100px;
 	margin-right: 45px;
-	margin-top: -1px;
+	margin-top: 7px;
 	padding: 0;
 }
 .logo-compressed {
-	height: 80px;  
-	width: 70px;
+	height: 50px;  
+	width: 100px;
 }
 .logo img {
 	height: 100%;
