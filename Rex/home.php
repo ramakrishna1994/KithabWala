@@ -43,11 +43,7 @@ session_start();
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script>
-	setTimeout(function(){
-	showheader();
-}, 3000);
-</script>
+	
 	<style>
 	
 	
@@ -235,6 +231,7 @@ session_start();
 		
 		
 		.fixedp{
+			    font-family: 'brandon-grotesque','archer', Helvetica, Arial, sans-serif;
 			font-size:30px;
 		}
 		
@@ -242,20 +239,23 @@ session_start();
 		
 	.mine
 	{
+		    font-family: 'archer', Helvetica, Arial, sans-serif;
 		font-size:30px;
-		color:grey;
-		transition:1s;
+		color:white;
+		transition:0.5s;
 	}
 	
 	.mine:hover
 	{
-		color:green;
+		color:#ffd00d;
 		font-size:35px;
 		
 	}
 	
 	
-
+body {
+    margin: 0;
+}
 	
 	
 	
@@ -282,11 +282,7 @@ session_start();
 }
 .navbar-fixed-top{
 	height: 80px;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+	
 }
 .logo {
 	height: 50px;  
@@ -328,11 +324,7 @@ session_start();
 
 .navbar-default .navbar-nav > li > a {
   color: #636363;
-  -webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+ 
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -344,9 +336,8 @@ session_start();
     background-color: transparent;
 }
 
-
-
-
+.non-floater { overflow:hidden; }
+iframe { width:100%; padding:0; border:0; height: 99vh;   }
 		
 	</style>
   </head>
@@ -361,72 +352,13 @@ session_start();
   <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#menu-area"><i class="fa fa-chevron-up"></i></a>
   <!-- END SCROLL TOP BUTTON -->
+ 
 
-  <!-- Start header section -->  
-  <header id="header">
+<div class="non-floater" id="header">
+  <iframe id="iframe1" src="header.html" ></iframe>
+</div>
 
-    <div class="header-inner">
-      <!-- Header image -->
-      <img src="images/header.jpg" alt="img">
-      <div class="header-overlay">
-        <div class="header-content">
-        <!-- Start header content slider -->
-       
-		<div class="collapse navbar-collapse" >
-	   
-			<div class="row" style="text-align:center;" id="abc" >
-				<div class="col-md-4" style="cursor:pointer">
-					<p class="fixedp" style="position:fixed;color:grey;text-align:center;margin-top:13%;margin-left:7%">CREATIVE<br>CORNER</p>
-					<div id="cchoverdiv" style="height:350px;">
-					<div class="col-md-10 col-md-offset-1" style="border:1px solid orange;height:370px;width:80%;background:url('images/buttonbg.jpg') no-repeat" id="ccdiv">
-							<img src="images/msp.png"  class="img-circle" width="200" height="175"><br>
-							<p class="mine" onclick="window.open('creative.php','_self')">CREATIVE<br>CORNER</p><br><br>
-							<a href="creative.php" class="action-button shadow animate red">EXPLORE YOUR CREATIVITY</a>
-							
-							
-					</div>
-					</div>
-				</div>
-				<div class="col-md-4"   style="cursor:pointer">
-					<p class="fixedp" style="position:fixed;color:grey;text-align:center;margin-top:13%;margin-left:6%">PRODUCTS</p>
-					<div id="phoverdiv" style="height:350px;">
-					<div class="col-md-10 col-md-offset-1" style="border:1px solid orange;height:370px;width:80%;background:url('images/buttonbg.jpg') no-repeat" id="pdiv">
-							<img src="images/msp.png"  class="img-circle" width="200" height="175"><br>
-							<p class="mine" onclick="window.open('products.php','_self')">PRODUCTS<br>&nbsp;</p><br><br>
-							<a href="products.php" class="action-button shadow animate blue">VIEW OUR PRODUCTS</a>
-							
-							
-					</div>
-					</div>	
-				</div>
-				<div class="col-md-4"   id="ad" style="cursor:pointer">
-					<p class="fixedp" style="position:fixed;color:grey;text-align:center;margin-top:13%;margin-left:6%">ADVERTISE</p>
-					<div id="adhoverdiv" style="height:350px;">
-					<div class="col-md-10 col-md-offset-1" style="border:1px solid orange;height:370px;width:80%;background:url('images/buttonbg.jpg') no-repeat" id="addiv">
-							<img src="images/msad.png" class="img-circle" width="200" height="175"><br>
-							<p class="mine" onclick="window.open('advertise.php','_self')">ADVERTISE<br>&nbsp;</p><br><br>
-							<a href="advertise.php" class="action-button shadow animate green">BRAND WITH US</a>
-						
-							
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-			
-		<div class="row" style="margin-top:7%">	
-        <!-- End header content slider -->  
-        <!-- Header btn area -->
-        <div class="col-md-4 col-md-offset-4">
-          <a class="knowmore-btn menu-scroll" onclick="hideheader()" ><i class="fa fa-chevron-down"></i></a>
-        </div>
-      </div>
-	  </div>
-      </div>      
-    </div>
 
-  </header>
-  <!-- End header section -->
 <div id="bodyid">
   <!-- Start menu section -->
   <section id="menu-area">
@@ -583,36 +515,12 @@ session_start();
             <!-- From Blog content -->
             <div class="from-blog-content">
               <div class="row">
-                <div class="col-md-4">
+                
+				
+				<div class="col-md-4">
                   <article class="single-from-blog">
                     <figure>
-                      <a href="blog-single.html"><img src="images/cc.png" alt="img"></a>
-                    </figure>
-                    <div class="blog-title">
-                      <h2><a href="blog-single.html">Advertise With US</a></h2>
-                     
-                    </div>
-                   
-                    
-                  </article>
-                </div>
-                <div class="col-md-4">
-                  <article class="single-from-blog">
-                    <figure>
-                      <a href="blog-single.html"><img src="images/cc.png" alt="img"></a>
-                    </figure>
-                    <div class="blog-title">
-                      <h2><a href="blog-single.html">Creative Corner</a></h2>
-                      
-                    </div>
-                    
-                   
-                  </article>
-                </div>
-                <div class="col-md-4">
-                  <article class="single-from-blog">
-                    <figure>
-                      <a href="blog-single.html"><img src="images/products.png" alt="img"></a>
+                      <a href="blog-single.html"><img src="images/products.jpg" alt="img"></a>
                     </figure>
                     <div class="blog-title">
                       <h2><a href="blog-single.html">View Our Products</a></h2>
@@ -622,6 +530,36 @@ session_start();
                    
                   </article>
                 </div>
+				
+                <div class="col-md-4">
+                  <article class="single-from-blog">
+                    <figure>
+                      <a href="blog-single.html"><img src="images/cc.jpg" alt="img"></a>
+                    </figure>
+                    <div class="blog-title">
+                      <h2><a href="blog-single.html">Creative Corner</a></h2>
+                      
+                    </div>
+                    
+                   
+                  </article>
+                </div>
+				
+				
+				<div class="col-md-4">
+                  <article class="single-from-blog">
+                    <figure>
+                      <a href="blog-single.html"><img src="images/rk.jpg" alt="img"></a>
+                    </figure>
+                    <div class="blog-title">
+                      <h2><a href="blog-single.html">Advertise With US</a></h2>
+                     
+                    </div>
+                   
+                    
+                  </article>
+                </div>
+                
               </div>    
             </div>
           </div>
@@ -757,17 +695,23 @@ session_start();
     <div class="container">
       <div class="row">
      
-        <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12" style="text-align:right">
          
 			
 			<input type="email" class="form-control" id="email" placeholder="Subscribe to our Newsletter">
 		 </div>
-		 <div class="col-md-2">
+		 <div class="col-md-2" style="text-align:left">
 		 
 		 
 		  
 		   <button type="submit" class="btn btn-primary btn-block">JOIN</button>
 		</div>
+		
+		<div class="col-md-4">
+							   <div class="row" >
+									<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+								</div>
+						  </div>
     </div>
   </section>
   <!-- End subscription section -->
@@ -851,7 +795,6 @@ session_start();
   </div>
   
   
-  
   	
   <!-- Start Footer -->    
   <footer id="footer">
@@ -860,23 +803,23 @@ session_start();
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
+                <p style="color:#ffd00d;font-size:30px;margin-top:5%">KITHABWALA</p>    
 				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
 						</div>
@@ -888,49 +831,64 @@ session_start();
         </div>
       </div>
     </div>
-	<div class="footer-bottom">
-			 <div class="row" style="text-align:center">
-				   <div class="col-md-2" >
-						<h4><b><font color="#ffcc04">Company</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
-						
-				  </div>
-			  
-				  <div class="col-md-2">
-						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
-				  </div>
-  
-				  <div class="col-md-2">
-					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
-						
-					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
-				  </div>
-				  
-				   <div class="col-md-2">
-					   <div class="row" >
-							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+		<div class="footer-bottom">
+	
+	
+			 <div class="row" >
+				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
+				
+						<div class="col-md-7">
+							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-				  </div>
+						<div class="col-md-5" style="text-align:left">
+							
+						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+							
+						   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+					  </div>
 				  
-				  <div class="col-md-4">
-						
-					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
-						
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
-				  </div>
+				</div>
+				<div class="col-md-6" style="text-align:left">
+					
+						<div class="col-md-3 col-md-offset-1" >
+								<h4><b><font color="#ffcc04">Company</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
+								<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
+								<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
+								
+						  </div>
+					  
+						  <div class="col-md-3">
+								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
+						  </div>
+		  
+						  <div class="col-md-3">
+							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+								
+							   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
+						  </div>
+						  
+						  
+						  
+				</div>
+				   
+				  
+				   
+				  
+				 
         </div>
     </div>
     <div class="footer-bottom">
-      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
+      <p><font color="#838282" size="3px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
+  
+  
   
   
 </div>
@@ -956,6 +914,8 @@ session_start();
   <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
 
     <script>
+	
+	
 		 jQuery(document).ready(function ($) {
             
             var jssor_1_SlideoTransitions = [
@@ -1109,57 +1069,14 @@ session_start();
 		
 		
 		
-			$('#ccdiv').hide();
-		$('#pdiv').hide();
-		$('#addiv').hide();
-	 
-	 
-	$("#cchoverdiv").hover(function(){
-    $('#ccdiv').slideDown(500);
-	 $('#pdiv').slideUp(500);
-	 $('#addiv').slideUp(500);
-});
-
-$("#phoverdiv").hover(function(){
-     $('#ccdiv').slideUp(500);
-	 $('#pdiv').slideDown(500);
-	 $('#addiv').slideUp(500);
-});
-
-$("#adhoverdiv").hover(function(){
-    $('#ccdiv').slideUp(500);
-	 $('#pdiv').slideUp(500);
-	 $('#addiv').slideDown(500);
-});
-
-$("#abc").hover(function(){
-    $('#ccdiv').slideUp(500);
-	 $('#pdiv').slideUp(500);
-	 $('#addiv').slideUp(500);
-});
-
 	
 	
 	
-	var fixmeTop = $('.fixedp').offset().top;
-$(window).scroll(function() {
-    var currentScroll = $(window).scrollTop();
-    if (currentScroll <= 100) {
-        $('.fixedp').css({
-            position: 'fixed',
-			display:'block'
-            
-        });
-    } else {
-        $('.fixedp').css({
-            position: 'static',
-			display:'none'
-        });
-    }
-});
 
 
-setTimeout(function(){ showheader();}, 5000);
+setTimeout(function(){ 
+showheader();
+}, 3000);
 
 
 	
@@ -1167,13 +1084,22 @@ setTimeout(function(){ showheader();}, 5000);
 	{
 	
 			$("#bodyid").show();
-			$("#header").slideUp(1000);
+			
+	$('#iframe1').contents().find('header#banner').slideUp(1000,function(){
+								 $("#header").hide();
+	});
+	
+	
+
 			
 	}
 	function showheader()
 		{
-			$("#header").slideDown(1000);
-			$("#bodyid").hide();
+			$("#header").show();
+			$('#iframe1').contents().find('header#banner').slideDown(1000,function(){
+					$("#bodyid").hide();
+			});
+			
 			
 		}
 	

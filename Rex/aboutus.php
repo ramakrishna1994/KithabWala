@@ -20,6 +20,17 @@ session_start();
 		.shakeimage{
 position:relative
 }
+
+.locimage{
+   
+    -webkit-transition:.4s all;
+}
+.transition {
+    -webkit-transform: scale(2); 
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(1.5);
+}
 	</style>
 	
 	<link  href="css/contactus.css" rel="stylesheet">
@@ -57,6 +68,7 @@ position:relative
 
   </head>
   <body>
+
 
   <!-- BEGAIN PRELOADER -->
   <div id="preloader">
@@ -165,7 +177,6 @@ position:relative
     </div>
   </section> --------->
 
-  
 
   
   <!-- Start Testimonial section -->
@@ -234,25 +245,7 @@ position:relative
   
   
   
-   <!-- Start subscription section -->
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-     
-        <div class="col-md-6 col-md-offset-2 col-sm-6 col-xs-12">
-         
-			
-			<input type="email" class="form-control" id="email" placeholder="Subscribe to our Newsletter">
-		 </div>
-		 <div class="col-md-2">
-		 
-		 
-		  
-		   <button type="submit" class="btn btn-primary btn-block">JOIN</button>
-		</div>
-    </div>
-  </section>
-  <!-- End subscription section -->
+   
   
   <!-- Start Team action -->
   <section id="team">
@@ -374,7 +367,7 @@ position:relative
               <span class="tittle-line"></span>
 			  <div class="row">
 				<div class>
-					<a href="https://www.google.co.in/maps/place/Sarathi+Studios+Bus+Stop/@17.4370234,78.4407573,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb90c55f8fef47:0x8925c47abc4116d6!8m2!3d17.4370183!4d78.442946" target="_blank"><img src="images/pmap.jpg" class="img-circle" width="300" height="300"></a>
+					<a href="https://www.google.co.in/maps/place/Sarathi+Studios+Bus+Stop/@17.4370234,78.4407573,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb90c55f8fef47:0x8925c47abc4116d6!8m2!3d17.4370183!4d78.442946" target="_blank"><img src="images/pmap.jpg" class="img-circle locimage" width="300" height="300"></a>
              
             </div>
             
@@ -492,7 +485,7 @@ position:relative
   
   
     <div class="row" style="padding-top:10%" id="skyline">
-	<img src="images/skyline.svg" width="100%" style="margin-top:10%">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
   </div>
   
   
@@ -533,46 +526,63 @@ position:relative
         </div>
       </div>
     </div>
-	<div class="footer-bottom">
-			 <div class="row" style="text-align:center">
-				   <div class="col-md-2" >
-						<h4><b><font color="#ffd00d">Company</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
-						
-				  </div>
-			  
-				  <div class="col-md-2">
-						<h4><b><font color="#ffd00d">Advertise</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
-				  </div>
-  
-				  <div class="col-md-2">
-					   <h4><b><font color="#ffd00d">Reach out</font></b></h4>
-						
-					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
-				  </div>
-				  
-				   <div class="col-md-2">
-					   <div class="row" >
-							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+		<div class="footer-bottom">
+	
+	
+			 <div class="row" >
+				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
+				
+						<div class="col-md-7">
+							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-				  </div>
+						<div class="col-md-5" style="text-align:left">
+							
+						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+							
+						   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+					  </div>
 				  
-				  <div class="col-md-4">
-						
-					   <h4><b><font color="#ffd00d">Head Quarters</font></b></h4>
-						
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
-				  </div>
+				</div>
+				<div class="col-md-6" style="text-align:left">
+					
+						<div class="col-md-3 col-md-offset-1" >
+								<h4><b><font color="#ffcc04">Company</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
+								<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
+								<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
+								
+						  </div>
+					  
+						  <div class="col-md-3">
+								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
+						  </div>
+		  
+						  <div class="col-md-3">
+							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+								
+							   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
+						  </div>
+						  
+						  <div class="col-md-2">
+							   <div class="row" >
+									<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+								</div>
+						  </div>
+						  
+				</div>
+				   
+				  
+				   
+				  
+				 
         </div>
     </div>
     <div class="footer-bottom">
-      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
+      <p><font color="#838282" size="3px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
@@ -1019,6 +1029,8 @@ position:relative
 	<script src="customjs/social.js"></script>
 <script>
 	
+	
+	
 		 //////////
     // Trade Enquiry related js
     /////
@@ -1110,10 +1122,14 @@ position:relative
     });
 });
 
-function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
-		
+
+$('.locimage').hover(function(){
+      $(this).addClass('transition');
+},function(){
+    $(this).removeClass('transition');   
+});
+
+	
 </script>
 	
 

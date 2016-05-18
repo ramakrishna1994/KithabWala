@@ -48,31 +48,19 @@ jQuery(function($){
 
 
 	jQuery(window).bind('scroll', function () {
-    if ($(window).scrollTop() > 10) {
+    if ($(window).scrollTop() > 1) {
         $('.main-navbar').addClass('navbar-fixed-top');
-        $('.logo').addClass('logo-compressed');
-        $('.main-nav li a').addClass('less-padding');
-        $('.search-area').css('height','44');
-        $('.search-area input[type="text"]').css('top','35%');
+      
+      
         
         
 	    } else {
 	        $('.main-navbar').removeClass('navbar-fixed-top');
-	        $('.logo').removeClass('logo-compressed');
-	        $('.main-nav li a').removeClass('less-padding');
-	        $('.search-area').css('height','60');
-	        $('.search-area input[type="text"]').css('top','11%');
+	        
 	    }
 	});
 
-	/* ----------------------------------------------------------- */
-	/*  3. COUNTER
-	/* ----------------------------------------------------------- */
-
-	jQuery('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
+	
 
 
 	/* ----------------------------------------------------------- */

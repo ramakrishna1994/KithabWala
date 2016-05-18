@@ -1187,7 +1187,7 @@ img{
 .testimonial-area{
 	display: inline;
 	float: left;
-	padding: 70px 0;
+	padding: 40px 0;
 	width: 100%;	
 }
 .testimonial-area .tittle{
@@ -1199,7 +1199,7 @@ img{
 .testimonial-conten{
 	display: inline;
 	float: left;
-	margin-top: 11px;
+	margin-top: 2px;
 	width: 100%;
 }
 .testimonial-slider {
@@ -1219,8 +1219,8 @@ img{
 	color: #fff;
 	font-family: "Raleway",sans-serif;
 	font-size: 18px;
-	line-height: 35px;
-	margin-top: 55px;
+	line-height: 20px;
+	margin-top: 10px;
 	position: relative;
 }
 .single-slide > p::after {
@@ -1543,7 +1543,7 @@ img{
 /*--------------------*/
 
 #footer{
-	background-color: black;
+	background-color: rgb(34,34,34);
 	display: inline;
 	float: left;
 	margin-top: -6px;

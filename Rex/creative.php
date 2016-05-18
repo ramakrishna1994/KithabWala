@@ -289,21 +289,29 @@ session_start();
   </section>
   <!-- End menu section -->
 
+  <div class="container col-md-8 col-md-offset-2" style="margin-top:1%">
   
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="creative.php">Hall Of Fame</a></li>
+    <li ><a href="submit.php">Submit</a></li>
+    <li><a href="howitworks.php">How it Works</a></li>
+   
+  </ul>
+  
+</div>
  
    <!-- Start subscription section -->
   <div class="container">	
 	<div class="row">
-		<div class="col-md-12 ">
-			<iframe src="cc.html" width="100%" height="3770px" frameBorder="0"></iframe>
+		<div class="col-md-12" style="margin-top:1%">
+			<iframe src="cc.html" width="100%" height="1150px" frameBorder="0"></iframe>
 		</div>
 	</div>
   </div>
   <!-- End subscription section -->
 
   
-  
-  
+ 
   
   
   
