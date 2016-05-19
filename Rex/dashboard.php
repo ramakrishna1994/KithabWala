@@ -83,7 +83,7 @@ background-image: url("images/bg.jpg");
         <li><a class="header-color" href="aboutus.php">Home</a></li> 
 		  <li><a class="header-color" href="products.php">About Us</a></li>
 		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
-		  <li><a class="header-color" href="creative.php">Creative Corner</a></li> 
+		  <li ><a href="halloffame.php">CREATIVE</a></li> 
 		  
         
        </ul>

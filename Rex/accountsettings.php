@@ -50,7 +50,7 @@ session_start();
          <li><a class="header-color" href="aboutus.php">About Us</a></li> 
 		  <li><a class="header-color" href="products.php">Products</a></li>
 		  <li><a class="header-color" href="advertise.php">Advertise</a></li>
-		  <li><a class="header-color" href="creativecorner.php">Creative Corner</a></li> 
+		  <li ><a href="halloffame.php">CREATIVE</a></li> 
 		  <li><a class="header-color" href="contactus.php">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
