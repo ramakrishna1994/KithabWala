@@ -803,8 +803,8 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffd00d;font-size:30px;margin-top:5%">KITHABWALA</p>    
-				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+                <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:15px;margin-top:1%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
@@ -837,39 +837,39 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
 			 <div class="row" >
 				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
 				
-						<div class="col-md-7">
+						<div class="col-md-7" style="padding:10px 0">
 							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-						<div class="col-md-5" style="text-align:left">
+						<div class="col-md-5" style="text-align:left;padding:10px 0">
 							
 						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
 							
-						   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+						   <p><font color="#838282" size="2px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
 					  </div>
 				  
 				</div>
 				<div class="col-md-6" style="text-align:left">
 					
-						<div class="col-md-3 col-md-offset-1" >
+						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
 								<h4><b><font color="#ffcc04">Company</font></b></h4>
 								
-								<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-								<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-								<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="#"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
 								
 						  </div>
 					  
-						  <div class="col-md-3">
+						  <div class="col-md-3" style="padding:10px 0">
 								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
 								
-								<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-								<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
+								<p><a href="#"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
 						  </div>
 		  
-						  <div class="col-md-3">
+						  <div class="col-md-3" style="padding:10px 0">
 							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
 								
-							   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
+							   <p><a href="#"><font color="#838282" size="2px">Contact Us</font></a></p>
 						  </div>
 						  
 						  
@@ -882,8 +882,8 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
 				 
         </div>
     </div>
-    <div class="footer-bottom">
-      <p><font color="#838282" size="3px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
+    <div class="footer-bottom" style="padding:10px 0">
+      <p><font color="#838282" size="2px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
