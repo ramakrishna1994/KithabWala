@@ -10,7 +10,7 @@ session_start();
 	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Home</title>
+    <title>How It Works</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/logo.ico"/>
 		<link  href="css/contactus.css" rel="stylesheet">

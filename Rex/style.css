@@ -601,7 +601,7 @@ img{
 .call-to-content {
 	display: inline;
 	float: left;
-	padding: 60px 0;
+	padding: 30px 0;
 	text-align: center;
 	width: 100%;
 }
@@ -982,7 +982,7 @@ img{
 	 transform: scale(0.9);
 } 
 .portfolio-title {
-	bottom: 0;
+	top: 0;
 	display:inline;
 	opacity: 0;
 	left: 0;
@@ -994,6 +994,21 @@ img{
 	-o-transition: all 0.7s ease 0s;
 	transition: all 0.7s ease 0s;
 }
+
+.portfolio-title1 {
+	
+	display:inline;
+	opacity: 0;
+	
+	
+
+	text-align: center;
+	width: 100%;
+	-webkit-transition: all 0.7s ease 0s;
+	-o-transition: all 0.7s ease 0s;
+	transition: all 0.7s ease 0s;
+}
+
 .single-item:hover .portfolio-title{
 	opacity: 1;
 }
@@ -1620,7 +1635,7 @@ img{
 	display: inline;
 	border-top: 1px solid #434343;
 	float: left;
-	padding: 40px 0;
+	padding: 0px 0;
 	width: 100%;
 	text-align: center;
 }

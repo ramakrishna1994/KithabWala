@@ -10,7 +10,7 @@ session_start();
 	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Home</title>
+    <title>Careers</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/logo.ico"/>
 		<link  href="css/contactus.css" rel="stylesheet">
@@ -43,11 +43,7 @@ session_start();
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script>
-	setTimeout(function(){
-	showheader();
-}, 3000);
-</script>
+	
 	<style>
 	
 	
@@ -184,27 +180,29 @@ session_start();
 	
 		
 		
-		.fixedp{
-			font-size:30px;
+		.roundup
+		{
+			position:absolute;
+			color:black;
+			width:70px;
+			height:70px;
+			border-radius:50%;
+			border:1px solid orange;
+			margin-top:-3%;
+			margin-left:48%;
+			background-color:white;
+			z-index:10;
+			padding:22px;
+			font-size:25px;
 		}
-		
-		
-		
-	.mine
-	{
-		font-size:30px;
-		color:grey;
-		transition:1s;
+	
+	.roundup:hover{
+		background-color:orange;
+		color:black;
+		cursor:pointer;
 	}
 	
-	.mine:hover
-	{
-		color:green;
-		font-size:35px;
-		
-	}
-	
-	
+
 
 	
 	
@@ -290,28 +288,109 @@ session_start();
   <!-- End menu section -->
 
   
+ 
   
-
+  <!-- 
+  <div class="container-fluid">	
+	<div class="row">
+		<div class="col-md-12" style="margin-top:1%">
+			<iframe src="careers.html" width="100%" height="2000px" frameBorder="0"></iframe>
+		</div>
+	</div>
+  </div>
+   -->
   
-   <!-- Start call to action -->
-  <section id="call-to-action">
-    <img src="images/careers.png" alt="img">
-    <div class="call-to-overlay">
-      <div class="container">
-        <div class="call-to-content wow fadeInUp">
-          
+  
+  
+  
+  
+  <!-- Start Testimonial section -->	
+  <section >
+    <img id="headerimage" src="images/careers.jpg" alt="img" height="400px" width="100%">
+	<div class="row">
+	<a class="roundup"  id="abc" ><span class="glyphicon glyphicon-chevron-down"></span></a>
+   </div>
+  </section>
+  <!-- End Testimonial section -->
+  
+  
+  
+  
+ <section id="start">
+    <div class="container-fluid" >
+      
+       
+          <!-- Start welcome area -->
+          <div class="welcome-area" style="margin-top:5%">
+            <div class="title-area">
+              <h5 class="tittle"><span>WE'RE HIRING</span></h5>
+              <span class="tittle-line"></span>
+			  <div class="row">
+				<p style="text-align:justify">At Kithabwala you will have the opportunity to work with a group of highly talented individuals and learn the specifics in a product based start-up. We offer Competitive Compensation and a Performance linked Bonus. The icing on the cake however is a chance to be a part of the core team for long term benefits. If you want to be a part of our journey, reach out to us!</p>
+            
+        
+          <!-- End welcome area -->
         </div>
       </div>
-    </div> 
-  </section>
-  <!-- End call to action -->
+      
+    </div>
   
+</div>
+</section>
+
+ <div class="container-fluid" >
+      
+       
+          <!-- Start welcome area -->
+          <div class="welcome-area" style="margin-top:5%">
+            <div class="title-area">
+              <center><font size="5px">Current open positions</font></center><br>
+              <span class="tittle-line"></span>
+			  <div class="row">
+			
+				<div class="col-md-4" >
+					<div class="col-md-12" style="margin:5px;background-color:#ffd00d;height:400px">
+					<h3><b>Marketing Associate</b></h3><br>
+					<h5>Job Desc:</h5><p style="text-align:justify">
+We are Looking for a motivated individual with a passion to work for an emerging product based startup.
+The marketing associate will be expected to work in a dynamic environment with focus on marketing and sponsor pitching.
+The candidate must have extremely high standards in terms of quality of work, attention to detail, and absolute commitment to task completion.</p>
+</div>
+				</div>
+				
+				<div class="col-md-4">
+				<div class="col-md-12" style="margin:5px;background-color:#ffd00d;height:400px">
+					<h3><b>Sales Associate</b></h3><br>
+					<h5>Job Desc:</h5><p style="text-align:justify">
+We’re looking for a motivated individual with a passion to work for an emerging product based startup. 
+The Sales associate will be expected to work in a dynamic environment with focus on dealer relations. 
+The candidate must have extremely high standards in terms of quality of work, attention to detail, and absolute commitment to task completion. </p>
+				</div>
+				</div>
+				
+				<div class="col-md-4">
+				<div class="col-md-12" style="margin:5px;background-color:#ffd00d;height:400px">
+					<h3><b>Sales Associate</b></h3><br>
+					<h5>Job Desc:</h5><p style="text-align:justify">
+We’re looking for a motivated individual with a passion to work for an emerging product based startup. 
+The Sales associate will be expected to work in a dynamic environment with focus on dealer relations. 
+The candidate must have extremely high standards in terms of quality of work, attention to detail, and absolute commitment to task completion. </p>
+				</div>
+				</div>
+				
+            
+        
+          <!-- End welcome area -->
+        </div>
+		
+		<div class="row" style="margin-top:2%">
+			<center>For further infformation and to apply, reach out to us at <b>careers@kithabwala.com</b></center>
+		</div>
+      </div>
+      
+    </div>
   
-  
-  
-  
-  
-  
+</div>
 
   
 
@@ -606,25 +685,13 @@ session_start();
 	 
 	
 
-	
-	
-	
-	var fixmeTop = $('.fixedp').offset().top;
-$(window).scroll(function() {
-    var currentScroll = $(window).scrollTop();
-    if (currentScroll <= 100) {
-        $('.fixedp').css({
-            position: 'fixed',
-			display:'block'
-            
-        });
-    } else {
-        $('.fixedp').css({
-            position: 'static',
-			display:'none'
-        });
-    }
+$("#abc").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#start").offset().top
+    }, 1000);
 });
+
+	
 
 
 

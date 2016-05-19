@@ -400,7 +400,7 @@ position:relative
     <img src="images/joinus.jpg" alt="img">
     <div class="call-to-overlay">
       <div class="container">
-        <div class="call-to-content wow fadeInUp" style="margin-top:15%" >
+        <div class="call-to-content wow fadeInUp" style="margin-top:10%" >
          
           <a href="careers.php" class="button button-default button-lg" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
         </div>

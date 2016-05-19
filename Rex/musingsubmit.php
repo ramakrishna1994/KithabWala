@@ -10,7 +10,7 @@ session_start();
 	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Submit</title>
+    <title>Musings</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/logo.ico"/>
 		<link  href="css/contactus.css" rel="stylesheet">
@@ -29,7 +29,7 @@ session_start();
 
     <!-- Main Style -->
     <link href="style.css" rel="stylesheet">
-
+  <script type="text/javascript" src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"> </script>
     <!-- Fonts -->
     <!-- Open Sans for body font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -247,7 +247,7 @@ session_start();
             <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
             <li ><a href="advertise.php">ADVERTISE </a></li> 
-            <li class="active"><a href="creative.php">CREATIVE</a></li> 
+            <li><a href="creative.php">CREATIVE</a></li> 
 			
 			
 			
@@ -286,226 +286,132 @@ session_start();
   </section>
   <!-- End menu section -->
 
- <div class="container col-md-8 col-md-offset-2" style="margin-top:1%">
-  
-  <ul class="nav nav-tabs">
-    <li ><a href="creative.php">Hall Of Fame</a></li>
-    <li class="active"><a href="submit.php">Submit</a></li>
-    <li><a href="howitworks.php">How it Works</a></li>
-   
-  </ul>
-  
-</div>
 
   
- 
-  <!-- Start Portfolio section -->
-  <section id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="portfolio-area">
-            <div class="title-area">
-              <h2 class="tittle">Recent portfolio</h2>
-              <span class="tittle-line"></span>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
-            </div>
-            <!-- Portfolio content -->
-            <div class="portfolio-content">
-                <!-- portfolio menu -->
-               <div class="portfolio-menu">
-                 <ul>
-                   <li class="filter" data-filter="all">All</li>
-                   <li class="filter" data-filter=".musing">Musings</li>
-                   <li class="filter" data-filter=".design">Design</li>
-                   
-                 </ul>
-               </div>
-               <!-- Portfolio container -->
-               <div id="mixit-container" class="portfolio-container">
-                
-                 <div class="single-portfolio mix design" >
-                   
-                     <div class="single-item" style="background:url('images/portfolio-img-small1.jpg') no-repeat;">
-							<div class="row" style="padding:2%">
-								
-									<div class="col-md-12">
-										<center><h3><font color="#ffd00d">Generic</font></h3></center>
-									</div>
-									<div class="col-md-10 col-md-offset-1" style="background-color:white;margin-top:42%">
-										<center><font color="#ffd00d">Contest Ends on May 28</font></center>
-									</div>
-									<div class="col-md-8 col-md-offset-2"  onclick="showcontentmodal(1)" style="background-color:white;margin-top:5%;cursor:pointer">
-										<center><i class="fa fa-eye"></i><font color="#ffd00d">&nbsp;View Challenge</font></center>
-									</div>
-								
-								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
-									</div>
-									
-								
-							</div>
-					</div>
-                   
-                 </div>
-                 <div class="single-portfolio mix musing">
-                  
-                     <div class="single-item" style="background:url('images/portfolio-img-big1.jpg') no-repeat;">
-							<div class="row" style="padding:2%">
-								
-									<div class="col-md-12">
-										<center><h3><font color="#ffd00d">Generic</font></h3></center>
-									</div>
-									<div class="col-md-10 col-md-offset-1" style="background-color:white;margin-top:42%">
-										<center><font color="#ffd00d">Contest Ends on May 28</font></center>
-									</div>
-									<div class="col-md-8 col-md-offset-2"  onclick="showcontentmodal(1)" style="background-color:white;margin-top:5%;cursor:pointer">
-										<center><i class="fa fa-eye"></i><font color="#ffd00d">&nbsp;View Challenge</font></center>
-									</div>
-								
-								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
-									</div>
-									
-								
-							</div>
-					</div>
-                   
-                 </div>
-                 <div class="single-portfolio mix musing">
-                    <div class="single-item" style="background:url('images/portfolio-img-big2.jpg') no-repeat;">
-							<div class="row" style="padding:2%">
-								
-									<div class="col-md-12">
-										<center><h3><font color="#ffd00d">Generic</font></h3></center>
-									</div>
-									<div class="col-md-10 col-md-offset-1" style="background-color:white;margin-top:42%">
-										<center><font color="#ffd00d">Contest Ends on May 28</font></center>
-									</div>
-									<div class="col-md-8 col-md-offset-2"  onclick="showcontentmodal(1)" style="background-color:white;margin-top:5%;cursor:pointer">
-										<center><i class="fa fa-eye"></i><font color="#ffd00d">&nbsp;View Challenge</font></center>
-									</div>
-								
-								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
-									</div>
-									
-								
-							</div>
-					</div>
-                 </div>
-                 <div class="single-portfolio mix design">
-                    <div class="single-item" style="background:url('images/portfolio-img-big3.jpg') no-repeat;">
-							<div class="row" style="padding:2%">
-								
-									<div class="col-md-12">
-										<center><h3><font color="#ffd00d">Generic</font></h3></center>
-									</div>
-									<div class="col-md-10 col-md-offset-1" style="background-color:white;margin-top:42%">
-										<center><font color="#ffd00d">Contest Ends on May 28</font></center>
-									</div>
-									<div class="col-md-8 col-md-offset-2"  onclick="showcontentmodal(1)" style="background-color:white;margin-top:5%;cursor:pointer">
-										<center><i class="fa fa-eye"></i><font color="#ffd00d">&nbsp;View Challenge</font></center>
-									</div>
-								
-								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
-									</div>
-									
-								
-							</div>
-					</div>
-                 </div>
-                 <div class="single-portfolio mix design">
-                   <div class="single-item" style="background:url('images/portfolio-img-big4.jpg') no-repeat;">
-							<div class="row" style="padding:2%">
-								
-									<div class="col-md-12">
-										<center><h3><font color="#ffd00d">Generic</font></h3></center>
-									</div>
-									<div class="col-md-10 col-md-offset-1" style="background-color:white;margin-top:42%">
-										<center><font color="#ffd00d">Contest Ends on May 28</font></center>
-									</div>
-									<div class="col-md-8 col-md-offset-2"  onclick="showcontentmodal(1)" style="background-color:white;margin-top:5%;cursor:pointer">
-										<center><i class="fa fa-eye"></i><font color="#ffd00d">&nbsp;View Challenge</font></center>
-									</div>
-								
-								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
-									</div>
-									
-								
-							</div>
-					</div>
-                 </div>
-                 <div class="single-portfolio mix design">
-                    <div class="single-item" style="background:url('images/portfolio-img-big5.jpg') no-repeat;">
-							<div class="row" style="padding:2%">
-								
-									<div class="col-md-12">
-										<center><h3><font color="#ffd00d">Generic</font></h3></center>
-									</div>
-									<div class="col-md-10 col-md-offset-1" style="background-color:white;margin-top:42%">
-										<center><font color="#ffd00d">Contest Ends on May 28</font></center>
-									</div>
-									<div class="col-md-8 col-md-offset-2"  onclick="showcontentmodal(1)" style="background-color:white;margin-top:5%;cursor:pointer">
-										<center><i class="fa fa-eye"></i><font color="#ffd00d">&nbsp;View Challenge</font></center>
-									</div>
-								
-								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
-									</div>
-									
-								
-							</div>
-					</div>
-                 </div>
-                 <div class="single-portfolio mix design">
-                    <div class="single-item" style="background:url('images/portfolio-img-big6.jpg') no-repeat;">
-							<div class="row" style="padding:2%">
-								
-									<div class="col-md-12">
-										<center><h3><font color="#ffd00d">Generic</font></h3></center>
-									</div>
-									<div class="col-md-10 col-md-offset-1" style="background-color:white;margin-top:42%">
-										<center><font color="#ffd00d">Contest Ends on May 28</font></center>
-									</div>
-									<div class="col-md-8 col-md-offset-2"  onclick="showcontentmodal(1)" style="background-color:white;margin-top:5%;cursor:pointer">
-										<center><i class="fa fa-eye"></i><font color="#ffd00d">&nbsp;View Challenge</font></center>
-									</div>
-								
-								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
-									</div>
-									
-								
-							</div>
-					</div>
-                 </div>
-               </div>      
-            </div>
-          </div>
+  
+<div class="container">
+  <h2>Horizontal form</h2>
+  <form class="form-horizontal" role="form">
+  
+
+	
+	<div class="form-group">
+      <center><label class="col-sm-12">MUSING INFORMATION</label></center>
+      
+    </div>
+	
+	
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="title">Title of the Design </label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="title" >
+      </div>
+    </div>
+    
+	<div class="form-group">
+	  <label for="theme" class="control-label col-sm-2">Select Theme </label>
+	  <div class="col-sm-10">          
+        <select class="form-control" id="theme">
+			<option>Select anyone</option>
+			<option>Politics</option>
+			<option>Science or Technology</option>
+			<option>Management and Business</option>
+			<option>Wildlife</option>
+			<option>Literature</option>
+			<option>Miscellaneous</option>
+			<option>Motivation and personality developement</option>
+		  </select>
+      </div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="tags">Theme Tags </label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="tags" >
+      </div>
+    </div>
+	
+	<div class="col-md-12" style="border-top:1px solid orange;height:1px;margin-bottom:2%;margin-top:2%">
+		
+	</div>
+	
+	
+	<div class="form-group">
+      <center><label class="col-sm-12">FILE UPLOAD</label></center>
+      
+    </div>
+	
+	
+	
+	
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="file">Submission File </label>
+      <div class="col-sm-10">          
+        <input type="file" class="filestyle" id="file">
+      </div>
+    </div>
+	
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox">Hide my musing during the Critique phase......I understand that I won't receive valulable feedback from the community during this period.</label>
         </div>
       </div>
     </div>
-  </section>
-  <!-- End Portfolio section -->
-  
-  
-  
-  
-  
-  <!-- Start subscription section -->
-  <div class="container-fluid" >	
-	<div class="row">
-		<div class="col-md-12 non-floater" style="margin-top:1%">
-			<iframe src="ccsubmit.html"   frameBorder="0"></iframe>
-		</div>
-	</div>
-  </div>
-  <!-- End subscription section -->
-  
-  
+	
+	 <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox">I have read and agree to the Kithabwala musing Submission <a href="termsandconditions.php">Terms and Conditions</a>.</label>
+        </div>
+      </div>
+    </div>
+	
+	 <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox">At Kithabwala we value innovative musing.By checking this box you agree that this submission is your original work and doesn't borrow in whole or in part from the work or others or incorporate stock images (except as permitted).</label>
+        </div>
+      </div>
+    </div>
+	
+	 <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox">I would like to hear about future challenges and promotions.</label>
+        </div>
+      </div>
+    </div>
+	
+	<?php 
+			if(!isset($_SESSION['kithabwalaemailid']))
+			{
+						echo '<div class="form-group">        
+								  <div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-danger">Please Login to Submit</button>
+								  </div>
+								</div>
+							';
+			}
+			else
+			{
+				echo '<div class="form-group">        
+								  <div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-warning">Submit</button>
+								  </div>
+								</div>
+							';
+				
+			}
+		?>
+   
+  </form>
+</div>
+
   
 
   
