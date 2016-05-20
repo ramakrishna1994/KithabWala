@@ -43,11 +43,7 @@ session_start();
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script>
-	setTimeout(function(){
-	showheader();
-}, 3000);
-</script>
+
 	<style>
 	
 	
@@ -482,7 +478,7 @@ session_start();
 		<div class="col-md-10 col-md-offset-1">
 			<div class="col-md-4 " style="padding:0.5%;text-align:center">
 				
-					<h3><b>Super Stars</b></h5>
+					<h3>Super Stars of chennai</h3>
 					May 20 2016.
 					<img src="images/products.jpg" width="250" height="250" ><br>
 					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
@@ -490,7 +486,7 @@ session_start();
 			</div>
 			<div class="col-md-4 " style="padding:0.5%;text-align:center">
 				
-					<h3><b>Super Stars</b></h5>
+					<h3>6 Types of students every school has seen</h3>
 					May 20 2016.
 					<img src="images/products.jpg" width="250" height="250" ><br>
 					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
@@ -498,7 +494,7 @@ session_start();
 			</div>
 			<div class="col-md-4 " style="padding:0.5%;text-align:center">
 				
-					<h3><b>Super Stars</b></h5>
+					<h3>Super Stars of chennai</h3>
 					May 20 2016.
 					<img src="images/products.jpg" width="250" height="250" ><br>
 					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
@@ -813,24 +809,6 @@ session_start();
 	
 
 	
-	
-	
-	var fixmeTop = $('.fixedp').offset().top;
-$(window).scroll(function() {
-    var currentScroll = $(window).scrollTop();
-    if (currentScroll <= 100) {
-        $('.fixedp').css({
-            position: 'fixed',
-			display:'block'
-            
-        });
-    } else {
-        $('.fixedp').css({
-            position: 'static',
-			display:'none'
-        });
-    }
-});
 
 
 

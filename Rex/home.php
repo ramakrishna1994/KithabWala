@@ -1141,7 +1141,7 @@ showheader();
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true"></div></center>
 						</div>
   				</div>
 				

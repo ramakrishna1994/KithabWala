@@ -158,27 +158,27 @@ session_start();
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
                             <div id="mainImage" style="padding:20px 40px">
-                                <img src="img/detailbig1.jpg" alt="" class="img-responsive">
+                                <img src="images/detailbig1.JPG" alt="" class="img-responsive">
                             </div>
                          <div class="row" id="thumbs">
                                 <div class="col-xs-3">
-                                    <a href="img/detailbig1.jpg" class="thumb">
-                                        <img src="img/detailsquare.jpg" alt="" class="img-responsive">
+                                    <a href="img/detailbig1.JPG" class="thumb">
+                                        <img src="images/detailsquare.JPG" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-xs-3">
-                                    <a href="img/detailbig2.jpg" class="thumb">
-                                        <img src="img/detailsquare2.jpg" alt="" class="img-responsive">
+                                    <a href="img/detailbig2.JPG" class="thumb">
+                                        <img src="images/detailsquare2.JPG" alt="" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-xs-3">
-                                    <a href="img/detailbig3.jpg" class="thumb">
-                                        <img src="img/detailsquare3.jpg" alt="" class="img-responsive">
+                                    <a href="img/detailbig3.JPG" class="thumb">
+                                        <img src="images/detailsquare3.JPG" alt="" class="img-responsive">
                                     </a>
                                 </div>
 								<div class="col-xs-3">
-                                    <a href="img/detailbig3.jpg" class="thumb">
-                                        <img src="img/detailsquare3.jpg" alt="" class="img-responsive">
+                                    <a href="img/detailbig3.JPG" class="thumb">
+                                        <img src="images/detailsquare3.JPG" alt="" class="img-responsive">
                                     </a>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@ session_start();
 									
 								  </tr>
 								  <tr>
-									<td>MOde id</td>
+									<td>Mode id</td>
 									<td>TDJID001</td>
 								  </tr>
 								  <tr>
@@ -301,7 +301,7 @@ session_start();
   
   	
   <!-- Start Footer -->    
-  <footer id="footer">
+  <footer id="footer" style="background-color: #242424">
     <div class="footer-top">
       <div class="container">
         <div class="row">
