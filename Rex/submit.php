@@ -289,7 +289,7 @@ session_start();
  <div class="container col-md-8 col-md-offset-2" style="margin-top:1%">
   
   <ul class="nav nav-tabs">
-    <li ><a href="creative.php">Hall Of Fame</a></li>
+   <li ><a href="halloffame.php">Hall Of Fame</a></li>
     <li class="active"><a href="submit.php">Submit</a></li>
     <li><a href="howitworks.php">How it Works</a></li>
    
@@ -1227,7 +1227,7 @@ session_start();
         <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
-        <p style="font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;">Some text in the modal.</p>
+        <p style="font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;font-size:30px">download the kit</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

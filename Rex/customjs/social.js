@@ -144,3 +144,47 @@ function fb_login(){
 		    });
  });
 }
+
+
+
+/*
+function render_google_btn() {
+    gapi.signin.render('custom_google_btn', {
+        'redirecturi':  "postmessage",
+        'accesstype':   "offline",
+        'callback':     "signinCallback",
+        'scope':        "https://www.googleapis.com/auth/userinfo.email",
+        'clientid':     "860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com",
+        'cookiepolicy': "single_host_origin"
+    });
+}
+
+function google_login_callback (authResult) {
+    if (authResult['status']['signed_in'] && authResult['status']['method'] == 'PROMPT') {
+        // Hide the sign-in button now that the user is authorized, for example:
+        document.getElementById('gSignInWrapper').setAttribute('style', 'display: none');
+        gapi.client.load('plus', 'v1', function() {
+
+            var request = gapi.client.plus.people.get({
+                'userId' : 'me'
+            });
+            request.execute(function(resp) {
+                if (resp['emails']) {
+                    for (var i = 0; i < resp['emails'].length; i++) {
+                        if (resp['emails'][i]['type'] == 'account') {
+                            email = resp['emails'][i]['value'];
+                        }
+                    }
+                }
+                Id = resp.id;
+            });
+        });
+
+    } else if (authResult['error']) {
+        // There was an error.
+        // Possible error codes:
+        //   "access_denied" - User denied access to your app
+        //   "immediate_failed" - Could not automatially log in the user
+        console.log('Sign-in state: ' + authResult['error']);
+    }
+}*/

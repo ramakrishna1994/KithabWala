@@ -17,7 +17,7 @@ session_start();
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- Slick slider -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/> 
     <!-- Fancybox slider -->
@@ -29,7 +29,7 @@ session_start();
 
     <!-- Main Style -->
     <link href="style.css" rel="stylesheet">
-
+ <link href='creativecornerassets/modaltext.css' rel='stylesheet' type='text/css'>
     <!-- Fonts -->
     <!-- Open Sans for body font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -207,8 +207,17 @@ session_start();
 	
 
 	
-	
+	body{
+		font-family: 'brandon-grotesque', Helvetica, Arial, sans-serif;
+		background-color:#d3d3d3;
+	}
 
+	.btn1{
+		
+		
+		margin-top:-7%;
+		
+	}
 		
 	</style>
   </head>
@@ -230,32 +239,28 @@ session_start();
   <!-- Start menu section -->
   <section id="menu-area">
 	
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-		
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="logo"></a>                      
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
+	<nav class="navbar navbar-default" style="padding:0.5%">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+     <img src="images/logo.png" alt="logo" height="50" width="50">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
 			<li ><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
             <li ><a href="advertise.php">ADVERTISE </a></li> 
             <li class="active"><a href="halloffame.php">CREATIVE</a></li> 
-			
-			
-			
-			
-			<?php 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+		
+		<?php 
 			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
@@ -280,27 +285,31 @@ session_start();
 			}
 							
 			?>
-          </ul>      
 			
-        </div><!--/.nav-collapse -->
-            
-      </div>          
-    </nav> 
+			
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    
   </section>
   <!-- End menu section -->
 
-  <div class="container col-md-8 col-md-offset-2" style="margin-top:1%">
-  
+  <div class="container" style="background-color:white">
+  <div class="row">
+  <div class="col-md-8 col-md-offset-2">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="creative.php">Hall Of Fame</a></li>
+    <li class="active"><a href="halloffame.php">Hall Of Fame</a></li>
     <li ><a href="submit.php">Submit</a></li>
     <li><a href="howitworks.php">How it Works</a></li>
    
   </ul>
-  
+</div>
+</div>  
 </div>
  
-   <!-- Start subscription section -->
+   <!-- 
   <div class="container">	
 	<div class="row">
 		<div class="col-md-12" style="margin-top:1%">
@@ -308,10 +317,202 @@ session_start();
 		</div>
 	</div>
   </div>
-  <!-- End subscription section -->
+   -->
 
+   <!-- Start subscription section -->
+  <div class="container" style="background-color:white;padding-bottom:2%">	
+	<div class="row">
+		<div class="col-md-12" style="margin-top:1%;text-align:center;background-image:url('images/cctop1.jpg');
+    background-repeat: no-repeat;
+    
+    background-position: center;height:420px;">
+			
+			
+			<div class="row" style="margin-top:28%">
+				<div class="col-md-4 col-md-offset-2" >
+					<button type="button" class="btn btn-warning btn-block btn-lg">SEE OPEN CHALLENGES</button>
+				</div>
+				<div class="col-md-4 " >
+					<button type="button" class="btn btn-warning btn-block btn-lg">HOW IT WORKS</button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+  </div>
+  <!---------------------->
   
+  <!------------Designs start---------->
+  <div class="container" style="background-color:white;margin-top:2%;padding-bottom:2%">	
+	
+	<div class="row" style="margin-top:1%">
+		<div class="col-md-10 col-md-offset-1">
+		<h3><b>DESIGN SUBMISSIONS</b></h3>
+		</div>
+	</div>
+	
+	<div class="row" style="margin-top:1%">
+		
+		<div class="col-md-5 col-md-offset-1">
+			<h4><i>373 Submissions</i></h4>
+		</div>
+		<div class="col-md-3">
+		
+			<form class="form-inline" role="form">
+				  <div class="form-group">
+				  <label for="sel1" >Select list:</label>
+				  <select class="form-control" id="sel1">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+				  </select>
+				</div>
+			</form>
+			
+		</div>
+		<div class="col-md-3">
+			<form class="form-inline" role="form">
+				  <div class="form-group">
+				  <label for="sel1" >Select list:</label>
+				  <select class="form-control" id="sel1">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+				  </select>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div class="row" style="margin-top:1%">
+		<div class="col-md-10 col-md-offset-1">
+		These recently submitted desings are open fro critique. Give youre feedback to help artists improve their submissions .Artists will be able to change their submission based on your feedback during the phase of the challenege.
+		</div>
+	</div>
+	<div class="row" style="margin-top:1%">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+				<h5>&nbsp;</h5>
+				<img src="images/cc.jpg" width="250" height="250" ><br>
+				<h5><b>Rocking House Design</b></h5>By Saradhi.
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+				<h5>&nbsp;</h5>
+				<img src="images/cc.jpg" width="250" height="250"><br>
+				<h5><b>Rocking House Design</b></h5>By Ravi Teja Surapaneni.
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+				<h5>&nbsp;</h5>
+				<img src="images/cc.jpg" width="250" height="250" ><br>
+				<h5><b>Rocking House Design</b></h5>By Ravi Teja Gamini.
+				
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 col-md-offset-4" style="padding:2%;text-align:center">
+		Show More
+	</div>
+  </div>
+  <div class="row">
+  <div class="col-md-2 col-md-offset-5" style="padding:10px 10px;text-align:center;background-color:white;border-top:1px solid grey;cursor:pointer;border-radius:25%">
+		Show More
+	</div>
+	</div>
+   <!---------------------->
+
  
+ 
+   <!------------Musings start---------->
+  <div class="container" style="background-color:white;margin-top:2%;padding-bottom:2%">	
+	
+	<div class="row" style="margin-top:3%">
+		<div class="col-md-10 col-md-offset-1">
+		<h3><b>MUSING SUBMISSIONS</b></h3>
+		</div>
+	</div>
+	
+	<div class="row" style="margin-top:1%">
+		
+		<div class="col-md-5 col-md-offset-1">
+			<h4><i>373 Submissions</i></h4>
+		</div>
+		<div class="col-md-3">
+		
+			<form class="form-inline" role="form">
+				  <div class="form-group">
+				  <label for="sel1" >Sorted By:</label>
+				  <select class="form-control" id="sel1">
+					<option>Randomize</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+				  </select>
+				</div>
+			</form>
+			
+		</div>
+		<div class="col-md-3">
+			<form class="form-inline" role="form">
+				  <div class="form-group">
+				  <label for="sel1" >Browsing By:</label>
+				  <select class="form-control" id="sel1">
+					<option>All</option>
+					<option>2</option>
+					<option>3</option>
+					<option>asddasda</option>
+				  </select>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div class="row" style="margin-top:1%">
+		<div class="col-md-10 col-md-offset-1">
+		These recently submitted desings are open fro critique. Give youre feedback to help artists improve their submissions .Artists will be able to change their submission based on your feedback during the phase of the challenege.
+		</div>
+	</div>
+	<div class="row" style="margin-top:1%">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+					<h3><b>Super Stars</b></h5>
+					May 20 2016.
+					<img src="images/products.jpg" width="250" height="250" ><br>
+					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+					<h3><b>Super Stars</b></h5>
+					May 20 2016.
+					<img src="images/products.jpg" width="250" height="250" ><br>
+					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+					<h3><b>Super Stars</b></h5>
+					May 20 2016.
+					<img src="images/products.jpg" width="250" height="250" ><br>
+					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
+				
+			</div>
+		</div>
+	</div>
+  </div>
+   <div class="row">
+  <div class="col-md-2 col-md-offset-5" style="padding:10px 10px;text-align:center;background-color:white;border-top:1px solid grey;cursor:pointer;border-radius:25%">
+		Show More
+	</div>
+	</div>
+   <!---------------------->
   
   
   
@@ -664,7 +865,7 @@ $(window).scroll(function() {
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" ></div></center>
 						</div>
   				</div>
 				

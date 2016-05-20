@@ -293,7 +293,7 @@ session_start();
   <div class="container col-md-8 col-md-offset-2" style="margin-top:1%">
   
   <ul class="nav nav-tabs">
-    <li ><a href="creative.php">Hall of Fame</a></li>
+    <li ><a href="halloffame.php">Hall Of Fame</a></li>
     <li ><a href="submit.php">Submit</a></li>
     <li class="active"><a href="howitworks.php">How it Works</a></li>
    

@@ -29,7 +29,7 @@ session_start();
 
     <!-- Main Style -->
     <link href="style.css" rel="stylesheet">
-  <script type="text/javascript" src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"> </script>
+  
     <!-- Fonts -->
     <!-- Open Sans for body font -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -206,8 +206,49 @@ session_start();
 	iframe { width:100%; padding:0; border:0; height: 2540px;   }
 	
 
+	
+	#custom_google_btn {
+    display: block;
+    color: #737373;
+    border-radius: 3px;
+    white-space: nowrap;
+    width: 235px;
+    margin: 0 auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #D7D7D7;
+    border-color: rgba(155, 155, 155, 0.3);
+}
+#custom_google_btn:hover {
+    background: #F7F7F7;
+    cursor: pointer;
+    border-style: inset;
+}
+span.icon {
+    background: url('https://developers.google.com/+/images/branding/button-gplus.png') transparent 2px 50% no-repeat;
+    background-size: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    height: 40px;
+    border-right: #DADADA 1px solid;
+}
+span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 25px;
+    padding-right: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto',arial,sans-serif;
+}         
+
+
 		
 	</style>
+	
+	
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   </head>
   <body>
 
@@ -290,10 +331,17 @@ session_start();
   
   
 <div class="container">
-  <h2>Horizontal form</h2>
-  <form class="form-horizontal" role="form">
   
-
+  <div class="row">
+	<div class="col-md-8">
+  <div class="form-horizontal" role="form">
+  
+				<div class="form-group" >
+    				
+    				<div  style="text-align:center" >
+      					<p id="status"></p>
+    				</div>
+  				</div>
 	
 	<div class="form-group">
       <center><label class="col-sm-12">DESIGN INFORMATION</label></center>
@@ -304,7 +352,7 @@ session_start();
     <div class="form-group">
       <label class="control-label col-sm-2" for="title">Title of the Design </label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="title" >
+        <input type="text" class="form-control" id="title" >
       </div>
     </div>
     <div class="form-group">
@@ -372,7 +420,7 @@ session_start();
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox">Hide my design during the Critique phase......I understand that I won't receive valulable feedback from the community during this period.</label>
+          <label><input type="checkbox" id="termscheckbox1">Hide my design during the Critique phase......I understand that I won't receive valulable feedback from the community during this period.</label>
         </div>
       </div>
     </div>
@@ -380,7 +428,7 @@ session_start();
 	 <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox">I have read and agree to the Kithabwala Design Submission <a href="termsandconditions.php">Terms and Conditions</a>.</label>
+          <label><input type="checkbox" id="termscheckbox2">I have read and agree to the Kithabwala Design Submission <a href="termsandconditions.php">Terms and Conditions</a>.</label>
         </div>
       </div>
     </div>
@@ -388,7 +436,7 @@ session_start();
 	 <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox">At Kithabwala we value innovative design.By checking this box you agree that this submission is your original work and doesn't borrow in whole or in part from the work or others or incorporate stock images (except as permitted).</label>
+          <label><input type="checkbox" id="termscheckbox3">At Kithabwala we value innovative design.By checking this box you agree that this submission is your original work and doesn't borrow in whole or in part from the work or others or incorporate stock images (except as permitted).</label>
         </div>
       </div>
     </div>
@@ -396,7 +444,7 @@ session_start();
 	 <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox">I would like to hear about future challenges and promotions.</label>
+          <label><input type="checkbox" >I would like to hear about future challenges and promotions.</label>
         </div>
       </div>
     </div>
@@ -416,16 +464,67 @@ session_start();
 			{
 				echo '<div class="form-group">        
 								  <div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" class="btn btn-warning">Submit</button>
+									<button type="submit" class="btn btn-warning" onclick="submitPost(\'design\')">Submit</button>
 								  </div>
 								</div>
 							';
 				
 			}
 		?>
+	
+ </div>
+</div>
+<div class="col-md-3 col-md-offset-1">
+					
+					 <div class="form-horizontal" role="form">
+					  
+					  <div class="form-group" >
+    				
+						<div  style="text-align:center" >
+							<p id=""></p>
+						</div>
+						
+					</div>
+					 <div class="form-group" >
+    				
+						<div  style="text-align:center" >
+							<p id=""></p>
+						</div>
+						
+					</div>
+					 <div class="form-group" >
+    				
+						<div  style="text-align:center" >
+							<p id=""></p>
+						</div>
+						
+					</div>
+					 
+				
+						<div class="form-group">
+						  <center><label class="col-sm-12">For Any help on how to submit please read <a href="submit.php" target="_blank"><font color="#ffd00d">here</font></a></label></center>
+						  
+						</div>
+						
+						<div class="form-group">
+						  <center><label class="col-sm-12">To see benefits of submission please read <a href="howitworks.php" target="_blank"><font color="#ffd00d">here</font></a></label></center>
+						  
+						</div>
+						
+						<div class="form-group">
+						  <center><label class="col-sm-12">You can also get in touch with our Artistic relations team for any queries.</label></center>
+						  
+						</div>
+						
+						<div class="form-group">
+						  <center><label class="col-sm-12">As part of the entry form to the left, you are asked thoroughly to read and agree to the challege terms and conditions.</label></center>
+						  
+						</div>
+					</div>
+					
+</div>	
 		
-		
-  </form>
+  </div>
 </div>
 
   
@@ -612,7 +711,7 @@ session_start();
   <!-- Custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
   <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-
+<script type="text/javascript" src="http://markusslima.github.io/bootstrap-filestyle/js/bootstrap-filestyle.min.js"> </script>
     <script>
 
 		
@@ -761,14 +860,26 @@ session_start();
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" onclick="login()"></div></center>
+							
+							
+						
+							<div id="gSignInWrapper">
+								<div id="custom_google_btn" class="g-signin customGPlusSignIn">
+									<span class="icon"></span>
+									<span class="buttonText">Sign in with Google</span>
+								</div>
+							</div>
+
+					<div id="g_results"></div>
+
 						</div>
   				</div>
 				
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><a href="#" onclick="fb_login();"><img src="images/fb_login_awesome.jpg" border="0" alt=""></a>
+							<center><a href="" onclick="fb_login();"><img src="images/fb_login_awesome.jpg" border="0" alt=""></a>
 </center>
 						</div>
   				</div>
@@ -1163,6 +1274,7 @@ session_start();
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
+	<script src="customjs/savepost.js"></script>
 
 	
 

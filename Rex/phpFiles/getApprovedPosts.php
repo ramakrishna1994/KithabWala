@@ -30,7 +30,14 @@ while($row = mysqli_fetch_array($result)){
 			$json .= '"profileimage":'.'"'.mysqli_real_escape_string($con,$row1["profileimage"]).'",';
 			$json .= '"firstname":'.'"'.mysqli_real_escape_string($con,$row1["firstname"]).'",';
 			$json .= '"lastname":'.'"'.mysqli_real_escape_string($con,$row1["lastname"]).'",';
-			$json .= '"description":'.'"'.mysqli_real_escape_string($con,$row["description"]).'",';
+			$json .= '"postid":'.'"'.mysqli_real_escape_string($con,$row["postid"]).'",';
+			$json .= '"posttype":'.'"'.mysqli_real_escape_string($con,$row["posttype"]).'",';
+			$json .= '"title":'.'"'.mysqli_real_escape_string($con,$row["title"]).'",';
+			$json .= '"comment":'.'"'.mysqli_real_escape_string($con,$row["comment"]).'",';
+			$json .= '"theme":'.'"'.mysqli_real_escape_string($con,$row["theme"]).'",';
+			$json .= '"colors":'.'"'.mysqli_real_escape_string($con,$row["colors"]).'",';
+			$json .= '"fonts":'.'"'.mysqli_real_escape_string($con,$row["fonts"]).'",';
+			$json .= '"tags":'.'"'.mysqli_real_escape_string($con,$row["tags"]).'",';
 			$json .= '"filename":'.'"'.mysqli_real_escape_string($con,$row["filename"]).'"';
 			$json .='},';
 			

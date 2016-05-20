@@ -698,13 +698,13 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
         <div class="col-md-6 col-sm-6 col-xs-12" style="text-align:right">
          
 			
-			<input type="email" class="form-control" id="email" placeholder="Subscribe to our Newsletter">
+			<input type="email" class="form-control" id="subscriptionemail" placeholder="Subscribe to our Newsletter">
 		 </div>
 		 <div class="col-md-2" style="text-align:left">
 		 
 		 
 		  
-		   <button type="submit" class="btn btn-primary btn-block">JOIN</button>
+		   <button type="submit" class="btn btn-primary btn-block" onclick="subscribe()">JOIN</button>
 		</div>
 		
 		<div class="col-md-4">
@@ -1083,11 +1083,16 @@ showheader();
 	function hideheader()
 	{
 	
-			$("#bodyid").show();
+			$("#bodyid").show(function(){
+						$("#header").slideUp(1000,function(){
+								$('#iframe1').contents().find('header#banner').slideUp(1000,function(){
+								 
+						});
+					});
+						
+			});
 			
-	$('#iframe1').contents().find('header#banner').slideUp(1000,function(){
-								 $("#header").hide();
-	});
+	
 	
 	
 
@@ -1095,9 +1100,12 @@ showheader();
 	}
 	function showheader()
 		{
-			$("#header").show();
-			$('#iframe1').contents().find('header#banner').slideDown(1000,function(){
-					$("#bodyid").hide();
+			
+			$('#iframe1').contents().find('header#banner').slideDown(1,function(){
+					$("#header").slideDown(1000,function(){
+							$("#bodyid").hide();
+					});
+					
 			});
 			
 			
@@ -1508,9 +1516,36 @@ showheader();
 
 
 
+
+
+
+
+<!-- subscription Modal -->
+  <div class="modal fade" id="subscriptionModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <center><h4 class="modal-title">Subscription</h4></center>
+			</div>
+         <div class="modal-body" style="text-align:center" id="subscriptionstatus">
+        
+		</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
+	<script src="customjs/subscription.js"></script>
 
 	
 

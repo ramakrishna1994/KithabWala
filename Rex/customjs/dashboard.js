@@ -27,96 +27,6 @@ function ApprovePost(postid)
 		
 		
 		
-		
-				
-function submitPost()
-{
-	$('#status').html('&nbsp;&nbsp;<img class="img-rounded" alt="Cinque Terre" width="20" height="20" src="images/loader.gif">');
-	var title = document.getElementById("title").value;
-	var description = document.getElementById('description').value;
-	var theme = document.getElementById('theme').value;
-	
-	if(document.getElementById("theme").value === "Select Theme")
-	{
-		$('#status').html('<font color="red">Please select one theme</font>');
-		return false;
-	}
-	if(document.getElementById("title").value == "")
-	{
-		$('#status').html('<font color="red">Please enter title</font>');
-		return false;
-	}
-	if(description == "")
-	{
-		$('#status').html('<font color="red">Please Enter Description</font>');
-		return false;
-	}
-	if(document.getElementById("termscheckbox").checked == false)
-	{
-		$('#status').html('<font color="red">Please accept Terms and Conditions</font>');
-		return false;
-	}
-	
-			
-			var formData = new FormData();
-			formData.append( 'file', $( '#file' )[0].files[0] );
-			formData.append( 'description', description );
-			formData.append( 'title', title );
-			formData.append( 'theme', theme );
-	 
-	 $(document).ready(function(){
-		 
-
-		 $.ajax({
-		        url: "phpFiles/savePostToDatabase.php",// give your url
-		        type: "POST",
-		        data: formData,
-		        dataType: 'json',
-		        processData: false,
-		        contentType: false,
-		        success: function (response) {
-		            //console.log(response.error);
-					 if(response.error == 1){
-						 
-					    
-			        	
-		            	$('#status').html('<font color="red">Please upload valid file</font>');
-			        	
-				     }
-				 
-				 else if(response.error == 2)
-					 {
-					  
-			        	
-					 $('#status').html('<font color="red">File size should be less than 100 KB</font>');
-			        	
-					 }
-				 
-				 else if(response.error == 3)
-					 {
-					  
-			        	
-					 $('#status').html('<font color="red">File Format not Supported</font>');
-			        	
-					 }
-				
-				 else
-					 {
-					 $('#status').html('<font color="green">Your Idea has been submitted for review !!</font>');
-					 document.getElementById('description').value = "";
-					 $( '#file' ).value="";
-					 
-					 }
-				 
-		            
-		        }
-		            
-		        
-		    });
- });
-}
-
-
 
 
 
@@ -150,7 +60,7 @@ function getApprovedPosts(resultscount)
 							innerhtml 	+= '<div class="panel panel-primary"><div class="panel-heading">'
 										+ '<img src="profilePics/'+response[i].profileimage+'" class="img-rounded" alt="Cinque Terre" width="30" height="30">'
 										+ '&nbsp;&nbsp;'+response[i].firstname+'&nbsp;'+response[i].lastname+'</div><div class="panel-body">'
-										+ response[i].description 
+										+ response[i].comment 
 										+'<br><p><a href="ideaFiles/'+response[i].filename+'">Attached Idea file</a></p></div></div>';
 									
 				
@@ -211,7 +121,7 @@ function getUserPosts(resultscount)
 							innerhtml 	+= '<div class="panel panel-primary"><div class="panel-heading">'
 										+ '<img src="profilePics/'+response[i].profileimage+'" class="img-rounded" alt="Cinque Terre" width="30" height="30">'
 										+ '&nbsp;&nbsp;'+response[i].firstname+'&nbsp;'+response[i].lastname+'</div><div class="panel-body">'
-										+ response[i].description 
+										+ response[i].comment 
 										+'<br><p><a href="ideaFiles/'+response[i].filename+'">Attached Idea file</a></p></div></div>';
 									
 				
@@ -270,7 +180,7 @@ function getPendingPosts(resultscount)
 							innerhtml 	+= '<div class="panel panel-primary"><div class="panel-heading">'
 										+ '<img src="profilePics/'+response[i].profileimage+'" class="img-rounded" alt="Cinque Terre" width="30" height="30">'
 										+ '&nbsp;&nbsp;'+response[i].firstname+'&nbsp;'+response[i].lastname+'</div><div class="panel-body">'
-										+ response[i].description 
+										+ response[i].comment 
 										+'<br><p><a href="ideaFiles/'+response[i].filename+'">Attached Idea file</a></p></div>'
 										+'<div class="panel-footer" style="text-align:left">'
 										+'	<button type="button" class="btn btn-success " onclick="ApprovePost('+response[i].postid+')">Approve Idea</button>'
