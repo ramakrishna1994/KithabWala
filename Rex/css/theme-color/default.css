@@ -1,3 +1,5 @@
+
+
 /*=======================================
 Template Design By MarkUps.
 Author URI : http://www.markups.io/
@@ -16,15 +18,7 @@ Author URI : http://www.markups.io/
 .main-nav li a:hover{
   color: #ffcc04;
 } 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #ffcc04;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #ffcc04;
-}
+
 .search-area input[type="text"]:focus:hover {
   border-bottom: 1px solid #ffcc04;  
 }

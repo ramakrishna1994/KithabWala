@@ -225,34 +225,30 @@ session_start();
   <!-- End header section -->
 
   <!-- Start menu section -->
-  <section id="menu-area">
+  
 	
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-		
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="logo"></a>                      
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
+	<nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%;background-color:white">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+     <a href="home.php"><img src="images/kithabwala.png" alt="logo" height="50" width="100"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
 			<li ><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
             <li ><a href="advertise.php">ADVERTISE </a></li> 
-           <li ><a href="halloffame.php">CREATIVE</a></li> 
-			
-			
-			
-			
-			<?php 
+            <li class="active"><a href="halloffame.php">CREATIVE</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+		
+		<?php 
 			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
@@ -277,16 +273,18 @@ session_start();
 			}
 							
 			?>
-          </ul>      
 			
-        </div><!--/.nav-collapse -->
-            
-      </div>          
-    </nav> 
-  </section>
+			
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    
+  
   <!-- End menu section -->
 
- <div class="container col-md-8 col-md-offset-2" style="margin-top:1%">
+ <div class="container col-md-8 col-md-offset-2" style="margin-top:7%">
   
   <ul class="nav nav-tabs">
    <li ><a href="halloffame.php">Hall Of Fame</a></li>
@@ -340,7 +338,7 @@ session_start();
 									</div>
 								
 								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
+										<button type="submit" class="btn btn-warning btn-block" onclick="window.open('musingsubmit.php','_self')">SUBMIT</button>
 									</div>
 									
 								
@@ -364,7 +362,7 @@ session_start();
 									</div>
 								
 								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
+										<button type="submit" class="btn btn-warning btn-block" onclick="window.open('musingsubmit.php','_self')">SUBMIT</button>
 									</div>
 									
 								
@@ -387,7 +385,7 @@ session_start();
 									</div>
 								
 								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
+										<button type="submit" class="btn btn-warning btn-block" onclick="window.open('musingsubmit.php','_self')">SUBMIT</button>
 									</div>
 									
 								
@@ -409,7 +407,7 @@ session_start();
 									</div>
 								
 								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
+										<button type="submit" class="btn btn-warning btn-block" onclick="window.open('designsubmit.php','_self')">SUBMIT</button>
 									</div>
 									
 								
@@ -431,7 +429,7 @@ session_start();
 									</div>
 								
 								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
+										<button type="submit" class="btn btn-warning btn-block" onclick="window.open('designsubmit.php','_self')">SUBMIT</button>
 									</div>
 									
 								
@@ -453,7 +451,7 @@ session_start();
 									</div>
 								
 								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
+										<button type="submit" class="btn btn-warning btn-block" onclick="window.open('designsubmit.php','_self')">SUBMIT</button>
 									</div>
 									
 								
@@ -475,7 +473,7 @@ session_start();
 									</div>
 								
 								<div class="col-md-6 col-md-offset-3" style="margin-top:10px">
-										<button type="submit" class="btn btn-warning btn-block" >SUBMIT</button>
+										<button type="submit" class="btn btn-warning btn-block" onclick="window.open('designsubmit.php','_self')">SUBMIT</button>
 									</div>
 									
 								
@@ -495,7 +493,7 @@ session_start();
   
   
   
-  <!-- Start subscription section -->
+  <!-- Start subscription section 
   <div class="container-fluid" >	
 	<div class="row">
 		<div class="col-md-12 non-floater" style="margin-top:1%">
@@ -506,11 +504,174 @@ session_start();
   <!-- End subscription section -->
   
   
-  
 
+<div class="container-fluid">
+    <div class="row">
+      
+        <div class="col-md-10 col-md-offset-1">
+          
+            <center><img src="images/challenges_home_banner2.jpg" alt="test" class="img-responsive"></center>
+          
+            <div class="carousel-caption">
+              <h1>how it works.</h1>
+			  <p>You’re free to create the
+        designs you want: you are your own client. We won’t adulterate your
+        designs, or curtail your artistic expression. Our role is to enable
+        you and ensure your design integrity is preserved from beginning to end.</p>
+            </div>
+          
+         </div>
+             
+      
+      
+ </div>
+ <div class="row" >
+		<div class="col-md-10 col-md-offset-1" style="background-color:white">
+			<div class="col-md-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Cloud-Download.png"><br>
+				<h3>1. download the kit</h3><br>
+				<p>The Challenge Kit has everything you need to know before you submit a design to Minted.</p>
+				</center>
+			</div>
+			
+			<div class="col-md-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Upload.png"><br>
+				<h3>2. submit your design</h3><br>
+				<p>Register on Minted, complete your profile and upload your design.</p>
+				</center>
+			</div>
+			
+			<div class="col-md-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Binoculars.png"><br>
+				<h3>3. develop as an artist</h3><br>
+				<p>Critique submissions and enjoy advice and feedback from our uniquely supportive creative community.</p>
+				</center>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row" >
+		<div class="col-md-8 col-md-offset-2" style="background-color:white">
+			<div class="col-md-4 col-md-offset-1" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Comments.png"><br>
+				<h3>4. have your say</h3><br>
+				<p>By rating designs and artwork on a scale of 1-5, you      become a curator of the Minted marketplace.</p>
+				</center>
+			</div>
+			
+			<div class="col-md-4 col-md-offset-1" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Trophy.png"><br>
+				<h3>5. reap the rewards</h3><br>
+				<p>Winners receive a cash prize, as well as a platform      for their work and an ongoing commission from all sales. </p>
+				</center>
+			</div>
+			
+			
+		</div>
+	</div>
+	
+	
   
-
   
+</div>
+  
+ <div class="container-fluid">
+  <div class="row">
+      
+        <div class="col-md-10 col-md-offset-1">
+          
+             <center><img src="images/challenges_home_banner3.jpg" alt="test" class="img-responsive"></center>
+          
+            <div class="carousel-caption">
+              <h1>why participate?</h1>
+			  
+            </div>
+          
+         </div>
+             
+      
+      
+ </div>
+ 
+ <div class="row" >
+		<div class="col-md-10 col-md-offset-1" style="background-color:white">
+			<div class="col-md-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Express.png"><br>
+				<h3>express yourself</h3><br>
+				<p>Our challenges are the place to let your creativity       shine - you're free to push boundaries and create work that's uniquely you.       Submit artwork and use Minted as a testing ground for new ideas.</p>
+				</center>
+			</div>
+			
+			<div class="col-md-4 " style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Scholar.png"><br>
+				<h3>a place to learn</h3><br>
+				<p>We like to think of Minted as a new type of design school -      a place where everyone from fledgling to established artists receives       constructive critique and support from Minted and from talented peers.</p>
+				</center>
+			</div>
+			
+			<div class="col-md-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Medal.png"><br>
+				<h3>earn from creation with no administration</h3><br>
+				<p>Spend your time 100% on creation.       We'll handle manufacturing and shipping your work to customers,       all customer service inquiries, and driving traffic to your products.</p>
+				</center>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+ <div class="row" >
+		<div class="col-md-10 col-md-offset-1" style="background-color:white">
+			<div class="col-md-4 " style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Megaphone.png"><br>
+				<h3>build your brand</h3><br>
+				<p>Minted builds all of our marketing around you, the artist.       In this way, we promote you and build your personal brand and fan base       through our global marketing: our catalogs, magazine ads, PR and more.</p>
+				</center>
+			</div>
+			
+			<div class="col-md-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Fun.png"><br>
+				<h3>have fun</h3><br>
+				<p>Entering and winning Minted's challenges give you the       opportunity to experiment, have fun, connect with other artists, and       realize the 'thrill of the win' when your vision is validated by       thousands of voters.</p>
+				</center>
+			</div>
+			
+			<div class="col-md-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_Door.png"><br>
+				<h3>your own Minted Store</h3><br>
+				<p>Winners of Minted competitions also win their own       Minted Store - giving them a platform to share and sell their work with       no need to manufacture, ship, or provide customer service.</p>
+				</center>
+			</div>
+		</div>
+	</div>
+	
+		
+ <div class="row" >
+		<div class="col-md-10 col-md-offset-1" style="background-color:white">
+			<div class="col-md-4 col-md-offset-4" style="padding:2%">
+				<center>
+				<img src="creativecornerassets/community_illustration_People.png"><br>
+				<h3>a supportive creative community</h3><br>
+				<p>Our community is the heart and soul of Minted.       Offering support, feedback, advice, and a "pay it forward" culture to       all, it's a welcoming space for talent to flourish and thrive.</p>
+				</center>
+			</div>
+			
+			
+		</div>
+	</div>
+ 
+</div>
   
   
   
@@ -585,8 +746,8 @@ session_start();
   
   
   
-    <div class="row" id="skyline">
-	<img src="images/skyline.svg" width="100%" style="margin-top:5%">
+     <div class="row" style="padding-top:1%" id="skyline">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
   </div>
   
   
@@ -594,27 +755,27 @@ session_start();
   <!-- Start Footer -->    
   <footer id="footer">
     <div class="footer-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
-				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+                <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:15px;margin-top:1%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
 						</div>
@@ -626,49 +787,63 @@ session_start();
         </div>
       </div>
     </div>
-	<div class="footer-bottom">
-			 <div class="row" style="text-align:center">
-				   <div class="col-md-2" >
-						<h4><b><font color="#ffcc04">Company</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
-						
-				  </div>
-			  
-				  <div class="col-md-2">
-						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
-				  </div>
-  
-				  <div class="col-md-2">
-					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
-						
-					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
-				  </div>
-				  
-				   <div class="col-md-2">
-					   <div class="row" >
-							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+		<div class="footer-bottom">
+	
+	
+			 <div class="row" >
+				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
+				
+						<div class="col-md-7" style="padding:10px 0">
+							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-				  </div>
+						<div class="col-md-5" style="text-align:left;padding:10px 0">
+							
+						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+							
+						   <p><font color="#838282" size="2px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+					  </div>
 				  
-				  <div class="col-md-4">
-						
-					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
-						
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
-				  </div>
+				</div>
+				<div class="col-md-6" style="text-align:left">
+					
+						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
+								<h4><b><font color="#ffcc04">Company</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="http://www.kithabwala.com/Rex/aboutus.php#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
+								
+						  </div>
+					  
+						  <div class="col-md-3" style="padding:10px 0">
+								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
+						  </div>
+		  
+						  <div class="col-md-3" style="padding:10px 0">
+							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+								
+							   <p><a href="#"><font color="#838282" size="2px">Contact Us</font></a></p>
+						  </div>
+						  
+						  
+						  
+				</div>
+				   
+				  
+				   
+				  
+				 
         </div>
     </div>
-    <div class="footer-bottom">
-      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
+    <div class="footer-bottom" style="padding:10px 0">
+      <p><font color="#838282" size="2px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
+
 
   <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -7,7 +7,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
+	 <meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Careers</title>
@@ -46,115 +46,21 @@ session_start();
 	
 	<style>
 	
+	.filterround{
+		
+		border:1px solid #ffd00d;
+		border-radius:40px;
+		cursor:pointer;
+		padding:10px 15px;
+		margin:0px 5px
+	}
 	
-
-
-#contact {
-	background-image: url("images/contact-bg.jpg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	display: inline;
-	float: left;
-	padding: 70px 0;
-	width: 100%;
-}
-.contact-left {
-	background-color: rgba(104, 102, 96, 0.5);
-	display: inline;
-	float: left;
-	padding: 30px 40px 10px;
-	width: 100%;
-}
-.contact-left h2 {
-	color: #fafafa;
-	font-size: 35px;
-	margin-bottom: 35px;
-}
-.single-address {
-	display: inline;
-	float: left;
-	margin-bottom: 15px;
-	padding-right: 50px;
-	width: 100%;
-}
-.single-address h4 {
-	color: #fafafa;
-	font-size: 22px;
-	font-weight: bold;
-	margin-bottom: 17px;
-}
-.single-address p {
-	color: #fafafa;
-	font-size: 14px;
-	margin-bottom: 5px;
-}
-.contact-right{
-	background-color: rgba(104, 102, 96, 0.5);
-	display: inline;
-	float: left;
-	padding: 30px 40px;
-	width: 100%;
-}
-.contact-right h2 {
-	color: #fafafa;
-	font-size: 35px;
-	margin-bottom: 48px;
-}
-.contact-form .form-group input {
-	background: transparent;
-	color: #e1e1e1;
-	font-size: 20px;
-	border: 1px solid #fff;
-	border-radius: 0;
-	height: 45px;
-	margin-bottom: 24px;
-}
-.contact-form .form-group textarea{
-	color: #e1e1e1;
-	background: transparent;
-	border: 1px solid #fff;
-	border-radius: 0;
-	height: 190px;
-}
-.contact-form .form-control:focus {
-    outline: 0;
-    box-shadow: none;    
-} 
-.contact-form .form-control::-webkit-input-placeholder {
-	color: #e2e2e2;
-	font-size: 20px;
-}
-
-.contact-form .form-control:-moz-placeholder { /* Firefox 18- */
-	color: #e2e2e2;
-	font-size: 20px; 
-}
-
-.contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
-	color: #e2e2e2;
-	font-size: 20px;
-}
-
-.contact-form .form-control:-ms-input-placeholder {  
-	color: #e2e2e2;
-	font-size: 20px;
-}
-.contact-form button {
-	float: right;
-	margin-right: 0;
-	border-radius: 0px;
-}
-.contact-form.button-default::after,
-.contact-form .button-default > span {
-	padding: 12px 40px;  
-}
-#google-map{
-	display: inline;
-	float: left;	
-	width: 100%;
-}
-
+	.filterround:hover{
+		background-color:#ffd00d;
+		border:1px solid black;
+	}
+	
+	
 
 	
 		.button123 {
@@ -163,7 +69,7 @@ session_start();
     color: white;
     padding: 10px 10px;
     text-align: center;
-    text-decoration: none;
+	text-decoration: none;
     display: inline-block;
     font-size: 16px;
     
@@ -180,7 +86,41 @@ session_start();
 	
 		
 		
-		.roundup
+		
+	
+.active
+{
+	background-color:#ffd00d;
+		border:1px solid black;
+	
+}
+
+	.jobbox{
+		margin:5px;
+		background-color:transparent;
+		height:70px;
+		border:1px solid #ffd00d;
+		text-align:left;
+		color:black;
+		
+	}
+	
+	.jobbox > p
+	{
+		color:black;
+	}
+	
+	
+	
+	.jobbox:hover{
+		background-color:#ffd00d;
+		color:black;
+		cursor:pointer;
+		
+		
+	}
+	
+.roundup
 		{
 			position:absolute;
 			color:black;
@@ -202,11 +142,6 @@ session_start();
 		cursor:pointer;
 	}
 	
-
-
-	
-	
-
 		
 	</style>
   </head>
@@ -225,35 +160,31 @@ session_start();
   
   <!-- End header section -->
 
-  <!-- Start menu section -->
-  <section id="menu-area">
+   <!-- Start menu section -->
+  
 	
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-		
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="logo"></a>                      
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li class="active"><a href="home.php">HOME</a></li>
+	<nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%;background-color:white">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+     <a href="home.php"><img src="images/kithabwala.png" alt="logo" height="50" width="100"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+			<li ><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
-            <li><a href="#a">ADVERTISE </a></li> 
-          <li ><a href="halloffame.php">CREATIVE</a></li> 
-			
-			
-			
-			
-			<?php 
+            <li ><a href="advertise.php">ADVERTISE </a></li> 
+            <li ><a href="halloffame.php">CREATIVE</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+		
+		<?php 
 			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
@@ -270,7 +201,7 @@ session_start();
 					
 					
 					
-					$content .= '<li><a class="header-color" href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+					$content .= '<li style="cursor:pointer"><a class="header-color" onclick="logout()"><span class="glyphicon glyphicon-log-out" ></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
 							. '</ul>'
 							
 							.'	</li>';
@@ -278,16 +209,16 @@ session_start();
 			}
 							
 			?>
-          </ul>      
 			
-        </div><!--/.nav-collapse -->
-            
-      </div>          
-    </nav> 
-  </section>
-  <!-- End menu section -->
+			
+      </ul>
+    </div>
+  </div>
+</nav>
 
+    
   
+  <!-- End menu section -->  
  
   
   <!-- 
@@ -338,6 +269,36 @@ session_start();
 </div>
 </section>
 
+<script>
+	function filter(id)
+	{
+		if(id==1)
+		{
+			$(".marketing").show();
+			$(".sales").show();
+			document.getElementById("all").className = "filterround active";
+			document.getElementById("sales").className = "filterround ";
+			document.getElementById("marketing").className = "filterround ";
+		}
+		
+		if(id==2)
+		{
+			$(".marketing").show();
+				$(".sales").hide();
+			document.getElementById("all").className = "filterround ";
+			document.getElementById("sales").className = "filterround ";
+			document.getElementById("marketing").className = "filterround active";
+		}
+		if(id==3)
+		{
+			$(".sales").show();
+			$(".marketing").hide();
+			document.getElementById("all").className = "filterround ";
+			document.getElementById("sales").className = "filterround active";
+			document.getElementById("marketing").className = "filterround ";
+		}
+	}
+</script>
  <div class="container-fluid" >
       
        
@@ -347,35 +308,37 @@ session_start();
               <center><font size="5px">Current open positions</font></center><br>
               <span class="tittle-line"></span>
 			  <div class="row">
+				
+				<div class="col-sm-12" style="text-align:left">
+					Filter by department&nbsp;&nbsp;	
+					<a class="btn filterround active" id="all" onclick="filter(1)">&nbsp;All&nbsp;</a>
+					<a class="btn filterround" id="marketing" onclick="filter(2)">Marketing</a>
+					<a class="btn filterround" id="sales" onclick="filter(3)">Sales</a>
+				</div>
+				
+				
+			  </div>
+			  <div class="row" style="margin-top:3%">
 			
-				<div class="col-md-4" >
-					<div class="col-md-12" style="margin:5px;background-color:#ffd00d;height:400px">
-					<h3><b>Marketing Associate</b></h3><br>
-					<h5>Job Desc:</h5><p style="text-align:justify">
-We are Looking for a motivated individual with a passion to work for an emerging product based startup.
-The marketing associate will be expected to work in a dynamic environment with focus on marketing and sponsor pitching.
-The candidate must have extremely high standards in terms of quality of work, attention to detail, and absolute commitment to task completion.</p>
-</div>
+				<div class="col-md-4 marketing ">
+					<div class="col-md-12 jobbox" onclick="window.open('marketingjob.php','_self')">
+					<h4><b>Marketing Associate</b></h4>
+					<p>Hyderabad,India</p>
+					</div>
 				</div>
 				
-				<div class="col-md-4">
-				<div class="col-md-12" style="margin:5px;background-color:#ffd00d;height:400px">
-					<h3><b>Sales Associate</b></h3><br>
-					<h5>Job Desc:</h5><p style="text-align:justify">
-We’re looking for a motivated individual with a passion to work for an emerging product based startup. 
-The Sales associate will be expected to work in a dynamic environment with focus on dealer relations. 
-The candidate must have extremely high standards in terms of quality of work, attention to detail, and absolute commitment to task completion. </p>
-				</div>
+				<div class="col-md-4 sales">
+						<div class="col-md-12 jobbox">
+						<h4><b>Sales Associate</b></h4>
+						<p>Hyderabad,India</p>
+						</div>				
 				</div>
 				
-				<div class="col-md-4">
-				<div class="col-md-12" style="margin:5px;background-color:#ffd00d;height:400px">
-					<h3><b>Sales Associate</b></h3><br>
-					<h5>Job Desc:</h5><p style="text-align:justify">
-We’re looking for a motivated individual with a passion to work for an emerging product based startup. 
-The Sales associate will be expected to work in a dynamic environment with focus on dealer relations. 
-The candidate must have extremely high standards in terms of quality of work, attention to detail, and absolute commitment to task completion. </p>
-				</div>
+				<div class="col-md-4 marketing ">
+					<div class="col-md-12 jobbox">
+					<h4><b>Marketing Associate</b></h4>
+					<p>Hyderabad,India</p>
+					</div>
 				</div>
 				
             
@@ -468,40 +431,38 @@ The candidate must have extremely high standards in terms of quality of work, at
   
   
   
-  
-    <div class="row" id="skyline">
-	<img src="images/skyline.svg" width="100%" style="margin-top:5%">
+   <div class="row" style="padding-top:1%" id="skyline">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
   </div>
   
   
-  
- 	
-  <!-- Start Footer -->    
-  <footer id="footer">
+  	
+   <!-- Start Footer -->    
+  <footer id="footer" style="background-color:#242424">
     <div class="footer-top">
-      <div class="container">
-        <div class="row">
+      <div class="container-fluid">
+        <div class="row-fluid">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
-				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+                <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:15px;margin-top:1%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
+								<a class="facebook" href="https://www.facebook.com/Kithabwala-156605224697747/?fref=ts" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
+								<a class="linkedin" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
 						</div>
 					</div>
 				   
@@ -511,46 +472,59 @@ The candidate must have extremely high standards in terms of quality of work, at
         </div>
       </div>
     </div>
-	<div class="footer-bottom">
-			 <div class="row" style="text-align:center">
-				   <div class="col-md-2" >
-						<h4><b><font color="#ffcc04">Company</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
-						
-				  </div>
-			  
-				  <div class="col-md-2">
-						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
-				  </div>
-  
-				  <div class="col-md-2">
-					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
-						
-					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
-				  </div>
-				  
-				   <div class="col-md-2">
-					   <div class="row" >
-							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+		<div class="footer-bottom">
+	
+	
+			 <div class="row" >
+				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
+				
+						<div class="col-md-7" style="padding:10px 0">
+							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-				  </div>
+						<div class="col-md-5" style="text-align:left;padding:10px 0">
+							
+						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+							
+						   <p><font color="#838282" size="2px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+					  </div>
 				  
-				  <div class="col-md-4">
-						
-					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
-						
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
-				  </div>
+				</div>
+				<div class="col-md-6" style="text-align:left">
+					
+						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
+								<h4><b><font color="#ffcc04">Company</font></b></h4>
+								
+								<p><a href="aboutus.php"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="aboutus.php/#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="careers.php"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
+								
+						  </div>
+					  
+						  <div class="col-md-3" style="padding:10px 0">
+								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+								
+								<p><a href="advertise.php"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
+						  </div>
+		  
+						  <div class="col-md-3" style="padding:10px 0">
+							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+								
+							   <p><a href="contactus.php"><font color="#838282" size="2px">Contact Us</font></a></p>
+						  </div>
+						  
+						  
+						  
+				</div>
+				   
+				  
+				   
+				  
+				 
         </div>
     </div>
-    <div class="footer-bottom">
-      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
+    <div class="footer-bottom" style="padding:10px 0">
+      <p><font color="#838282" size="2px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
@@ -571,7 +545,7 @@ The candidate must have extremely high standards in terms of quality of work, at
   <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
   <!-- Wow animation -->
   <script type="text/javascript" src="js/wow.js"></script> 
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+
   <!-- Custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
   <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
@@ -725,8 +699,10 @@ $("#abc").click(function() {
 			
 				<div class="form-group"> 
 						
-						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+						<div class="col-sm-12"><center> 
+							<div id="gConnect">
+								<div onclick="startApp()" style="cursor:pointer"><img src="images/google.png" width="210" height="80"></div>
+							  </div></center>
 						</div>
   				</div>
 				
@@ -734,7 +710,7 @@ $("#abc").click(function() {
 						
 						<div class="col-sm-12"> 
 							<center><a href="#" onclick="fb_login();"><img src="images/fb_login_awesome.jpg" border="0" alt=""></a>
-</center>
+							</center>
 						</div>
   				</div>
 				
@@ -1104,7 +1080,7 @@ $("#abc").click(function() {
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
-
+<script src="https://apis.google.com/js/client:platform.js"></script>
 	
 
 

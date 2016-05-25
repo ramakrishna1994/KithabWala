@@ -1677,7 +1677,7 @@ img{
 .footer-social{	
 	display: inline;
 	float: left;
-	margin: 40px 0px;
+	margin: 10px 0px;
 	width: 100%;
 }
 .footer-social a {
@@ -1731,8 +1731,7 @@ img{
 	display: inline;
 	border-top: 1px solid #434343;
 	float: left;
-	padding: 40px 0;
-	width: 100%;
+        width: 100%;
 	text-align: center;
 }
 .footer-bottom p{

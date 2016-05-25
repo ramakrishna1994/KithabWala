@@ -1,5 +1,67 @@
 <?php
 session_start();
+
+require_once 'phpFiles/connection.php';
+require_once ('googlerk/libraries/Google/autoload.php');
+
+//Insert your cient ID and secret 
+//You can get it from : https://console.developers.google.com/
+$client_id = '860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com'; 
+$client_secret = 'J0fdkvOoKB5fO2Sp-lZ9q6vN';
+$redirect_uri = 'http://localhost/google-login-api/';
+
+
+
+//incase of logout request, just unset the session var
+if (isset($_GET['logout'])) {
+  unset($_SESSION['access_token']);
+}
+
+/************************************************
+  Make an API request on behalf of a user. In
+  this case we need to have a valid OAuth 2.0
+  token for the user, so we need to send them
+  through a login flow. To do this we need some
+  information from our API console project.
+ ************************************************/
+$client = new Google_Client();
+$client->setClientId($client_id);
+$client->setClientSecret($client_secret);
+$client->setRedirectUri($redirect_uri);
+$client->addScope("email");
+$client->addScope("profile");
+
+/************************************************
+  When we create the service here, we pass the
+  client to it. The client then queries the service
+  for the required scopes, and uses that when
+  generating the authentication URL later.
+ ************************************************/
+$service = new Google_Service_Oauth2($client);
+
+/************************************************
+  If we have a code back from the OAuth 2.0 flow,
+  we need to exchange that with the authenticate()
+  function. We store the resultant access token
+  bundle in the session, and redirect to ourself.
+*/
+  
+if (isset($_GET['code'])) {
+  $client->authenticate($_GET['code']);
+  $_SESSION['access_token'] = $client->getAccessToken();
+  header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+  exit;
+}
+
+/************************************************
+  If we have an access token, we can make
+  requests, else we generate an authentication URL.
+ ************************************************/
+if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
+  $client->setAccessToken($_SESSION['access_token']);
+} else {
+  $authUrl = $client->createAuthUrl();
+}
 ?>
 
 <!DOCTYPE html>
@@ -7,6 +69,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/icon" href="images/logo.ico"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -37,7 +100,7 @@ position:relative
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- Slick slider -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/> 
     <!-- Fancybox slider -->
@@ -81,36 +144,31 @@ position:relative
   <!-- END SCROLL TOP BUTTON -->
 
  
- 
-    <!-- Start menu section -->
-  <section id="menu-area">
+  <!-- Start menu section -->
+  
 	
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-		
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/kithabwala.png" alt="logo"></a>                      
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
+	<nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%;background-color:white">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+     <a href="home.php"><img src="images/kithabwala.png" alt="logo" height="50" width="100"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
 			<li ><a href="home.php">HOME</a></li>
             <li class="active"><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
-            <li><a href="advertise.php">ADVERTISE </a></li> 
+            <li ><a href="advertise.php">ADVERTISE </a></li> 
             <li ><a href="halloffame.php">CREATIVE</a></li> 
-			
-			
-			
-			
-			<?php 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+		
+		<?php 
 			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
@@ -127,7 +185,8 @@ position:relative
 					
 					
 					
-					$content .= '<li><a class="header-color" href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+					
+$content .= '<li style="cursor:pointer"><a class="header-color" onclick="logout()"><span class="glyphicon glyphicon-log-out" ></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
 							. '</ul>'
 							
 							.'	</li>';
@@ -135,18 +194,16 @@ position:relative
 			}
 							
 			?>
-          </ul>      
 			
-        </div><!--/.nav-collapse -->
-            
-      </div>          
-    </nav> 
-  </section>
+			
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    
+  
   <!-- End menu section -->
-  
-  
-  
- 
 	
 	
  
@@ -180,9 +237,9 @@ position:relative
 
   
   <!-- Start Testimonial section -->
-  <section id="testimonial">
-    <img src="images/aboutus.jpg" alt="img" height="400px" width="100%">
-    <div class="counter-overlay" style="height:400px">
+  <section id="testimonial" style="margin-top:5%">
+    <img src="images/aboutus.jpg" alt="img" height="300px" width="100%">
+    <div class="counter-overlay" style="height:300px">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -237,11 +294,12 @@ position:relative
   </div>
   -------------------------------------->
   
-   <!-- Start call to action -->
+   <!-- Start call to action 
   <section id="call-to-action">
     <img src="images/map.png" alt="img" width="1300" height="500">
     
-  </section>
+  </section>  -->
+
   
   
   
@@ -400,7 +458,7 @@ position:relative
     <img src="images/joinus.jpg" alt="img">
     <div class="call-to-overlay">
       <div class="container">
-        <div class="call-to-content wow fadeInUp" style="margin-top:10%" >
+        <div class="call-to-content wow" style="margin-top:10%" >
          
           <a href="careers.php" class="button button-default button-lg" data-text="JOIN US IN OUR JOURNEY"><span>JOIN US IN OUR JOURNEY</span></a>
         </div>
@@ -484,22 +542,21 @@ position:relative
   
   
   
-    <div class="row" style="padding-top:10%" id="skyline">
+    <div class="row" style="padding-top:1%" id="skyline">
 	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
   </div>
-  
   
   
   	
   <!-- Start Footer -->    
   <footer id="footer">
     <div class="footer-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffd00d;font-size:30px;margin-top:5%">KITHABWALA</p>    
-				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+                <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:15px;margin-top:1%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
@@ -532,46 +589,42 @@ position:relative
 			 <div class="row" >
 				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
 				
-						<div class="col-md-7">
+						<div class="col-md-7" style="padding:10px 0">
 							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-						<div class="col-md-5" style="text-align:left">
+						<div class="col-md-5" style="text-align:left;padding:10px 0">
 							
 						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
 							
-						   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+						   <p><font color="#838282" size="2px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
 					  </div>
 				  
 				</div>
 				<div class="col-md-6" style="text-align:left">
 					
-						<div class="col-md-3 col-md-offset-1" >
+						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
 								<h4><b><font color="#ffcc04">Company</font></b></h4>
 								
-								<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-								<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-								<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="http://www.kithabwala.com/Rex/aboutus.php#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
 								
 						  </div>
 					  
-						  <div class="col-md-3">
+						  <div class="col-md-3" style="padding:10px 0">
 								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
 								
-								<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-								<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
+								<p><a href="#"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
 						  </div>
 		  
-						  <div class="col-md-3">
+						  <div class="col-md-3" style="padding:10px 0">
 							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
 								
-							   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
+							   <p><a href="#"><font color="#838282" size="2px">Contact Us</font></a></p>
 						  </div>
 						  
-						  <div class="col-md-2">
-							   <div class="row" >
-									<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
-								</div>
-						  </div>
+						  
 						  
 				</div>
 				   
@@ -581,19 +634,19 @@ position:relative
 				 
         </div>
     </div>
-    <div class="footer-bottom">
-      <p><font color="#838282" size="3px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
+    <div class="footer-bottom" style="padding:10px 0">
+      <p><font color="#838282" size="2px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
   
   
-  
+
+  <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-   <script type="text/javascript" src="customjs/initialpageload.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <!-- Bootstrap -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- Slick Slider -->
   <script type="text/javascript" src="js/slick.js"></script>
   <!-- Counter -->
@@ -608,12 +661,128 @@ position:relative
 
   <!-- Custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
-       
-	
+  <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+
+    <script>
+
+		
+		
+		
+		
+		 //////////
+    // Trade Enquiry related js
+    /////
+		
+		jQuery(document).ready(function($) {
+    $(document.body).on('click', '.edit_sms_number', function() {
+        console.log('jnnn');
+        if ($('#'+this.id).is(':checked')) {
+            $('#'+this.id).val('1');
+        } else {
+            $('#'+this.id).val('0');
+        }
+    });
+
+   
+    window.originalHeightOfBlock = $(".fixed_queries_content").outerHeight();
+    window.originalWidthOfBlock = $(".fixed_queries_content").outerWidth();
+
+    window.longAnimationDuration = 500;
+    window.shortAnimationDuration = 300;
+
+    $(".fixed_queries_section_overlay").hide();
+
+    window.expandFixedTabs = function() {
+        $(".fixed_queries_content").animate({
+            width: '400px'
+        }, longAnimationDuration, function() {
+            $('body').css('overflow-y', 'hidden');
+            $(".fixed_queries_section.phone_icon").fadeOut();
+            $(".fixed_queries_section_overlay").fadeIn();
+            $(".fixed_queries_content").css('overflow', 'initial');
+
+            var curHeight = $('.fixed_queries_content').height();
+            $('.fixed_queries_content').css('height', 'auto');
+            var autoHeight = $('.fixed_queries_content').height();
+
+            $(".fixed_queries_content").height(curHeight).animate({
+                height: autoHeight
+            }, longAnimationDuration, function() {
+                $( ".fixed_queries_content .first" ).addClass( "active" );
+                $(".fixed_queries_content .tab-content").show().animate({
+                    opacity: 1,
+                    top: 0
+                }, shortAnimationDuration, function() {
+                    $(".fixed_queries_section.close_icon").fadeIn();
+                });
+            });
+        });
+    };
+
+    $(".fixed_queries_section.phone_icon").click(function() {
+        expandFixedTabs();
+    });
+
+    window.collapseFixedTabs = function() {
+        $('body').css('overflow-y', 'auto');
+        $(".fixed_queries_section.close_icon").hide();
+        $(".fixed_queries_section_overlay").fadeOut();
+        $( ".fixed_queries_content .first" ).removeClass( "active" );
+        $(".fixed_queries_content").animate({
+            height: originalHeightOfBlock
+        }, longAnimationDuration, function() {
+                $(".fixed_queries_section.phone_icon").fadeIn();
+                $(".fixed_queries_content").css('overflow', 'hidden');
+            $(".fixed_queries_content").animate({
+                width: originalWidthOfBlock
+            }, longAnimationDuration, function() {
+                $(".fixed_queries_content .tab-content").css({
+                    opacity: 0,
+                    top: 30
+                });
+                $( ".fixed_queries_content .nav-tabs .first a" ).trigger( "click" );
+                $(".query_form_main_section").show();
+                $(".success_message_on_query_submission").hide();
+                $(".query_form_main_section input").val('');
+                $(".query_form_main_section textarea").val('');
+                $( ".fixed_queries_content .first" ).removeClass( "active" );
+
+            });
+        });
+    };
+
+    $(".fixed_queries_section.close_icon").click(function() {
+        collapseFixedTabs();
+    });
+
+    $(".fixed_queries_section_overlay").click(function() {
+        collapseFixedTabs();
+    });
+});
+		
+		
+		
+		
+		function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+		
+		
+			
+	 
 	
 
-</script>
+	
 
+
+
+
+		
+		
+	</script>
+	
+	
+	
 
 
 
@@ -651,16 +820,60 @@ position:relative
 			
 			
 				<div class="form-group"> 
+				<div class="form-group"> 
 						
-						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="270" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+						<div class="col-sm-12"><center> 
+							<div id="gConnect">
+								<div  style="cursor:pointer"><a href="
+								<?php 
+								if (isset($authUrl)){
+								echo $authUrl 
+								}
+								
+								else {
+	
+									$user = $service->userinfo->get(); //get user info 
+									
+									
+									
+									//check if user exist in database using COUNT
+									/*$result = $mysqli->query("SELECT COUNT(google_id) as usercount FROM google_users WHERE google_id=$user->id");
+									$user_count = $result->fetch_object()->usercount; //will return 0 if user doesn't exist*/
+									
+									//show user picture
+									echo '<img src="'.$user->picture.'" style="float: right;margin-top: 33px;" />';
+									/*
+									if($user_count) //if user already exist change greeting text to "Welcome Back"
+									{
+										echo 'Welcome back '.$user->name.'! [<a href="'.$redirect_uri.'?logout=1">Log Out</a>]';
+									}
+									else //else greeting text "Thanks for registering"
+									{ 
+										echo 'Hi '.$user->name.', Thanks for Registering! [<a href="'.$redirect_uri.'?logout=1">Log Out</a>]';
+										$statement = $mysqli->prepare("INSERT INTO google_users (google_id, google_name, google_email, google_link, google_picture_link) VALUES (?,?,?,?,?)");
+										$statement->bind_param('issss', $user->id,  $user->name, $user->email, $user->link, $user->picture);
+										$statement->execute();
+										echo $mysqli->error;
+									}
+									*/
+									//print user details
+									
+									print_r($user);
+									
+								}
+								
+								?>
+								
+								"><img src="images/google.png" width="210" height="80"></div>
+							  </div></center>
 						</div>
   				</div>
 				
 				<div class="form-group"> 
 						
 						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="270" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
+							<center><a href="#" onclick="fb_login();"><img src="images/fb_login_awesome.jpg" border="0" alt=""></a>
+</center>
 						</div>
   				</div>
 				
@@ -1027,110 +1240,8 @@ position:relative
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
-<script>
-	
-	
-	
-		 //////////
-    // Trade Enquiry related js
-    /////
-		
-		jQuery(document).ready(function($) {
-    $(document.body).on('click', '.edit_sms_number', function() {
-        console.log('jnnn');
-        if ($('#'+this.id).is(':checked')) {
-            $('#'+this.id).val('1');
-        } else {
-            $('#'+this.id).val('0');
-        }
-    });
+	<script src="https://apis.google.com/js/client:platform.js"></script>
 
-   
-    window.originalHeightOfBlock = $(".fixed_queries_content").outerHeight();
-    window.originalWidthOfBlock = $(".fixed_queries_content").outerWidth();
-
-    window.longAnimationDuration = 500;
-    window.shortAnimationDuration = 300;
-
-    $(".fixed_queries_section_overlay").hide();
-
-    window.expandFixedTabs = function() {
-        $(".fixed_queries_content").animate({
-            width: '400px'
-        }, longAnimationDuration, function() {
-            $('body').css('overflow-y', 'hidden');
-            $(".fixed_queries_section.phone_icon").fadeOut();
-            $(".fixed_queries_section_overlay").fadeIn();
-            $(".fixed_queries_content").css('overflow', 'initial');
-
-            var curHeight = $('.fixed_queries_content').height();
-            $('.fixed_queries_content').css('height', 'auto');
-            var autoHeight = $('.fixed_queries_content').height();
-
-            $(".fixed_queries_content").height(curHeight).animate({
-                height: autoHeight
-            }, longAnimationDuration, function() {
-                $( ".fixed_queries_content .first" ).addClass( "active" );
-                $(".fixed_queries_content .tab-content").show().animate({
-                    opacity: 1,
-                    top: 0
-                }, shortAnimationDuration, function() {
-                    $(".fixed_queries_section.close_icon").fadeIn();
-                });
-            });
-        });
-    };
-
-    $(".fixed_queries_section.phone_icon").click(function() {
-        expandFixedTabs();
-    });
-
-    window.collapseFixedTabs = function() {
-        $('body').css('overflow-y', 'auto');
-        $(".fixed_queries_section.close_icon").hide();
-        $(".fixed_queries_section_overlay").fadeOut();
-        $( ".fixed_queries_content .first" ).removeClass( "active" );
-        $(".fixed_queries_content").animate({
-            height: originalHeightOfBlock
-        }, longAnimationDuration, function() {
-                $(".fixed_queries_section.phone_icon").fadeIn();
-                $(".fixed_queries_content").css('overflow', 'hidden');
-            $(".fixed_queries_content").animate({
-                width: originalWidthOfBlock
-            }, longAnimationDuration, function() {
-                $(".fixed_queries_content .tab-content").css({
-                    opacity: 0,
-                    top: 30
-                });
-                $( ".fixed_queries_content .nav-tabs .first a" ).trigger( "click" );
-                $(".query_form_main_section").show();
-                $(".success_message_on_query_submission").hide();
-                $(".query_form_main_section input").val('');
-                $(".query_form_main_section textarea").val('');
-                $( ".fixed_queries_content .first" ).removeClass( "active" );
-
-            });
-        });
-    };
-
-    $(".fixed_queries_section.close_icon").click(function() {
-        collapseFixedTabs();
-    });
-
-    $(".fixed_queries_section_overlay").click(function() {
-        collapseFixedTabs();
-    });
-});
-
-
-$('.locimage').hover(function(){
-      $(this).addClass('transition');
-},function(){
-    $(this).removeClass('transition');   
-});
-
-	
-</script>
 	
 
   </body>

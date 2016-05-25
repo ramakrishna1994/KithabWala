@@ -43,174 +43,20 @@ session_start();
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<script>
-	setTimeout(function(){
-	showheader();
-}, 3000);
-</script>
 	<style>
-	
-	
-
-
-#contact {
-	background-image: url("images/contact-bg.jpg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	display: inline;
-	float: left;
-	padding: 70px 0;
-	width: 100%;
-}
-.contact-left {
-	background-color: rgba(104, 102, 96, 0.5);
-	display: inline;
-	float: left;
-	padding: 30px 40px 10px;
-	width: 100%;
-}
-.contact-left h2 {
-	color: #fafafa;
-	font-size: 35px;
-	margin-bottom: 35px;
-}
-.single-address {
-	display: inline;
-	float: left;
-	margin-bottom: 15px;
-	padding-right: 50px;
-	width: 100%;
-}
-.single-address h4 {
-	color: #fafafa;
-	font-size: 22px;
-	font-weight: bold;
-	margin-bottom: 17px;
-}
-.single-address p {
-	color: #fafafa;
-	font-size: 14px;
-	margin-bottom: 5px;
-}
-.contact-right{
-	background-color: rgba(104, 102, 96, 0.5);
-	display: inline;
-	float: left;
-	padding: 30px 40px;
-	width: 100%;
-}
-.contact-right h2 {
-	color: #fafafa;
-	font-size: 35px;
-	margin-bottom: 48px;
-}
-.contact-form .form-group input {
-	background: transparent;
-	color: #e1e1e1;
-	font-size: 20px;
-	border: 1px solid #fff;
-	border-radius: 0;
-	height: 45px;
-	margin-bottom: 24px;
-}
-.contact-form .form-group textarea{
-	color: #e1e1e1;
-	background: transparent;
-	border: 1px solid #fff;
-	border-radius: 0;
-	height: 190px;
-}
-.contact-form .form-control:focus {
-    outline: 0;
-    box-shadow: none;    
-} 
-.contact-form .form-control::-webkit-input-placeholder {
-	color: #e2e2e2;
-	font-size: 20px;
-}
-
-.contact-form .form-control:-moz-placeholder { /* Firefox 18- */
-	color: #e2e2e2;
-	font-size: 20px; 
-}
-
-.contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
-	color: #e2e2e2;
-	font-size: 20px;
-}
-
-.contact-form .form-control:-ms-input-placeholder {  
-	color: #e2e2e2;
-	font-size: 20px;
-}
-.contact-form button {
-	float: right;
-	margin-right: 0;
-	border-radius: 0px;
-}
-.contact-form.button-default::after,
-.contact-form .button-default > span {
-	padding: 12px 40px;  
-}
-#google-map{
-	display: inline;
-	float: left;	
-	width: 100%;
-}
-
-
-	
-		.button123 {
-    background-color: #ffcc04; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-	.button1 {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #ffcc04;
-}
-	
-		
-		
-		.fixedp{
-			font-size:30px;
+		.navbar-nav > li > a
+		{
+			background-color:#c2c4c6;
+			color:black;
 		}
-		
-		
-		
-	.mine
-	{
-		font-size:30px;
-		color:grey;
-		transition:1s;
-	}
-	
-	.mine:hover
-	{
-		color:green;
-		font-size:35px;
-		
-	}
-	
-	
 
-	
-	
-
-		
+		.navbar-nav > li > a:hover
+		{
+			background-color:#c2c4c6;
+			color:white;
+		}
 	</style>
+	
   </head>
   <body>
 
@@ -227,44 +73,45 @@ session_start();
   
   <!-- End header section -->
 
-  <!-- Start menu section -->
-  <section id="menu-area">
+   
+
+<!-- Start menu section -->
+  <nav class="navbar navbar-fixed-top" style="background-color:#c2c4c6;height:60px" id="navigation">
+  
+ 
 	
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-		
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="logo"></a>                      
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li ><a href="home.php">HOME</a></li>
-            <li><a href="aboutus.php">ABOUT US</a></li> 
-            <li><a href="products.php">PRODUCTS</a></li>                    
-            <li class="active"><a href="advertise.php">ADVERTISE </a></li> 
+  <div class="container-fluid" style="background-color:#c2c4c6">
+    <div class="navbar-header" style="background-color:#c2c4c6">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#rkNavbar">
+        <span class="icon-bar" style="background-color:black"></span>
+        <span class="icon-bar" style="background-color:black"></span>
+        <span class="icon-bar" style="background-color:black"></span> 
+      </button>
+      <a class="navbar-brand" href="home.php" ><img id="logoimage" src="images/newlogo.jpg" width="100" height="50" style="margin-top:-2%"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="rkNavbar" style="margin-top:1%;background-color:#c2c4c6">
+      <ul class="nav navbar-nav" style="padding-left:5%">
+        <li class="active"><a href="home.php"><font color="white">HOME</font></a></li>
+            <li ><a href="aboutus.php" >ABOUT US</a></li> 
+            <li ><a href="products.php">PRODUCTS</a></li>                    
+            <li ><a href="advertise.php">ADVERTISE </a></li> 
             <li ><a href="halloffame.php">CREATIVE</a></li> 
 			
-			
-			
+      </ul>
+      <ul class="nav navbar-nav navbar-right" style="padding-left:5%">
+        
 			
 			<?php 
+			
 			if(!isset($_SESSION['kithabwalaemailid']))
 			{
-						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
-							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> 
+						echo '
+							<li id="login"><a href="#d" data-toggle="modal" data-target="#loginModal"><font size="2px"><span class="glyphicon glyphicon-log-in"></span> Login</font></a></li> 
 							';
 			}
 			else
 			{
-				$content =  '<li><a  style="cursor:pointer" data-toggle="dropdown"><font color="orange"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
+				$content =  '<li><a  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
 						.'	<span class="caret"></span></a>'
 						.'	<ul class="dropdown-menu" style="background-color:white;padding:2%">'
 						.'	<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>'
@@ -272,25 +119,104 @@ session_start();
 					
 					
 					
-					$content .= '<li><a class="header-color" href="logout.php"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
+					$content .= '<li><a class="header-color" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
 							. '</ul>'
 							
 							.'	</li>';
 							echo $content;
 			}
-							
+						
 			?>
-          </ul>      
-			
-        </div><!--/.nav-collapse -->
-            
-      </div>          
-    </nav> 
-  </section>
-  <!-- End menu section -->
+      </ul>
+    </div>
+  </div>
+</nav>
+ <!-- End menu section -->
+  
+  
 
   
    <!-- End from blog section -->
+  
+<div class="container-fluid" style="text-align:center;margin-top:7%" id="topdiv">
+<center>
+<h4 style="color:#ffd00d">Imagine your ad positioned in a product which is seen day in and day out for a period of over <br>
+							
+a month by a crowd having the purchasing power? Perfectly defines the purpose of <br>
+
+advertising right?<br> </h4>
+<br>
+
+
+<b>We can help you uncover a potentially nascent marketing space thereby giving you a chance <br>
+
+
+to grow your customer base through an innovative and cost effective marketing channel!<br></b> <br>
+
+
+
+
+
+<h4 style="color:#ffd00d">Why US?<br></h4>
+
+<b>Significantly large Display Period<br></b><br>
+
+
+
+Our Products stay longer with the end user compared to any traditional print media and offer<br>
+
+
+significantly higher exposure to your ad<br><br>
+
+
+<b>Increased Probability of delivery to the audience<br></b><br>
+
+
+We make sure that the end user doesn't miss your ad by driving them to the advertisements<br>
+
+
+through our interactive media such as the Magic Slate, In house Comics, Bookmark etc.<br><br>
+
+
+<b>Reduced Audience Development Cost<br></b><br>
+
+
+Advertisements placed in our products lead to significant indirect marketing owing to the social <br>
+
+
+circles of the end user, leading to an increased viewership of about 20x<br><br>
+
+
+<b>Higher Control of the Target Audience <br></b><br>
+
+
+Want a target crowd of 18-24? Else want an Open Market Crowd of 14+? We give you the <br>
+
+
+power to choose your target audience and our credibility lies in the strong distribution channels <br>
+
+
+we partner with <br></br>
+
+
+<b>Coupons and Deals <br> </b></br>
+
+
+1888 marked the introduction of coupon by the Coca Cola Company into the books of <br>
+
+
+marketing. Coupons are still considered one of the best ways of acquiring and retaining a <br>
+
+
+customer. We help you make your customers happy by providing you slots to position your<br>
+
+
+coupons both in our book and through our technology portals <br>
+
+</center>
+</div>
+
+
 
   <section id="client">
     <div class="container">
@@ -403,91 +329,9 @@ session_start();
   
   
   
-    <div class="row" id="skyline">
-	<img src="images/skyline.svg" width="100%" style="margin-top:5%">
-  </div>
-  
-  
+   
   	
-  <!-- Start Footer -->    
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="footer-top-area">             
-                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
-				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
-              <div class="footer-social">
-					<div class="row">
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
-								
-								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
-						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
-								
-								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
-						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
-								
-								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
-						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
-								
-								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
-						</div>
-					</div>
-				   
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-	<div class="footer-bottom">
-			 <div class="row" style="text-align:center">
-				   <div class="col-md-2" >
-						<h4><b><font color="#ffcc04">Company</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
-						
-				  </div>
-			  
-				  <div class="col-md-2">
-						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
-				  </div>
-  
-				  <div class="col-md-2">
-					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
-						
-					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
-				  </div>
-				  
-				   <div class="col-md-2">
-					   <div class="row" >
-							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
-						</div>
-				  </div>
-				  
-				  <div class="col-md-4">
-						
-					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
-						
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
-				  </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
-    </div>
-  </footer>
-  <!-- End Footer -->
-
+ 
   <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -508,6 +352,7 @@ session_start();
   <!-- Custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
   <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+   
 
     <script>
 
@@ -621,22 +466,6 @@ session_start();
 	
 	
 	
-	var fixmeTop = $('.fixedp').offset().top;
-$(window).scroll(function() {
-    var currentScroll = $(window).scrollTop();
-    if (currentScroll <= 100) {
-        $('.fixedp').css({
-            position: 'fixed',
-			display:'block'
-            
-        });
-    } else {
-        $('.fixedp').css({
-            position: 'static',
-			display:'none'
-        });
-    }
-});
 
 
 
@@ -645,265 +474,139 @@ $(window).scroll(function() {
 		
 	</script>
 	
+		<!--Login Modal -------->
 	
-	
-	
-	
-	<!--Login Modal -->
-<div id="loginModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <h4 class="modal-title"> <center><font color="orange" size="5px">Log in</font></center></h4>
-      </div>
-      <div class="modal-body">
-        
-		
-		
-		
-						
-			<div class="form-horizontal" >
-			
-			
-				<div class="form-group"> 
-						
-						<div class="col-sm-12"> 
-							<center><div class="g-signin2" data-width="195" data-height="35" data-longtitle="true" data-onsuccess="onSignIn"></div></center>
-						</div>
-  				</div>
-				
-				<div class="form-group"> 
-						
-						<div class="col-sm-12"> 
-							<center><a href="#" onclick="fb_login();"><img src="images/fb_login_awesome.jpg" border="0" alt=""></a>
-</center>
-						</div>
-  				</div>
-				
-				<div class="form-group"> 
-						
-						<div class="col-sm-12"> 
-							<center>--or--</center>
-						</div>
-  				</div>
-				
-				<div class="form-group" >
-    				<label class="control-label col-sm-3" ></label>
-    				<div class="col-sm-7" style="text-align:center" >
-      					<p id="loginstatus"></p>
-    				</div>
-  				</div>
-				
-				<div class="form-group" id="loginEmailDivision">
-					<div class="col-sm-3">
-						<div class="collapse navbar-collapse" >
-							<label class="control-label col-sm-offset-12" for="loginemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
-						</div>
-					</div>
-    				<div class="col-sm-7">
-      					<input type="text" class="form-control" id="loginemailid" placeholder="Email address" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="" autofocus>
-      					<span class="" id="loginEmailErrorSpan"></span>
-    				</div>
-  				</div>
-  				
-  				
-  				<div class="form-group" id="loginPasswordDivision">
-					<div class="col-sm-3">
-						<div class="collapse navbar-collapse" >
-							<label class="control-label col-sm-offset-12" for="loginpassword"><span class = "glyphicon glyphicon-lock"></span></label>
-						</div>
-					</div>
-    				<div class="col-sm-7"> 
-      					<input type="password" class="form-control" id="loginpassword" placeholder="Password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
-      					<span class="" id="loginPasswordErrorSpan"></span>
-    				</div>
-    			</div>
-    
-    
-				<div class="form-group" >
-    				<label class="control-label col-sm-3" ></label>
-    				<div class="col-sm-7"> 
-      					<button type="submit" class="btn btn-success btn-block" onclick="return checkLoginParameters()"> Login </button>
-    				</div>
-    			</div>
-				
-				
-
-  				
-  				
-  				<div class="form-group"> 
-						
-						<div class="col-sm-12"> 
-							<center><a  style="cursor:pointer" data-toggle="modal" onclick="toggle()">Help ,I forgot my login details.</a></center>
-						</div>
-      					
-    				
-  				</div>
-    			
-				<div class="form-group">
-					
-					<center>
-					<a  style="cursor:pointer" data-toggle="modal" onclick="toggleModals()">Sign Up</a>
-					</center>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header login_modal_header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h2 class="modal-title" id="myModalLabel">Login to Kithabwala</h2>
+      		</div>
+      		<div class="modal-body login-modal">
+      			<div class="col-md-12">
+					<center><p id="loginstatus">123</p></center>
 				</div>
-   
-   
-  
-			</div>
-			
-			
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+      			<br/>
+      			<div class="clearfix"></div>
+      			<div id='social-icons-conatainer'>
+	        		<div class='modal-body-left'>
+	        			<div class="form-group">
+		              		<input type="text" id="loginemailid" placeholder="Enter your name" value="" class="form-control login-field">
+		              		<i class="fa fa-user login-field-icon"></i>
+		            	</div>
+		
+		            	<div class="form-group">
+		            	  	<input type="password" id="loginpassword" placeholder="Password" value="" class="form-control login-field">
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+		
+		            	<a class="btn btn-success modal-login-btn" onclick="return checkLoginParameters()">Login</a>
+		            	<a  class="login-link text-center" onclick="toggle()" style="cursor:pointer">Lost your password?</a>
+	        		</div>
+	        	
+	        		<div class='modal-body-right'>
+	        			<div class="modal-social-icons">
+						<br><br>
+	        				<a onclick="fb_login(); class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+	        				<br>
+	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FRex%2Fgoogle-login-api&client_id=860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
+	        			
+	        			</div> 
+	        		</div>	
+	        		<div id='center-line'> OR </div>
+	        	</div>																												
+        		<div class="clearfix"></div>
+        		
+        		<div class="form-group modal-register-btn">
+        			<button class="btn btn-default" onclick="toggleModals()"> New User Please Register</button>
+        		</div>
+      		</div>
+      		<div class="clearfix"></div>
+      		<div class="modal-footer login_modal_footer">
+      		</div>
+    	</div>
+  	</div>
+</div>	
+	
+<!------------------->
 
 	
-</div>
-
-  </div>
-</div>
+	<!---------registration modal---------->
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-
-<!-- registration Modal -->
-<div id="registrationModal" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-md">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <h4 class="modal-title"><center><font color="orange" size="5px">New to Kithabwala? Sign up!</font></center></h4>
-      </div>
-      <div class="modal-body">
-					
-					
+	<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+    	<div class="modal-content">
+      		<div class="modal-header login_modal_header">
+        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        		<h2 class="modal-title" id="myModalLabel">New to Kithabwala? Sign up!</h2>
+      		</div>
+      		<div class="modal-body login-modal">
+      			
+				
+				<div class="col-md-12">
+					<center><p id="registrationstatus">123</p></center>
+				</div>
+      			<br/>
+      			<div class="clearfix"></div>
+      			<div id='social-icons-conatainer'>
+	        		<div class='modal-body col-sm-10 col-sm-offset-1'>
+	        			<div class="form-group ">
+		              		<input type="text" id="registrationfirstname" placeholder="Enter your first name" value="" class="form-control login-field">
+		              		<i class="fa fa-user login-field-icon"></i>
+		            	</div>
 						
-			<div class="form-horizontal" role="form">
-			
-			
-				<div class="form-group" >
-    				<label class="control-label col-sm-3" ></label>
-    				<div class="col-sm-7" style="text-align:center" >
-      					<p id="registrationstatus"></p>
-    				</div>
-  				</div>
-				
-				<div class="form-group" id="registrationFirstNameDivision">
-					
-					<div class="col-sm-3">
-						<div class="collapse navbar-collapse" >
-							<label class="control-label  col-sm-offset-12 " for="registrationfirstname"><span class = "glyphicon glyphicon-user"></span></label>
-						</div>
-					</div>
-					<div class="col-sm-7">
-      					<input type="text" class="form-control" id="registrationfirstname" placeholder="Enter Your Firstname" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
-      					<span class="" id="registrationFirstNameErrorSpan"></span>
-    				</div>
-  				</div>
-				
-				<div class="form-group" id="registrationLastNameDivision">
-					<div class="col-sm-3">
-						<div class="collapse navbar-collapse" >
-							<label class="control-label col-sm-offset-12" for="registrationlastname"><span class = "glyphicon glyphicon-user"></span></label>
-						</div>
-					</div>
-    				<div class="col-sm-7">
-      					<input type="text" class="form-control" id="registrationlastname" placeholder="Enter Your Lastname" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
-      					<span class="" id="registrationLastNameErrorSpan"></span>
-    				</div>
-  				</div>
-  				  				
-  				
-  				<div class="form-group" id="registrationEmailDivision">
-				<div class="col-sm-3">
-						<div class="collapse navbar-collapse" >
-							<label class="control-label col-sm-offset-12" for="registrationemailid"><span class = "glyphicon glyphicon-envelope"></span></label>
-						</div>
-					</div>
-    				
-    				<div class="col-sm-7">
-      					<input type="text" class="form-control" id="registrationemailid" placeholder="Enter Your Email Address" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
-      					<span class="" id="registrationEmailErrorSpan"></span>
-    				</div>
-  				</div>
-  				
-  				
-  				<div class="form-group" id="registrationPasswordDivision">
-					<div class="col-sm-3">
-						<div class="collapse navbar-collapse" >
-							<label class="control-label col-sm-offset-12" for="registrationpassword"><span class = "glyphicon glyphicon-lock"></span></label>
-						</div>
-					</div>
-    				
-    				<div class="col-sm-7"> 
-      					<input type="password" class="form-control" id="registrationpassword" placeholder="Enter Your Password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
-      					<span class="" id="registrationPasswordErrorSpan"></span>
-    				</div>
-    			</div>
-    			
-    			
-    			<div class="form-group" id="registrationConfirmPasswordDivision">
-				<div class="col-sm-3">
-						<div class="collapse navbar-collapse" >
-							<label class="control-label col-sm-offset-12" for="registrationconfirmpassword"><span class = "glyphicon glyphicon-lock"></span></label>
-						</div>
-					</div>
-    				
-    				<div class="col-sm-7"> 
-      					<input type="password" class="form-control" id="registrationconfirmpassword" placeholder="Confirm password" data-toggle="popover"  data-trigger="hover" data-placement="top" data-content="">
-      					<span class="" id="registrationConfirmPasswordErrorSpan"></span>
-   				 	</div>
-  				</div>
- 
-  
-    
-				 <div class="form-group" >
-    				<label class="control-label col-sm-3" ></label>
-    				<div class="col-sm-7"> 
-      					<button type="submit" class="btn btn-primary btn-block" onclick="return checkRegistrationParameters()">Register</button>
-    				</div>
-    			</div>
-    
-  				
-   
-   
-			</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-
-
+						<div class="form-group">
+		              		<input type="text" id="registrationlastname" placeholder="Enter your last name" value="" class="form-control login-field">
+		              		<i class="fa fa-user login-field-icon"></i>
+		            	</div>
+						
+						<div class="form-group">
+		              		<input type="text" id="registrationemailid" placeholder="Enter Your Email Address" value="" class="form-control login-field">
+		              		<i class="fa fa-envelope login-field-icon"></i>
+		            	</div>
+		
+		            	<div class="form-group">
+		            	  	<input type="password" id="registrationpassword" placeholder="Enter Your Password" value="" class="form-control login-field">
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+						
+						<div class="form-group">
+		            	  	<input type="password" id="registrationconfirmpassword" placeholder="Confirm Password" value="" class="form-control login-field">
+		              		<i class="fa fa-lock login-field-icon"></i>
+		            	</div>
+		
+		            	<a  class="btn btn-success modal-login-btn" onclick="return checkRegistrationParameters()">Register</a>
+		          
+	        		</div>
+	        	
+	        		
+	        	</div>																												
+        		<div class="clearfix"></div>
+        	
+      		</div>
+      		<div class="clearfix"></div>
+      		<div class="modal-footer login_modal_footer">
+      		</div>
+    	</div>
+  	</div>
+</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 
@@ -982,7 +685,6 @@ $(window).scroll(function() {
 
 
 
-
 <!-- Reset password Modal -->
 <div id="resetPasswordModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -1049,10 +751,110 @@ $(window).scroll(function() {
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
+	<script src="customjs/screen.js"></script>
 
 	
 
 
 
   </body>
+  
+  
+   <div class="row" style="padding-top:1%" id="skyline">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
+  </div>
+  
+ 
+  	
+  <!-- Start Footer -->    
+  <footer id="footer" style="background-color:#242424">
+    <div class="footer-top">
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="col-md-12">
+            <div class="footer-top-area">             
+                <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:15px;margin-top:1%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+              <div class="footer-social">
+					<div class="row">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
+								
+								<a class="facebook" href="https://www.facebook.com/Kithabwala-156605224697747/?fref=ts" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
+						</div>
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
+								
+								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
+						</div>
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
+								
+								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
+						</div>
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
+								
+								<a class="linkedin" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
+						</div>
+					</div>
+				   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+		<div class="footer-bottom">
+	
+	
+			 <div class="row" >
+				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
+				
+						<div class="col-md-7" style="padding:10px 0">
+							<img src="images/logo.png" width="150" height="150" class="img-rounded">
+						</div>
+						<div class="col-md-5" style="text-align:left;padding:10px 0">
+							
+						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+							
+						   <p><font color="#838282" size="2px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+					  </div>
+				  
+				</div>
+				<div class="col-md-6" style="text-align:left">
+					
+						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
+								<h4><b><font color="#ffcc04">Company</font></b></h4>
+								
+								<p><a href="aboutus.php"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="aboutus.php/#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="careers.php"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
+								
+						  </div>
+					  
+						  <div class="col-md-3" style="padding:10px 0">
+								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+								
+								<p><a href="advertise.php"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
+						  </div>
+		  
+						  <div class="col-md-3" style="padding:10px 0">
+							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+								
+							   <p><a href="contactus.php"><font color="#838282" size="2px">Contact Us</font></a></p>
+						  </div>
+						  
+						  
+						  
+				</div>
+				   
+				  
+				   
+				  
+				 
+        </div>
+    </div>
+    <div class="footer-bottom" style="padding:10px 0">
+      <p><font color="#838282" size="2px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
+    </div>
+  </footer>
+  <!-- End Footer -->
 </html>

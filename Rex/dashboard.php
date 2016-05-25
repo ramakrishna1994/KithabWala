@@ -143,7 +143,7 @@ background-image: url("images/bg.jpg");
     
 		<div class="collapse navbar-collapse col-sm-2" style="margin-top:5%">
 		<div  style="text-align:center">
-			 <img src="profilePics/<?php echo $_SESSION['profileimage'] ?>" class="img-rounded" alt="Cinque Terre" width="100" height="100" >
+			 <img src="<?php echo $_SESSION['profileimage'] ?>" class="img-rounded" alt="Cinque Terre" width="100" height="100" >
 		<p style="color:purple;margin-top:10%"><b><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'] ?></b></p>
 		<button type="button" class="btn btn-primary btn-block" onclick="getApprovedPosts(0)">Home</button>
 		<?php

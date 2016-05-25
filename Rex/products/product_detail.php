@@ -64,6 +64,12 @@ session_start();
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script src="js/respond.min.js"></script>
+	<style>
+		.point
+		{
+			cursor:pointer;
+		}
+	</style>
   </head>
   <body>
 
@@ -80,7 +86,7 @@ session_start();
  <!-- Start menu section -->
   <section id="menu-area">
 	
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
+    <nav class="navbar navbar-default main-navbar navbar-fixed-top " role="navigation">  
 		
       <div class="container">
         <div class="navbar-header">
@@ -96,11 +102,11 @@ session_start();
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
-			<li ><a href="home.php">HOME</a></li>
-            <li><a href="aboutus.php">ABOUT US</a></li> 
-            <li><a href="products.php">PRODUCTS</a></li>                    
-            <li ><a href="advertise.php">ADVERTISE </a></li> 
-            <li ><a href="halloffame.php">CREATIVE</a></li> 
+			<li ><a onclick="window.open('../home.php','_self')" class="point">HOME</a></li>
+            <li><a onclick="window.open('../aboutus.php','_self')" class="point">ABOUT US</a></li> 
+            <li><a onclick="window.open('../products.php','_self')" class="point">PRODUCTS</a></li>                    
+            <li ><a onclick="window.open('../advertise.php','_self')" class="point">ADVERTISE </a></li> 
+            <li ><a onclick="window.open('../halloffame.php','_self')" class="point">CREATIVE</a></li> 
 			
 			
 			
@@ -157,9 +163,10 @@ session_start();
 
                     <div class="row" id="productMain">
                         <div class="col-sm-6">
-                            <div id="mainImage" style="padding:20px 40px">
+                            <div id="mainImage" style="padding:20px 20px;background-color: white">
                                 <img src="images/detailbig1.JPG" alt="" class="img-responsive">
                             </div>
+<br>
                          <div class="row" id="thumbs">
                                 <div class="col-xs-3">
                                     <a href="img/detailbig1.JPG" class="thumb">
@@ -185,8 +192,8 @@ session_start();
 
                         </div>
                         <div class="col-sm-6">
-                            <div class="box">
-                                <h3 style="color:#ffcc04">Kithabwala college theme notebook</h3>
+                            <div class="box"><br>
+                                <h3 style="color:#ffcc04"><br>Kithabwala college theme notebook<br></h3>
 								<table class="table">
                                 <tbody>
                                   <tr>
@@ -235,7 +242,7 @@ session_start();
 								  </tr>
 								</tbody>
 							  </table>
-                              <br>
+                              <br><br>
 							  <table class="table">
 								<thead>
 								  <tr>
@@ -301,10 +308,10 @@ session_start();
   
   	
   <!-- Start Footer -->    
-  <footer id="footer" style="background-color: #242424">
+  <footer id="footer" style="background-color:#242424">
     <div class="footer-top">
-      <div class="container">
-        <div class="row">
+      <div class="container-fluid">
+        <div class="row-fluid">
           <div class="col-md-12">
             <div class="footer-top-area">             
                 <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
@@ -313,7 +320,7 @@ session_start();
 					<div class="row">
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
+								<a class="facebook" href="https://www.facebook.com/Kithabwala-156605224697747/?fref=ts" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
@@ -325,7 +332,7 @@ session_start();
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
+								<a class="linkedin" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
 						</div>
 					</div>
 				   
@@ -357,23 +364,23 @@ session_start();
 						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
 								<h4><b><font color="#ffcc04">Company</font></b></h4>
 								
-								<p><a href="#"><font color="#838282" size="2px">About Us</font></a></p> 
-								<p><a href="#"><font color="#838282" size="2px">Team</font></a></p>
-								<p><a href="#"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
+								<p><a href="aboutus.php"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="aboutus.php/#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="careers.php"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
 								
 						  </div>
 					  
 						  <div class="col-md-3" style="padding:10px 0">
 								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
 								
-								<p><a href="#"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="advertise.php"><font color="#838282" size="2px">Advertise with us</font></a></p>
 								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
 						  </div>
 		  
 						  <div class="col-md-3" style="padding:10px 0">
 							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
 								
-							   <p><a href="#"><font color="#838282" size="2px">Contact Us</font></a></p>
+							   <p><a href="contactus.php"><font color="#838282" size="2px">Contact Us</font></a></p>
 						  </div>
 						  
 						  

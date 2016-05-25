@@ -265,35 +265,31 @@ span.buttonText {
   
   <!-- End header section -->
 
-  <!-- Start menu section -->
-  <section id="menu-area">
+   <!-- Start menu section -->
+  
 	
-    <nav class="navbar navbar-default main-navbar" role="navigation">  
-		
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->                                               
-           <a class="navbar-brand logo" href="index.html"><img src="images/logo.png" alt="logo"></a>                      
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
+	<nav class="navbar navbar-default" style="padding:0.5%;background-color:white">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+     <a href="home.php"><img src="images/kithabwala.png" alt="logo" height="50" width="100"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
 			<li ><a href="home.php">HOME</a></li>
             <li><a href="aboutus.php">ABOUT US</a></li> 
             <li><a href="products.php">PRODUCTS</a></li>                    
             <li ><a href="advertise.php">ADVERTISE </a></li> 
-            <li ><a href="halloffame.php">CREATIVE</a></li> 
-			
-			
-			
-			
-			<?php 
+            <li class="active"><a href="halloffame.php">CREATIVE</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+		
+		<?php 
 			if(!isset($_SESSION['kithabwalaemailid']))
 			{
 						echo '<li id="signup"><a href="#v" data-toggle="modal" data-target="#registrationModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> 
@@ -318,15 +314,16 @@ span.buttonText {
 			}
 							
 			?>
-          </ul>      
 			
-        </div><!--/.nav-collapse -->
-            
-      </div>          
-    </nav> 
-  </section>
-  <!-- End menu section -->
+			
+      </ul>
+    </div>
+  </div>
+</nav>
 
+    
+  
+  <!-- End menu section -->
 
   
   
@@ -606,8 +603,8 @@ span.buttonText {
   
   
   
-    <div class="row" id="skyline">
-	<img src="images/skyline.svg" width="100%" style="margin-top:5%">
+   <div class="row" style="padding-top:1%" id="skyline">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
   </div>
   
   
@@ -615,27 +612,27 @@ span.buttonText {
   <!-- Start Footer -->    
   <footer id="footer">
     <div class="footer-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
-				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+                <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:15px;margin-top:1%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
 						</div>
@@ -647,49 +644,63 @@ span.buttonText {
         </div>
       </div>
     </div>
-	<div class="footer-bottom">
-			 <div class="row" style="text-align:center">
-				   <div class="col-md-2" >
-						<h4><b><font color="#ffcc04">Company</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
-						
-				  </div>
-			  
-				  <div class="col-md-2">
-						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
-				  </div>
-  
-				  <div class="col-md-2">
-					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
-						
-					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
-				  </div>
-				  
-				   <div class="col-md-2">
-					   <div class="row" >
-							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+		<div class="footer-bottom">
+	
+	
+			 <div class="row" >
+				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
+				
+						<div class="col-md-7" style="padding:10px 0">
+							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-				  </div>
+						<div class="col-md-5" style="text-align:left;padding:10px 0">
+							
+						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+							
+						   <p><font color="#838282" size="2px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+					  </div>
 				  
-				  <div class="col-md-4">
-						
-					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
-						
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
-				  </div>
+				</div>
+				<div class="col-md-6" style="text-align:left">
+					
+						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
+								<h4><b><font color="#ffcc04">Company</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="http://www.kithabwala.com/Rex/aboutus.php#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
+								
+						  </div>
+					  
+						  <div class="col-md-3" style="padding:10px 0">
+								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+								
+								<p><a href="#"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
+						  </div>
+		  
+						  <div class="col-md-3" style="padding:10px 0">
+							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+								
+							   <p><a href="#"><font color="#838282" size="2px">Contact Us</font></a></p>
+						  </div>
+						  
+						  
+						  
+				</div>
+				   
+				  
+				   
+				  
+				 
         </div>
     </div>
-    <div class="footer-bottom">
-      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
+    <div class="footer-bottom" style="padding:10px 0">
+      <p><font color="#838282" size="2px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
+
 
   <!-- initialize jQuery Library --> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

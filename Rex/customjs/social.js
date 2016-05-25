@@ -24,7 +24,7 @@ function fb_login(){
     FB.login(function(response) {
 
         if (response.authResponse) {
-            console.log('Welcome!  Fetching your information.... ');
+            //console.log('Welcome!  Fetching your information.... ');
             //console.log(response); // dump complete info
             access_token = response.authResponse.accessToken; //get access token
             user_id = response.authResponse.userID; //get FB UID
@@ -78,7 +78,7 @@ function fb_login(){
 
         } else {
             //user hit cancel button
-            console.log('User cancelled login or did not fully authorize.');
+            //console.log('User cancelled login or did not fully authorize.');
 
         }
     });
@@ -93,10 +93,23 @@ function fb_login(){
   
   
   
+  /********************************google sign in***********************************/
   
   
   
   var auth2 = {};
+  var first_run = true;
+  
+    function onSignInCallback(data) {
+  if(!first_run) {
+	  alert(2);
+	   
+      helper.onSignInCallback(data);
+  }
+  first_run = false;
+ 
+}
+
 var helper = (function() {
   return {
     /**
@@ -105,6 +118,7 @@ var helper = (function() {
      * @param {Object} authResult An Object which contains the access token and
      *   other authentication information.
      */
+	 
     onSignInCallback: function(authResult) {
       $('#authResult').html('Auth Result:<br/>');
       for (var field in authResult) {
@@ -120,7 +134,7 @@ var helper = (function() {
           if (authResult['error'] || authResult.currentUser.get().getAuthResponse() == null) {
             // There was an error, which means the user is not signed in.
             // As an example, you can handle by writing to the console:
-            console.log('There was an error: ' + authResult['error']);
+            //console.log('There was an error: ' + authResult['error']);
           }
           $('#authResult').append('Logged out');
           $('#authOps').hide('slow');
@@ -133,6 +147,8 @@ var helper = (function() {
    
 
    
+ 
+   
 
     /**
      * Gets and renders the currently signed in user's profile data.
@@ -142,28 +158,53 @@ var helper = (function() {
         'userId': 'me'
       }).then(function(res) {
         var profile = res.result;
-        console.log(profile);
-        $('#profile').empty();
-        $('#profile').append(
-            $('<p><img src=\"' + profile.image.url + '\"></p>'));
-        $('#profile').append(
-            $('<p>Hello ' + profile.displayName + '!<br />Tagline: ' +
-            profile.tagline + '<br />About: ' + profile.emails[0].value + '</p>'));
-        if (profile.emails) {
-          $('#profile').append('<br/>Emails: ');
-          for (var i=0; i < profile.emails.length; i++){
-            $('#profile').append(profile.emails[i].value).append(' ');
-          }
-          $('#profile').append('<br/>');
-        }
-        if (profile.cover && profile.coverPhoto) {
-          $('#profile').append(
-              $('<p><img src=\"' + profile.cover.coverPhoto.url + '\"></p>'));
-        }
+        //console.log(profile);
+		//alert(1);
+         var formData = new FormData();
+			formData.append( 'emailid',profile.emails[0].value);
+			formData.append( 'firstname',profile.name.familyName);
+			formData.append( 'lastname',profile.name.givenName);
+		$(document).ready(function(){
+		 
+
+		 $.ajax({
+		        url: "phpFiles/fbandgmail.php",// give your url
+		        type: "POST",
+		        data: formData,
+		        dataType: 'json',
+		        processData: false,
+		        contentType: false,
+		        success: function (response) {
+		            
+					 
+						 
+					    
+			        	
+		           window.location.reload();
+			        	
+				   
+				 
+				
+					  
+			        	
+					
+				 
+				
+				
+				
+		            
+		        }
+		            
+		        
+				});
+			});
+        
+        
+        
       }, function(err) {
         var error = err.result;
-        $('#profile').empty();
-        $('#profile').append(error.message);
+      
+       
       });
     }
   };
@@ -190,12 +231,12 @@ $(document).ready(function() {
  * @param {boolean} isSignedIn The new signed in state.
  */
 var updateSignIn = function() {
-  console.log('update sign in state');
+  //console.log('update sign in state');
   if (auth2.isSignedIn.get()) {
-    console.log('signed in');
+    //console.log('signed in');
     helper.onSignInCallback(gapi.auth2.getAuthInstance());
   }else{
-    console.log('signed out');
+    //console.log('signed out');
     helper.onSignInCallback(gapi.auth2.getAuthInstance());
   }
 }
@@ -212,7 +253,7 @@ function startApp() {
       gapi.auth2.init({fetch_basic_profile: true,
           scope:'https://www.googleapis.com/auth/plus.login'}).then(
             function (){
-              console.log('init');
+              //console.log('init');
               auth2 = gapi.auth2.getAuthInstance();
               auth2.isSignedIn.listen(updateSignIn);
               auth2.then(updateSignIn);
@@ -220,3 +261,6 @@ function startApp() {
     });
   });
 }
+
+
+

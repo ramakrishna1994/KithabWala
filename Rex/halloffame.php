@@ -17,7 +17,7 @@ session_start();
     <!-- Font Awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
     <!-- Bootstrap -->
-     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- Slick slider -->
     <link rel="stylesheet" type="text/css" href="css/slick.css"/> 
     <!-- Fancybox slider -->
@@ -232,10 +232,10 @@ session_start();
   
   <!-- End header section -->
 
-  <!-- Start menu section -->
-  <section id="menu-area">
+    <!-- Start menu section -->
+  
 	
-	<nav class="navbar navbar-default" style="padding:0.5%">
+	<nav class="navbar navbar-default navbar-fixed-top" style="padding:0.5%;background-color:white">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -243,7 +243,7 @@ session_start();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-     <img src="images/logo.png" alt="logo" height="50" width="50">
+     <a href="home.php"><img src="images/kithabwala.png" alt="logo" height="50" width="100"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -289,11 +289,11 @@ session_start();
 </nav>
 
     
-  </section>
+  
   <!-- End menu section -->
 
-  <div class="container" style="background-color:white">
-  <div class="row">
+  <div class="container" style="background-color:white;">
+  <div class="row" style="margin-top:7%">
   <div class="col-md-8 col-md-offset-2">
   <ul class="nav nav-tabs">
     <li class="active"><a href="halloffame.php">Hall Of Fame</a></li>
@@ -316,7 +316,7 @@ session_start();
    -->
 
    <!-- Start subscription section -->
-  <div class="container" style="background-color:white;padding-bottom:2%">	
+  <div class="container" style="background-color:white;padding-bottom:2%;">	
 	<div class="row">
 		<div class="col-md-12" style="margin-top:1%;text-align:center;background-image:url('images/cctop1.jpg');
     background-repeat: no-repeat;
@@ -326,10 +326,10 @@ session_start();
 			
 			<div class="row" style="margin-top:28%">
 				<div class="col-md-4 col-md-offset-2" >
-					<button type="button" class="btn btn-warning btn-block btn-lg">SEE OPEN CHALLENGES</button>
+					<button type="button" class="btn btn-warning btn-block btn-lg" onclick="window.open('submit.php')">SEE OPEN CHALLENGES</button>
 				</div>
 				<div class="col-md-4 " >
-					<button type="button" class="btn btn-warning btn-block btn-lg">HOW IT WORKS</button>
+					<button type="button" class="btn btn-warning btn-block btn-lg" onclick="window.open('howitworks.php')">HOW IT WORKS</button>
 				</div>
 			</div>
 			
@@ -593,38 +593,37 @@ session_start();
   
   
   
-    <div class="row" id="skyline">
-	<img src="images/skyline.svg" width="100%" style="margin-top:5%">
+    <div class="row" style="padding-top:1%" id="skyline">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
   </div>
-  
-  
+    
   	
-  <!-- Start Footer -->    
-  <footer id="footer">
+   <!-- Start Footer -->    
+  <footer id="footer" style="background-color:#242424">
     <div class="footer-top">
-      <div class="container">
-        <div class="row">
+      <div class="container-fluid">
+        <div class="row-fluid">
           <div class="col-md-12">
             <div class="footer-top-area">             
-                <p style="color:#ffcc04;font-size:30px;margin-top:5%">KITHABWALA</p>    
-				<p style="color:#838282;font-size:16px;margin-top:2%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
+                <p style="color:#ffd00d;font-size:25px;margin-top:5%">KITHABWALA</p>    
+				<p style="color:#838282;font-size:15px;margin-top:1%">We are inspired from experiences and aim to give a transformational makeover to the rustic notebook, making it more than just a place to write!</p>    				
               <div class="footer-social">
 					<div class="row">
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="facebook" href="#" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
+								<a class="facebook" href="https://www.facebook.com/Kithabwala-156605224697747/?fref=ts" style="float:left"><span class="fa fa-facebook"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">SAY HELLO ON <br> OUR FACEBOOK PAGE</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
 								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
-						<div class="col-md-3 " style="text-align:center;color:#ffcc04">
+						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="linkedin" href="#" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
+								<a class="linkedin" style="float:left"><span class="fa fa-mobile-phone"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">CALL 022-42661060 <br> MON - FRI: 11 A.M - 6 P.M</font></p>
 						</div>
 					</div>
 				   
@@ -634,46 +633,59 @@ session_start();
         </div>
       </div>
     </div>
-	<div class="footer-bottom">
-			 <div class="row" style="text-align:center">
-				   <div class="col-md-2" >
-						<h4><b><font color="#ffcc04">Company</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">About Us</font></a></p> 
-						<p><a href="#"><font color="#838282" size="3px">Team</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Carrer at KithabWala</font></a></p>
-						
-				  </div>
-			  
-				  <div class="col-md-2">
-						<h4><b><font color="#ffcc04">Advertise</font></b></h4>
-						
-						<p><a href="#"><font color="#838282" size="3px">Advertise with us</font></a></p>
-						<p><a href="#"><font color="#838282" size="3px">Store Locations</font></a></p>		
-				  </div>
-  
-				  <div class="col-md-2">
-					   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
-						
-					   <p><a href="#"><font color="#838282" size="3px">Contact Us</font></a></p>
-				  </div>
-				  
-				   <div class="col-md-2">
-					   <div class="row" >
-							<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false" data-width="300" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"></div>
+		<div class="footer-bottom">
+	
+	
+			 <div class="row" >
+				<div class="col-md-6" style="text-align:center;border-right:1px solid #505050">
+				
+						<div class="col-md-7" style="padding:10px 0">
+							<img src="images/logo.png" width="150" height="150" class="img-rounded">
 						</div>
-				  </div>
+						<div class="col-md-5" style="text-align:left;padding:10px 0">
+							
+						   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
+							
+						   <p><font color="#838282" size="2px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
+					  </div>
 				  
-				  <div class="col-md-4">
-						
-					   <h4><b><font color="#ffcc04">Head Quarters</font></b></h4>
-						
-					   <p><font color="#838282" size="3px">Kithabwala Pvt Ltd.<br>401 Sarathi Studios <br>Mythrivanam,Hyderabad<br>Telangana 500081</font></p>
-				  </div>
+				</div>
+				<div class="col-md-6" style="text-align:left">
+					
+						<div class="col-md-3 col-md-offset-1" style="padding:10px 0" >
+								<h4><b><font color="#ffcc04">Company</font></b></h4>
+								
+								<p><a href="aboutus.php"><font color="#838282" size="2px">About Us</font></a></p> 
+								<p><a href="aboutus.php/#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="careers.php"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
+								
+						  </div>
+					  
+						  <div class="col-md-3" style="padding:10px 0">
+								<h4><b><font color="#ffcc04">Advertise</font></b></h4>
+								
+								<p><a href="advertise.php"><font color="#838282" size="2px">Advertise with us</font></a></p>
+								<p><a href="#"><font color="#838282" size="2px">Store Locations</font></a></p>		
+						  </div>
+		  
+						  <div class="col-md-3" style="padding:10px 0">
+							   <h4><b><font color="#ffcc04">Reach out</font></b></h4>
+								
+							   <p><a href="contactus.php"><font color="#838282" size="2px">Contact Us</font></a></p>
+						  </div>
+						  
+						  
+						  
+				</div>
+				   
+				  
+				   
+				  
+				 
         </div>
     </div>
-    <div class="footer-bottom">
-      <p><font color="#838282" size="3px">&copy; 2016 All Rights reserved to Kithabwala.com</font></p>
+    <div class="footer-bottom" style="padding:10px 0">
+      <p><font color="#838282" size="2px">Copyright &copy; 2016 - Kithabwala - All rights reserved.</font></p>
     </div>
   </footer>
   <!-- End Footer -->
@@ -682,7 +694,7 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <!-- Bootstrap -->
-  <script src="js/bootstrap.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <!-- Slick Slider -->
   <script type="text/javascript" src="js/slick.js"></script>
   <!-- Counter -->

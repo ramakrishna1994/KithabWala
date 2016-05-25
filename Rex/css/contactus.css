@@ -14,8 +14,8 @@
 	cursor:pointer;
 }
 .fixed_queries_section:hover {
-    color: #fff;
-	background-color:#ffcc04;
+    background-color: #fff;
+	color:#ffcc04;
 }
 .fixed_queries_content.inner {
     bottom: 14px;
@@ -41,7 +41,8 @@
     bottom: 14px;
     right: 45px;
     z-index: 100;
-	color:#ffcc04;
+	background-color:#ffcc04;
+	color:white;
 }
 
 .fixed_queries_section.close_icon {
