@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']); 
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +56,42 @@ session_start();
 			background-color:#c2c4c6;
 			color:white;
 		}
+		
+		
+
+.login_modal_footer{margin-top:5px;}
+.login_modal_header .modal-title {text-align: center;font-family:'Philosopher',sans-serif; }
+.form-group{position: relative;}
+.form-group .login-field-icon {
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    transition: all 0.25s ease 0s;
+    padding-top: 2%;
+}
+.login-modal{
+    width:100%;
+    padding-bottom:20px;
+}
+.login_modal_header, .login_modal_footer {background: #00BB64 !important;color:#fff;}
+.modal-register-btn{margin: 4% 33% 2% 33% ;width:100%;}
+.login-modal input{height:40px; box-shadow: none; border:1px solid #ddd;}
+.modal-body-left{float:left; width:50%; padding-right:4%; border-right:4px solid #ddd;}
+.modal-body-right{float:right; width:47%;}
+.login-link{padding:0 20%;}
+.modal-social-icons{padding:0 10%;}
+.facebook1, .twitter, .google, .linkedin {width:100%;height:40; padding-top:2%; margin-top:2%;}
+.modal-icons{margin-left: -10px; margin-right: 20px;}
+.google, .google:hover{background-color:#dd4b39;border:2px solid #dd4b39;color:#fff;}
+
+.facebook1, .facebook1:hover{background-color: #3b5999; border:2px solid #3b5999;color:#fff;}
+
+#social-icons-conatainer{position: relative;}
+#center-line{position: absolute;  right: 47.5%;top: 80px;background:#ddd;  border: 4px solid #DDDDDD;border-radius: 20px;}
+.modal-login-btn{width:100%;height:40px; margin-bottom:10px;}
+#modal-launcher{margin: 30% 0 0 30%; }
+
 	</style>
 	
   </head>
@@ -508,7 +545,7 @@ coupons both in our book and through our technology portals <br>
 	        		<div class='modal-body-right'>
 	        			<div class="modal-social-icons">
 						<br><br>
-	        				<a onclick="fb_login(); class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+	        				<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
 	        				<br>
 	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Flocalhost%2FRex%2Fgoogle-login-api&client_id=860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
 	        			

@@ -134,14 +134,11 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 						
 			
 		echo '{"error":0}';
-		$str = $_SERVER['HTTP_REFERER'];
-		$file = basename($str); 
 		
-		//$str1 = (explode("//",$str));
-		print_r ($file);
-		//$str2 = (explode("/",$str1));
-		//print_r ($str2);
-	header('location:../'.$file);
+		
+		print_r ($_SESSION['previousurl']);
+	
+	header('location:../'.$_SESSION['previousurl']);
 	
 	
 
