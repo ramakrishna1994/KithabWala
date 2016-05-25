@@ -27,7 +27,58 @@ function ApprovePost(postid)
 		
 		
 		
+function getHallOfFamePendingComments(resultscount)
+{
+	
+	
+	var innerhtml = "";
+	$('#loadmorecontent').html('<img class="img-rounded" alt="Cinque Terre" width="20" height="20" src="images/loader.gif">');
+	if(resultscount != 0)
+		innerhtml = document.getElementById('posts').innerHTML;
+	var formData = new FormData();
+	formData.append( 'resultscount', resultscount );
+			
+	 $(document).ready(function(){
 
+		 $.ajax({
+		        url: "phpFiles/getHallOfFamePendingposts.php",// give your url
+		        type: "POST",
+				data: formData,
+		        dataType: 'json',
+		        processData: false,
+		        contentType: false,
+		        success: function (response) {
+		            
+							
+						for(i=0;i<response.length-1;i++)
+						{
+							innerhtml 	+= '<div class="panel panel-primary"><div class="panel-heading">'
+										+ '<img src="profilePics/'+response[i].profileimage+'" class="img-rounded" alt="Cinque Terre" width="30" height="30">'
+										+ '&nbsp;&nbsp;'+response[i].firstname+'&nbsp;'+response[i].lastname+'</div><div class="panel-body">'
+										+ response[i].comment 
+										+'<br><p><a href="ideaFiles/'+response[i].filename+'">Attached Idea file</a></p></div>'
+										+'<div class="panel-footer" style="text-align:left">'
+										+'	<button type="button" class="btn btn-success " onclick="ApprovePost('+response[i].postid+')">Approve Idea</button>'
+										+'	</div></div>';
+										
+											
+			
+				
+						}
+						
+						
+						
+						
+						
+							
+							
+						document.getElementById('posts').innerHTML = innerhtml;						
+		     
+		        }
+		    });
+		});
+		
+}
 
 
 

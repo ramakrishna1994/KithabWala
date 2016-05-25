@@ -116,7 +116,8 @@ background-image: url("images/bg.jpg");
 					}
 					if($_SESSION['isadmin'] == 1)
 					{
-						$content .= '<li><a  style="cursor:pointer" class="header-color" onclick="getPendingPosts(0)"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;&nbsp;Pending Ideas</a></li>';
+						$content .= '<li><a  style="cursor:pointer" class="header-color" onclick="getPendingPosts(0)"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;&nbsp;Pending Ideas</a></li>
+						<li><a  style="cursor:pointer" class="header-color" onclick="getHallOfFamePendingComments()"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;&nbsp;Pending Ideas</a></li>';
 					}
 					
 					
