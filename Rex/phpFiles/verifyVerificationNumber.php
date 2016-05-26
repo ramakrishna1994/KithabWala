@@ -29,7 +29,7 @@ if($_SESSION['code'] == $verificationcode	)
 					.'"'.$lastname.'",'
 					.'"'.$emailid.'",'
 					.'"'.$hashed_password.'",'
-					.'"user.jpg",'
+					.'"profilePics/user.jpg",'
 					.'0,'
 					.'"'.$resetpasswordhash.'");';
 					

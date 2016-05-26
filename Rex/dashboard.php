@@ -5,7 +5,7 @@ require_once 'phpFiles/isSessionSet.php';
 
 
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <title>Dashboard</title>
@@ -61,7 +61,7 @@ background-image: url("images/bg.jpg");
 <body>
   
   
-	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:white">
+	<nav class="navbar navbar-fixed-top" style="background-color:white">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" >
@@ -117,7 +117,8 @@ background-image: url("images/bg.jpg");
 					if($_SESSION['isadmin'] == 1)
 					{
 						$content .= '<li><a  style="cursor:pointer" class="header-color" onclick="getPendingPosts(0)"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;&nbsp;Pending Ideas</a></li>
-						<li><a  style="cursor:pointer" class="header-color" onclick="getHallOfFamePendingComments()"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;&nbsp;Pending Ideas</a></li>';
+						<li><a  style="cursor:pointer" class="header-color" onclick="getHallOfFamePendingComments()"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;&nbsp;Pending Hall Of Fame Post Comments</a></li>
+						<li><a  style="cursor:pointer" class="header-color" onclick="getHallOfFamePendingComments()"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;&nbsp;Subscribed Emails List</a></li>';
 					}
 					
 					
@@ -142,7 +143,7 @@ background-image: url("images/bg.jpg");
   
   <div class="row" style="margin-top:2%;margin-bottom:1%">
     
-		<div class="collapse navbar-collapse col-sm-2" style="margin-top:5%">
+		<div class="col-md-2" style="margin-top:5%">
 		<div  style="text-align:center">
 			 <img src="<?php echo $_SESSION['profileimage'] ?>" class="img-rounded" alt="Cinque Terre" width="100" height="100" >
 		<p style="color:purple;margin-top:10%"><b><?php echo $_SESSION['firstname'].' '.$_SESSION['lastname'] ?></b></p>
@@ -150,7 +151,8 @@ background-image: url("images/bg.jpg");
 		<?php
 			if($_SESSION['isadmin'] == 0)
 			{
-					echo '<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Submit an Idea</button>'
+					echo '<a  href="designsubmit.php" class="btn btn-primary btn-block" >Submit a Design</a>'
+						.'<a  href="musingsubmit.php" class="btn btn-primary btn-block" >Submit a Musing</a>'
 						.'<button type="button" class="btn btn-primary btn-block" onclick="getUserPosts(0)">Your Ideas</button>';
 			}
 		?>
@@ -159,7 +161,9 @@ background-image: url("images/bg.jpg");
 		<?php
 			if($_SESSION['isadmin'] == 1)
 			{
-					echo '<button type="button" class="btn btn-primary btn-block" onclick="getPendingPosts(0)">Pending Ideas</button>';
+					echo '<button type="button" class="btn btn-primary btn-block" onclick="getPendingPosts(0)">Pending Ideas</button>
+						<button type="button" class="btn btn-primary btn-block" onclick="getHallOfFamePendingComments()">Hall Of Fame <br> Pending Comments</button>
+							<button type="button" class="btn btn-primary btn-block" onclick="getSubscribedEmails()">Subscribed Emails</button>';
 			}
 		?>
 		<button type="button" class="btn btn-primary btn-block" >LeaderBoard</button>
@@ -169,7 +173,7 @@ background-image: url("images/bg.jpg");
 	</div>	
 		
 	</div>
-	<div class="col-sm-10" style="padding:5%">
+	<div class="col-md-10" style="margin-top:5%">
 		
 		<div class="row" id="posts">
 			<!----------------------will be filled dynamically---------->

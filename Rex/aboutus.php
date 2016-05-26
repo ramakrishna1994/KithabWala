@@ -1,14 +1,15 @@
 <?php
 session_start();
-
-require_once 'phpFiles/connection.php';
-require_once ('googlerk/libraries/Google/autoload.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once '/home/vijaymerakii007/public_html/Rex/phpFiles/connection.php';
+require_once '/home/vijaymerakii007/public_html/Rex/googlerk/libraries/Google/autoload.php';
 
 //Insert your cient ID and secret 
 //You can get it from : https://console.developers.google.com/
 $client_id = '860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com'; 
 $client_secret = 'J0fdkvOoKB5fO2Sp-lZ9q6vN';
-$redirect_uri = 'http://localhost/google-login-api/';
+$redirect_uri = 'http://kithabwala.com/';
 
 
 
@@ -69,7 +70,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com"></meta>
+	
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/icon" href="images/logo.ico"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -303,10 +304,11 @@ $content .= '<li style="cursor:pointer"><a class="header-color" onclick="logout(
   
   
   
-   
-  
+ <a id="team-KW">  
+
   <!-- Start Team action -->
   <section id="team">
+    
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -406,11 +408,11 @@ $content .= '<li style="cursor:pointer"><a class="header-color" onclick="logout(
         </div>
       </div>
     </div>
+  </a>
   </section>
+  </a>
   <!-- Start Team action -->
 
-
- 
 
 
 
@@ -827,7 +829,7 @@ $content .= '<li style="cursor:pointer"><a class="header-color" onclick="logout(
 								<div  style="cursor:pointer"><a href="
 								<?php 
 								if (isset($authUrl)){
-								echo $authUrl 
+								echo $authUrl ;
 								}
 								
 								else {

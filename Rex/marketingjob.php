@@ -280,12 +280,12 @@ session_start();
 			The marketing associate will be expected to work in a dynamic environment with focus on marketing and sponsor pitching.
 			The candidate must have extremely high standards in terms of quality of work, attention to detail, and absolute commitment to task completion.</p>
 			<br>
-			<center><button class="btn btn-warning" style="border-radius:40px">Apply for this job</button></center>
+			<a href="apply.php"><center><button class="btn btn-warning" style="border-radius:40px">Apply for this job</button></center></a>
 		</div>
 		
 		<div class="col-md-4" style="padding-left:50px">
 			<br>
-			<button class="btn btn-lg btn-block btn-warning" style="height:70px">Apply for this  Job</button>
+			<a href="apply.php"><button class="btn btn-lg btn-block btn-warning" style="height:70px">Apply for this  Job</button></a>
 			<br>
 			<button class="btn btn-md btn-block btn-primary" style="height:50px">Apply With LinkedIn</button>
 			<br>

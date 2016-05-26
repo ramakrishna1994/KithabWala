@@ -143,6 +143,24 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 	
 	
 	
+	.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   cursor:pointer;
+}
+
+
+	
 
 		
 	</style>
@@ -276,7 +294,12 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 			{
 						echo '<div class="col-md-12" style="margin-top:3%;text-align:left">
 							<div class="form-group">
-							  <label for="comment">Comment:</label>
+							  <input type="hidden" id="rating" value="0">
+							  <b>Rate it</b> : 
+							  <div class="rating">
+								&nbsp;&nbsp;<span onclick="setrating(5)">&#9734;</span><span onclick="setrating(4)">&#9734;</span><span onclick="setrating(3)">&#9734;</span><span onclick="setrating(2)">&#9734;</span><span onclick="setrating(1)">&#9734;</span>
+								</div>
+								<label for="comment">Comment:</label><br>
 							  <textarea class="form-control" rows="5" id="comment"></textarea>
 							</div>
 							
@@ -293,7 +316,13 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 	</div>
 	
   </div>
-  
+  <script>
+	function setrating(value)
+	{
+		alert(1);
+		document.getElementById("rating").value = value;
+	}
+  </script>
   
   <?php
   
@@ -309,7 +338,8 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 	function submitcomment(id)
 	{
 		var comment = document.getElementById('comment').value;
-		var rating =  0;
+		var rating =  document.getElementById('rating').value;
+		alert("rating"+rating);
 		 var formData = new FormData();
 			formData.append( 'comment',comment);
 			formData.append( 'id',id);
@@ -672,23 +702,6 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 
 	
 	
-	
-	var fixmeTop = $('.fixedp').offset().top;
-$(window).scroll(function() {
-    var currentScroll = $(window).scrollTop();
-    if (currentScroll <= 100) {
-        $('.fixedp').css({
-            position: 'fixed',
-			display:'block'
-            
-        });
-    } else {
-        $('.fixedp').css({
-            position: 'static',
-			display:'none'
-        });
-    }
-});
 
 
 

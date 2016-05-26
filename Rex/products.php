@@ -445,7 +445,7 @@ session_start();
 								<h4><b><font color="#ffcc04">Company</font></b></h4>
 								
 								<p><a href="aboutus.php"><font color="#838282" size="2px">About Us</font></a></p> 
-								<p><a href="aboutus.php/#team"><font color="#838282" size="2px">Team</font></a></p>
+								<p><a href="http://www.kithabwala.com/Rex/aboutus.php#team-KW"><font color="#838282" size="2px">Team</font></a></p>
 								<p><a href="careers.php"><font color="#838282" size="2px">Carrer at KithabWala</font></a></p>
 								
 						  </div>

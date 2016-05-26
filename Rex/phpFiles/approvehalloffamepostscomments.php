@@ -4,9 +4,9 @@ require_once 'connection.php';
 session_start();
 session_unset();
 
-
+$username=mysqli_real_escape_string($con,$_POST['username']);
 $comment=mysqli_real_escape_string($con,$_POST['comment']);
-$id=mysqli_real_escape_string($con,$_POST['id']);
+$id=mysqli_real_escape_string($con,$_POST['postid']);
 $rating=mysqli_real_escape_string($con,$_POST['rating']);
 
 
@@ -24,17 +24,18 @@ $rating=mysqli_real_escape_string($con,$_POST['rating']);
 					
 						$oldapprovedcomments = $row['approvedcomments'];
 						$oldapprovedusernames = $row['approvedusernames'];
+						$oldapproveduserratings = $row['approveduserratings'];
 				
 						
 				
 			}
 			
-			$newapprovedcomments = $oldapprovedcomments . "01sep01" . $comment;
-			$newapprovedusernames = $oldapprovedusernames . "01sep01" . $_SESSION['lastname'] . " " . $_SESSION['firstname'];
+			$newapprovedcomments = $oldapprovedcomments . $comment . "01sep01" ;
+			$newapprovedusernames = $oldapprovedusernames .  $username ."01sep01" ;
+			$newapproveduserratings = $oldapproveduserratings . $rating . "sep" ;
 			
-			
-			$insertquery = "update halloffameposts set approvedcomments = '".$newapprovedcomments."' and approvedusernames = '".$newapprovedusernames."' where postid = ".$id.";";
-			$result = mysqli_query(insertquery) or die(mysqli_error($con));
+			$insertquery = "update halloffameposts set approvedcomments = '".$newapprovedcomments."' , approvedusernames = '".$newapprovedusernames."' , approveduserratings = '".$newapproveduserratings."' where postid = ".$id.";";
+			$result = mysqli_query($con,$insertquery) or die(mysqli_error($con));
 
 
 		
