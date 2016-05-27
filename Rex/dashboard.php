@@ -163,7 +163,8 @@ background-image: url("images/bg.jpg");
 			{
 					echo '<button type="button" class="btn btn-primary btn-block" onclick="getPendingPosts(0)">Pending Ideas</button>
 						<button type="button" class="btn btn-primary btn-block" onclick="getHallOfFamePendingComments()">Hall Of Fame <br> Pending Comments</button>
-							<button type="button" class="btn btn-primary btn-block" onclick="getSubscribedEmails()">Subscribed Emails</button>';
+						<button type="button" class="btn btn-primary btn-block" onclick="getSubmittedResumes()">Submitted Resumes</button>
+						<button type="button" class="btn btn-primary btn-block" onclick="getSubscribedEmails()">Subscribed Emails</button>';
 			}
 		?>
 		<button type="button" class="btn btn-primary btn-block" >LeaderBoard</button>

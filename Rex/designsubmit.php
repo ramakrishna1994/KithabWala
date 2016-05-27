@@ -349,48 +349,103 @@ span.buttonText {
     <div class="form-group">
       <label class="control-label col-sm-2" for="title">Title of the Design </label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="title" >
+	   <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<input type="text" class="form-control" id="title" placeholder="Please Login To Submit" disabled>';
+			}
+			else{
+				echo '<input type="text" class="form-control" id="title" >';
+			}
+          ?>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="comment">Comments About your design </label>
-      <div class="col-sm-10">          
-       <textarea class="form-control" rows="5" id="comment"></textarea>
+      <div class="col-sm-10">    
+	   <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<textarea class="form-control" rows="5" id="comment" placeholder="Please Login To Submit" disabled></textarea>';
+			}
+			else{
+				echo '<textarea class="form-control" rows="5" id="comment"></textarea>';
+			}
+			  ?>
+       
       </div>
     </div>
 	<div class="form-group">
 	  <label for="theme" class="control-label col-sm-2">Select Theme </label>
-	  <div class="col-sm-10">          
-        <select class="form-control" id="theme">
-			<option>Select anyone</option>
-			<option>College</option>
-			<option>Entrepreneur</option>
-			<option>Generic</option>
-			<option>Hyderabad</option>
-			<option>Sports</option>
-			<option>Abstract</option>
-		  </select>
+	  <div class="col-sm-10">
+	  <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<select class="form-control" id="theme" disabled>
+					<option>Please Login To Submit</option>
+				</select>';
+			}
+			else{
+				echo '<select class="form-control" id="theme">
+					<option>Select anyone</option>
+					<option>College</option>
+					<option>Entrepreneur</option>
+					<option>Generic</option>
+					<option>Hyderabad</option>
+					<option>Sports</option>
+					<option>Abstract</option>
+				</select>';
+				
+				
+			}
+        ?>
       </div>
 	</div>
 	
 	<div class="form-group">
       <label class="control-label col-sm-2" for="colors">Key Colors </label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" id="colors" >
+      <div class="col-sm-10">  
+	   <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<input type="text" class="form-control" id="colors" placeholder="Please Login To Submit" disabled>';
+			}
+			else{
+				echo '<input type="text" class="form-control" id="colors" >';
+			}
+			?>
       </div>
     </div>
 	
 	<div class="form-group">
       <label class="control-label col-sm-2" for="fonts">Fonts Used </label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="fonts" >
+	  <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<input type="text" class="form-control" id="fonts" placeholder="Please Login To Submit" disabled>';
+			}
+			else{
+				echo '<input type="text" class="form-control" id="fonts" >';
+			}
+			?>
+       
       </div>
     </div>
 	
 	<div class="form-group">
       <label class="control-label col-sm-2" for="tags">Design Tags </label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="tags" >
+	  <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<input type="text" class="form-control" id="tags" placeholder="Please Login To Submit" disabled>';
+			}
+			else{
+				echo '<input type="text" class="form-control" id="tags" >';
+			}
+			?>
+        
       </div>
     </div>
 	
@@ -452,7 +507,7 @@ span.buttonText {
 			{
 						echo '<div class="form-group">        
 								  <div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" class="btn btn-danger">Please Login to Submit</button>
+									<button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Please Login to Submit</button>
 								  </div>
 								</div>
 							';

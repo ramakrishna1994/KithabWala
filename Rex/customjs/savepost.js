@@ -2,7 +2,7 @@ $(":file").filestyle();
 				
 function submitPost(posttype)
 {
-	$('#status').html('&nbsp;&nbsp;<img class="img-rounded" alt="Cinque Terre" width="20" height="20" src="images/loader.gif">');
+	
 	var title = document.getElementById("title").value;
 	var comment = document.getElementById("comment").value;
 	var theme = document.getElementById('theme').value;
@@ -13,38 +13,38 @@ function submitPost(posttype)
 	
 	if(document.getElementById("title").value == "")
 	{
-		$('#status').html('<font color="red">Please Enter Title</font>');
+		alert('Please Enter Title');
 		return false;
 	}
 	if(document.getElementById("comment").value == "")
 	{
-		$('#status').html('<font color="red">Please Enter Comments</font>');
+		alert('Please Enter Comments');
 		return false;
 	}
 	if(document.getElementById("theme").value === "Select anyone")
 	{
-		$('#status').html('<font color="red">Please Select Any One Theme</font>');
+		alert('Please Select Any One Theme');
 		return false;
 	}
 	
 	if(colors == "")
 	{
-		$('#status').html('<font color="red">Please Enter Colors</font>');
+		alert('Please Enter Colors');
 		return false;
 	}
 	if(fonts == "")
 	{
-		$('#status').html('<font color="red">Please Enter Fonts used</font>');
+		alert('Please Enter Fonts used');
 		return false;
 	}
 	if(tags == "")
 	{
-		$('#status').html('<font color="red">Please Enter Tags used</font>');
+		alert('Please Enter Tags used');
 		return false;
 	}
 	if(document.getElementById("termscheckbox1").checked == false || document.getElementById("termscheckbox2").checked == false || document.getElementById("termscheckbox3").checked == false)
 	{
-		$('#status').html('<font color="red">Please Select First Three Check Boxes</font>');
+		alert('Please Select First Three Check Boxes');
 		return false;
 	}
 	
@@ -75,7 +75,7 @@ function submitPost(posttype)
 						 
 					    
 			        	
-		            	$('#status').html('<font color="red">Please upload valid file</font>');
+		            	alert('Please upload valid file');
 			        	
 				     }
 				 
@@ -83,7 +83,7 @@ function submitPost(posttype)
 					 {
 					  
 			        	
-					 $('#status').html('<font color="red">File size should be less than 100 KB</font>');
+					alert('File size should be less than 100 KB');
 			        	
 					 }
 				 
@@ -91,15 +91,14 @@ function submitPost(posttype)
 					 {
 					  
 			        	
-					 $('#status').html('<font color="red">File Format not Supported</font>');
+					 alert('File Format not Supported');
 			        	
 					 }
 				
 				 else
 					 {
-					 $('#status').html('<font color="green">Your Idea has been submitted for review !!</font>');
-					 document.getElementById('description').value = "";
-					 $( '#file' ).value="";
+						alert('Your Idea has been submitted for review !!');
+						window.location.reload();
 					 
 					 }
 				 

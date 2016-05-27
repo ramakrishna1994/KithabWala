@@ -30,14 +30,17 @@ $json='[';
 			{
 				
 				$json .='{';
+				$json .= '"title":'.'"'.$row['title'].'",';
+				$json .= '"posttype":'.'"'.$row['posttype'].'",';
 				$json .= '"username":'.'"'.$pendingusernamesarray[$i].'",';
 				$json .= '"comment":'.'"'.$pendingcommentsarray[$i].'",';
 				$json .= '"rating":'.'"'.$pendinguserratingsarray[$i].'",';
+				$json .= '"commentid":'.'"'.$i.'",';
 				$json .= '"postid":'.'"'.$row['postid'].'"';
 				$json .='},';
 				
 			}
-			
+			$json = substr($json,0,strlen($json)-1);
 				
 		}
 		
@@ -46,7 +49,7 @@ $json='[';
 		
 	
 
-	$json = substr($json,0,strlen($json)-1);
+	
 
    $json .= ']';
 

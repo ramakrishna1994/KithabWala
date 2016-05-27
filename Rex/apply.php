@@ -264,7 +264,7 @@ session_start();
            
   <ul class="pager">
     <li><a href="careers.php">Job Openings</a></li>&nbsp;&gt;
-    <li ><a href="marketingjob.php" style="background-color:#ffd00d">Marketing Associative</a></li>&nbsp;&gt;
+    <li ><a href="marketingjob.php">Marketing Associative</a></li>&nbsp;&gt;
 	<li ><a href="apply.php" style="background-color:#ffd00d">Apply form</a></li>
   </ul>
   </div>
@@ -310,7 +310,7 @@ session_start();
 		     <button class="btn btn-md btn-block btn-primary pull-right" style="height:40px">Apply With LinkedIn</button>
 			
 		</div>
-	<form>	
+	<div>	
 		<div class="col-md-4" style="padding-left:50px">
 			<h3><b> Personal information </b></h3>
 			<p style="font-size:12px"> Tell us something about yourself </p>
@@ -318,9 +318,9 @@ session_start();
 		</div>
 		
 		<div class="col-md-6" style="padding-left:50px">
-             <div class="form-group"><label for="candidate_name">Full name </label> <input class="form-control" placeholder="Your full name" type="text" id="candidate_name" /></div>
-           <div class="form-group"><label for="candidate_email">Email address</label><input class="form-control" placeholder="Your email address" type="email" id="candidate_email" /></div>
-          <div class="form-group "><label for="candidate_phone">Phone number </label><input class="form-control"   placeholder="Your phone number" type="tel"  id="candidate_phone" /></div>
+             <div class="form-group"><label for="candidate_name">Full name </label> <input class="form-control" placeholder="Your full name" type="text" id="fullname" /></div>
+           <div class="form-group"><label for="candidate_email">Email address</label><input class="form-control" placeholder="Your email address" type="email" id="emailid" /></div>
+          <div class="form-group "><label for="candidate_phone">Phone number </label><input class="form-control"   placeholder="Your phone number" type="tel"  id="phonenumber" /></div>
         </div>
 		  
   
@@ -335,7 +335,7 @@ session_start();
 </div>
 <div class='col-md-6' style="padding-left:50px">
 <div class="form-group ">
-<input class="file required select-file" accept=".doc,.docx,.pdf,.odt,.rtf,.txt,.png,.jpg"  type="file"  id="candidate_cv" />
+<input class="file required select-file" accept=".doc,.docx,.pdf,.odt,.rtf,.txt,.png,.jpg"  type="file"  id="file" />
 <span class="help-block">We accept Word, PDF, and ODT files</span>
 </div>
 </div>
@@ -349,7 +349,7 @@ session_start();
 <p style="font-size:12px">Insert your motivation here</p>
 </div>
 <div class='col-md-6'style="padding-left:50px">
-<div class="form-group "><textarea rows="5" class="text form-control"  id="candidate_cover_letter">
+<div class="form-group "><textarea rows="5" class="text form-control"  id="coverletter">
 </textarea><span class="help-block">This field is optional</span></div>
 </div>
 </div>
@@ -357,10 +357,10 @@ session_start();
 <hr>
 <section>
 <center>
-<input type="submit" name="commit" value="Submit application" class="btn btn-lg btn-primary" />
+<input type="submit" name="commit" value="Submit application" class="btn btn-lg btn-primary" onclick="return submitResume('Marketing Job')" />
 </center>
 </section>
-</form>
+</div>
 
  
   
@@ -1088,6 +1088,7 @@ $("#abc").click(function() {
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
+	<script src="customjs/dashboard.js"></script>
 <script src="https://apis.google.com/js/client:platform.js"></script>
 	
 

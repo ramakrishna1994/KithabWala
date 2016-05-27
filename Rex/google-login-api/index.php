@@ -7,7 +7,7 @@ require_once ('../phpFiles/connection.php');
 //You can get it from : https://console.developers.google.com/
 $client_id = '860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com'; 
 $client_secret = 'J0fdkvOoKB5fO2Sp-lZ9q6vN';
-$redirect_uri = 'http://localhost/Rex/google-login-api';
+$redirect_uri = 'http://www.kithabwala.com/Rex/google-login-api';
 
 
 
@@ -138,7 +138,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 		
 		print_r ($_SESSION['previousurl']);
 	
-	header('location:../'.$_SESSION['previousurl']);
+	//header('location:../'.$_SESSION['previousurl']);
 	
 	
 

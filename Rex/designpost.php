@@ -143,24 +143,41 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 	
 	
 	
-	.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-.rating > span {
+
+div.stars {
+  width: 270px;
   display: inline-block;
-  position: relative;
-  width: 1.1em;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
-   cursor:pointer;
 }
 
+input.star { display: none; }
 
-	
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: 30px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
 
 		
 	</style>
@@ -272,16 +289,44 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 			
 			$approvedusersarray = explode("01sep01",$row['approvedusernames']);
 			$approvedcommentsarray = explode("01sep01",$row['approvedcomments']);
+			$approvedratingsarray = explode("sep",$row['approveduserratings']);
 			//print_r ($approvedcommentsarray);
 			if(count($approvedcommentsarray)>0)
 				echo '<br><p style="text-align:left"><font color="black" size="4px"><b> Comments By other Users :</b></font></p><br>';
 			for($i=0;$i<count($approvedcommentsarray)-1;$i++)
 			{
-				echo '<div class="col-md-12" style="border:1px solid #ffd00d;margin-top:1%;padding:3%;text-align:left">
+				echo '<div class="row alert alert-warning" style="text-align:left">
+						<div class="col-md-2">
+							<img src="profilePics/user.jpg" height="70" width="70">
+						</div>
+						<div class="col-md-10">
+							<font color="black" size="4px"><b>'.$approvedusersarray[$i].'</b></font>
+							<p>'.$approvedcommentsarray[$i].'</p>
+							<p>Rated : ';
+								if($approvedratingsarray[$i] == 0)
+									echo '<img src="images/0star.png" width="50" height="10">';
+								if($approvedratingsarray[$i] == 1)
+									echo '<img src="images/1star.png" width="50" height="10">';
+								if($approvedratingsarray[$i] == 2)
+									echo '<img src="images/2star.png" width="50" height="10">';
+								if($approvedratingsarray[$i] == 3)
+									echo '<img src="images/3star.png" width="50" height="10">';
+								if($approvedratingsarray[$i] == 4)
+									echo '<img src="images/4star.png" width="50" height="10">';
+								if($approvedratingsarray[$i] == 5)
+									echo '<img src="images/5star.png" width="50" height="10">';
+								
+							echo '</p>
+						</div>
+						
+						</div>
+							';
+					
+				/*echo '<div class="col-md-12" style="border:1px solid #ffd00d;margin-top:1%;padding:3%;text-align:left">
 							<div class="row"><font color="black" size="4px"><b>'.$approvedusersarray[$i].'</b></font></div><br>
 							<div class="row">'.$approvedcommentsarray[$i].'</div>
 						</div>
-				';
+				';*/
 			}
 			
 			if(!isset($_SESSION['kithabwalaemailid']))
@@ -295,10 +340,25 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 						echo '<div class="col-md-12" style="margin-top:3%;text-align:left">
 							<div class="form-group">
 							  <input type="hidden" id="rating" value="0">
-							  <b>Rate it</b> : 
-							  <div class="rating">
-								&nbsp;&nbsp;<span onclick="setrating(5)">&#9734;</span><span onclick="setrating(4)">&#9734;</span><span onclick="setrating(3)">&#9734;</span><span onclick="setrating(2)">&#9734;</span><span onclick="setrating(1)">&#9734;</span>
-								</div>
+							  
+							  
+								<div class="stars">
+									<b>Rate it</b> : 
+									<form action="">
+									  <input class="star star-5" id="star-5" type="radio" name="star"/>
+									  <label class="star star-5" for="star-5" onclick="setrating(5)"></label>
+									  <input class="star star-4" id="star-4" type="radio" name="star"/>
+									  <label class="star star-4" for="star-4" onclick="setrating(4)"></label>
+									  <input class="star star-3" id="star-3" type="radio" name="star"/>
+									  <label class="star star-3" for="star-3" onclick="setrating(3)"></label>
+									  <input class="star star-2" id="star-2" type="radio" name="star"/>
+									  <label class="star star-2" for="star-2" onclick="setrating(2)"></label>
+									  <input class="star star-1" id="star-1" type="radio" name="star"/>
+									  <label class="star star-1" for="star-1" onclick="setrating(1)"></label>
+									</form>
+								  </div>
+								
+								<br>
 								<label for="comment">Comment:</label><br>
 							  <textarea class="form-control" rows="5" id="comment"></textarea>
 							</div>
@@ -319,7 +379,7 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
   <script>
 	function setrating(value)
 	{
-		alert(1);
+		//alert(value);
 		document.getElementById("rating").value = value;
 	}
   </script>
@@ -339,13 +399,13 @@ $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 	{
 		var comment = document.getElementById('comment').value;
 		var rating =  document.getElementById('rating').value;
-		alert("rating"+rating);
+		//alert("rating"+rating);
 		 var formData = new FormData();
 			formData.append( 'comment',comment);
 			formData.append( 'id',id);
 			formData.append( 'rating',rating);
 
-		if(comment === "")
+		if(comment == "")
 		{
 			alert("Please Enter Comment");
 			return false;

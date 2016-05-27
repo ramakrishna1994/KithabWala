@@ -309,7 +309,15 @@ session_start();
     <div class="form-group">
       <label class="control-label col-sm-2" for="title">Title of the Design </label>
       <div class="col-sm-10">
-        <input type="email" class="form-control" id="title" >
+        <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<input type="text" class="form-control" id="title" placeholder="Please Login To Submit" disabled>';
+			}
+			else{
+				echo '<input type="text" class="form-control" id="title" >';
+			}
+			?>
       </div>
     </div>
 	
@@ -317,17 +325,28 @@ session_start();
     
 	<div class="form-group">
 	  <label for="theme" class="control-label col-sm-2">Select Theme </label>
-	  <div class="col-sm-10">          
-        <select class="form-control" id="theme">
-			<option>Select anyone</option>
-			<option>Politics</option>
-			<option>Science or Technology</option>
-			<option>Management and Business</option>
-			<option>Wildlife</option>
-			<option>Literature</option>
-			<option>Miscellaneous</option>
-			<option>Motivation and personality developement</option>
-		  </select>
+	  <div class="col-sm-10"> 
+	  <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo ' <select class="form-control" id="theme" disabled>
+							<option>Please Login to Submit</option>
+						</select>';
+			}
+			else{
+				echo ' <select class="form-control" id="theme">
+							<option>Select anyone</option>
+							<option>Politics</option>
+							<option>Science or Technology</option>
+							<option>Management and Business</option>
+							<option>Wildlife</option>
+							<option>Literature</option>
+							<option>Miscellaneous</option>
+							<option>Motivation and personality developement</option>
+						  </select>';
+			}
+			?>
+       
       </div>
 	</div>
 	
@@ -337,8 +356,17 @@ session_start();
 	
 	<div class="form-group">
       <label class="control-label col-sm-2" for="tags">Theme Tags </label>
-      <div class="col-sm-10">          
-        <input type="text" class="form-control" id="tags" >
+      <div class="col-sm-10">    
+		 <?php
+		if(!isset($_SESSION['kithabwalaemailid']))
+			{
+				echo '<input type="text" class="form-control" id="tags" placeholder="Please Login To Submit" disabled>';
+			}
+			else{
+				echo '<input type="text" class="form-control" id="tags" >';
+			}
+			?>
+        
       </div>
     </div>
 	
@@ -399,7 +427,7 @@ session_start();
 			{
 						echo '<div class="form-group">        
 								  <div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" class="btn btn-danger">Please Login to Submit</button>
+									<button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Please Login to Submit</button>
 								  </div>
 								</div>
 							';

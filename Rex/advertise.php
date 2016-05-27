@@ -50,7 +50,6 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 			background-color:#c2c4c6;
 			color:black;
 		}
-
 		.navbar-nav > li > a:hover
 		{
 			background-color:#c2c4c6;
@@ -58,7 +57,6 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 		}
 		
 		
-
 .login_modal_footer{margin-top:5px;}
 .login_modal_header .modal-title {text-align: center;font-family:'Philosopher',sans-serif; }
 .form-group{position: relative;}
@@ -79,41 +77,21 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 .login-modal input{height:40px; box-shadow: none; border:1px solid #ddd;}
 .modal-body-left{float:left; width:50%; padding-right:4%; border-right:4px solid #ddd;}
 .modal-body-right{float:right; width:47%;}
-.login-link{padding:0 20%;}
+.login-link{padding:0 15%;}
 .modal-social-icons{padding:0 10%;}
 .facebook1, .twitter, .google, .linkedin {width:100%;height:40; padding-top:2%; margin-top:2%;}
 .modal-icons{margin-left: -10px; margin-right: 20px;}
 .google, .google:hover{background-color:#dd4b39;border:2px solid #dd4b39;color:#fff;}
-
 .facebook1, .facebook1:hover{background-color: #3b5999; border:2px solid #3b5999;color:#fff;}
-
 #social-icons-conatainer{position: relative;}
 #center-line{position: absolute;  right: 47.5%;top: 80px;background:#ddd;  border: 4px solid #DDDDDD;border-radius: 20px;}
 .modal-login-btn{width:100%;height:40px; margin-bottom:10px;}
 #modal-launcher{margin: 30% 0 0 30%; }
-
 	</style>
-	
-  </head>
-  <body>
-
-  <!-- BEGAIN PRELOADER -->
-  <div id="preloader">
-    <div class="loader">&nbsp;</div>
-  </div>
-  <!-- END PRELOADER -->
-
-  <!-- SCROLL TOP BUTTON -->
-    <a class="scrollToTop" href="#menu-area"><i class="fa fa-chevron-up"></i></a>
-  <!-- END SCROLL TOP BUTTON -->
-
-  
-  <!-- End header section -->
-
-   
+ 
 
 <!-- Start menu section -->
-  <nav class="navbar navbar-fixed-top" style="background-color:#c2c4c6;height:60px" id="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#c2c4c6;height:60px" id="navigation">
   
  
 	
@@ -133,7 +111,16 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
             <li ><a href="products.php">PRODUCTS</a></li>                    
             <li ><a href="advertise.php">ADVERTISE </a></li> 
             <li ><a href="halloffame.php">CREATIVE</a></li> 
-			
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
+				<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+				  <li><a href="#">Page 1-1</a></li>
+				  <li><a href="#">Page 1-2</a></li>
+				  <li><a href="#">Page 1-3</a></li> 
+				</ul>
+			  </li>
+					
       </ul>
       <ul class="nav navbar-nav navbar-right" style="padding-left:5%">
         
@@ -148,19 +135,18 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 			}
 			else
 			{
-				$content =  '<li><a  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
-						.'	<span class="caret"></span></a>'
-						.'	<ul class="dropdown-menu" style="background-color:white;padding:2%">'
-						.'	<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>'
-						.'	<li><a class="header-color" href="accountsettings.php"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></li>';
-					
-					
-					
-					$content .= '<li><a class="header-color" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>'
-							. '</ul>'
+				
 							
-							.'	</li>';
-							echo $content;
+				echo '<div class="dropdown">
+					  <a class="dropdown-toggle"  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>
+					  <span class="caret"></span></a>
+					  <ul class="dropdown-menu">
+						<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>
+						<li><a class="header-color" href="accountsettings.php"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
+					   <li><a class="header-color" href="accountsettings.php"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
+					   <li><a class="header-color" style="cursor:pointer" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>
+					  </ul>
+					</div>';
 			}
 						
 			?>
@@ -170,12 +156,29 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 </nav>
  <!-- End menu section -->
   
+  </head>
   
+  
+  
+  <body>
+
+  <!-- BEGAIN PRELOADER -->
+  <div id="preloader">
+    <div class="loader">&nbsp;</div>
+  </div>
+  <!-- END PRELOADER -->
+
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#menu-area"><i class="fa fa-chevron-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+ 
+
 
   
    <!-- End from blog section -->
   
-<div class="container-fluid" style="text-align:center;margin-top:7%" id="topdiv">
+<div class="container-fluid"  id="topdiv">
 <center>
 <h4 style="color:#ffd00d">Imagine your ad positioned in a product which is seen day in and day out for a period of over <br>
 							
@@ -392,7 +395,6 @@ coupons both in our book and through our technology portals <br>
    
 
     <script>
-
 		
 		
 		
@@ -410,16 +412,12 @@ coupons both in our book and through our technology portals <br>
             $('#'+this.id).val('0');
         }
     });
-
    
     window.originalHeightOfBlock = $(".fixed_queries_content").outerHeight();
     window.originalWidthOfBlock = $(".fixed_queries_content").outerWidth();
-
     window.longAnimationDuration = 500;
     window.shortAnimationDuration = 300;
-
     $(".fixed_queries_section_overlay").hide();
-
     window.expandFixedTabs = function() {
         $(".fixed_queries_content").animate({
             width: '400px'
@@ -428,11 +426,9 @@ coupons both in our book and through our technology portals <br>
             $(".fixed_queries_section.phone_icon").fadeOut();
             $(".fixed_queries_section_overlay").fadeIn();
             $(".fixed_queries_content").css('overflow', 'initial');
-
             var curHeight = $('.fixed_queries_content').height();
             $('.fixed_queries_content').css('height', 'auto');
             var autoHeight = $('.fixed_queries_content').height();
-
             $(".fixed_queries_content").height(curHeight).animate({
                 height: autoHeight
             }, longAnimationDuration, function() {
@@ -446,11 +442,9 @@ coupons both in our book and through our technology portals <br>
             });
         });
     };
-
     $(".fixed_queries_section.phone_icon").click(function() {
         expandFixedTabs();
     });
-
     window.collapseFixedTabs = function() {
         $('body').css('overflow-y', 'auto');
         $(".fixed_queries_section.close_icon").hide();
@@ -474,15 +468,12 @@ coupons both in our book and through our technology portals <br>
                 $(".query_form_main_section input").val('');
                 $(".query_form_main_section textarea").val('');
                 $( ".fixed_queries_content .first" ).removeClass( "active" );
-
             });
         });
     };
-
     $(".fixed_queries_section.close_icon").click(function() {
         collapseFixedTabs();
     });
-
     $(".fixed_queries_section_overlay").click(function() {
         collapseFixedTabs();
     });
@@ -499,14 +490,9 @@ coupons both in our book and through our technology portals <br>
 			
 	 
 	
-
 	
 	
 	
-
-
-
-
 		
 		
 	</script>
@@ -567,7 +553,6 @@ coupons both in our book and through our technology portals <br>
 </div>	
 	
 <!------------------->
-
 	
 	<!---------registration modal---------->
 	
@@ -788,8 +773,8 @@ coupons both in our book and through our technology portals <br>
 <script src="customjs/loginAndRegistration.js"></script>
 	<script src="customjs/forgotPassword.js"></script>
 	<script src="customjs/social.js"></script>
-	<script src="customjs/screen.js"></script>
-
+	
+<script src="customjs/screen.js"></script>
 	
 
 
