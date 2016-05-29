@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+$_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']); 
 ?>
 
 <!DOCTYPE html>

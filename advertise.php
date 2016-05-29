@@ -2,7 +2,8 @@
 session_start();
 include 'phpFiles/prevurl.php';
 $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']); 
-$prevurl = 'advertise.php';
+//$prevurl = 'advertise.php';
+//$prevurl = basename($_SERVER['REQUEST_URI']);
 ?>
 
 <!DOCTYPE html>

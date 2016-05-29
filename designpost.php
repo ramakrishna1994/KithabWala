@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'phpFiles/connection.php';
-
+$_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']); 
 $id = $_GET['postid'];
 
 
