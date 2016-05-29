@@ -12,7 +12,7 @@ if(isset($_FILES['image']))
 		$uploadOk = 1;
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 		$temp = explode(".", $_FILES["image"]["name"]);
-		$newfilename = $_SESSION['emailid'] . '.' . end($temp);
+		$newfilename = $_SESSION['kithabwalaemailid'] . '.' . end($temp);
 
 		//Check if image file is a actual image or fake image
 
@@ -57,7 +57,7 @@ if(isset($_FILES['image']))
 			{
 				
 				$error = 0;
-				$updateQuery = "update users set profileimage = '".$newfilename."' where emailid = '".$_SESSION['emailid']."';";		
+				$updateQuery = "update users set profileimage = 'profilePics/".$newfilename."' where emailid = '".$_SESSION['kithabwalaemailid']."';";		
 				mysqli_query($con,$updateQuery);
 				$_SESSION['profileimage'] = $newfilename;
 			}

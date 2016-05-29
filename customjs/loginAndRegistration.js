@@ -1,13 +1,5 @@
 	
-$(document).ready(function(){
-  
-    
-    $('[data-toggle="popover"]').popover(function(){
-		
-		clearParameters();
-	});
-    
-});
+
 
 var registrationemailid,registrationfirstname,registrationlastname,registrationpassword; 
 clearParameters();
@@ -15,40 +7,23 @@ clearParameters();
 function clearParameters()
 {
 	
-	document.getElementById("registrationFirstNameDivision").className = 'form-group';
-	document.getElementById("registrationLastNameDivision").className = 'form-group';
-	document.getElementById("registrationEmailDivision").className = 'form-group';
-	document.getElementById("registrationPasswordDivision").className = 'form-group';
-	document.getElementById("registrationConfirmPasswordDivision").className = 'form-group';
-
-
-	document.getElementById("registrationFirstNameErrorSpan").className = '';
-	document.getElementById("registrationLastNameErrorSpan").className = '';
-	document.getElementById("registrationEmailErrorSpan").className = '';
-	document.getElementById("registrationPasswordErrorSpan").className = '';
-	document.getElementById("registrationConfirmPasswordErrorSpan").className = '';
-
 	
-	document.getElementById("registrationfirstname").setAttribute("data-content", "");
-	document.getElementById("registrationlastname").setAttribute("data-content", "");
-	document.getElementById("registrationemailid").setAttribute("data-content", "");
-	document.getElementById("registrationpassword").setAttribute("data-content", "");
-	document.getElementById("registrationconfirmpassword").setAttribute("data-content", "");
-
-
-
 	
-	document.getElementById("loginEmailDivision").className = 'form-group';
-	document.getElementById("loginPasswordDivision").className = 'form-group';
-	
-	document.getElementById("loginEmailErrorSpan").className = '';
-	document.getElementById("loginPasswordErrorSpan").className = '';
-	
-	document.getElementById("loginemailid").setAttribute("data-content", "");
-	document.getElementById("loginpassword").setAttribute("data-content", "");
 	
 	$('#loginstatus').html('');
+	
+
+	
+
+	
+	
+
+
 	$('#registrationstatus').html('');
+	
+	
+	
+	
 	$('#verificationstatus').html('');
 	
 }
@@ -79,22 +54,18 @@ function checkLoginParameters()
 				if(document.getElementById("loginemailid").value == "")
 				{
 
-				document.getElementById("loginEmailDivision").className = 'form-group has-error has-feedback';
-				document.getElementById("loginEmailErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-				document.getElementById("loginemailid").setAttribute("data-content", "Please Enter Email address");
+				
 				document.getElementById("loginemailid").focus();
-				$('#loginstatus').html('');
+				$('#loginstatus').html('<font color="red">Please Enter Email Address</font>');
 				return false;
 				}
 
 				if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("loginemailid").value)))  
 				{  
 
-				document.getElementById("loginEmailDivision").className = 'form-group has-error has-feedback';
-				document.getElementById("loginEmailErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-				document.getElementById("loginemailid").setAttribute("data-content", "Please Enter Valid Email address");
+				
 				document.getElementById("loginemailid").focus();
-				$('#loginstatus').html('');
+				$('#loginstatus').html('<font color="red">Please Enter Valid Email address</font>');
 				return false;
 				  
 				}  
@@ -103,11 +74,9 @@ function checkLoginParameters()
 				if(document.getElementById("loginpassword").value == "")
 				{
 
-				document.getElementById("loginPasswordDivision").className = 'form-group has-error has-feedback';
-				document.getElementById("loginPasswordErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-				document.getElementById("loginpassword").setAttribute("data-content", "Please Enter Password");
+				
 				document.getElementById("loginpassword").focus();
-				$('#status').html('');
+				$('#loginstatus').html('<font color="red">Please Enter Password</font>');
 				return false;
 				}
 
@@ -217,11 +186,9 @@ function checkRegistrationParameters()
 	if(document.getElementById("registrationfirstname").value == "")
 	  {
 	  
-	    document.getElementById("registrationFirstNameDivision").className = 'form-group has-error has-feedback';
-	    document.getElementById("registrationFirstNameErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-	   document.getElementById("registrationfirstname").setAttribute("data-content", "Please Enter First Name");
+	   
 	   document.getElementById("registrationfirstname").focus();
-	   $('#registrationstatus').html('');
+	   $('#registrationstatus').html('<font color="red">Please Enter First Name</font>');
 	    
 	    return false;
 	  }
@@ -229,11 +196,9 @@ function checkRegistrationParameters()
 	  if(document.getElementById("registrationlastname").value == "")
 	  {
 	  
-	    document.getElementById("registrationLastNameDivision").className = 'form-group has-error has-feedback';
-	    document.getElementById("registrationLastNameErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-	   document.getElementById("registrationlastname").setAttribute("data-content", "Please Enter Last Name");
+	   
 	   document.getElementById("registrationlastname").focus();
-	   $('#registrationstatus').html('');
+	  $('#registrationstatus').html('<font color="red">Please Enter Last Name</font>');
 
 	    
 	    return false;
@@ -243,23 +208,19 @@ function checkRegistrationParameters()
   if(document.getElementById("registrationemailid").value == "")
 	  {
 	  
-	    document.getElementById("registrationEmailDivision").className = 'form-group has-error has-feedback';
-	    document.getElementById("registrationEmailErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-	   document.getElementById("registrationemailid").setAttribute("data-content", "Please Enter Email address");
+	   
 	   document.getElementById("registrationemailid").focus();
 	   
-	   $('#registrationstatus').html('');
+	   $('#registrationstatus').html('<font color="red">Please Enter Email address</font>');
 	    return false;
 	  }
   
   if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("registrationemailid").value)))  
   {  
 
-	  document.getElementById("registrationEmailDivision").className = 'form-group has-error has-feedback';
-	   document.getElementById("registrationEmailErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-	   document.getElementById("registrationemailid").setAttribute("data-content", "Please Enter Valid Email address");
+	  
 	   document.getElementById("registrationemailid").focus();
-	   $('#registrationstatus').html('');
+	   $('#registrationstatus').html('<font color="red">Please Enter Valid Email address</font>');
 	   return false;
 	 	  
   }  
@@ -269,11 +230,9 @@ function checkRegistrationParameters()
   if(document.getElementById("registrationpassword").value == "")
   {
   
-    document.getElementById("registrationPasswordDivision").className = 'form-group has-error has-feedback';
-    document.getElementById("registrationPasswordErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-   document.getElementById("registrationpassword").setAttribute("data-content", "Please Enter Password");
+   
    document.getElementById("registrationpassword").focus();
-   $('#registrationstatus').html('');
+   $('#registrationstatus').html('<font color="red">Please Enter Password</font>');
     
     return false;
   }
@@ -281,11 +240,8 @@ function checkRegistrationParameters()
   if(document.getElementById("registrationconfirmpassword").value == "")
   {
   
-    document.getElementById("registrationConfirmPasswordDivision").className = 'form-group has-error has-feedback';
-    document.getElementById("registrationConfirmPasswordErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-   document.getElementById("registrationconfirmpassword").setAttribute("data-content", "Please Confirm Password");
    document.getElementById("registrationconfirmpassword").focus();
-   $('#registrationstatus').html('');
+  $('#registrationstatus').html('<font color="red">Please Confirm Password</font>');
 
     
     return false;
@@ -294,16 +250,9 @@ function checkRegistrationParameters()
   if(document.getElementById("registrationconfirmpassword").value != document.getElementById("registrationpassword").value)
   {
   
-	  document.getElementById("registrationPasswordDivision").className = 'form-group has-error has-feedback';
-	    document.getElementById("registrationPasswordErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-	   document.getElementById("registrationpassword").setAttribute("data-content", "Passwords do not match");
-	   document.getElementById("registrationpassword").focus();
-	   
-    document.getElementById("registrationConfirmPasswordDivision").className = 'form-group has-error has-feedback';
-    document.getElementById("registrationConfirmPasswordErrorSpan").className = 'glyphicon glyphicon-remove form-control-feedback';
-   document.getElementById("registrationconfirmpassword").setAttribute("data-content", "Passwords do not match");
-   document.getElementById("registrationconfirmpassword").focus();
-   $('#registrationstatus').html('');
+	  
+	 
+  $('#registrationstatus').html('<font color="red">Passwords do not match</font>');
 
     
     return false;
@@ -406,3 +355,33 @@ function resendCode()
 		
 	});
 }
+
+
+
+
+
+
+
+
+
+
+
+function logout()
+{
+	$(document).ready(function(){
+		 
+		 
+		
+		 $.post( "phpFiles/logout.php" 
+				 
+		  ,function(data) {
+		   
+		      window.location.reload();
+		 
+		 
+		
+	 },"json");
+});
+}
+
+

@@ -2,7 +2,13 @@
 require_once 'isSessionSet.php';
 require_once 'connection.php';
 
-$description = $_POST['description'];
+$posttype = $_POST['posttype'];
+$title = $_POST['title'];
+$comment = $_POST['comment'];
+$theme = $_POST['theme'];
+$colors = $_POST['colors'];
+$fonts = $_POST['fonts'];
+$tags = $_POST['tags'];
 $username = $_SESSION['firstname'].'_'.$_SESSION['lastname'];
 $error = -1;
 if(isset($_FILES['file']))
@@ -57,7 +63,7 @@ if(isset($_FILES['file']))
 			{
 				
 				$error = 0;
-				$insertQuery = "insert into pendingposts(userid,description,filename) values (".$_SESSION['userid'].",'".$description."','".$newfilename."')";		
+				$insertQuery = "insert into pendingposts(userid,posttype,title,comment,theme,colors,fonts,tags,filename) values (".$_SESSION['userid'].",'".$posttype."','".$title."','".$comment."','".$theme."','".$colors."','".$fonts."','".$tags."','".$newfilename."')";		
 				mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 			}
 			else
@@ -72,7 +78,8 @@ if(isset($_FILES['file']))
 else
 
 {
-	
+	$insertQuery = "insert into pendingposts(userid,posttype,title,comment,theme,colors,fonts,tags,filename) values (".$_SESSION['userid'].",'".$posttype."','".$title."','".$comment."','".$theme."','".$colors."','".$fonts."','".$tags."','dummy')";		
+	mysqli_query($con,$insertQuery) or die(mysqli_error($con));
 	echo '{"error":"'.$error.'"}';	
 }
 	

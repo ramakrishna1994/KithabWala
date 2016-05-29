@@ -1,4 +1,4 @@
-
+$(":file").filestyle();
 
 $(document).ready(function(){
   
@@ -150,7 +150,7 @@ function getProfilePic()
 		$.getJSON("phpFiles/getProfile.php",{},function(data){
 			 
 			
-			$('#profilePicture').html('<img src="profilePics/'+data.image+'?'+new Date().getTime()+'" class="img-rounded" width="50%" height="20%">');
+			$('#profilePicture').html('<img src="'+data.image+'?'+new Date().getTime()+'" class="img-rounded" width="50%" height="20%">');
 			document.getElementById("miniImage").src='profilePics/'+data.image+'?'+new Date().getTime();
 		});
 	});

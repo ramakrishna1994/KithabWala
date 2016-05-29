@@ -1,0 +1,27 @@
+[23-May-2016 08:19:10 UTC] PHP Warning:  require_once(./Rex/phpFiles/connection.php): failed to open stream: No such file or directory in /home/vijaymerakii007/public_html/Rex/aboutus.php on line 5
+[23-May-2016 08:19:10 UTC] PHP Fatal error:  require_once(): Failed opening required './Rex/phpFiles/connection.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/vijaymerakii007/public_html/Rex/aboutus.php on line 5
+[25-May-2016 13:45:18 UTC] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/vijaymerakii007/public_html/Rex/phpFiles/connection.php on line 11
+[25-May-2016 13:45:18 UTC] PHP Warning:  mysqli_select_db() expects parameter 1 to be mysqli, boolean given in /home/vijaymerakii007/public_html/Rex/phpFiles/connection.php on line 13
+[25-May-2016 13:45:18 UTC] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, boolean given in /home/vijaymerakii007/public_html/Rex/phpFiles/connection.php on line 13
+[28-May-2016 16:45:24 UTC] PHP Notice:  Undefined variable: _SESSION in /home/vijaymerakii007/public_html/dashboard.php on line 148
+[28-May-2016 16:45:24 UTC] PHP Notice:  Undefined variable: _SESSION in /home/vijaymerakii007/public_html/dashboard.php on line 149
+[28-May-2016 16:45:24 UTC] PHP Notice:  Undefined variable: _SESSION in /home/vijaymerakii007/public_html/dashboard.php on line 149
+[28-May-2016 16:45:24 UTC] PHP Notice:  Undefined variable: _SESSION in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[28-May-2016 16:45:24 UTC] PHP Notice:  Undefined variable: _SESSION in /home/vijaymerakii007/public_html/dashboard.php on line 162
+[28-May-2016 16:46:34 UTC] PHP Notice:  Undefined variable: content in /home/vijaymerakii007/public_html/dashboard.php on line 118
+[28-May-2016 16:47:08 UTC] PHP Notice:  Undefined variable: content in /home/vijaymerakii007/public_html/dashboard.php on line 118
+[28-May-2016 16:51:02 UTC] PHP Notice:  Undefined index: profileimage in /home/vijaymerakii007/public_html/dashboard.php on line 151
+[28-May-2016 16:51:02 UTC] PHP Notice:  Undefined index: firstname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[28-May-2016 16:51:02 UTC] PHP Notice:  Undefined index: lastname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[28-May-2016 16:51:02 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 155
+[28-May-2016 16:51:02 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 165
+[28-May-2016 17:15:08 UTC] PHP Notice:  Undefined index: profileimage in /home/vijaymerakii007/public_html/dashboard.php on line 151
+[28-May-2016 17:15:08 UTC] PHP Notice:  Undefined index: firstname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[28-May-2016 17:15:08 UTC] PHP Notice:  Undefined index: lastname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[28-May-2016 17:15:08 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 155
+[28-May-2016 17:15:08 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 165
+[28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: profileimage in /home/vijaymerakii007/public_html/dashboard.php on line 151
+[28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: firstname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: lastname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 155
+[28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 165

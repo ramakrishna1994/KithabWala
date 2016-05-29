@@ -1,0 +1,86 @@
+[27-May-2016 04:10:27 UTC] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/oauth2/v2/userinfo: (401) Invalid Credentials' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php:110
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(62): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request), Object(Google_Client))
+#1 [internal function]: Google_Http_REST::doExecute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Task/Runner.php(174): call_user_func_array(Array, Array)
+#3 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(46): Google_Task_Runner->run()
+#4 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(593): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#5 /home/vijaymerakii007/public_html/Rex/google-login-api in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php on line 110
+[28-May-2016 02:32:31 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'redirect_uri_mismatch'' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/fiT9Hql57L_xz...', false)
+#1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(49): Google_Client->authenticate('4/fiT9Hql57L_xz...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[28-May-2016 02:36:47 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Code was already redeemed.'' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/fiT9Hql57L_xz...', false)
+#1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(49): Google_Client->authenticate('4/fiT9Hql57L_xz...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[28-May-2016 02:36:56 UTC] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/oauth2/v2/userinfo: (401) Invalid Credentials' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php:110
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(62): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request), Object(Google_Client))
+#1 [internal function]: Google_Http_REST::doExecute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Task/Runner.php(174): call_user_func_array(Array, Array)
+#3 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(46): Google_Task_Runner->run()
+#4 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(593): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#5 /home/vijaymerakii007/public_html/Rex/google-login-api in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php on line 110
+[28-May-2016 02:39:58 UTC] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/oauth2/v2/userinfo: (401) Invalid Credentials' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php:110
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(62): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request), Object(Google_Client))
+#1 [internal function]: Google_Http_REST::doExecute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Task/Runner.php(174): call_user_func_array(Array, Array)
+#3 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(46): Google_Task_Runner->run()
+#4 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(593): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#5 /home/vijaymerakii007/public_html/Rex/google-login-api in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php on line 110
+[28-May-2016 02:41:24 UTC] PHP Fatal error:  Uncaught exception 'Google_Service_Exception' with message 'Error calling GET https://www.googleapis.com/oauth2/v2/userinfo: (401) Invalid Credentials' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php:110
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(62): Google_Http_REST::decodeHttpResponse(Object(Google_Http_Request), Object(Google_Client))
+#1 [internal function]: Google_Http_REST::doExecute(Object(Google_Client), Object(Google_Http_Request))
+#2 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Task/Runner.php(174): call_user_func_array(Array, Array)
+#3 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php(46): Google_Task_Runner->run()
+#4 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(593): Google_Http_REST::execute(Object(Google_Client), Object(Google_Http_Request))
+#5 /home/vijaymerakii007/public_html/Rex/google-login-api in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Http/REST.php on line 110
+[28-May-2016 14:38:38 UTC] PHP Notice:  Undefined index: previousurl in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 7
+[28-May-2016 14:38:39 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Code was already redeemed.'' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/RsQy_gXMyIM2H...', false)
+#1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(53): Google_Client->authenticate('4/RsQy_gXMyIM2H...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[28-May-2016 14:40:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/phpFiles/prevurl.php:3) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 55
+[28-May-2016 14:41:05 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Code was already redeemed.'' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/J4JuHd387ML6V...', false)
+#1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(52): Google_Client->authenticate('4/J4JuHd387ML6V...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[28-May-2016 14:41:47 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 54
+[28-May-2016 14:42:57 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Code was already redeemed.'' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/mG1MiLLm9O9ul...', false)
+#1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(52): Google_Client->authenticate('4/mG1MiLLm9O9ul...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[28-May-2016 14:43:11 UTC] PHP Notice:  Undefined variable: authUrl in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 68
+[28-May-2016 14:43:30 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Code was already redeemed.'' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/vzoKLxtpEwsj6...', false)
+#1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(52): Google_Client->authenticate('4/vzoKLxtpEwsj6...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[28-May-2016 14:43:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 144
+[28-May-2016 14:46:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 144
+[28-May-2016 14:46:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 54
+[28-May-2016 14:46:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 144
+[28-May-2016 14:48:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 54
+[28-May-2016 14:48:10 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 144
+[28-May-2016 14:49:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:6) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 54
+[28-May-2016 14:50:46 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/Rex/google-login-api/index.php:139) in /home/vijaymerakii007/public_html/Rex/google-login-api/index.php on line 144
+[28-May-2016 14:50:59 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'invalid_grant: Code was already redeemed.'' in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/Xooreqd0DzwdA...', false)
+#1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(52): Google_Client->authenticate('4/Xooreqd0DzwdA...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125

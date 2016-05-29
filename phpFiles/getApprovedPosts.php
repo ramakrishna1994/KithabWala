@@ -30,7 +30,14 @@ while($row = mysqli_fetch_array($result)){
 			$json .= '"profileimage":'.'"'.mysqli_real_escape_string($con,$row1["profileimage"]).'",';
 			$json .= '"firstname":'.'"'.mysqli_real_escape_string($con,$row1["firstname"]).'",';
 			$json .= '"lastname":'.'"'.mysqli_real_escape_string($con,$row1["lastname"]).'",';
-			$json .= '"description":'.'"'.mysqli_real_escape_string($con,$row["description"]).'",';
+			$json .= '"postid":'.'"'.mysqli_real_escape_string($con,$row["postid"]).'",';
+			$json .= '"posttype":'.'"'.mysqli_real_escape_string($con,$row["posttype"]).'",';
+			$json .= '"title":'.'"'.mysqli_real_escape_string($con,$row["title"]).'",';
+			$json .= '"comment":'.'"'.mysqli_real_escape_string($con,$row["comment"]).'",';
+			$json .= '"theme":'.'"'.mysqli_real_escape_string($con,$row["theme"]).'",';
+			$json .= '"colors":'.'"'.mysqli_real_escape_string($con,$row["colors"]).'",';
+			$json .= '"fonts":'.'"'.mysqli_real_escape_string($con,$row["fonts"]).'",';
+			$json .= '"tags":'.'"'.mysqli_real_escape_string($con,$row["tags"]).'",';
 			$json .= '"filename":'.'"'.mysqli_real_escape_string($con,$row["filename"]).'"';
 			$json .='},';
 			
@@ -45,7 +52,7 @@ $resultscount = $resultscount + 10 ;
 $selectquery="select * from approvedposts limit 10 offset ".$resultscount." ;";
 $result=mysqli_query($con,$selectquery) or die(mysqli_error($con));
 if(mysqli_num_rows($result)<=0)
-	$json.='{"nomoreresults":1}]';
+	$json.='{"nomoreresults":1,"resultscount":'.$resultscount .'}]';
 else
 	$json.='{"nomoreresults":0,"resultscount":'.$resultscount .'}]';
 
