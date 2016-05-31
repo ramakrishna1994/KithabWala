@@ -19,7 +19,7 @@ while($row = mysqli_fetch_array($result)){
 	$tablepassword = $row['password'];
 	if($tablepassword==crypt($password, $tablepassword))
 	{
-		$error = 0;
+			$error = 0;
 			$_SESSION['firstname'] = $row['firstname'];
 			$_SESSION['lastname'] = $row['lastname'];
 			$_SESSION['kithabwalaemailid'] = $row['emailid'];
@@ -32,7 +32,7 @@ while($row = mysqli_fetch_array($result)){
 	
 }
 
-echo '{"error":"'. $error.'"}';
+echo '{"error":"'. $error.'","isadmin":"'.$_SESSION['isadmin'].'"}';
 
 
 

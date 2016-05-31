@@ -9,7 +9,7 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
+	
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Musings</title>
@@ -165,7 +165,7 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 			{
 				
 							
-				echo '<div class="dropdown">
+			echo '<div class="dropdown" style="margin-top:5%;">
 					  <a class="dropdown-toggle"  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>
 					  <span class="caret"></span></a>
 					  <ul class="dropdown-menu">
@@ -503,11 +503,11 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
+								<a class="twitter" href="https://twitter.com/kithabwala" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
+								<a class="google-plus" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
@@ -762,7 +762,7 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 						<br><br>
 	        				<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
 	        				<br>
-	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2Fgoogle-login-api&client_id=860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
+	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2Fgoogle-login-api&client_id=839189393184-cuo5b1427lo95gkri8mjdst7i62r1cih.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
 	        			
 	        			</div> 
 	        		</div>	

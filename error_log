@@ -25,3 +25,8 @@
 [28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: lastname in /home/vijaymerakii007/public_html/dashboard.php on line 152
 [28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 155
 [28-May-2016 17:15:43 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 165
+[29-May-2016 09:08:19 UTC] PHP Notice:  Undefined index: profileimage in /home/vijaymerakii007/public_html/dashboard.php on line 151
+[29-May-2016 09:08:19 UTC] PHP Notice:  Undefined index: firstname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[29-May-2016 09:08:19 UTC] PHP Notice:  Undefined index: lastname in /home/vijaymerakii007/public_html/dashboard.php on line 152
+[29-May-2016 09:08:19 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 155
+[29-May-2016 09:08:19 UTC] PHP Notice:  Undefined index: isadmin in /home/vijaymerakii007/public_html/dashboard.php on line 165

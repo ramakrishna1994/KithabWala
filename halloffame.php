@@ -8,7 +8,7 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
+	
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Creative Corner</title>
@@ -173,7 +173,7 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 			{
 				
 							
-				echo '<div class="dropdown">
+				echo '<div class="dropdown" style="margin-top:5%;">
 					  <a class="dropdown-toggle"  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>
 					  <span class="caret"></span></a>
 					  <ul class="dropdown-menu">
@@ -253,6 +253,8 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 		<div class="col-md-5 col-md-offset-1">
 			<h4><i>373 Submissions</i></h4>
 		</div>
+		
+		<!--
 		<div class="col-md-3">
 		
 			<form class="form-inline" role="form">
@@ -281,6 +283,7 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 				</div>
 			</form>
 		</div>
+		-->
 	</div>
 	
 	<div class="row" style="margin-top:1%">
@@ -312,13 +315,45 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 				
 			</div>
 		</div>
+		
+		
+		<div class="col-md-10 col-md-offset-1" id="designblock1" style="display:none">
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+				<h5>&nbsp;</h5>
+				<img src="images/cc.jpg" width="250" height="250" ><br>
+				<h5><b>Rocking House Design</b></h5>By Saradhi.
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+				<h5>&nbsp;</h5>
+				<img src="images/cc.jpg" width="250" height="250"><br>
+				<h5><b>Rocking House Design</b></h5>By Ravi Teja Surapaneni.
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+				<h5>&nbsp;</h5>
+				<img src="images/cc.jpg" width="250" height="250" ><br>
+				<h5><b>Rocking House Design</b></h5>By Ravi Teja Gamini.
+				
+			</div>
+			
+			<div class="row" >
+				<center>
+					<a class="btn btn-warning btn-lg" style="margin-top:3%">Click here to see more Designs</a>
+				</center>
+			</div>
+		
+		</div>
+		
+		
+		
 	</div>
-	<div class="col-md-4 col-md-offset-4" style="padding:2%;text-align:center">
-		Show More
 	</div>
-  </div>
   <div class="row">
-  <div class="col-md-2 col-md-offset-5" style="padding:10px 10px;text-align:center;background-color:white;border-top:1px solid grey;cursor:pointer;border-radius:25%">
+  <div class="col-md-2 col-md-offset-5" style="padding:10px 10px;text-align:center;background-color:white;border-top:1px solid grey;cursor:pointer;border-radius:25%" onclick="showmoredesigns()" id="showmoredesignsbox">
 		Show More
 	</div>
 	</div>
@@ -340,6 +375,7 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 		<div class="col-md-5 col-md-offset-1">
 			<h4><i>373 Submissions</i></h4>
 		</div>
+		<!--
 		<div class="col-md-3">
 		
 			<form class="form-inline" role="form">
@@ -368,6 +404,8 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 				</div>
 			</form>
 		</div>
+		
+		-->
 	</div>
 	
 	<div class="row" style="margin-top:1%">
@@ -402,10 +440,48 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 				
 			</div>
 		</div>
+		
+		
+		<div class="col-md-10 col-md-offset-1" id="musingsblock1" style="display:none">
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+					<h3>Super Stars of chennai</h3>
+					May 20 2016.
+					<img src="images/products.jpg" width="250" height="250" ><br>
+					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+					<h3>6 Types of students every school has seen</h3>
+					May 20 2016.
+					<img src="images/products.jpg" width="250" height="250" ><br>
+					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
+				
+			</div>
+			<div class="col-md-4 " style="padding:0.5%;text-align:center">
+				
+					<h3>Super Stars of chennai</h3>
+					May 20 2016.
+					<img src="images/products.jpg" width="250" height="250" ><br>
+					<div class="col-md-10 col-md-offset-1" style="margin-top:2%;text-align:justify">Most of us take the MTC buses to commute to our colleges , while most of us take bikes and cars.</div>
+				
+			</div>
+			
+			<div class="col-md-12" >
+					<center>
+					<a class="btn btn-warning btn-lg" style="margin-top:3%">Click here to see more Musings</a>
+					</center>
+			</div>
+			
+		</div>
+		
+		
+			
 	</div>
   </div>
    <div class="row">
-  <div class="col-md-2 col-md-offset-5" style="padding:10px 10px;text-align:center;background-color:white;border-top:1px solid grey;cursor:pointer;border-radius:25%">
+  <div class="col-md-2 col-md-offset-5" style="padding:10px 10px;text-align:center;background-color:white;border-top:1px solid grey;cursor:pointer;border-radius:25%" id="showmoremusingsbox" onclick="showmoremusings()">
 		Show More
 	</div>
 	</div>
@@ -517,11 +593,11 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
+								<a class="twitter" href="https://twitter.com/kithabwala" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
+								<a class="google-plus" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
@@ -719,13 +795,49 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 		
 		
 			
-	 
+	 function showmoredesigns()
+	 {
+		 $('#designblock1').slideDown(1000,function(){
+			 document.getElementById("showmoredesignsbox").setAttribute("onclick","hidemoredesigns()");
+			 //$("#showmoredesignsbox").innerhtml("Hide");
+			 document.getElementById("showmoredesignsbox").innerHTML = "Hide More";
+		 });
+	 }
 	
+	
+	function hidemoredesigns()
+	{
+		$('#designblock1').slideUp(1000,function(){
+			 document.getElementById("showmoredesignsbox").setAttribute("onclick","showmoredesigns()");
+			  //$('#showmoredesignsbox').innerhtml("Show More");
+			  document.getElementById("showmoredesignsbox").innerHTML = "Show More";
+		 });
+	}
 
 	
+	
+	 function showmoremusings()
+	 {
+		 $('#musingsblock1').slideDown(1000,function(){
+			 document.getElementById("showmoremusingsbox").setAttribute("onclick","hidemoremusings()");
+			 //$("#showmoredesignsbox").innerhtml("Hide");
+			 document.getElementById("showmoremusingsbox").innerHTML = "Hide More";
+		 });
+	 }
+	
+	
+	function hidemoremusings()
+	{
+		$('#musingsblock1').slideUp(1000,function(){
+			 document.getElementById("showmoremusingsbox").setAttribute("onclick","showmoremusings()");
+			  //$('#showmoredesignsbox').innerhtml("Show More");
+			  document.getElementById("showmoremusingsbox").innerHTML = "Show More";
+		 });
+	}
 
 
 
+ 
 
 		
 		
@@ -769,9 +881,9 @@ $_SESSION['previousurl'] = basename($_SERVER['REQUEST_URI']);
 	        		<div class='modal-body-right'>
 	        			<div class="modal-social-icons">
 						<br><br>
-	        				<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+	        				<!--<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>-->
 	        				<br>
-	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2Fgoogle-login-api&client_id=860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
+	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2Fgoogle-login-api&client_id=839189393184-cuo5b1427lo95gkri8mjdst7i62r1cih.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
 	        			
 	        			</div> 
 	        		</div>	

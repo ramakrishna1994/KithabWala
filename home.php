@@ -11,7 +11,7 @@ error_reporting(E_ALL);
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="google-signin-client_id" content="860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com">
+	
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Home</title>
@@ -150,7 +150,7 @@ error_reporting(E_ALL);
 	
 
 .non-floater { overflow:hidden; }
-iframe { width:100%; padding:0; border:0; height: 99vh;   }
+iframe { width:100%; padding:0; border:0; height: 99.6vh;   }
 
 .links{
 	color:white;
@@ -199,7 +199,7 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
  
 
  
-<div id="bodyid" style="display:none">
+<div id="bodyid" >
  
  
 
@@ -242,7 +242,7 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
 			}
 			else
 			{
-				$content =  '<div><a  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
+				$content =  '<div class="dropdown" style="margin-top:6%"><a  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>'
 						.'	<span class="caret"></span></a>'
 						.'	<ul class="dropdown-menu" style="background-color:white;padding:2%">'
 						.'	<li><a class="header-color" href="dashboard.php"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;Dashboard</a></li>'
@@ -293,30 +293,30 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
   
   
   
-   
 
 <!----------start carousel section------------->
-	 <section id="about">
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 400px; overflow: hidden; visibility: hidden;">
+ 
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 350px; overflow: hidden; visibility: visible;" jssor-slider="true">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 400px; overflow: hidden;">
-           <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/purple.jpg" />
-            </div>
-            <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="img/blue.jpg" />
-            </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 350px; overflow: hidden;">
+            
             <div data-p="225.00" style="display: none;">
                 <img data-u="image" src="img/purple.jpg" />
             </div>
             <div data-p="225.00" style="display: none;">
                 <img data-u="image" src="img/blue.jpg" />
             </div>
-          
+			<div data-p="225.00" style="display: none;">
+                <img data-u="image" src="img/purple.jpg" />
+            </div>
+            <div data-p="225.00" style="display: none;">
+                <img data-u="image" src="img/blue.jpg" />
+            </div>
+           
         
         </div>
         <!-- Bullet Navigator -->
@@ -327,9 +327,12 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
         <!-- Arrow Navigator -->
         
     </div>
- </section >
+
   <!-- End carousel section -->
   
+  
+  
+
   
   
  
@@ -404,7 +407,10 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
   </section>
   <!-- End from blog section -->
   
+
   
+       
+ 
 
 
 <section id="testimonial">
@@ -546,19 +552,25 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
   
     <div class="container-fluid">
 			<div class="row" style="background-color:#ffd00d">
-     
-						<div class="col-md-6 col-md-offset-1" style="text-align:right;margin:6% 0;">
+				<div class="col-md-10">
+					<div class="row">
+						<div class="col-md-1">
+							&nbsp;
+						</div>
+						<div class="col-md-6 " style="text-align:right;margin:8% 0;">
 							<input type="email" class="form-control" id="subscriptionemail" placeholder="Subscribe to our Newsletter">
 						 </div>
-						  <div class="col-md-3" style="text-align:left;margin:6% 0;background-color:#ffd00d">
+						  <div class="col-md-2" style="text-align:left;margin:8% 0;">
 							<button type="submit" class="btn btn-primary btn-block" onclick="subscribe()">SUBSCRIBE</button>
 						</div>
 		
-						<div class="col-md-2" style="text-align:right">
-							   <div class="row" >
-									<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false"  data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+						<div class="col-md-2" style="text-align:right;padding:1%">
+							<div class="row" >
+									<div class="fb-page" data-href="https://www.facebook.com/Kithabwala-156605224697747/" data-small-header="false"  data-adapt-container-width="true" data-widht="450" data-hide-cover="false" data-show-facepile="true"></div>
 								</div>
-							</div>
+					</div>
+					</div>
+				</div>
 			</div>
 	 </div>
   <!-- End subscription section -->
@@ -665,8 +677,7 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
 
     <script>
 	
-	
-		 jQuery(document).ready(function ($) {
+	 	 jQuery(document).ready(function ($) {
             
             var jssor_1_SlideoTransitions = [
               [{b:5500,d:3000,o:-1,r:240,e:{r:2}}],
@@ -716,8 +727,6 @@ iframe { width:100%; padding:0; border:0; height: 99vh;   }
             $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
         });
-		
-		
 		
 		
 		
@@ -823,8 +832,8 @@ if(screen.availWidth >= 500)
 	
 	//alert(screen.availWidth);
 	setTimeout(function(){ 
-	//showheader();
-	}, 10000);
+	showheader();
+	}, 5000);
 }
 else{
 	//alert(screen.availWidth);
@@ -870,6 +879,7 @@ else{
 	function showheader()
 		{
 			document.getElementById("navigation").setAttribute("style","display:none");
+			
 			
 			$('#iframe1').contents().find('header#banner').slideDown(1,function(){
 					$("#header").slideDown(1000,function(){
@@ -928,9 +938,9 @@ else{
 	        		<div class='modal-body-right'>
 	        			<div class="modal-social-icons">
 						<br><br>
-	        				<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+	        				<!--<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>-->
 	        				<br>
-	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2Fgoogle-login-api&client_id=860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
+	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2Fgoogle-login-api&client_id=839189393184-cuo5b1427lo95gkri8mjdst7i62r1cih.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
 	        			
 	        			</div> 
 	        		</div>	
@@ -1188,15 +1198,15 @@ else{
 	<script src="customjs/social.js"></script>
 	<script src="customjs/subscription.js"></script>
 
-	
+	<div class="row" style="padding-top:1%;display:none" id="skyline">
+	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
+  </div>
 
 
 
   </body>
   
-   <div class="row" style="padding-top:1%;display:none" id="skyline">
-	<img src="images/hydfooter.png" width="100%" style="margin-top:10%">
-  </div>
+   
   
   
   	
@@ -1217,11 +1227,11 @@ else{
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
+								<a class="twitter" href="https://twitter.com/kithabwala" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
+								<a class="google-plus" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								

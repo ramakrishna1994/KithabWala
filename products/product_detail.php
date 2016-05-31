@@ -3,6 +3,7 @@
 session_start();
 error_reporting(E_ALL);
  ini_set('display_errors', '1');
+ $_SESSION['previousurl'] = 'products/'.basename($_SERVER['REQUEST_URI']);
 ?>
 
 
@@ -35,7 +36,7 @@ error_reporting(E_ALL);
 
     <!-- Main Style -->
     <link href="style.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -115,8 +116,9 @@ error_reporting(E_ALL);
     <a class="scrollToTop" href="#"><i class="fa fa-chevron-up"></i></a>
   <!-- END SCROLL TOP BUTTON -->
 
-  
- <!-- Start menu section -->
+ 	  
+
+<!-- Start menu section -->
   <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#c2c4c6;height:60px" id="navigation">
   
  
@@ -128,15 +130,15 @@ error_reporting(E_ALL);
         <span class="icon-bar" style="background-color:black"></span>
         <span class="icon-bar" style="background-color:black"></span> 
       </button>
-      <a class="navbar-brand" href="home.php" ><img id="logoimage" src="../images/newlogo.jpg" width="100" height="50" style="margin-top:-2%"></a>
+      <a class="navbar-brand" href="home.php" ><img id="logoimage" src="http://kithabwala.com/images/newlogo.jpg" width="100" height="50" style="margin-top:-2%"></a>
     </div>
     <div class="collapse navbar-collapse" id="rkNavbar" style="margin-top:1%;background-color:#c2c4c6">
       <ul class="nav navbar-nav" style="padding-left:5%">
-			<li ><a onclick="window.open('../home.php','_self')" class="point">HOME</a></li>
-            <li><a onclick="window.open('../aboutus.php','_self')" class="point">ABOUT US</a></li> 
-            <li><a onclick="window.open('../products.php','_self')" class="point">PRODUCTS</a></li> 
-			<li ><a onclick="window.open('../advertise.php','_self')" class="point">ADVERTISE </a></li> 
-            <li ><a onclick="window.open('../halloffame.php','_self')" class="point">CREATIVE</a></li> 
+        <li ><a href="../home.php">HOME</a></li>
+            <li ><a href="../aboutus.php" >ABOUT US</a></li> 
+            <li ><a href="../products.php">PRODUCTS</a></li>                    
+            <li ><a href="../advertise.php">ADVERTISE </a></li> 
+            <li ><a href="../halloffame.php">CREATIVE</a></li> 
 			
       </ul>
       <ul class="nav navbar-nav navbar-right" style="padding-left:5%">
@@ -153,7 +155,7 @@ error_reporting(E_ALL);
 			{
 				
 							
-				echo '<div class="dropdown">
+				echo '<li class="dropdown" style="margin-top:5%;">
 					  <a class="dropdown-toggle"  style="cursor:pointer" data-toggle="dropdown"><font color="black" size="2px"><b>Welcome <i>'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</i></b></font>
 					  <span class="caret"></span></a>
 					  <ul class="dropdown-menu">
@@ -161,7 +163,7 @@ error_reporting(E_ALL);
 						<li><a class="header-color" href="accountsettings.php"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;&nbsp;Account Settings</a></li>
 					   <li><a class="header-color" style="cursor:pointer" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;LogOut</a></li>
 					  </ul>
-					</div>';
+					</li>';
 			}
 						
 			?>
@@ -171,9 +173,6 @@ error_reporting(E_ALL);
 </nav>
  <!-- End menu section -->
 
-   
-  <!-- End header section -->
-   
 
   
 
@@ -352,11 +351,11 @@ error_reporting(E_ALL);
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="twitter" href="#" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
+								<a class="twitter" href="https://twitter.com/kithabwala" style="float:left"><span class="fa fa-twitter"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">TWEET / FOLLOW US <br> ON TWITTER</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
-								<a class="google-plus" href="#" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
+								<a class="google-plus" style="float:left"><span class="fa fa-envelope"></span></a><p style="margin-top:1%;text-align:left"><font size="1px">QUESTIONS ? <br> SEND US AN EMAIL</font></p>
 						</div>
 						<div class="col-md-3 " style="text-align:center;color:#ffd00d">
 								
@@ -498,9 +497,9 @@ error_reporting(E_ALL);
 	        		<div class='modal-body-right'>
 	        			<div class="modal-social-icons">
 						<br><br>
-	        				<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>
+	        				<!--<a onclick="fb_login();" class="btn btn-default facebook1" style="font-size:80%"> <i class="fa fa-facebook modal-icons"></i> Sign In with Facebook </a>-->
 	        				<br>
-	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2FRex%2Fgoogle-login-api&client_id=860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
+	        				<a href="https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.kithabwala.com%2Fgoogle-login-api&client_id=839189393184-cuo5b1427lo95gkri8mjdst7i62r1cih.apps.googleusercontent.com&scope=email+profile&access_type=online&approval_prompt=auto" class="btn btn-default google"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google </a>
 	        			
 	        			</div> 
 	        		</div>	

@@ -84,3 +84,37 @@ Stack trace:
 #1 /home/vijaymerakii007/public_html/Rex/google-login-api/index.php(52): Google_Client->authenticate('4/Xooreqd0DzwdA...')
 #2 {main}
   thrown in /home/vijaymerakii007/public_html/Rex/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[28-May-2016 18:49:11 UTC] PHP Notice:  Undefined variable: password in /home/vijaymerakii007/public_html/google-login-api/index.php on line 98
+[28-May-2016 18:49:11 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/google-login-api/index.php:98) in /home/vijaymerakii007/public_html/google-login-api/index.php on line 144
+[29-May-2016 05:17:34 UTC] PHP Notice:  Undefined index: previousurl in /home/vijaymerakii007/public_html/google-login-api/index.php on line 144
+[29-May-2016 05:17:35 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/google-login-api/index.php:144) in /home/vijaymerakii007/public_html/google-login-api/index.php on line 144
+[29-May-2016 09:12:14 UTC] PHP Notice:  Undefined variable: password in /home/vijaymerakii007/public_html/google-login-api/index.php on line 98
+[29-May-2016 09:12:14 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/google-login-api/index.php:98) in /home/vijaymerakii007/public_html/google-login-api/index.php on line 144
+[29-May-2016 09:13:17 UTC] PHP Notice:  Undefined variable: password in /home/vijaymerakii007/public_html/google-login-api/index.php on line 98
+[29-May-2016 09:13:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/google-login-api/index.php:98) in /home/vijaymerakii007/public_html/google-login-api/index.php on line 144
+[29-May-2016 13:19:15 UTC] PHP Notice:  Undefined variable: password in /home/vijaymerakii007/public_html/google-login-api/index.php on line 98
+[29-May-2016 13:19:15 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/vijaymerakii007/public_html/google-login-api/index.php:98) in /home/vijaymerakii007/public_html/google-login-api/index.php on line 144
+[30-May-2016 04:02:59 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'unauthorized_client'' in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/Qo0-nduMJuNoA...', false)
+#1 /home/vijaymerakii007/public_html/google-login-api/index.php(52): Google_Client->authenticate('4/Qo0-nduMJuNoA...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[30-May-2016 04:03:30 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'unauthorized_client'' in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/1U0TI6kdNkgyB...', false)
+#1 /home/vijaymerakii007/public_html/google-login-api/index.php(52): Google_Client->authenticate('4/1U0TI6kdNkgyB...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[30-May-2016 04:04:42 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'unauthorized_client'' in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/Izhndxskd1eoT...', false)
+#1 /home/vijaymerakii007/public_html/google-login-api/index.php(52): Google_Client->authenticate('4/Izhndxskd1eoT...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php on line 125
+[30-May-2016 04:13:34 UTC] PHP Fatal error:  Uncaught exception 'Google_Auth_Exception' with message 'Error fetching OAuth2 access token, message: 'unauthorized_client'' in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php:125
+Stack trace:
+#0 /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Client.php(128): Google_Auth_OAuth2->authenticate('4/Shay-0jGZHlv7...', false)
+#1 /home/vijaymerakii007/public_html/google-login-api/index.php(52): Google_Client->authenticate('4/Shay-0jGZHlv7...')
+#2 {main}
+  thrown in /home/vijaymerakii007/public_html/google-login-api/libraries/Google/Auth/OAuth2.php on line 125

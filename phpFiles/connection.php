@@ -1,5 +1,5 @@
 <?php 
-//require_once '/home/vijaymerakii007/public_html/sample/mainFiles/phpmailer/PHPMailerAutoload.php';
+require_once '/home/vijaymerakii007/public_html/phpmailer/PHPMailerAutoload.php';
 
 $db_host="localhost";
 $db_user="kithabwala";

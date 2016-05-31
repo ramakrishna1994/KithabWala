@@ -8,8 +8,8 @@ require_once ('libraries/Google/autoload.php');
 require_once ('../phpFiles/connection.php');
 //Insert your cient ID and secret 
 //You can get it from : https://console.developers.google.com/
-$client_id = '860268918382-52k1gd6pthju1s03domgiddimbnk1on0.apps.googleusercontent.com'; 
-$client_secret = 'J0fdkvOoKB5fO2Sp-lZ9q6vN';
+$client_id = '839189393184-cuo5b1427lo95gkri8mjdst7i62r1cih.apps.googleusercontent.com'; 
+$client_secret = 'TsWEEtw6gVNvCm3CRgxNbthy';
 $redirect_uri = 'http://www.kithabwala.com/google-login-api';
 
 
@@ -80,7 +80,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 			$result = mysqli_query($con,$checkQuery) or die(mysqli_error($con));
 			//echo "no of rows:".mysqli_num_rows($result);
 			
-			
+			$password = "Kithabwala123";
 			
 			//echo $random;
 			
